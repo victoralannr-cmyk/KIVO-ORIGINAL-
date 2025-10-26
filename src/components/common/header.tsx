@@ -12,6 +12,7 @@ const navItems = [
   { name: 'Como Funciona', href: '#como-funciona' },
   { name: 'Benefícios', href: '#beneficios' },
   { name: 'Sobre', href: '#sobre' },
+  { name: 'FAQ', href: '#faq' },
 ];
 
 export default function Header() {

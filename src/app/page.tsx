@@ -9,6 +9,7 @@ import InteractiveDemoSection from '@/components/sections/interactive-demo';
 import AiIntegrationTextSection from '@/components/sections/ai-integration-text';
 import AboutSection from '@/components/sections/about';
 import ContactSection from '@/components/sections/contact';
+import FaqSection from '@/components/sections/faq';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <InteractiveDemoSection />
         <AiIntegrationTextSection />
         <AboutSection />
+        <FaqSection />
         <ContactSection />
       </main>
       <Footer />

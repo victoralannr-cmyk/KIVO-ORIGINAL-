@@ -1,34 +1,20 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
-
-const humanAvatar = PlaceHolderImages.find(p => p.id === 'human-avatar');
-const aiAvatar = PlaceHolderImages.find(p => p.id === 'ai-avatar');
-
-const chatMessages = [
-    { from: 'human', text: 'Qual o status do meu pedido #A3X8B?' },
-    { from: 'ai', text: 'Seu pedido #A3X8B foi enviado hoje e a previsão de entrega é amanhã. Quer o código de rastreio?' },
-    { from: 'human', text: 'Sim, por favor!' },
-];
 
 export default function HeroSection() {
     const [offsetY, setOffsetY] = useState(0);
-    const [isMounted, setIsMounted] = useState(false);
 
     const handleScroll = () => {
         setOffsetY(window.pageYOffset);
     };
 
     useEffect(() => {
-        setIsMounted(true);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -36,10 +22,10 @@ export default function HeroSection() {
     const getParallaxStyle = (factor: number) => ({
         transform: `translateY(${offsetY * factor}px)`,
     });
-    
+
     return (
-        <section id="home" className="relative w-full h-screen min-h-[700px] flex items-center justify-center overflow-hidden animated-gradient">
-            <div className="absolute inset-0 bg-background/50" />
+        <section id="home" className="relative w-full h-screen min-h-[800px] flex items-center justify-center overflow-hidden animated-gradient">
+            <div className="absolute inset-0 bg-background/60" />
             
             <div className="container relative z-10 px-4 md:px-6 text-center">
                 <h1 className="font-headline text-4xl font-bold tracking-tighter text-foreground sm:text-5xl md:text-6xl lg:text-7xl text-glow-primary">
@@ -49,7 +35,7 @@ export default function HeroSection() {
                     Treinamos e implementamos um agente de IA generativa que fala com seus clientes, automatiza processos, responde dúvidas, resolve problemas e integra com todos os seus sistemas como se fosse você.
                 </p>
                 <div className="mt-8">
-                    <Button asChild size="lg" className="group transition-all duration-300 ease-in-out hover:glow-shadow-accent bg-accent text-accent-foreground hover:bg-accent/90">
+                    <Button asChild size="lg" className="group transition-all duration-300 ease-in-out hover:glow-shadow-accent bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-8 py-4 text-lg">
                         <Link href="#agendar">
                             Agendar uma demonstração
                         </Link>
@@ -57,28 +43,24 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            {isMounted && (
-                <div className="absolute inset-0 z-0 h-full w-full">
-                    <Card style={getParallaxStyle(0.15)} className={cn("absolute top-[15%] left-[5%] w-80 p-3 bg-card/50 backdrop-blur-sm border-border/20 transition-transform duration-300 ease-out", "animate-float")}>
-                        <div className="flex items-center gap-2">
-                            <Avatar className="h-8 w-8">{humanAvatar && <AvatarImage src={humanAvatar.imageUrl} /> }<AvatarFallback>U</AvatarFallback></Avatar>
-                            <p className="text-sm">{chatMessages[0].text}</p>
-                        </div>
-                    </Card>
-                    <Card style={getParallaxStyle(0.25)} className={cn("absolute top-[30%] right-[10%] w-96 p-3 bg-card/50 backdrop-blur-sm border-border/20 transition-transform duration-300 ease-out", "animate-float animation-delay-3000")}>
-                        <div className="flex items-center gap-2">
-                             <Avatar className="h-8 w-8">{aiAvatar && <AvatarImage src={aiAvatar.imageUrl} /> }<AvatarFallback>AI</AvatarFallback></Avatar>
-                            <p className="text-sm">{chatMessages[1].text}</p>
-                        </div>
-                    </Card>
-                    <Card style={getParallaxStyle(0.1)} className={cn("absolute bottom-[20%] left-[15%] w-64 p-3 bg-card/50 backdrop-blur-sm border-border/20 transition-transform duration-300 ease-out", "animate-float animation-delay-1000")}>
-                        <div className="flex items-center gap-2">
-                             <Avatar className="h-8 w-8">{humanAvatar && <AvatarImage src={humanAvatar.imageUrl} /> }<AvatarFallback>U</AvatarFallback></Avatar>
-                            <p className="text-sm">{chatMessages[2].text}</p>
-                        </div>
-                    </Card>
-                </div>
-            )}
+            <div className="absolute inset-0 z-0 h-full w-full">
+                <Image
+                    src="https://kyondigital.com/wp-content/uploads/2025/08/Gostaria-de-conhecer-o-catalogo-de-voces.svg"
+                    alt="Chat message example 1"
+                    width={390}
+                    height={61}
+                    className="absolute top-[15%] left-[5%] w-72 md:w-96 transition-all duration-300 ease-out"
+                    style={{...getParallaxStyle(0.15), filter: 'blur(1px)'}}
+                />
+                 <Image
+                    src="https://kyondigital.com/wp-content/uploads/2025/08/Claro-Jose-Vou-te-enviar-um-PDF-que-contem.png"
+                    alt="Chat message example 2"
+                    width={862}
+                    height={161}
+                    className="absolute top-[30%] right-[5%] w-80 md:w-[450px] transition-all duration-300 ease-out"
+                    style={{...getParallaxStyle(0.25), filter: 'blur(1px)'}}
+                />
+            </div>
         </section>
     );
 }

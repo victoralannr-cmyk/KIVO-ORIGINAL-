@@ -17,9 +17,9 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <HeroSection />
+        <SuccessCasesSection />
         <HowItWorksSection />
         <BenefitsSection />
-        <SuccessCasesSection />
         <InteractiveDemoSection />
         <AiIntegrationTextSection />
         <AboutSection />

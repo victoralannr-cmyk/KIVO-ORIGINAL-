@@ -33,6 +33,21 @@ const testimonials = [
     name: 'CTO, FutureWare',
     logoId: 'client-logo-4',
   },
+  {
+    quote: 'O ROI foi evidente desde o primeiro trimestre. Uma ferramenta indispensável para qualquer negócio que queira escalar.',
+    name: 'CFO, Visionary Inc.',
+    logoId: 'client-logo-5',
+  },
+  {
+    quote: 'A capacidade de integração do agente com nossos sistemas legados foi surpreendente. Parecia que ele sempre esteve aqui.',
+    name: 'Head de TI, DataDriven Co.',
+    logoId: 'client-logo-6',
+  },
+    {
+    quote: 'Nossos clientes estão mais felizes, e nossa equipe mais produtiva. Foi uma vitória para todos os lados.',
+    name: 'Diretora de RH, PeopleFirst',
+    logoId: 'client-logo-7',
+  },
 ];
 
 export default function SuccessCasesSection() {
@@ -57,7 +72,7 @@ export default function SuccessCasesSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl text-glow-primary">
-            Casos de Sucesso
+            Apoiada por grandes empresas
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl">
             Veja como empresas como a sua estão se beneficiando da nossa tecnologia.
@@ -68,24 +83,24 @@ export default function SuccessCasesSection() {
             {testimonials.map((testimonial, index) => {
                const logo = PlaceHolderImages.find(p => p.id === testimonial.logoId);
                return (
-                <CarouselItem key={index}>
-                  <div className="p-1">
-                    <Card className="border-border/20 bg-card overflow-hidden">
-                      <CardContent className="flex flex-col items-center justify-center p-8 md:p-12 text-center">
-                        <p className="text-xl md:text-2xl font-medium text-foreground">
-                          &ldquo;{testimonial.quote}&rdquo;
-                        </p>
-                        <div className="mt-6 flex items-center gap-4">
-                           {logo && (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1 h-full">
+                    <Card className="border-border/20 bg-card overflow-hidden h-full">
+                      <CardContent className="flex flex-col items-center justify-center p-8 md:p-12 text-center h-full">
+                         {logo && (
                              <Image
                                src={logo.imageUrl}
                                alt={logo.description}
                                width={120}
-                               height={50}
-                               className="h-10 w-auto object-contain grayscale"
+                               height={40}
+                               className="h-10 w-auto object-contain grayscale mb-6"
                                data-ai-hint={logo.imageHint}
                              />
                            )}
+                        <p className="text-lg md:text-xl font-medium text-foreground flex-grow">
+                          &ldquo;{testimonial.quote}&rdquo;
+                        </p>
+                        <div className="mt-6 flex items-center gap-4">
                            <span className="text-muted-foreground font-semibold">{testimonial.name}</span>
                         </div>
                       </CardContent>
@@ -100,3 +115,4 @@ export default function SuccessCasesSection() {
     </section>
   );
 }
+

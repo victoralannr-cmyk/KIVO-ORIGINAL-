@@ -8,7 +8,7 @@ import {
 
 const faqs = [
     {
-        question: "O que é um agente de IA da AetherAI?",
+        question: "O que é um agente de IA da Kyon?",
         answer: "Nossos agentes de IA são sistemas inteligentes capazes de automatizar todo ou parte do atendimento ao cliente, interagindo em múltiplos canais e integrando-se aos sistemas da sua empresa para oferecer respostas rápidas, personalizadas e precisas."
     },
     {
@@ -31,23 +31,22 @@ const faqs = [
 
 export default function FaqSection() {
   return (
-    <section id="faq" className="bg-card">
+    <section id="faq" className="bg-background py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl text-glow-accent">
             Perguntas Frequentes
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl">
-            Tudo o que você precisa saber antes de contratar.
-          </p>
         </div>
         <div className="mt-12 max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, index) => (
-                    <AccordionItem key={index} value={`item-${index}`}>
-                        <AccordionTrigger className="font-headline text-lg text-left">{faq.question}</AccordionTrigger>
+                    <AccordionItem key={index} value={`item-${index}`} className="border-b-border/20">
+                        <AccordionTrigger className="font-headline text-lg text-left hover:no-underline text-foreground">
+                          {faq.question}
+                        </AccordionTrigger>
                         <AccordionContent className="text-base text-muted-foreground">
-                        {faq.answer}
+                          {faq.answer}
                         </AccordionContent>
                     </AccordionItem>
                 ))}

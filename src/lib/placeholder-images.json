@@ -1,3 +1,70 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "aetherai-logo",
+      "description": "The official logo for AetherAI.",
+      "imageUrl": "https://i.postimg.cc/g0QhyjPr/Whats-App-Image-2025-10-23-at-20-08-15-removebg-preview.png",
+      "imageHint": "AI logo"
+    },
+    {
+      "id": "human-avatar",
+      "description": "Avatar for a human user in a chat interface.",
+      "imageUrl": "https://images.unsplash.com/photo-1521119989659-a83eee488004?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYxNDM4NzYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "ai-avatar",
+      "description": "Avatar for an AI agent in a chat interface.",
+      "imageUrl": "https://images.unsplash.com/photo-1688586487902-b9769ef4a6e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxyb2JvdCUyMGFic3RyYWN0fGVufDB8fHx8MTc2MTM3MTc3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "robot abstract"
+    },
+    {
+      "id": "client-logo-1",
+      "description": "Logo for a client company.",
+      "imageUrl": "https://images.unsplash.com/photo-1680530033206-881e0a7e44b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0ZWNoJTIwbG9nb3xlbnwwfHx8fDE3NjEzOTU2MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tech logo"
+    },
+    {
+      "id": "client-logo-2",
+      "description": "Logo for another client company.",
+      "imageUrl": "https://images.unsplash.com/photo-1594319622332-8507b850f10a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdGFydHVwJTIwbG9nb3xlbnwwfHx8fDE3NjEzNzA1NDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "startup logo"
+    },
+    {
+      "id": "client-logo-3",
+      "description": "Logo for a third client company.",
+      "imageUrl": "https://images.unsplash.com/photo-1678564205744-3dc5913fc3fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmaW5hbmNlJTIwbG9nb3xlbnwwfHx8fDE3NjEzOTEzOTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "finance logo"
+    },
+    {
+      "id": "client-logo-4",
+      "description": "Logo for a fourth client company.",
+      "imageUrl": "https://images.unsplash.com/photo-1728406970272-1b68f161df6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2FhcyUyMGxvZ298ZW58MHx8fHwxNzYxNDU2OTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "saas logo"
+    },
+    {
+      "id": "about-us-image",
+      "description": "Image for the About Us section, showing the team or office.",
+      "imageUrl": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0ZWNoJTIwb2ZmaWNlfGVufDB8fHx8MTc2MTM4NjcwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tech office"
+    },
+    {
+      "id": "chat-message-1",
+      "description": "Simulated chat message bubble.",
+      "imageUrl": "https://images.unsplash.com/photo-1625167256638-f47df21d8be7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjaGF0JTIwYnViYmxlfGVufDB8fHx8MTc2MTQ1NjkxNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chat bubble"
+    },
+    {
+      "id": "chat-message-2",
+      "description": "Another simulated chat message bubble.",
+      "imageUrl": "https://images.unsplash.com/photo-1694878982018-561e965dd981?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaGF0JTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2MTQxMDQ5MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chat interface"
+    },
+    {
+      "id": "phone-mockup",
+      "description": "A phone mockup to display chat UI.",
+      "imageUrl": "https://images.unsplash.com/photo-1529653762956-b0a27278529c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwaG9uZSUyMHNjcmVlbnxlbnwwfHx8fDE3NjE0MDY3NTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "phone screen"
+    }
+  ]
 }

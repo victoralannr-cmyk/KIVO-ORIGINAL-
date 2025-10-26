@@ -11,6 +11,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Loader2 } from 'lucide-react';
+import Image from 'next/image';
 
 const initialState: ContactFormState = {
   message: '',
@@ -21,7 +22,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
   return (
     <Button type="submit" className="w-full" disabled={pending}>
-      {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : 'Enviar Mensagem'}
+      {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : 'Enviar'}
     </Button>
   );
 }
@@ -54,38 +55,58 @@ export default function ContactSection() {
   }, [state, toast]);
 
   return (
-    <section id="agendar" className="bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-glow-primary">
-            Agende uma demonstração
-          </h2>
-          <p className="mt-4 text-muted-foreground md:text-xl">
-            Pronto para ver como nossa IA pode revolucionar sua empresa? Preencha o formulário e nossa equipe entrará em contato.
-          </p>
+    <section id="agendar" className="bg-background py-12 md:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+        <div className="space-y-4">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl text-glow-primary">
+                Preencha com seus dados para começar
+            </h2>
+            <p className="text-muted-foreground md:text-lg">
+                Nosso time entrará em contato para fazer uma demonstração gratuita.
+            </p>
+            <div className="space-y-4 pt-4">
+                <div className="flex items-center gap-4">
+                    <Image src="https://kyondigital.com/wp-content/uploads/2025/08/Frame-2147207702.png" alt="Email icon" width={60} height={60} />
+                    <p className="text-muted-foreground">Veja sua caixa de e-mails, incluindo SPAM e Lixo Eletrônico</p>
+                </div>
+                <div className="flex items-center gap-4">
+                    <Image src="https://kyondigital.com/wp-content/uploads/2025/08/Frame-2147207703.png" alt="WhatsApp icon" width={60} height={60} />
+                    <p className="text-muted-foreground">Verifique suas mensagens no WhatsApp e mantenha seu celular ligado</p>
+                </div>
+            </div>
         </div>
 
-        <Card className="mx-auto mt-12 max-w-lg border-border/20 bg-card shadow-lg shadow-primary/10">
+        <Card className="w-full max-w-lg mx-auto bg-card border-border/20 shadow-lg">
           <form action={formAction}>
-            <CardHeader>
-              <CardTitle>Fale Conosco</CardTitle>
-              <CardDescription>Deixe sua mensagem e retornaremos em breve.</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="pt-6 space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="name">Nome</Label>
-                <Input id="name" name="name" placeholder="Seu nome completo" required />
+                <Input id="name" name="name" placeholder="Seu nome" required className="bg-background"/>
                 {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name.join(', ')}</p>}
               </div>
               <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" name="email" type="email" placeholder="seu@email.com" required />
+                <Input id="email" name="email" type="email" placeholder="Seu melhor e-mail" required className="bg-background"/>
                  {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email.join(', ')}</p>}
               </div>
               <div className="space-y-2">
-                <Label htmlFor="message">Mensagem</Label>
-                <Textarea id="message" name="message" placeholder="Como podemos te ajudar?" required />
-                 {state.errors?.message && <p className="text-sm text-destructive">{state.errors.message.join(', ')}</p>}
+                <Input id="whatsapp" name="whatsapp" placeholder="WhatsApp" required className="bg-background"/>
+              </div>
+              <div className="space-y-2">
+                <Input id="company" name="company" placeholder="Qual é o nome da sua empresa?" required className="bg-background"/>
+              </div>
+               <div className="space-y-2">
+                <Input id="segment" name="segment" placeholder="Qual o segmento da sua empresa?" required className="bg-background"/>
+              </div>
+              <div className="space-y-2">
+                <select name="revenue" id="revenue" className="w-full h-10 rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-muted-foreground" required>
+                    <option value="" disabled selected>Qual é o seu faturamento mensal atual?</option>
+                    <option value="Até R$ 20.000">Até R$ 20.000</option>
+                    <option value="de R$ 20.000 a R$ 40.000">de R$ 20.000 a R$ 40.000</option>
+                    <option value="de R$ 41.000 a R$ 60.000">de R$ 41.000 a R$ 60.000</option>
+                    <option value="de R$ 61.000 a R$ 100.000">de R$ 61.000 a R$ 100.000</option>
+                    <option value="de R$ 100.000 a R$ 500.000">de R$ 100.000 a R$ 500.000</option>
+                    <option value="de R$ 500.000 a R$ 1.000.000">de R$ 500.000 a R$ 1.000.000</option>
+                    <option value="Mais de R$ 1.000.000 por mês">Mais de R$ 1.000.000 por mês</option>
+                </select>
               </div>
             </CardContent>
             <CardFooter>

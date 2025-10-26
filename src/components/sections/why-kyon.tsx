@@ -18,7 +18,7 @@ const benefits = [
 
 export default function WhyKyonSection() {
   return (
-    <section className="bg-background py-12 md:py-24 lg:py-32">
+    <section id="beneficios" className="bg-background py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="font-headline text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl text-glow-accent">
           Por que a Kyon?

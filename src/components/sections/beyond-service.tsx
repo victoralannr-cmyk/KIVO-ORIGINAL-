@@ -24,7 +24,7 @@ export default function BeyondServiceSection() {
                 Muito além do atendimento
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-muted-foreground md:text-xl">
-                Na Kyon, nossos agentes de IA não se limitam a responder clientes. Eles atuam como assistentes digitais completos, capazes de automatizar tarefas e organizar processos que antes tomavam horas da sua equipe.
+                Na Kivo, nossos agentes de IA não se limitam a responder clientes. Eles atuam como assistentes digitais completos, capazes de automatizar tarefas e organizar processos que antes tomavam horas da sua equipe.
             </p>
             <p className="mt-8 font-headline text-2xl font-bold tracking-tighter text-foreground sm:text-3xl">
                 O que eles também fazem:

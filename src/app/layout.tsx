@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster"
 import BackToTop from '@/components/common/back-to-top';
 
 export const metadata: Metadata = {
-  title: 'Kyon | Agentes de IA sob medida',
+  title: 'Kivo | Agentes de IA sob medida',
   description: 'Integrating Generative AI into your business.',
 };
 

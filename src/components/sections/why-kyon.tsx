@@ -21,10 +21,10 @@ export default function WhyKyonSection() {
     <section id="beneficios" className="bg-background py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="font-headline text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl text-glow-accent">
-          Por que a Kyon?
+          Por que a Kivo?
         </h2>
         <p className="mx-auto mt-4 max-w-3xl text-muted-foreground md:text-xl">
-          Na Kyon, criamos agentes de IA generativa sob medida, com infraestrutura segura e privativa, integração com +400 ferramentas e suporte contínuo para que seu atendimento evolua junto com o seu negócio.
+          Na Kivo, criamos agentes de IA generativa sob medida, com infraestrutura segura e privativa, integração com +400 ferramentas e suporte contínuo para que seu atendimento evolua junto com o seu negócio.
         </p>
         <div className="mt-12 grid gap-8 sm:grid-cols-1 md:grid-cols-3">
           {benefits.map((benefit, index) => (

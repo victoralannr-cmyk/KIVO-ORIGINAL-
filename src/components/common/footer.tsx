@@ -13,7 +13,7 @@ export default function Footer() {
             {logo && (
               <Image
                 src={logo.imageUrl}
-                alt="Kyon Logo"
+                alt="Kivo Logo"
                 width={150}
                 height={40}
                 className="h-10 w-auto"
@@ -24,7 +24,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 border-t border-border/20 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Kyon. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Kivo. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

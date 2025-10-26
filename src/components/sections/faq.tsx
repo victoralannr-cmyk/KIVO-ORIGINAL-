@@ -8,7 +8,7 @@ import {
 
 const faqs = [
     {
-        question: "O que é um agente de IA da Kyon?",
+        question: "O que é um agente de IA da Kivo?",
         answer: "Nossos agentes de IA são sistemas inteligentes capazes de automatizar todo ou parte do atendimento ao cliente, interagindo em múltiplos canais e integrando-se aos sistemas da sua empresa para oferecer respostas rápidas, personalizadas e precisas."
     },
     {

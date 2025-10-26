@@ -46,7 +46,7 @@ export default function Header() {
               {logo && (
                 <Image
                   src={logo.imageUrl}
-                  alt="Kyon Logo"
+                  alt="Kivo Logo"
                   width={150}
                   height={40}
                   className="h-10 w-auto"

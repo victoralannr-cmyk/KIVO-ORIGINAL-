@@ -9,7 +9,7 @@ export default function IntegrationsSection() {
           Integrações sem limites
         </h2>
         <p className="mx-auto mt-4 max-w-3xl text-muted-foreground md:text-xl">
-          Seus agentes de IA não trabalham sozinhos, eles se conectam a todas as ferramentas que sua empresa já usa. Com a Kyon, você tem integração completa entre canais de atendimento, sistemas internos e plataformas externas, criando um ecossistema fluido e inteligente.
+          Seus agentes de IA não trabalham sozinhos, eles se conectam a todas as ferramentas que sua empresa já usa. Com a Kivo, você tem integração completa entre canais de atendimento, sistemas internos e plataformas externas, criando um ecossistema fluido e inteligente.
         </p>
         <div className="mt-12 flex justify-center">
             <Image 

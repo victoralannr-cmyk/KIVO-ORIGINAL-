@@ -3,8 +3,13 @@ import Image from 'next/image';
 
 export default function WhatIsAgent() {
   return (
-    <section className="bg-card py-12 md:py-24 lg:py-32">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+    <section 
+      id="sobre" 
+      className="relative bg-card py-12 md:py-24 lg:py-32 bg-cover bg-center"
+      style={{backgroundImage: "url('https://i.postimg.cc/SxrgzLkK/17178a26ad764906f5ea3c8c44df5ac2.jpg')"}}
+    >
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
         <div className="relative h-[500px] md:h-[600px] flex items-center justify-center">
           <Image
             src="https://kyondigital.com/wp-content/uploads/2025/08/Background-celular-v2.png"
@@ -16,7 +21,7 @@ export default function WhatIsAgent() {
           <div className="absolute inset-0 flex flex-col justify-center items-center p-4 space-y-4">
              <div className="flex items-center gap-2 mb-4">
                 <Image src="https://i.postimg.cc/d0jZ0D95/Whats-App-Image-2025-10-23-at-20-08-15-removebg-preview-1.png" width={40} height={40} alt="Kivo Logo" className="rounded-full"/>
-                <p className="font-bold text-lg">Suporte Kivo 24H</p>
+                <p className="font-bold text-lg text-white">Suporte Kivo 24H</p>
              </div>
              <Image src="https://kyondigital.com/wp-content/uploads/2025/08/Mensagem-1.png" width={315} height={75} alt="Chat message 1" className="self-end animate-float" />
              <Image src="https://kyondigital.com/wp-content/uploads/2025/08/Mensagem-2.png" width={317} height={75} alt="Chat message 2" className="self-start animate-float animation-delay-1000" />

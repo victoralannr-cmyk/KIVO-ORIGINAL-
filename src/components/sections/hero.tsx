@@ -5,7 +5,6 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
 import {
   Carousel,
   CarouselContent,
@@ -35,21 +34,22 @@ export default function HeroSection() {
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
 
-        if (api) {
-            const interval = setInterval(() => {
-                if (api.canScrollNext()) {
-                    api.scrollNext();
-                } else {
-                    api.scrollTo(0);
-                }
-            }, 3000);
-            return () => {
-                window.removeEventListener('scroll', handleScroll);
-                clearInterval(interval);
-            };
+        if (!api) {
+          return;
         }
-
-        return () => window.removeEventListener('scroll', handleScroll);
+    
+        const interval = setInterval(() => {
+          if (api.canScrollNext()) {
+            api.scrollNext();
+          } else {
+            api.scrollTo(0);
+          }
+        }, 3000);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+          clearInterval(interval);
+        };
     }, [api]);
 
     const getParallaxStyle = (factor: number) => ({
@@ -89,7 +89,7 @@ export default function HeroSection() {
                     </div>
                     <Carousel setApi={setApi} className="w-full" opts={{loop: true, align: 'start'}}>
                         <CarouselContent>
-                            {logos.concat(logos).map((item, index) => { // Duplicate logos for seamless loop
+                            {logos.concat(logos).map((item, index) => {
                                const logo = PlaceHolderImages.find(p => p.id === item.logoId);
                                return (
                                 <CarouselItem key={index} className="basis-1/3 md:basis-1/5 lg:basis-1/7">

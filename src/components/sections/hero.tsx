@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -24,8 +23,12 @@ export default function HeroSection() {
     });
 
     return (
-        <section id="home" className="relative w-full h-screen min-h-[800px] flex items-center justify-center overflow-hidden animated-gradient">
-            <div className="absolute inset-0 bg-background/60" />
+        <section 
+            id="home" 
+            className="relative w-full h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-cover bg-center"
+            style={{backgroundImage: "url('https://i.postimg.cc/4xShMn1D/01d24abda1b3a344dfe48ac9c25194c5.jpg')"}}
+        >
+            <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
             
             <div className="container relative z-10 px-4 md:px-6 text-center">
                 <h1 className="font-headline text-4xl font-bold tracking-tighter text-foreground sm:text-5xl md:text-6xl lg:text-7xl text-glow-primary">

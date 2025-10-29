@@ -1,0 +1,152 @@
+/* --- FONTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@700&display=swap');
+
+/* --- VARIÁVEIS DE COR --- */
+:root {
+  --background-dark: #1a1a2e;
+  --background-light: #f0f2f5;
+  --text-dark: #e0e0e0;
+  --text-light: #1c1e21;
+  --primary-color: #8A2BE2; /* Roxo Elétrico */
+  --secondary-color: #4B0082; /* Indigo */
+  --accent-color: #00BFFF; /* DeepSkyBlue */
+  --card-background-dark: rgba(23, 23, 39, 0.5);
+  --card-background-light: rgba(255, 255, 255, 0.8);
+  --border-color-dark: rgba(138, 43, 226, 0.3);
+  --border-color-light: rgba(204, 204, 204, 0.5);
+  --shadow-color: rgba(138, 43, 226, 0.5);
+}
+
+/* --- ESTILOS GERAIS --- */
+body {
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+.dark-mode {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+.light-mode {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+/* --- ANIMAÇÕES --- */
+.animated-gradient {
+    background: linear-gradient(-45deg, #1a1a2e, #16224c, #4b0082, #1a1a2e);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- CABEÇALHO E RODAPÉ --- */
+header, footer {
+  padding: 1rem 2rem;
+  background-color: transparent;
+}
+
+/* --- SEÇÕES --- */
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- COMPONENTES --- */
+.card {
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.dark-mode .card {
+    background-color: var(--card-background-dark);
+    border-color: var(--border-color-dark);
+}
+
+.light-mode .card {
+    background-color: var(--card-background-light);
+    border-color: var(--border-color-light);
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 0 15px var(--shadow-color);
+}
+
+/* --- DEPOIMENTOS --- */
+.testimonials-section {
+    position: relative;
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonial-card img.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid var(--primary-color);
+}
+
+.testimonial-card .quote {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial-card .name {
+    font-weight: bold;
+}
+
+.testimonial-card .role {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.testimonial-card .client-logo {
+    max-height: 25px;
+    margin-top: 10px;
+    filter: grayscale(1);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover .client-logo {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.stars {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}

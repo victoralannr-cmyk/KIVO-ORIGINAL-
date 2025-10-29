@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useEffect } from 'react';
@@ -59,8 +58,13 @@ export default function HowItWorksSection() {
   }, [api]);
 
   return (
-    <section id="como-funciona" className="bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section 
+      id="como-funciona" 
+      className="relative bg-background py-12 md:py-24 lg:py-32 bg-cover bg-center"
+      style={{backgroundImage: "url('https://i.postimg.cc/BbTTfsv5/5f641b8a47622f548953b25741593e24.jpg')"}}
+    >
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl text-glow-primary">
             O que ele é capaz de fazer
@@ -74,7 +78,7 @@ export default function HowItWorksSection() {
             {capabilities.map((capability, index) => (
               <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                 <div className="p-1 h-full">
-                  <Card className="flex flex-col items-center text-center p-6 bg-card border border-border/20 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 h-full">
+                  <Card className="flex flex-col items-center text-center p-6 bg-card/80 backdrop-blur-sm border border-border/20 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 h-full">
                     <CardHeader className="p-0">
                       <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
                         {capability.icon}

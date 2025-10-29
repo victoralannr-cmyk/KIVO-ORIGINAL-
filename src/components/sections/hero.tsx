@@ -1,13 +1,32 @@
+
 'use client';
 
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from '@/components/ui/carousel';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+
+const logos = [
+  { logoId: 'client-logo-1' },
+  { logoId: 'client-logo-2' },
+  { logoId: 'client-logo-3' },
+  { logoId: 'client-logo-4' },
+  { logoId: 'client-logo-5' },
+  { logoId: 'client-logo-6' },
+  { logoId: 'client-logo-7' },
+];
 
 export default function HeroSection() {
     const [offsetY, setOffsetY] = useState(0);
+    const [api, setApi] = React.useState<CarouselApi>();
 
     const handleScroll = () => {
         setOffsetY(window.pageYOffset);
@@ -15,8 +34,23 @@ export default function HeroSection() {
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
+
+        if (api) {
+            const interval = setInterval(() => {
+                if (api.canScrollNext()) {
+                    api.scrollNext();
+                } else {
+                    api.scrollTo(0);
+                }
+            }, 3000);
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+                clearInterval(interval);
+            };
+        }
+
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [api]);
 
     const getParallaxStyle = (factor: number) => ({
         transform: `translateY(${offsetY * factor}px)`,
@@ -25,12 +59,12 @@ export default function HeroSection() {
     return (
         <section 
             id="home" 
-            className="relative w-full h-screen min-h-[800px] flex items-center justify-center overflow-hidden bg-cover bg-center"
+            className="relative w-full h-screen min-h-[900px] md:min-h-[800px] flex flex-col justify-center overflow-hidden bg-cover bg-center"
             style={{backgroundImage: "url('https://i.postimg.cc/4xShMn1D/01d24abda1b3a344dfe48ac9c25194c5.jpg')"}}
         >
             <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
             
-            <div className="container relative z-10 px-4 md:px-6 text-center">
+            <div className="container relative z-10 px-4 md:px-6 text-center mt-auto">
                 <h1 className="font-headline text-4xl font-bold tracking-tighter text-foreground sm:text-5xl md:text-6xl lg:text-7xl text-glow-primary">
                     Coloque um Agente de IA para trabalhar na sua empresa
                 </h1>
@@ -43,6 +77,39 @@ export default function HeroSection() {
                             Agendar uma demonstração
                         </Link>
                     </Button>
+                </div>
+            </div>
+
+            <div className="relative z-10 w-full mt-auto mb-8 md:mb-12">
+                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center">
+                        <h2 className="font-headline text-2xl font-bold tracking-tighter text-foreground sm:text-3xl text-glow-primary mb-8">
+                            Apoiada por grandes empresas
+                        </h2>
+                    </div>
+                    <Carousel setApi={setApi} className="w-full" opts={{loop: true, align: 'start'}}>
+                        <CarouselContent>
+                            {logos.concat(logos).map((item, index) => { // Duplicate logos for seamless loop
+                               const logo = PlaceHolderImages.find(p => p.id === item.logoId);
+                               return (
+                                <CarouselItem key={index} className="basis-1/3 md:basis-1/5 lg:basis-1/7">
+                                  <div className="p-4 flex justify-center items-center h-full">
+                                     {logo && (
+                                         <Image
+                                           src={logo.imageUrl}
+                                           alt={logo.description}
+                                           width={140}
+                                           height={50}
+                                           className="h-10 w-auto object-contain grayscale opacity-60"
+                                           data-ai-hint={logo.imageHint}
+                                         />
+                                       )}
+                                  </div>
+                                </CarouselItem>
+                              );
+                            })}
+                        </CarouselContent>
+                    </Carousel>
                 </div>
             </div>
 

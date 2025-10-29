@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
@@ -14,9 +13,9 @@ export default function Footer() {
               <Image
                 src={logo.imageUrl}
                 alt="Kivo Logo"
-                width={150}
-                height={40}
-                className="h-10 w-auto"
+                width={200}
+                height={50}
+                className="h-12 w-auto"
               />
             )}
           </div>

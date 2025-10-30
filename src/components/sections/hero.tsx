@@ -47,7 +47,7 @@ export default function HeroSection() {
     return (
         <section 
             id="home" 
-            className="relative w-full h-screen min-h-[900px] md:min-h-[800px] flex flex-col justify-center items-center text-center overflow-hidden"
+            className="relative w-full h-screen min-h-[1000px] md:min-h-[900px] flex flex-col justify-center items-center text-center overflow-hidden"
             style={{backgroundImage: "url('https://i.postimg.cc/KcR5HCL0/a40fbc6f-7725-4026-8835-ab6a63e5441c.jpg')", backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}
         >
             <div className="absolute inset-0" />

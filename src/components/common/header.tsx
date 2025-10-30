@@ -59,7 +59,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="font-medium text-foreground transition-colors hover:text-primary"
+                className="font-medium text-black transition-colors hover:text-primary"
               >
                 {item.name}
               </Link>
@@ -86,7 +86,7 @@ export default function Header() {
                key={item.name}
                href={item.href}
                onClick={() => setIsMenuOpen(false)}
-               className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-muted"
+               className="block px-3 py-2 rounded-md text-base font-medium text-black hover:text-primary hover:bg-muted"
              >
                {item.name}
              </Link>

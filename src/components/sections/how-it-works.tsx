@@ -61,7 +61,7 @@ export default function HowItWorksSection() {
     <section 
       id="como-funciona" 
       className="relative bg-background py-12 md:py-24 lg:py-32 bg-cover bg-center"
-      style={{backgroundImage: "url('https://i.postimg.cc/BbTTfsv5/5f641b8a47622f548953b25741593e24.jpg')"}}
+      style={{backgroundImage: "url('https://i.postimg.cc/rpsT480S/6167b44b090043d5151bacce172725d9.jpg')"}}
     >
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">

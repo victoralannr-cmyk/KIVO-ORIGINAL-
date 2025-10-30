@@ -27,8 +27,12 @@ const autopilotItems = [
 
 export default function AutopilotSection() {
   return (
-    <section className="py-12 md:py-24 lg:py-32 bg-card">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section 
+      className="relative py-12 md:py-24 lg:py-32 bg-card bg-cover bg-center"
+      style={{backgroundImage: "url('https://i.postimg.cc/rpsT480S/6167b44b090043d5151bacce172725d9.jpg')"}}
+    >
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl text-glow-primary">
             Seu atendimento, vendas e suporte no piloto automático
@@ -39,7 +43,7 @@ export default function AutopilotSection() {
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {autopilotItems.map((item, index) => (
-            <Card key={index} className="overflow-hidden bg-background border-border/20 shadow-lg group">
+            <Card key={index} className="overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group">
               <div className="relative h-48 w-full">
                 {item.video ? (
                   <video

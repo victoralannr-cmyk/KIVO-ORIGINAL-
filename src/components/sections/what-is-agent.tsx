@@ -8,7 +8,7 @@ export default function WhatIsAgent() {
       className="relative bg-card py-12 md:py-24 lg:py-32 bg-cover bg-center"
       style={{backgroundImage: "url('https://i.postimg.cc/SxrgzLkK/17178a26ad764906f5ea3c8c44df5ac2.jpg')"}}
     >
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
         <div className="relative h-[500px] md:h-[600px] flex items-center justify-center">
           <Image

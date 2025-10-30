@@ -63,14 +63,11 @@ export default function HeroSection() {
         >
             <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
             
-            <div className="container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full">
+            <div className="container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center">
                 <div className="flex-grow flex flex-col justify-center items-center">
                     <h1 className="font-headline text-4xl font-bold tracking-tighter text-foreground sm:text-5xl md:text-6xl lg:text-7xl text-glow-primary">
                         Coloque um Agente de IA para trabalhar na sua empresa
                     </h1>
-                    <p className="mx-auto mt-6 max-w-[700px] text-muted-foreground md:text-xl">
-                        Visão estratégica. Execução completa. <span className="text-glow-accent">Resultado real.</span>
-                    </p>
                     <div className="mt-8">
                         <Button asChild size="lg" className="group transition-all duration-300 ease-in-out hover:glow-shadow-accent bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-8 py-4 text-lg">
                             <Link href="#agendar">

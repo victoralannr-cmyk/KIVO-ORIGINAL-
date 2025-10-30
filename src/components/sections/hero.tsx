@@ -50,7 +50,7 @@ export default function HeroSection() {
             className="relative w-full h-screen min-h-[900px] md:min-h-[800px] flex flex-col justify-center items-center text-center overflow-hidden"
             style={{backgroundImage: "url('https://i.postimg.cc/KcR5HCL0/a40fbc6f-7725-4026-8835-ab6a63e5441c.jpg')", backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}
         >
-            <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
+            <div className="absolute inset-0 bg-background/60" />
             
             <div className="container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center">
                 <div className="flex-grow flex flex-col justify-center items-center">

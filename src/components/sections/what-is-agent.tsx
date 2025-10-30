@@ -27,7 +27,7 @@ export default function WhatIsAgent() {
         </div>
         <div className="space-y-4">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl text-glow-accent">
-            O que é um Agente de IA da Kivo?
+            SUPORTE KIVO 24H
           </h2>
           <p className="text-muted-foreground md:text-lg">
             Ele é um atendente digital inteligente que entende mensagens, busca informações em tempo real, toma decisões e executa tarefas de ponta a ponta, tudo de forma autônoma e personalizada.

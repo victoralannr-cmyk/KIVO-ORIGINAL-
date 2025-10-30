@@ -68,9 +68,7 @@ export default function HeroSection() {
                 </div>
 
                 <div className="w-full pb-8 md:pb-12">
-                <h2 className="font-headline text-2xl font-bold tracking-tighter text-foreground sm:text-3xl text-glow-primary mb-8">
-                    Apoiada por grandes empresas
-                </h2>
+                
                 </div>
             </div>
         </section>

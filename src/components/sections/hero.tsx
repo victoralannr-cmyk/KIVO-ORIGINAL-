@@ -69,7 +69,7 @@ export default function HeroSection() {
                     Coloque um Agente de IA para trabalhar na sua empresa
                 </h1>
                 <p className="mx-auto mt-6 max-w-[700px] text-muted-foreground md:text-xl">
-                    Treinamos e implementamos um agente de IA generativa que fala com seus clientes, automatiza processos, responde dúvidas, resolve problemas e integra com todos os seus sistemas como se fosse você.
+                    Visão estratégica. Execução completa. Resultado real.
                 </p>
                 <div className="mt-8">
                     <Button asChild size="lg" className="group transition-all duration-300 ease-in-out hover:glow-shadow-accent bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-8 py-4 text-lg">

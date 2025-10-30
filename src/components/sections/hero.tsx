@@ -1,7 +1,6 @@
 'use client';
 
-import 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
@@ -55,7 +54,7 @@ export default function HeroSection() {
             
             <div className="container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center">
                 <div className="flex-grow flex flex-col justify-center items-center">
-                    <h1 className="font-headline text-4xl font-bold tracking-tighter text-foreground sm:text-5xl md:text-6xl lg:text-7xl text-glow-primary text-center">
+                    <h1 className="font-headline text-4xl font-bold tracking-tighter text-black sm:text-5xl md:text-6xl lg:text-7xl text-glow-primary text-center">
 						<span>
 							Visão estratégica. Execução completa. <span className="text-glow-accent">Resultado real.</span>						</span>
 					</h1>

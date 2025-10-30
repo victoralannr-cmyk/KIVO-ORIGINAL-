@@ -50,7 +50,7 @@ export default function HeroSection() {
             className="relative w-full h-screen min-h-[900px] md:min-h-[800px] flex flex-col justify-center items-center text-center overflow-hidden"
             style={{backgroundImage: "url('https://i.postimg.cc/KcR5HCL0/a40fbc6f-7725-4026-8835-ab6a63e5441c.jpg')", backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}
         >
-            <div className="absolute inset-0 bg-background/60" />
+            <div className="absolute inset-0" />
             
             <div className="container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center">
                 <div className="flex-grow flex flex-col justify-center items-center">
@@ -71,29 +71,6 @@ export default function HeroSection() {
                 <h2 className="font-headline text-2xl font-bold tracking-tighter text-foreground sm:text-3xl text-glow-primary mb-8">
                     Apoiada por grandes empresas
                 </h2>
-                <Carousel setApi={setApi} className="w-full" opts={{loop: true, align: 'start'}}>
-                    <CarouselContent>
-                        {logos.concat(logos).map((item, index) => {
-                           const logo = PlaceHolderImages.find(p => p.id === item.logoId);
-                           return (
-                            <CarouselItem key={index} className="basis-1/3 md:basis-1/5 lg:basis-1/7">
-                              <div className="p-4 flex justify-center items-center h-full">
-                                 {logo && (
-                                     <Image
-                                       src={logo.imageUrl}
-                                       alt={logo.description}
-                                       width={140}
-                                       height={50}
-                                       className="h-10 w-auto object-contain grayscale opacity-60"
-                                       data-ai-hint={logo.imageHint}
-                                     />
-                                   )}
-                              </div>
-                            </CarouselItem>
-                          );
-                        })}
-                    </CarouselContent>
-                </Carousel>
                 </div>
             </div>
         </section>

@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useEffect, useState } from 'react';
@@ -69,7 +68,7 @@ export default function HeroSection() {
                     Coloque um Agente de IA para trabalhar na sua empresa
                 </h1>
                 <p className="mx-auto mt-6 max-w-[700px] text-muted-foreground md:text-xl">
-                    Visão estratégica. Execução completa. Resultado real.
+                    Visão estratégica. Execução completa. <span className="text-glow-accent">Resultado real.</span>
                 </p>
                 <div className="mt-8">
                     <Button asChild size="lg" className="group transition-all duration-300 ease-in-out hover:glow-shadow-accent bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-8 py-4 text-lg">

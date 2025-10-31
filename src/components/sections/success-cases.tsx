@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useEffect } from 'react';
@@ -41,12 +40,12 @@ export default function SuccessCasesSection() {
   return (
     <section 
       id="sucesso" 
-      className="relative bg-background py-12 md:py-24 bg-cover bg-center"
+      className="relative bg-background py-12 md:py-24"
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://i.postimg.cc/L870DR7z/2eabaf401c2ddba7019c97f98712c0c2.jpg')",
+          backgroundImage: "url('https://i.postimg.cc/8CBFmdPR/Chat-GPT-Image-31-de-out-de-2025-11-38-36.png')",
           transform: 'scaleY(-1)',
         }}
       />

@@ -45,7 +45,7 @@ export default function SuccessCasesSection() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://i.postimg.cc/8CBFmdPR/Chat-GPT-Image-31-de-out-de-2025-11-38-36.png')",
+          backgroundImage: "url('https://i.postimg.cc/L870DR7z/2eabaf401c2ddba7019c97f98712c0c2.jpg')",
           transform: 'scaleY(-1)',
         }}
       />

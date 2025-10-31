@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useEffect } from 'react';
@@ -42,8 +41,14 @@ export default function SuccessCasesSection() {
     <section 
       id="sucesso" 
       className="relative bg-background py-12 md:py-24 bg-cover bg-center"
-      style={{backgroundImage: "url('https://i.postimg.cc/RF91td98/c17711a33270d24df3432abb31459612.jpg')"}}
     >
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: "url('https://i.postimg.cc/RF91td98/c17711a33270d24df3432abb31459612.jpg')",
+          transform: 'scaleY(-1)',
+        }}
+      />
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl text-glow-primary">

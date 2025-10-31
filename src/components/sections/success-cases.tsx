@@ -39,8 +39,13 @@ export default function SuccessCasesSection() {
     }, [api]);
 
   return (
-    <section id="sucesso" className="bg-background py-12 md:py-24">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section 
+      id="sucesso" 
+      className="relative bg-background py-12 md:py-24 bg-cover bg-center"
+      style={{backgroundImage: "url('https://i.postimg.cc/pXNWJ63T/fbe6b4d79a7b423121350dd74ebbb91d.jpg')"}}
+    >
+      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl text-glow-primary">
             Apoiada por grandes empresas

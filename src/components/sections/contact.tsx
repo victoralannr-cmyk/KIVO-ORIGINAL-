@@ -6,10 +6,8 @@ import { useEffect } from 'react';
 import { submitContactForm, type ContactFormState } from '@/app/actions';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
 import { Loader2 } from 'lucide-react';
 import Image from 'next/image';
 
@@ -55,8 +53,13 @@ export default function ContactSection() {
   }, [state, toast]);
 
   return (
-    <section id="agendar" className="bg-background py-12 md:py-24">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+    <section 
+      id="agendar" 
+      className="relative bg-background py-12 md:py-24 bg-cover bg-center"
+      style={{backgroundImage: "url('https://i.postimg.cc/7LG5s2PN/5b381d2b-5564-4f8b-8cd6-c44d14e6a02f.png')"}}
+    >
+      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-4">
             <h2 className="font-headline text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl text-glow-primary">
                 Preencha com seus dados para começar
@@ -76,7 +79,7 @@ export default function ContactSection() {
             </div>
         </div>
 
-        <Card className="w-full max-w-lg mx-auto bg-card border-border/20 shadow-lg">
+        <Card className="w-full max-w-lg mx-auto bg-card/80 backdrop-blur-sm border-border/20 shadow-lg">
           <form action={formAction}>
             <CardContent className="pt-6 space-y-4">
               <div className="space-y-2">

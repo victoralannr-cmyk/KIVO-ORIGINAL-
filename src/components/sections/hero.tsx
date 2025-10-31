@@ -50,13 +50,13 @@ export default function HeroSection() {
             className="relative w-full h-screen min-h-[1000px] md:min-h-[900px] flex flex-col justify-center items-center text-center overflow-hidden bg-cover bg-center"
             style={{backgroundImage: "url('https://i.postimg.cc/KcR5HCL0/a40fbc6f-7725-4026-8835-ab6a63e5441c.jpg')"}}
         >
-            <div className="absolute inset-0" />
+            <div className="absolute inset-0 bg-black/60" />
             
             <div className="container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center">
                 <div className="flex-grow flex flex-col justify-center items-center">
-                    <h1 className="font-headline text-4xl font-bold tracking-tighter text-black sm:text-5xl md:text-6xl lg:text-7xl text-glow-primary text-center">
+                    <h1 className="font-headline text-4xl font-bold tracking-tighter text-white sm:text-5xl md:text-6xl lg:text-7xl text-glow-primary text-center">
 						<span style={{fontFamily: "'Playfair Display', serif"}}>
-							Visão estratégica. Execução completa. <span className="text-glow-accent" style={{color: 'black'}}>Resultado real.</span>						</span>
+							Visão estratégica. Execução completa. <span className="text-glow-accent">Resultado real.</span>						</span>
 					</h1>
                     <div className="mt-8">
                         <Button asChild size="lg" className="group transition-all duration-300 ease-in-out hover:glow-shadow-accent bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-8 py-4 text-lg">

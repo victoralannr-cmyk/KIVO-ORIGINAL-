@@ -59,7 +59,7 @@ export default function HeroSection() {
 							Visão estratégica. Execução completa. <span className="text-glow-accent">Resultado real.</span>						</span>
 					</h1>
                     <div className="mt-8">
-                        <Button asChild size="lg" className="group transition-all duration-300 ease-in-out hover:glow-shadow-accent bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-8 py-4 text-lg">
+                        <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-8 py-4 text-lg">
                             <Link href="#agendar">
                                 Agendar uma demonstração
                             </Link>

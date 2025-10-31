@@ -98,6 +98,23 @@ body {
     animation: gradient-animation 15s ease infinite;
   }
 
+  .button-wavy-gradient {
+    background: linear-gradient(90deg, #0b0b64, #151515, #0b0b64);
+    background-size: 200% 100%;
+    animation: gradient-wave 5s linear infinite;
+    color: white;
+  }
+
+  @keyframes gradient-wave {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+
   @keyframes gradient-animation {
     0% {
       background-position: 0% 50%;

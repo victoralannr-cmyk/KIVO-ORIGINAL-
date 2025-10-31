@@ -42,7 +42,7 @@ export default function SuccessCasesSection() {
     <section 
       id="sucesso" 
       className="relative bg-background py-12 md:py-24 bg-cover bg-center"
-      style={{backgroundImage: "url('https://i.postimg.cc/Rhdgh8HG/2eabaf401c2ddba7019c97f98712c0c2.jpg')"}}
+      style={{backgroundImage: "url('https://i.postimg.cc/RF91td98/c17711a33270d24df3432abb31459612.jpg')"}}
     >
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">

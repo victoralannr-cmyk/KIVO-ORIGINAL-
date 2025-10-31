@@ -6,7 +6,7 @@ export default function WhatIsAgent() {
     <section 
       id="sobre" 
       className="relative bg-card py-12 md:py-24 lg:py-32 bg-cover bg-center"
-      style={{backgroundImage: "url('https://i.postimg.cc/rpsT480S/6167b44b090043d5151bacce172725d9.jpg')"}}
+      style={{backgroundImage: "url('https://i.postimg.cc/RF91td98/c17711a33270d24df3432abb31459612.jpg')"}}
     >
       <div className="absolute inset-0 bg-black/60"></div>
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">

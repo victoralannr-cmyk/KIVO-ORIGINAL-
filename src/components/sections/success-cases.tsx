@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useEffect } from 'react';
@@ -45,7 +46,7 @@ export default function SuccessCasesSection() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://i.postimg.cc/RF91td98/c17711a33270d24df3432abb31459612.jpg')",
+          backgroundImage: "url('https://i.postimg.cc/L870DR7z/2eabaf401c2ddba7019c97f98712c0c2.jpg')",
           transform: 'scaleY(-1)',
         }}
       />

@@ -48,7 +48,7 @@ export default function HeroSection() {
         <section 
             id="home" 
             className="relative w-full h-screen min-h-[1000px] md:min-h-[900px] flex flex-col justify-center items-center text-center overflow-hidden bg-cover bg-center"
-            style={{backgroundImage: "url('https://i.postimg.cc/KcR5HCL0/a40fbc6f-7725-4026-8835-ab6a63e5441c.jpg')"}}
+            style={{backgroundImage: "url('https://i.postimg.cc/RF91td98/c17711a33270d24df3432abb31459612.jpg')"}}
         >
             <div className="absolute inset-0 bg-black/60" />
             

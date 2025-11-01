@@ -106,7 +106,7 @@ body {
   }
 
    .text-wavy-gradient {
-    background: linear-gradient(90deg, #4169E1, #a3b0e3, #4169E1);
+    background: linear-gradient(90deg, #0b0b64, #151515, #0b0b64);
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;

@@ -55,8 +55,8 @@ export default function HeroSection() {
             <div className="container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center">
                 <div className="flex-grow flex flex-col justify-center items-center">
                     <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center">
-						<span style={{fontFamily: "'Playfair Display', serif"}} >
-							Visão estratégica. Execução completa. <span style={{color: '#4169E1'}}>Resultado real.</span>
+						<span style={{fontFamily: "'Playfair Display', serif"}} className='outline-none' >
+							Visão estratégica. Execução completa. <span className="text-wavy-gradient">Resultado real.</span>
 						</span>
 					</h1>
                     <div className="mt-8">

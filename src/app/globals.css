@@ -33,7 +33,7 @@ body {
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
+    --radius: 0.8rem;
     --sidebar-background: 227 30% 11%;
     --sidebar-foreground: 0 0% 100%;
     --sidebar-primary: 195 85% 58%;
@@ -103,6 +103,15 @@ body {
     background-size: 200% 100%;
     animation: gradient-wave 5s linear infinite;
     color: white;
+  }
+
+   .text-wavy-gradient {
+    background: linear-gradient(90deg, #4169E1, #a3b0e3, #4169E1);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-wave 5s linear infinite;
   }
 
   @keyframes gradient-wave {

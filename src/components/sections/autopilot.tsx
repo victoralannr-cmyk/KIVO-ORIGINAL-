@@ -1,3 +1,4 @@
+
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Image from 'next/image';
 
@@ -32,7 +33,7 @@ export default function AutopilotSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
-            <span style={{fontFamily: "'Playfair Display', serif"}}>Seu atendimento, vendas e suporte no piloto automático</span>
+            Seu atendimento, vendas e suporte no piloto automático
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl">
             Imagine ter um assistente inteligente, disponível o tempo todo, que:

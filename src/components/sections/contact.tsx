@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useFormState, useFormStatus } from 'react-dom';
@@ -59,7 +60,7 @@ export default function ContactSection() {
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-4">
             <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
-                <span style={{fontFamily: "'Playfair Display', serif"}}>Preencha com seus dados para começar</span>
+                Preencha com seus dados para começar
             </h2>
             <p className="text-muted-foreground md:text-lg">
                 Nosso time entrará em contato para fazer uma demonstração gratuita.

@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 
 const items = [
@@ -22,7 +23,7 @@ export default function BeyondServiceSection() {
     >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
-                <span style={{fontFamily: "'Playfair Display', serif"}}>Muito além do atendimento</span>
+                Muito além do atendimento
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-muted-foreground md:text-xl">
                 Na Kivo, nossos agentes de IA não se limitam a responder clientes. Eles atuam como assistentes digitais completos, capazes de automatizar tarefas e organizar processos que antes tomavam horas da sua equipe.

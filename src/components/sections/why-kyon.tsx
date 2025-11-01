@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 
 const benefits = [
@@ -23,7 +24,7 @@ export default function WhyKyonSection() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground">
-            <span style={{fontFamily: "'Playfair Display', serif"}}>Por que a Kivo?</span>
+            Por que a Kivo?
         </h2>
         <p className="mx-auto mt-4 max-w-3xl text-muted-foreground md:text-xl">
           Na Kivo, criamos agentes de IA generativa sob medida, com infraestrutura segura e privativa, integração com +400 ferramentas e suporte contínuo para que seu atendimento evolua junto com o seu negócio.

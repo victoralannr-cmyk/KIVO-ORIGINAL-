@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 
 export default function IntegrationsSection() {
@@ -7,7 +8,7 @@ export default function IntegrationsSection() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
-          <span style={{fontFamily: "'Playfair Display', serif"}}>Integrações sem limites</span>
+          Integrações sem limites
         </h2>
         <p className="mx-auto mt-4 max-w-3xl text-muted-foreground md:text-xl">
           Seus agentes de IA não trabalham sozinhos, eles se conectam a todas as ferramentas que sua empresa já usa. Com a Kivo, você tem integração completa entre canais de atendimento, sistemas internos e plataformas externas, criando um ecossistema fluido e inteligente.

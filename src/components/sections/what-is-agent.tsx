@@ -1,3 +1,4 @@
+
 'use client';
 import Image from 'next/image';
 
@@ -25,7 +26,7 @@ export default function WhatIsAgent() {
         </div>
         <div className="space-y-4">
           <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
-            <span style={{fontFamily: "'Playfair Display', serif"}}>SUPORTE KIVO 24H</span>
+            SUPORTE KIVO 24H
           </h2>
           <p className="text-muted-foreground md:text-lg">
             Ele é um atendente digital inteligente que entende mensagens, busca informações em tempo real, toma decisões e executa tarefas de ponta a ponta, tudo de forma autônoma e personalizada.

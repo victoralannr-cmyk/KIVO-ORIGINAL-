@@ -42,7 +42,7 @@ export default function AutopilotSection() {
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {autopilotItems.map((item, index) => (
-            <Card key={index} className="overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group">
+            <Card key={index} className="overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl">
               <div className="relative h-48 w-full">
                 {item.video ? (
                   <video

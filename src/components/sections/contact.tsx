@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useFormState, useFormStatus } from 'react-dom';
@@ -19,7 +18,7 @@ const initialState: ContactFormState = {
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" className="w-full" disabled={pending}>
+    <Button type="submit" className="w-full rounded-full" disabled={pending}>
       {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : 'Enviar'}
     </Button>
   );
@@ -79,28 +78,28 @@ export default function ContactSection() {
             </div>
         </div>
 
-        <Card className="w-full max-w-lg mx-auto bg-card/80 backdrop-blur-sm border-border/20 shadow-lg">
+        <Card className="w-full max-w-lg mx-auto bg-card/80 backdrop-blur-sm border-border/20 shadow-lg rounded-2xl">
           <form action={formAction}>
             <CardContent className="pt-6 space-y-4">
               <div className="space-y-2">
-                <Input id="name" name="name" placeholder="Seu nome" required className="bg-background"/>
+                <Input id="name" name="name" placeholder="Seu nome" required className="bg-background rounded-full"/>
                 {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name.join(', ')}</p>}
               </div>
               <div className="space-y-2">
-                <Input id="email" name="email" type="email" placeholder="Seu melhor e-mail" required className="bg-background"/>
+                <Input id="email" name="email" type="email" placeholder="Seu melhor e-mail" required className="bg-background rounded-full"/>
                  {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email.join(', ')}</p>}
               </div>
               <div className="space-y-2">
-                <Input id="whatsapp" name="whatsapp" placeholder="WhatsApp" required className="bg-background"/>
+                <Input id="whatsapp" name="whatsapp" placeholder="WhatsApp" required className="bg-background rounded-full"/>
               </div>
               <div className="space-y-2">
-                <Input id="company" name="company" placeholder="Qual é o nome da sua empresa?" required className="bg-background"/>
+                <Input id="company" name="company" placeholder="Qual é o nome da sua empresa?" required className="bg-background rounded-full"/>
               </div>
                <div className="space-y-2">
-                <Input id="segment" name="segment" placeholder="Qual o segmento da sua empresa?" required className="bg-background"/>
+                <Input id="segment" name="segment" placeholder="Qual o segmento da sua empresa?" required className="bg-background rounded-full"/>
               </div>
               <div className="space-y-2">
-                <select name="revenue" id="revenue" className="w-full h-10 rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-muted-foreground" required>
+                <select name="revenue" id="revenue" className="w-full h-10 rounded-full border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-muted-foreground" required>
                     <option value="" disabled selected>Qual é o seu faturamento mensal atual?</option>
                     <option value="Até R$ 20.000">Até R$ 20.000</option>
                     <option value="de R$ 20.000 a R$ 40.000">de R$ 20.000 a R$ 40.000</option>

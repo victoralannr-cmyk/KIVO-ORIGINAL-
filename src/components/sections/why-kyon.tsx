@@ -34,8 +34,8 @@ export default function WhyKyonSection() {
         <div className="mt-12 grid gap-8 sm:grid-cols-1 md:grid-cols-3">
           {benefits.map((benefit, index) => (
             <div key={index} className="flex flex-col items-center">
-              <div className="flex items-center justify-center h-40 w-40 rounded-full p-4">
-                <Image src={benefit.image} alt={benefit.description} width={160} height={150} className="object-contain" />
+              <div className="h-40 w-40 flex items-center justify-center">
+                <Image src={benefit.image} alt={benefit.description} width={150} height={150} className="object-contain" />
               </div>
               <p className="mt-4 text-muted-foreground text-lg max-w-xs"><span className="font-bold text-foreground">{benefit.description.split(' ')[0]}</span> {benefit.description.substring(benefit.description.indexOf(' ') + 1)}</p>
             </div>

@@ -15,20 +15,26 @@ import ContactSection from '@/components/sections/contact';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen overflow-x-hidden animated-gradient">
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
       <Header />
       <main className="flex-grow">
-        <HeroSection />
-        <SuccessCasesSection />
-        <WhatIsAgent />
-        <HowItWorksSection />
-        <AutopilotSection />
-        <WhyKyonSection />
-        <BeyondServiceSection />
-        <IntegrationsSection />
-        <FinalCtaSection />
-        <FaqSection />
-        <ContactSection />
+        <div className="animated-gradient">
+          <HeroSection />
+          <SuccessCasesSection />
+        </div>
+        <div className="sky-background">
+          <WhatIsAgent />
+          <HowItWorksSection />
+          <AutopilotSection />
+          <WhyKyonSection />
+          <BeyondServiceSection />
+          <IntegrationsSection />
+        </div>
+        <div className="animated-gradient">
+          <FinalCtaSection />
+          <FaqSection />
+          <ContactSection />
+        </div>
       </main>
       <Footer />
     </div>

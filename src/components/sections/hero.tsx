@@ -56,7 +56,7 @@ export default function HeroSection() {
                 <div className="flex-grow flex flex-col justify-center items-center">
                     <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center">
 						<span style={{fontFamily: "'Playfair Display', serif"}} className="button-wavy-gradient bg-clip-text text-transparent">
-							Visão estratégica. Execução completa. <span style={{color: '#0000CD'}}>Resultado real.</span>
+							Visão estratégica. Execução completa. <span style={{color: '#4169E1'}}>Resultado real.</span>
 						</span>
 					</h1>
                     <div className="mt-8">

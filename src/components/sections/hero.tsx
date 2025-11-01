@@ -47,7 +47,7 @@ export default function HeroSection() {
     return (
         <section 
             id="home" 
-            className="relative w-full h-screen min-h-[1000px] md:min-h-[900px] flex flex-col justify-center items-center text-center overflow-hidden bg-cover bg-center"
+            className="relative w-full h-screen min-h-[1000px] md:min-h-[900px] flex flex-col justify-center items-center text-center overflow-hidden bg-cover bg-center bg-fixed"
             style={{backgroundImage: "url('https://i.postimg.cc/PJxbpVhs/Chat-GPT-Image-31-de-out-de-2025-12-01-53.png')"}}
         >
             <div className="absolute inset-0 bg-black/60" />

@@ -1,13 +1,7 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  type CarouselApi,
-} from '@/components/ui/carousel';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const logos = [
@@ -20,23 +14,10 @@ const logos = [
   { logoId: 'client-logo-7' },
 ];
 
+// Duplicate logos for a seamless loop
+const extendedLogos = [...logos, ...logos];
+
 export default function SuccessCasesSection() {
-    const [api, setApi] = React.useState<CarouselApi>();
-
-    useEffect(() => {
-        if (!api) return;
-
-        const interval = setInterval(() => {
-            if (api.canScrollNext()) {
-                api.scrollNext();
-            } else {
-                api.scrollTo(0);
-            }
-        }, 3000); 
-
-        return () => clearInterval(interval);
-    }, [api]);
-
   return (
     <section 
       id="sucesso" 
@@ -55,13 +36,12 @@ export default function SuccessCasesSection() {
                 <span style={{fontFamily: "'Playfair Display', serif"}}>Apoiada por grandes empresas</span>
             </h2>
         </div>
-        <Carousel setApi={setApi} className="w-full mt-12" opts={{loop: true, align: 'start'}}>
-          <CarouselContent>
-            {logos.map((item, index) => {
+        <div className="w-full mt-12 overflow-x-hidden relative">
+          <div className="flex w-max marquee">
+            {extendedLogos.map((item, index) => {
                const logo = PlaceHolderImages.find(p => p.id === item.logoId);
                return (
-                <CarouselItem key={index} className="basis-1/3 md:basis-1/5 lg:basis-1/7">
-                  <div className="p-4 flex justify-center items-center h-full">
+                <div key={index} className="p-4 flex-shrink-0 flex justify-center items-center h-full mx-4">
                      {logo && (
                          <Image
                            src={logo.imageUrl}
@@ -73,11 +53,10 @@ export default function SuccessCasesSection() {
                          />
                        )}
                   </div>
-                </CarouselItem>
               );
             })}
-          </CarouselContent>
-        </Carousel>
+          </div>
+        </div>
       </div>
     </section>
   );

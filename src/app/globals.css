@@ -162,4 +162,12 @@ body {
   .text-glow-accent {
     text-shadow: 0 0 8px hsl(var(--accent) / 0.8);
   }
+
+  .marquee {
+    animation: marquee 40s linear infinite;
+  }
+
+  .marquee:hover {
+    animation-play-state: paused;
+  }
 }

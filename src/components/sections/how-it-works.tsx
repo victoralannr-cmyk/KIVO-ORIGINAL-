@@ -66,8 +66,8 @@ export default function HowItWorksSection() {
       <div className="absolute inset-0 bg-black/60"></div>
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
-            O que ele é capaz de fazer
+          <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground">
+            <span style={{fontFamily: "'Playfair Display', serif"}}>O que ele é capaz de fazer</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl">
             Nosso agente de IA é um assistente digital completo para sua empresa.
@@ -78,7 +78,7 @@ export default function HowItWorksSection() {
             {capabilities.map((capability, index) => (
               <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                 <div className="p-1 h-full">
-                  <Card className="flex flex-col items-center text-center p-6 bg-card/80 backdrop-blur-sm border border-border/20 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 h-full">
+                  <Card className="flex flex-col items-center text-center p-6 bg-card/60 backdrop-blur-sm border border-border/20 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 h-full">
                     <CardHeader className="p-0">
                       <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
                         {capability.icon}

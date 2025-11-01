@@ -27,14 +27,12 @@ const autopilotItems = [
 export default function AutopilotSection() {
   return (
     <section 
-      className="relative py-12 md:py-24 lg:py-32 bg-card bg-cover bg-center"
-      style={{backgroundImage: "url('https://i.postimg.cc/RhnJfkW2/6167b44b090043d5151bacce172725d9-1.jpg')"}}
+      className="sky-background"
     >
-      <div className="absolute inset-0 bg-black/60"></div>
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
-            Seu atendimento, vendas e suporte no piloto automático
+            <span style={{fontFamily: "'Playfair Display', serif"}}>Seu atendimento, vendas e suporte no piloto automático</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl">
             Imagine ter um assistente inteligente, disponível o tempo todo, que:

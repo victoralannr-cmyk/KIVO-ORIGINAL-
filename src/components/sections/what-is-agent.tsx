@@ -5,10 +5,8 @@ export default function WhatIsAgent() {
   return (
     <section 
       id="sobre" 
-      className="relative bg-card py-12 md:py-24 lg:py-32 bg-cover bg-center"
-      style={{backgroundImage: "url('https://i.postimg.cc/8CBFmdPR/Chat-GPT-Image-31-de-out-de-2025-11-38-36.png')"}}
+      className="sky-background"
     >
-      <div className="absolute inset-0 bg-black/60"></div>
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
         <div className="relative h-[500px] md:h-[600px] flex items-center justify-center">
           <Image
@@ -27,7 +25,7 @@ export default function WhatIsAgent() {
         </div>
         <div className="space-y-4">
           <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
-            SUPORTE KIVO 24H
+            <span style={{fontFamily: "'Playfair Display', serif"}}>SUPORTE KIVO 24H</span>
           </h2>
           <p className="text-muted-foreground md:text-lg">
             Ele é um atendente digital inteligente que entende mensagens, busca informações em tempo real, toma decisões e executa tarefas de ponta a ponta, tudo de forma autônoma e personalizada.

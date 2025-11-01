@@ -37,7 +37,7 @@ export default function SuccessCasesSection() {
             </h2>
         </div>
         <div className="w-full mt-12 overflow-x-hidden relative">
-          <div className="flex w-max marquee">
+          <div className="flex w-max animate-marquee">
             {extendedLogos.map((item, index) => {
                const logo = PlaceHolderImages.find(p => p.id === item.logoId);
                return (

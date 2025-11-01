@@ -108,7 +108,7 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'gradient': 'gradient-animation 15s ease infinite',
         'float': 'float 6s ease-in-out infinite',
-        marquee: 'marquee 40s linear infinite',
+        'marquee': 'marquee 40s linear infinite',
       },
     },
   },

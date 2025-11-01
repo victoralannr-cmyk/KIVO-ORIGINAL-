@@ -30,9 +30,9 @@ export default function Home() {
           <BeyondServiceSection />
           <IntegrationsSection />
           <FinalCtaSection />
+          <FaqSection />
         </div>
         <div className="animated-gradient">
-          <FaqSection />
           <ContactSection />
         </div>
       </main>

@@ -32,14 +32,12 @@ export default function FaqSection() {
   return (
     <section 
       id="faq" 
-      className="relative bg-background py-12 md:py-24 lg:py-32 bg-cover bg-center"
-      style={{backgroundImage: "url('https://i.postimg.cc/RhnJfkW2/6167b44b090043d5151bacce172725d9-1.jpg')"}}
+      className="relative bg-transparent py-12 md:py-24 lg:py-32"
     >
-      <div className="absolute inset-0 bg-black/60"></div>
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
-            Perguntas Frequentes
+            <span style={{fontFamily: "'Playfair Display', serif"}}>Perguntas Frequentes</span>
           </h2>
         </div>
         <div className="mt-12 max-w-3xl mx-auto">

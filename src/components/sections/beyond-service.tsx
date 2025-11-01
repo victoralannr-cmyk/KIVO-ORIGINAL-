@@ -18,7 +18,7 @@ const items = [
 export default function BeyondServiceSection() {
   return (
     <section 
-      className="sky-background"
+      className="bg-transparent py-12 md:py-24 lg:py-32"
     >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground">

@@ -5,7 +5,7 @@ export default function WhatIsAgent() {
   return (
     <section 
       id="sobre" 
-      className="sky-background"
+      className="bg-transparent py-12 md:py-24 lg:py-32"
     >
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
         <div className="relative h-[500px] md:h-[600px] flex items-center justify-center">

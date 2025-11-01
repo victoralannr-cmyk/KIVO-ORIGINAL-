@@ -21,18 +21,11 @@ export default function SuccessCasesSection() {
   return (
     <section 
       id="sucesso" 
-      className="relative bg-background py-12 md:py-24"
+      className="relative bg-transparent py-12 md:py-24"
     >
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('https://i.postimg.cc/L870DR7z/2eabaf401c2ddba7019c97f98712c0c2.jpg')",
-          transform: 'scaleY(-1)',
-        }}
-      />
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-            <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground">
+            <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
                 <span style={{fontFamily: "'Playfair Display', serif"}}>Apoiada por grandes empresas</span>
             </h2>
         </div>

@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Footer() {
   const logo = PlaceHolderImages.find(img => img.id === 'aetherai-logo');
   return (
-    <footer className="bg-background border-t border-border/20">
+    <footer className="bg-transparent border-t border-border/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-2">

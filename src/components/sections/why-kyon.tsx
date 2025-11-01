@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const benefits = [
   {
-    image: 'https://i.postimg.cc/50fW93bF/01.webp',
+    image: 'https://i.postimg.cc/zv30HqYJ/01.png',
     description: '70% de redução no tempo médio de resposta no WhatsApp.',
   },
   {
@@ -19,7 +19,7 @@ export default function WhyKyonSection() {
   return (
     <section 
       id="beneficios" 
-      className="sky-background"
+      className="bg-transparent py-12 md:py-24 lg:py-32"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground">

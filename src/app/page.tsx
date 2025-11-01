@@ -29,9 +29,9 @@ export default function Home() {
           <WhyKyonSection />
           <BeyondServiceSection />
           <IntegrationsSection />
+          <FinalCtaSection />
         </div>
         <div className="animated-gradient">
-          <FinalCtaSection />
           <FaqSection />
           <ContactSection />
         </div>

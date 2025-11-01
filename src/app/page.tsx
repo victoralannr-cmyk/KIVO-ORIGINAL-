@@ -20,9 +20,9 @@ export default function Home() {
       <main className="flex-grow">
         <div className="animated-gradient">
           <HeroSection />
-          <SuccessCasesSection />
         </div>
         <div className="sky-background">
+          <SuccessCasesSection />
           <WhatIsAgent />
           <HowItWorksSection />
           <AutopilotSection />

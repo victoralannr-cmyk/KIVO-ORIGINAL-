@@ -24,15 +24,15 @@ export default function WhyKyonSection() {
     >
       <div className="absolute inset-0 bg-black/60"></div>
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
-          Por que a Kivo?
+        <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground">
+            <span style={{fontFamily: "'Playfair Display', serif"}}>Por que a Kivo?</span>
         </h2>
         <p className="mx-auto mt-4 max-w-3xl text-muted-foreground md:text-xl">
           Na Kivo, criamos agentes de IA generativa sob medida, com infraestrutura segura e privativa, integração com +400 ferramentas e suporte contínuo para que seu atendimento evolua junto com o seu negócio.
         </p>
         <div className="mt-12 grid gap-8 sm:grid-cols-1 md:grid-cols-3">
           {benefits.map((benefit, index) => (
-            <div key={index} className="flex flex-col items-center">
+            <div key={index} className="flex flex-col items-center p-6 rounded-lg bg-card/60 backdrop-blur-sm border border-border/20">
               <Image src={benefit.image} alt={benefit.description} width={150} height={150} className="object-contain" />
               <p className="mt-4 text-muted-foreground text-lg max-w-xs"><span className="font-bold text-foreground">{benefit.description.split(' ')[0]}</span> {benefit.description.substring(benefit.description.indexOf(' ') + 1)}</p>
             </div>

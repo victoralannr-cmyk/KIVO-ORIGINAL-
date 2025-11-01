@@ -29,6 +29,15 @@ export default function WhyKyonSection() {
         <p className="mx-auto mt-4 max-w-3xl text-muted-foreground md:text-xl">
           Na Kivo, criamos agentes de IA generativa sob medida, com infraestrutura segura e privativa, integração com +400 ferramentas e suporte contínuo para que seu atendimento evolua junto com o seu negócio.
         </p>
+        <div className="mt-12 flex justify-center">
+            <Image 
+                src="https://i.postimg.cc/sxpk8FvC/Chat-GPT-Image-1-de-nov-de-2025-20-51-41-removebg-preview.png"
+                alt="Imagem de exemplo de agente de IA"
+                width={800}
+                height={450}
+                className="max-w-full h-auto rounded-lg"
+            />
+        </div>
         <div className="mt-12 grid gap-8 sm:grid-cols-1 md:grid-cols-3">
           {benefits.map((benefit, index) => (
             <div key={index} className="flex flex-col items-center p-6 rounded-lg bg-card/60 backdrop-blur-sm border border-border/20">

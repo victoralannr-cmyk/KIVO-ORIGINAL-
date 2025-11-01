@@ -31,8 +31,6 @@ export default function Home() {
           <IntegrationsSection />
           <FinalCtaSection />
           <FaqSection />
-        </div>
-        <div className="animated-gradient">
           <ContactSection />
         </div>
       </main>

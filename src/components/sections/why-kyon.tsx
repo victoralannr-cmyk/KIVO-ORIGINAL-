@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const benefits = [
   {
-    image: 'https://kyondigital.com/wp-content/uploads/2025/08/01.png',
+    image: 'https://i.postimg.cc/50fW93bF/01.webp',
     description: '70% de redução no tempo médio de resposta no WhatsApp.',
   },
   {

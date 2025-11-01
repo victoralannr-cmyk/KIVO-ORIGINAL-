@@ -1,4 +1,3 @@
-
 import {
   Accordion,
   AccordionContent,
@@ -39,7 +38,7 @@ export default function FaqSection() {
       <div className="absolute inset-0 bg-black/60"></div>
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="font-headline text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl text-glow-accent">
+          <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
             Perguntas Frequentes
           </h2>
         </div>

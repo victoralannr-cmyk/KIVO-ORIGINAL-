@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 
 const benefits = [
@@ -25,7 +24,7 @@ export default function WhyKyonSection() {
     >
       <div className="absolute inset-0 bg-black/60"></div>
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="font-headline text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl text-glow-accent">
+        <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
           Por que a Kivo?
         </h2>
         <p className="mx-auto mt-4 max-w-3xl text-muted-foreground md:text-xl">
@@ -34,9 +33,7 @@ export default function WhyKyonSection() {
         <div className="mt-12 grid gap-8 sm:grid-cols-1 md:grid-cols-3">
           {benefits.map((benefit, index) => (
             <div key={index} className="flex flex-col items-center">
-              <div className="h-40 w-40 flex items-center justify-center">
-                <Image src={benefit.image} alt={benefit.description} width={150} height={150} className="object-contain" />
-              </div>
+              <Image src={benefit.image} alt={benefit.description} width={150} height={150} className="object-contain" />
               <p className="mt-4 text-muted-foreground text-lg max-w-xs"><span className="font-bold text-foreground">{benefit.description.split(' ')[0]}</span> {benefit.description.substring(benefit.description.indexOf(' ') + 1)}</p>
             </div>
           ))}

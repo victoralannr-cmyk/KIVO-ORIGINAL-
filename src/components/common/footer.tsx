@@ -15,7 +15,7 @@ export default function Footer() {
                 alt="Kivo Logo"
                 width={200}
                 height={50}
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
             )}
           </div>

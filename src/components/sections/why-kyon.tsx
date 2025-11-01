@@ -21,7 +21,7 @@ export default function WhyKyonSection() {
       id="beneficios" 
       className="sky-background"
     >
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground">
             <span style={{fontFamily: "'Playfair Display', serif"}}>Por que a Kivo?</span>
         </h2>

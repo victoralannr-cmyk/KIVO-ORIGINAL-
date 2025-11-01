@@ -20,7 +20,7 @@ export default function BeyondServiceSection() {
     <section 
       className="sky-background"
     >
-        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
                 <span style={{fontFamily: "'Playfair Display', serif"}}>Muito além do atendimento</span>
             </h2>

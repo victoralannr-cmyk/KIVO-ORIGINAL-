@@ -62,7 +62,7 @@ export default function HowItWorksSection() {
       id="como-funciona" 
       className="sky-background"
     >
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground">
             <span style={{fontFamily: "'Playfair Display', serif"}}>O que ele é capaz de fazer</span>

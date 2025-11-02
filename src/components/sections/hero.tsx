@@ -4,54 +4,15 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import Image from 'next/image';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  type CarouselApi,
-} from '@/components/ui/carousel';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-
-const logos = [
-  { logoId: 'client-logo-1' },
-  { logoId: 'client-logo-2' },
-  { logoId: 'client-logo-3' },
-  { logoId: 'client-logo-4' },
-  { logoId: 'client-logo-5' },
-  { logoId: 'client-logo-6' },
-  { logoId: 'client-logo-7' },
-];
+import { BackgroundPaths } from '@/components/common/background-paths';
 
 export default function HeroSection() {
-    const [api, setApi] = useState<CarouselApi>();
-
-    useEffect(() => {
-
-        if (!api) {
-          return;
-        }
-    
-        const interval = setInterval(() => {
-          if (api.canScrollNext()) {
-            api.scrollNext();
-          } else {
-            api.scrollTo(0);
-          }
-        }, 3000);
-    
-        return () => {
-          clearInterval(interval);
-        };
-    }, [api]);
-
     return (
         <section 
             id="home" 
-            className="relative w-full h-screen min-h-[1000px] md:min-h-[900px] flex flex-col justify-center items-center text-center overflow-hidden bg-cover bg-center bg-fixed"
-            style={{backgroundImage: "url('https://i.postimg.cc/PJxbpVhs/Chat-GPT-Image-31-de-out-de-2025-12-01-53.png')"}}
+            className="relative w-full h-screen min-h-[900px] flex flex-col justify-center items-center text-center overflow-hidden"
         >
-            <div className="absolute inset-0 bg-black/60" />
+            <BackgroundPaths />
             
             <div className="container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center">
                 <div className="flex-grow flex flex-col justify-center items-center">

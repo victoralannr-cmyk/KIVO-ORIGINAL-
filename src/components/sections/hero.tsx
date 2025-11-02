@@ -1,7 +1,7 @@
 
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { BackgroundPaths } from '@/components/common/background-paths';
@@ -10,7 +10,7 @@ export default function HeroSection() {
     return (
         <section 
             id="home" 
-            className="relative w-full h-screen min-h-[900px] flex flex-col justify-center items-center text-center overflow-hidden"
+            className="relative w-full h-screen min-h-[900px] flex flex-col justify-center items-center text-center overflow-hidden animated-gradient"
         >
             <BackgroundPaths />
             

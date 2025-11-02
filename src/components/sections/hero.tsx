@@ -8,7 +8,7 @@ export default function HeroSection() {
     return (
         <section 
             id="home" 
-            className="relative w-full h-screen min-h-[900px] flex flex-col justify-center items-center text-center overflow-hidden bg-cover bg-center"
+            className="relative w-full h-screen min-h-[900px] flex flex-col justify-center items-center text-center overflow-hidden bg-cover bg-bottom"
             style={{ backgroundImage: "url('https://i.postimg.cc/MKMGLpSz/Chat-GPT-Image-31-de-out-de-2025-12-01-53.png')" }}
         >
             <div className="container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center">

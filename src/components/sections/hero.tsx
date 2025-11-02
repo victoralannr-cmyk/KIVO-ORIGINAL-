@@ -10,7 +10,8 @@ export default function HeroSection() {
     return (
         <section 
             id="home" 
-            className="relative w-full h-screen min-h-[900px] flex flex-col justify-center items-center text-center overflow-hidden animated-gradient"
+            className="relative w-full h-screen min-h-[900px] flex flex-col justify-center items-center text-center overflow-hidden bg-cover bg-center"
+            style={{ backgroundImage: "url('https://i.postimg.cc/MKMGLpSz/Chat-GPT-Image-31-de-out-de-2025-12-01-53.png')" }}
         >
             <BackgroundPaths />
             

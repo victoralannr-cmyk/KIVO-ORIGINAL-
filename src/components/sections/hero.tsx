@@ -15,7 +15,7 @@ export default function HeroSection() {
                 src="https://i.postimg.cc/MKMGLpSz/Chat-GPT-Image-31-de-out-de-2025-12-01-53.png"
                 alt="Fundo com logo Kivo"
                 fill
-                className="object-cover object-right-bottom"
+                className="object-cover object-bottom"
             />
             <div className="container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center">
                 <div className="flex-grow flex flex-col justify-center items-center">

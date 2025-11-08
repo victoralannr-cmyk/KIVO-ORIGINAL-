@@ -112,7 +112,7 @@ export default function HowItWorksSection() {
                               </div>
                           </div>
                       </div>
-                      <CardTitle className="font-headline text-xl">Consultoria de Vendas</CardTitle>
+                      <CardTitle className="font-headline text-xl">Criação de Sites</CardTitle>
                   </CardHeader>
                   <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400">
                      Ter um site é abrir as portas do seu negócio para o mundo. Ele trabalha por você 24h, atrai clientes, gera confiança e transforma oportunidades em resultados reais.

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Share2, Users } from 'lucide-react';
+import { Share2, Users, TrendingUp } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -68,9 +68,7 @@ export default function HowItWorksSection() {
                          <Image src="https://framerusercontent.com/images/EaQHg2lXGfJYdlkVzsdOTUA4AIk.png" alt="Grid Background" fill style={{objectFit: 'contain', transform: 'scale(0.8)'}} />
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" className="h-12 w-12 text-muted-foreground" transform="scale(1.2)">
-                                    <path d="M4 2.5L4 21.5M12 2.5L12 21.5M4 12L20 12M20 2.5L20 21.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"></path>
-                                </svg>
+                                <TrendingUp className="h-12 w-12 text-muted-foreground" />
                             </div>
                         </div>
                     </div>

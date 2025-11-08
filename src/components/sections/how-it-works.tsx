@@ -15,7 +15,7 @@ export default function HowItWorksSection() {
       className="bg-transparent py-12 md:py-24 lg:py-32"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollReveal>
+        
           <div className="text-center">
             <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground">
               O que ele é capaz de fazer
@@ -24,7 +24,7 @@ export default function HowItWorksSection() {
               Nosso agente de IA é um assistente digital completo para sua empresa.
             </p>
           </div>
-        </ScrollReveal>
+        
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-8">
             <ScrollReveal delay={0}>
@@ -65,12 +65,12 @@ export default function HowItWorksSection() {
                                       strokeWidth="1.5"
                                       strokeLinecap="round"
                                       strokeLinejoin="round"
-                                      className="h-12 w-12 text-muted-foreground icon-pulse-glow"
+                                      className="h-12 w-12 text-muted-foreground"
                                   >
                                       <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                                      <circle cx="9" cy="7" r="4" />
+                                      <circle cx="9" cy="7" r="4" className="animate-bob-1" />
                                       <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                      <path d="M16 3.13a4 4 0 0 1 0 7.75" className="animate-bob-2" />
                                   </svg>
                               </div>
                           </div>
@@ -127,7 +127,7 @@ export default function HowItWorksSection() {
                            <div className="card-sky-background"></div>
                           <div className="absolute inset-0 flex items-center justify-center">
                               <div className="bg-card p-4 rounded-full border border-border/50">
-                                  <Clapperboard className="h-12 w-12 text-muted-foreground icon-pulse-glow" />
+                                  <Clapperboard className="h-12 w-12 text-muted-foreground" />
                               </div>
                           </div>
                       </div>

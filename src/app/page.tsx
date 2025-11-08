@@ -26,9 +26,7 @@ export default function Home() {
           <ScrollReveal>
             <SuccessCasesSection />
           </ScrollReveal>
-          <ScrollReveal>
-            <WhatIsAgent />
-          </ScrollReveal>
+          <WhatIsAgent />
           <HowItWorksSection />
           <ScrollReveal>
             <AutopilotSection />
@@ -57,3 +55,5 @@ export default function Home() {
     </div>
   );
 }
+
+    

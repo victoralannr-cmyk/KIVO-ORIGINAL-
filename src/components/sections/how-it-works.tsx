@@ -4,7 +4,7 @@ import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, Clapperboard } from 'lucide-react';
+import { ArrowUpRight, Clapperboard, MonitorSmartphone } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import LottiePlayer from '../common/lottie-player';
 import Image from 'next/image';
@@ -90,13 +90,10 @@ export default function HowItWorksSection() {
                   <CardHeader className="relative items-center text-center p-6">
                       <div className="relative h-48 w-full mb-4">
                            <div className="card-sky-background"></div>
-                          <div className="absolute inset-0 flex items-center justify-center p-4">
-                              <Image 
-                                src="https://i.postimg.cc/L8gd45W1/Captura-de-tela-2025-11-08-152833.png"
-                                alt="Criação de Sites"
-                                fill
-                                className="object-contain"
-                              />
+                          <div className="absolute inset-0 flex items-center justify-center">
+                              <div className="bg-card p-4 rounded-full border border-border/50">
+                                <MonitorSmartphone className="h-12 w-12 text-muted-foreground" />
+                              </div>
                           </div>
                       </div>
                       <CardTitle className="font-headline text-xl">Criação de Sites</CardTitle>

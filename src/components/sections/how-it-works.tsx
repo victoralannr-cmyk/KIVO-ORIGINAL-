@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowUpRight, Clapperboard } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import LottiePlayer from '../common/lottie-player';
+import Image from 'next/image';
 
 export default function HowItWorksSection() {
   return (
@@ -89,26 +90,13 @@ export default function HowItWorksSection() {
                   <CardHeader className="relative items-center text-center p-6">
                       <div className="relative h-48 w-full mb-4">
                            <div className="card-sky-background"></div>
-                          <div className="absolute inset-0 flex items-center justify-center">
-                              <div className="bg-card p-4 rounded-full border border-border/50">
-                                  <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      width="48"
-                                      height="48"
-                                      viewBox="0 0 24 24"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      strokeWidth="1"
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                      className="h-12 w-12 text-muted-foreground"
-                                  >
-                                      <path d="M3 21L3 3" />
-                                      <path d="M3 21L21 21" />
-                                      <path className="animate-zigzag" d="M7 17L11 11L15 14L19 8" />
-                                      <path d="M15 8L19 8L19 12" />
-                                  </svg>
-                              </div>
+                          <div className="absolute inset-0 flex items-center justify-center p-4">
+                              <Image 
+                                src="https://i.postimg.cc/L8gd45W1/Captura-de-tela-2025-11-08-152833.png"
+                                alt="Criação de Sites"
+                                fill
+                                className="object-contain"
+                              />
                           </div>
                       </div>
                       <CardTitle className="font-headline text-xl">Criação de Sites</CardTitle>

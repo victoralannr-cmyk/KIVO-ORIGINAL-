@@ -1,53 +1,8 @@
-
 'use client';
 
-import React, { useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-  type CarouselApi,
-} from '@/components/ui/carousel';
-import { Megaphone, Bot, Code } from 'lucide-react';
-
-const capabilities = [
-  {
-    icon: <Megaphone className="h-10 w-10 text-primary" />,
-    title: 'Tráfego Pago',
-    description: 'Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.',
-  },
-  {
-    icon: <Code className="h-10 w-10 text-primary" />,
-    title: 'Criação de Sites',
-    description: 'Desenvolvemos sites de alta performance que convertem visitantes em clientes.',
-  },
-  {
-    icon: <Bot className="h-10 w-10 text-primary" />,
-    title: 'Automação com IA',
-    description: 'Integramos agentes de IA para automatizar tarefas e otimizar processos.',
-  },
-];
+import React from 'react';
 
 export default function HowItWorksSection() {
-  const [api, setApi] = React.useState<CarouselApi>();
-
-  useEffect(() => {
-    if (!api) return;
-
-    const interval = setInterval(() => {
-      if (api.canScrollNext()) {
-        api.scrollNext();
-      } else {
-        api.scrollTo(0);
-      }
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [api]);
-
   return (
     <section 
       id="como-funciona" 
@@ -62,29 +17,6 @@ export default function HowItWorksSection() {
             Nosso agente de IA é um assistente digital completo para sua empresa.
           </p>
         </div>
-        <Carousel setApi={setApi} className="w-full mt-12" opts={{ loop: true, align: 'start' }}>
-          <CarouselContent className="-ml-4">
-            {capabilities.map((capability, index) => (
-              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <div className="p-1 h-full">
-                  <Card className="flex flex-col items-center text-center p-6 bg-card/60 backdrop-blur-sm border border-border/20 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 h-full">
-                    <CardHeader className="p-0">
-                      <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-                        {capability.icon}
-                      </div>
-                      <CardTitle className="font-headline text-xl">{capability.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="p-0 mt-4 flex-grow">
-                      <p className="text-muted-foreground">{capability.description}</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="absolute left-[-50px] top-1/2 -translate-y-1/2 fill-black" />
-          <CarouselNext className="absolute right-[-50px] top-1/2 -translate-y-1/2 fill-black" />
-        </Carousel>
       </div>
     </section>
   );

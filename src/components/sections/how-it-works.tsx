@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Share2, BarChart3 } from 'lucide-react';
+import { Share2 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -20,7 +20,7 @@ export default function HowItWorksSection() {
           <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground">
             O que ele é capaz de fazer
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-gray-500 md:text-xl">
+          <p className="mx-auto mt-4 max-w-2xl text-gray-400 md:text-xl">
             Nosso agente de IA é um assistente digital completo para sua empresa.
           </p>
         </div>
@@ -40,7 +40,7 @@ export default function HowItWorksSection() {
                     <CardTitle className="font-headline text-xl">Gestão de Mídias</CardTitle>
                 </CardHeader>
                 <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400">
-                    As redes sociais da sua empresa são sua vitrine digital, o primeiro passo. <span className="text-muted-foreground">Google Business Center, Instagram, Facebook e mais.</span>
+                    As redes sociais da sua empresa são sua vitrine digital, o primeiro passo. <span className="text-gray-500">Google Business Center, Instagram, Facebook e mais.</span>
                 </CardContent>
             </Card>
 
@@ -51,14 +51,16 @@ export default function HowItWorksSection() {
                          <Image src="https://framerusercontent.com/images/EaQHg2lXGfJYdlkVzsdOTUA4AIk.png" alt="Grid Background" fill style={{objectFit: 'contain', transform: 'scale(0.8)'}} />
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
-                                <BarChart3 className="h-12 w-12 text-muted-foreground" />
+                               <svg width="48" height="48" viewBox="0 0 16 16" fill="none" className="h-12 w-12 text-muted-foreground">
+                                    <path stroke-linecap="butt" stroke-linejoin="round" fill-opacity="0" stroke="currentColor" stroke-opacity="1" stroke-width="1" d=" M0.01,14.88 C1.32,6.62 10.45,6.62 11.76,14.88 C11.86,15.48 11.39,16 10.81,16 C10.81,16 0.96,16 0.96,16 C0.38,16 -0.08,15.48 0.01,14.88 C0.01,14.88 0.01,14.88 0.01,14.88 C0.01,14.88 0.01,14.88 0.01,14.88 C0.01,14.88 0.01,14.88 0.01,14.88z M8.89,2.68 C8.89,4.34 7.54,5.68 5.89,5.68 C4.23,5.68 2.89,4.34 2.89,2.68 C2.89,1.03 4.23,-0.32 5.89,-0.32 C7.54,-0.32 8.89,1.03 8.89,2.68 C8.89,2.68 8.89,2.68 8.89,2.68 C8.89,2.68 8.89,2.68 8.89,2.68 C8.89,2.68 8.89,2.68 8.89,2.68z"></path>
+                                </svg>
                             </div>
                         </div>
                     </div>
                     <CardTitle className="font-headline text-xl">Tráfego Pago</CardTitle>
                 </CardHeader>
                 <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400">
-                   Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. <span className="text-muted-foreground">Google e Meta Ads.</span>
+                   Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. <span className="text-gray-500">Google e Meta Ads.</span>
                 </CardContent>
             </Card>
             
@@ -69,11 +71,9 @@ export default function HowItWorksSection() {
                          <Image src="https://framerusercontent.com/images/EaQHg2lXGfJYdlkVzsdOTUA4AIk.png" alt="Grid Background" fill style={{objectFit: 'contain', transform: 'scale(0.8)'}} />
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
-                                <svg width="48" height="48" viewBox="0 0 72 72" fill="none" className="h-12 w-12 text-muted-foreground">
-                                    <g transform="matrix(1.2207369804382324,0,0,1.2207369804382324,39.83444595336914,40.16555404663086)">
-                                        <g transform="matrix(2,0,0,2,0,0)">
-                                            <path strokeLinecap="round" strokeLinejoin="round" fillOpacity="0" stroke="currentColor" strokeOpacity="1" strokeWidth="3" d=" M3.0980000495910645,-1.5980000495910645 C1.121999979019165,0.3779999911785126 -1.5,3 -1.5,3 C-1.5,3 -4.5,0 -4.5,0"></path>
-                                        </g>
+                                <svg width="48" height="48" viewBox="0 0 16 16" fill="none" className="h-12 w-12 text-muted-foreground">
+                                    <g transform="matrix(0.5,0,0,0.5,4,4)">
+                                        <path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="currentColor" stroke-opacity="1" stroke-width="3" d=" M3.0980000495910645,-1.5980000495910645 C1.121999979019165,0.3779999911785126 -1.5,3 -1.5,3 C-1.5,3 -4.5,0 -4.5,0"></path>
                                     </g>
                                 </svg>
                             </div>
@@ -82,7 +82,7 @@ export default function HowItWorksSection() {
                     <CardTitle className="font-headline text-xl">Consultoria de Vendas</CardTitle>
                 </CardHeader>
                 <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400">
-                   Nosso objetivo é te entregar vendas, e não mensagens. <span className="text-muted-foreground">Time Comercial, Consultoria, Agente de Vendas.</span>
+                   Nosso objetivo é te entregar vendas, e não mensagens. <span className="text-gray-500">Time Comercial, Consultoria, Agente de Vendas.</span>
                 </CardContent>
             </Card>
         </div>

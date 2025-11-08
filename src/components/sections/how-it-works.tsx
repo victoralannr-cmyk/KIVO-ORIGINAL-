@@ -69,8 +69,8 @@ export default function HowItWorksSection() {
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
                                 <svg width="48" height="48" viewBox="0 0 16 16" fill="none" className="h-12 w-12 text-muted-foreground">
-                                    <g transform="matrix(0.7,0,0,0.7,4,4)">
-                                        <path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="currentColor" stroke-opacity="1" stroke-width="3" d=" M3.0980000495910645,-1.5980000495910645 C1.121999979019165,0.3779999911785126 -1.5,3 -1.5,3 C-1.5,3 -4.5,0 -4.5,0"></path>
+                                    <g transform="matrix(0.8,0,0,0.8,8,8)">
+                                        <path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="currentColor" stroke-opacity="1" stroke-width="2" d=" M-13.5,-13.5 C-13.5,-13.5 -13.5,11.100000381469727 -13.5,11.100000381469727 C-13.5,11.9399995803833 -13.5,12.359999656677246 -13.336999893188477,12.680999755859375 C-13.192999839782715,12.963000297546387 -12.963000297546387,13.192999839782715 -12.680999755859375,13.336999893188477 C-12.359999656677246,13.5 -11.9399995803833,13.5 -11.100000381469727,13.5 C-11.100000381469727,13.5 13.5,13.5 13.5,13.5"></path>
                                     </g>
                                 </svg>
                             </div>

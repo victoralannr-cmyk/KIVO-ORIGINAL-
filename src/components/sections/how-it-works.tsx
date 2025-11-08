@@ -3,11 +3,11 @@
 
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Share2 } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowUpRight } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
+import LottiePlayer from '../common/lottie-player';
 
 export default function HowItWorksSection() {
   return (
@@ -35,8 +35,8 @@ export default function HowItWorksSection() {
                       <div className="relative h-48 w-full mb-4">
                           <div className="card-sky-background"></div>
                           <div className="absolute inset-0 flex items-center justify-center">
-                              <div className="bg-card p-4 rounded-full border border-border/50">
-                                  <Share2 className="h-12 w-12 text-muted-foreground icon-pulse-glow" />
+                              <div className="h-24 w-24">
+                                <LottiePlayer src="https://framerusercontent.com/assets/kBcE45MCQmZncyr3HpCtuBAYw.json" />
                               </div>
                           </div>
                       </div>
@@ -121,14 +121,14 @@ export default function HowItWorksSection() {
             </ScrollReveal>
         </div>
 
-        <ScrollReveal className="mt-16 text-center">
+        <div className="mt-16 text-center">
           <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-8 py-4 text-lg">
             <Link href="#agendar">
               Fale com um especialista
               <ArrowUpRight className="h-5 w-5 ml-2 transition-transform group-hover:rotate-45" />
             </Link>
           </Button>
-        </ScrollReveal>
+        </div>
 
       </div>
     </section>

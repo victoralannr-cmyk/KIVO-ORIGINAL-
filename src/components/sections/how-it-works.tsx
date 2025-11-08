@@ -29,16 +29,6 @@ const capabilities = [
     title: 'Automação com IA',
     description: 'Integramos agentes de IA para automatizar tarefas e otimizar processos.',
   },
-  {
-    icon: <Code className="h-10 w-10 text-primary" />,
-    title: 'Conectar-se a qualquer API',
-    description: 'Integra sistemas, ERPs, bancos de dados e plataformas externas.',
-  },
-  {
-    icon: <Bot className="h-10 w-10 text-primary" />,
-    title: 'Executar lógica avançada',
-    description: 'Gerar orçamentos, validar informações e aplicar regras de negócio.',
-  },
 ];
 
 export default function HowItWorksSection() {

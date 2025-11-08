@@ -267,6 +267,13 @@
     animation: draw-zigzag 1.2s linear infinite;
   }
 
+  .animate-bob-1 {
+    animation: gentle-bob 3s ease-in-out infinite;
+  }
+  .animate-bob-2 {
+    animation: gentle-bob 3s ease-in-out infinite 0.5s;
+  }
+
   @keyframes draw-zigzag {
     0% {
       stroke-dashoffset: 100;
@@ -289,6 +296,15 @@
     50% {
       transform: scale(1.1);
       filter: drop-shadow(0 0 10px hsl(var(--primary) / 1));
+    }
+  }
+  
+  @keyframes gentle-bob {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2px);
     }
   }
 }

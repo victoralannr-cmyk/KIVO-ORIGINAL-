@@ -1,9 +1,8 @@
-
 'use client';
 
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Share2 } from 'lucide-react';
+import { Share2, Users } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -39,7 +38,7 @@ export default function HowItWorksSection() {
                     </div>
                     <CardTitle className="font-headline text-xl">Gestão de Mídias</CardTitle>
                 </CardHeader>
-                <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400">
+                <CardContent className="relative p-6 pt-0 text-center text-base text-gray-500">
                     As redes sociais da sua empresa são sua vitrine digital, o primeiro passo. <span className="text-gray-500">Google Business Center, Instagram, Facebook e mais.</span>
                 </CardContent>
             </Card>
@@ -51,15 +50,15 @@ export default function HowItWorksSection() {
                          <Image src="https://framerusercontent.com/images/EaQHg2lXGfJYdlkVzsdOTUA4AIk.png" alt="Grid Background" fill style={{objectFit: 'contain', transform: 'scale(0.8)'}} />
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
-                               <svg width="48" height="48" viewBox="0 0 16 16" fill="none" className="h-12 w-12 text-muted-foreground">
-                                    <path stroke-linecap="butt" stroke-linejoin="round" fill-opacity="0" stroke="currentColor" stroke-opacity="1" stroke-width="1" d=" M0.01,14.88 C1.32,6.62 10.45,6.62 11.76,14.88 C11.86,15.48 11.39,16 10.81,16 C10.81,16 0.96,16 0.96,16 C0.38,16 -0.08,15.48 0.01,14.88 C0.01,14.88 0.01,14.88 0.01,14.88 C0.01,14.88 0.01,14.88 0.01,14.88 C0.01,14.88 0.01,14.88 0.01,14.88z M8.89,2.68 C8.89,4.34 7.54,5.68 5.89,5.68 C4.23,5.68 2.89,4.34 2.89,2.68 C2.89,1.03 4.23,-0.32 5.89,-0.32 C7.54,-0.32 8.89,1.03 8.89,2.68 C8.89,2.68 8.89,2.68 8.89,2.68 C8.89,2.68 8.89,2.68 8.89,2.68 C8.89,2.68 8.89,2.68 8.89,2.68z"></path>
+                                <svg width="48" height="48" viewBox="0 0 16 16" fill="none" className="h-12 w-12 text-muted-foreground">
+                                   <path stroke-linecap="butt" stroke-linejoin="round" fill-opacity="0" stroke="currentColor" stroke-opacity="1" stroke-width="2" d=" M0.01,14.92 C1.32,6.97 10.45,6.97 11.76,14.92 C11.86,15.5 11.39,16 10.81,16 C10.81,16 0.96,16 0.96,16 C0.38,16 -0.08,15.5 0.01,14.92 C0.01,14.92 0.01,14.92 0.01,14.92 C0.01,14.92 0.01,14.92 0.01,14.92 C0.01,14.92 0.01,14.92 0.01,14.92z M8.89,2.96 C8.89,4.62 7.54,5.96 5.89,5.96 C4.23,5.96 2.89,4.62 2.89,2.96 C2.89,1.3 4.23,-0.04 5.89,-0.04 C7.54,-0.04 8.89,1.3 8.89,2.96 C8.89,2.96 8.89,2.96 8.89,2.96 C8.89,2.96 8.89,2.96 8.89,2.96 C8.89,2.96 8.89,2.96 8.89,2.96z"></path>
                                 </svg>
                             </div>
                         </div>
                     </div>
                     <CardTitle className="font-headline text-xl">Tráfego Pago</CardTitle>
                 </CardHeader>
-                <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400">
+                <CardContent className="relative p-6 pt-0 text-center text-base text-gray-500">
                    Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. <span className="text-gray-500">Google e Meta Ads.</span>
                 </CardContent>
             </Card>
@@ -81,7 +80,7 @@ export default function HowItWorksSection() {
                     </div>
                     <CardTitle className="font-headline text-xl">Consultoria de Vendas</CardTitle>
                 </CardHeader>
-                <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400">
+                <CardContent className="relative p-6 pt-0 text-center text-base text-gray-500">
                    Nosso objetivo é te entregar vendas, e não mensagens. <span className="text-gray-500">Time Comercial, Consultoria, Agente de Vendas.</span>
                 </CardContent>
             </Card>

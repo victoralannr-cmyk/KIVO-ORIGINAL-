@@ -1,9 +1,11 @@
 'use client';
 
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Share2, BarChart3, Users } from 'lucide-react';
+import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Share2, BarChart3, Users, ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 export default function HowItWorksSection() {
   return (
@@ -34,11 +36,9 @@ export default function HowItWorksSection() {
                     </div>
                     <CardTitle className="font-headline text-xl">Gestão de Mídias</CardTitle>
                 </CardHeader>
-                <CardContent className="p-6 pt-0 text-center">
-                    <CardDescription className="text-base">
-                        As redes sociais da sua empresa são sua vitrine digital, o primeiro passo. <span className="text-primary">Google Business Center, Instagram, Facebook e mais.</span>
-                    </CardDescription>
-                </CardContent>
+                <CardDescription className="p-6 pt-0 text-center text-base">
+                    As redes sociais da sua empresa são sua vitrine digital, o primeiro passo. <span className="text-primary">Google Business Center, Instagram, Facebook e mais.</span>
+                </CardDescription>
             </Card>
 
              <Card className="overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
@@ -53,11 +53,9 @@ export default function HowItWorksSection() {
                     </div>
                     <CardTitle className="font-headline text-xl">Tráfego Pago</CardTitle>
                 </CardHeader>
-                <CardContent className="p-6 pt-0 text-center">
-                    <CardDescription className="text-base">
-                       Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. <span className="text-primary">Google e Meta Ads.</span>
-                    </CardDescription>
-                </CardContent>
+                <CardDescription className="p-6 pt-0 text-center text-base">
+                   Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. <span className="text-primary">Google e Meta Ads.</span>
+                </CardDescription>
             </Card>
             
             <Card className="overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
@@ -72,12 +70,19 @@ export default function HowItWorksSection() {
                     </div>
                     <CardTitle className="font-headline text-xl">Consultoria de Vendas</CardTitle>
                 </CardHeader>
-                <CardContent className="p-6 pt-0 text-center">
-                    <CardDescription className="text-base">
-                       Nosso objetivo é te entregar vendas, e não mensagens. <span className="text-primary">Time Comercial, Consultoria, Agente de Vendas.</span>
-                    </CardDescription>
-                </CardContent>
+                <CardDescription className="p-6 pt-0 text-center text-base">
+                   Nosso objetivo é te entregar vendas, e não mensagens. <span className="text-primary">Time Comercial, Consultoria, Agente de Vendas.</span>
+                </CardDescription>
             </Card>
+        </div>
+
+        <div className="mt-16 text-center">
+          <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-8 py-4 text-lg">
+            <Link href="#agendar">
+              Fale com um especialista
+              <ArrowUpRight className="h-5 w-5 ml-2 transition-transform group-hover:rotate-45" />
+            </Link>
+          </Button>
         </div>
 
       </div>

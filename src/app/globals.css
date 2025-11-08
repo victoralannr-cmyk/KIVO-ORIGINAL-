@@ -264,7 +264,7 @@
   .animate-zigzag {
     stroke-dasharray: 100;
     stroke-dashoffset: 100;
-    animation: draw-zigzag 2.5s linear infinite;
+    animation: draw-zigzag 1.5s linear infinite;
   }
 
   @keyframes draw-zigzag {

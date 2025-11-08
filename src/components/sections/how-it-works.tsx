@@ -26,50 +26,50 @@ export default function HowItWorksSection() {
         </div>
 
         <div className="mt-12 flex flex-wrap justify-center gap-8">
-            <Card className="relative overflow-hidden bg-card/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+            <Card className="relative overflow-hidden bg-gray-900/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
                 <div className="card-sky-background"></div>
                 <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">
                         <Image src="https://framerusercontent.com/images/EaQHg2lXGfJYdlkVzsdOTUA4AIk.png" alt="Grid Background" fill style={{objectFit: 'contain', transform: 'scale(0.8)'}} />
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
-                                <Share2 className="h-12 w-12 text-primary icon-pulse-glow" />
+                                <Share2 className="h-12 w-12 text-muted-foreground icon-pulse-glow" />
                             </div>
                         </div>
                     </div>
                     <CardTitle className="font-headline text-xl">Gestão de Mídias</CardTitle>
                 </CardHeader>
                 <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400">
-                    As redes sociais da sua empresa são sua vitrine digital, o primeiro passo. <span className="text-primary">Google Business Center, Instagram, Facebook e mais.</span>
+                    As redes sociais da sua empresa são sua vitrine digital, o primeiro passo. <span className="text-muted-foreground">Google Business Center, Instagram, Facebook e mais.</span>
                 </CardContent>
             </Card>
 
-            <Card className="relative overflow-hidden bg-card/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+            <Card className="relative overflow-hidden bg-gray-900/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
                 <div className="card-sky-background"></div>
                 <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">
                          <Image src="https://framerusercontent.com/images/EaQHg2lXGfJYdlkVzsdOTUA4AIk.png" alt="Grid Background" fill style={{objectFit: 'contain', transform: 'scale(0.8)'}} />
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
-                                <BarChart3 className="h-12 w-12 text-primary" />
+                                <BarChart3 className="h-12 w-12 text-muted-foreground" />
                             </div>
                         </div>
                     </div>
                     <CardTitle className="font-headline text-xl">Tráfego Pago</CardTitle>
                 </CardHeader>
                 <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400">
-                   Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. <span className="text-primary">Google e Meta Ads.</span>
+                   Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. <span className="text-muted-foreground">Google e Meta Ads.</span>
                 </CardContent>
             </Card>
             
-            <Card className="relative overflow-hidden bg-card/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+            <Card className="relative overflow-hidden bg-gray-900/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
                 <div className="card-sky-background"></div>
                 <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">
                          <Image src="https://framerusercontent.com/images/EaQHg2lXGfJYdlkVzsdOTUA4AIk.png" alt="Grid Background" fill style={{objectFit: 'contain', transform: 'scale(0.8)'}} />
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
-                                <svg width="48" height="48" viewBox="0 0 72 72" fill="none" className="h-12 w-12 text-primary">
+                                <svg width="48" height="48" viewBox="0 0 72 72" fill="none" className="h-12 w-12 text-muted-foreground">
                                     <g transform="matrix(1.2207369804382324,0,0,1.2207369804382324,39.83444595336914,40.16555404663086)">
                                         <g transform="matrix(2,0,0,2,0,0)">
                                             <path strokeLinecap="round" strokeLinejoin="round" fillOpacity="0" stroke="currentColor" strokeOpacity="1" strokeWidth="3" d=" M3.0980000495910645,-1.5980000495910645 C1.121999979019165,0.3779999911785126 -1.5,3 -1.5,3 C-1.5,3 -4.5,0 -4.5,0"></path>
@@ -82,7 +82,7 @@ export default function HowItWorksSection() {
                     <CardTitle className="font-headline text-xl">Consultoria de Vendas</CardTitle>
                 </CardHeader>
                 <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400">
-                   Nosso objetivo é te entregar vendas, e não mensagens. <span className="text-primary">Time Comercial, Consultoria, Agente de Vendas.</span>
+                   Nosso objetivo é te entregar vendas, e não mensagens. <span className="text-muted-foreground">Time Comercial, Consultoria, Agente de Vendas.</span>
                 </CardContent>
             </Card>
         </div>

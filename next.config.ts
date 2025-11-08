@@ -40,6 +40,12 @@ const nextConfig: NextConfig = {
         hostname: 'kyondigital.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'framerusercontent.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

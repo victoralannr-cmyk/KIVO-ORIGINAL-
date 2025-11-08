@@ -5,7 +5,7 @@ import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, Clapperboard, MonitorSmartphone, Share2 } from 'lucide-react';
+import { ArrowUpRight, Clapperboard, MonitorSmartphone, TrendingUp } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import Image from 'next/image';
 
@@ -36,7 +36,7 @@ export default function HowItWorksSection() {
                           <div className="card-sky-background"></div>
                           <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
-                              <Share2 className="h-12 w-12 text-muted-foreground icon-pulse-glow" />
+                              <TrendingUp className="h-12 w-12 text-muted-foreground icon-pulse-glow" />
                             </div>
                           </div>
                       </div>

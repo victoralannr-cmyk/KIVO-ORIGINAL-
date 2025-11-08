@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Share2, Users } from 'lucide-react';
+import { Share2, Users, TrendingUp } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -30,10 +30,10 @@ export default function HowItWorksSection() {
                 <div className="card-sky-background"></div>
                 <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">
-                        <Image src="https://framerusercontent.com/images/EaQHg2lXGfJYdlkVzsdOTUA4AIk.png" alt="Grid Background" fill style={{objectFit: 'contain', transform: 'scale(0.8)'}} />
+                        <div className="card-sky-background"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
-                                <Share2 className="h-12 w-12 text-muted-foreground icon-pulse-glow" />
+                                <Share2 className="h-12 w-12 text-muted-foreground" />
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@ export default function HowItWorksSection() {
                 <div className="card-sky-background"></div>
                 <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">
-                         <Image src="https://framerusercontent.com/images/EaQHg2lXGfJYdlkVzsdOTUA4AIk.png" alt="Grid Background" fill style={{objectFit: 'contain', transform: 'scale(0.8)'}} />
+                         <div className="card-sky-background"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
                                 <Users className="h-12 w-12 text-muted-foreground" />
@@ -66,7 +66,7 @@ export default function HowItWorksSection() {
                 <div className="card-sky-background"></div>
                 <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">
-                         <Image src="https://framerusercontent.com/images/EaQHg2lXGfJYdlkVzsdOTUA4AIk.png" alt="Grid Background" fill style={{objectFit: 'contain', transform: 'scale(0.8)'}} />
+                         <div className="card-sky-background"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
                                 <svg
@@ -76,7 +76,7 @@ export default function HowItWorksSection() {
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     stroke="currentColor"
-                                    strokeWidth="2"
+                                    strokeWidth="1.5"
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                     className="h-12 w-12 text-muted-foreground"

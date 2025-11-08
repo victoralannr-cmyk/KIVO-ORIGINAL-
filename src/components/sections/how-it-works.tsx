@@ -18,7 +18,7 @@ export default function HowItWorksSection() {
           <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground">
             O que ele é capaz de fazer
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-gray-400 md:text-xl">
+          <p className="mx-auto mt-4 max-w-2xl text-gray-500 md:text-xl">
             Nosso agente de IA é um assistente digital completo para sua empresa.
           </p>
         </div>

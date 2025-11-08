@@ -1,11 +1,10 @@
-
 'use client';
 
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Clapperboard } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import LottiePlayer from '../common/lottie-player';
 
@@ -27,9 +26,9 @@ export default function HowItWorksSection() {
           </div>
         </ScrollReveal>
 
-        <div className="mt-12 flex flex-wrap justify-center gap-8">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-8">
             <ScrollReveal delay={0}>
-              <Card className="relative overflow-hidden bg-black backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+              <Card className="relative overflow-hidden bg-black backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   <div className="card-sky-background"></div>
                   <CardHeader className="relative items-center text-center p-6">
                       <div className="relative h-48 w-full mb-4">
@@ -42,14 +41,14 @@ export default function HowItWorksSection() {
                       </div>
                       <CardTitle className="font-headline text-xl">Gestão de Mídias</CardTitle>
                   </CardHeader>
-                  <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400">
+                  <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400 flex-grow">
                       As redes sociais da sua empresa são sua vitrine digital, o primeiro passo. <span className="text-gray-500">Google Business Center, Instagram, Facebook e mais.</span>
                   </CardContent>
               </Card>
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
-              <Card className="relative overflow-hidden bg-black backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+              <Card className="relative overflow-hidden bg-black backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   <div className="card-sky-background"></div>
                   <CardHeader className="relative items-center text-center p-6">
                       <div className="relative h-48 w-full mb-4">
@@ -78,14 +77,14 @@ export default function HowItWorksSection() {
                       </div>
                       <CardTitle className="font-headline text-xl">Tráfego Pago</CardTitle>
                   </CardHeader>
-                  <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400">
+                  <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400 flex-grow">
                      Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. <span className="text-gray-500">Google e Meta Ads.</span>
                   </CardContent>
               </Card>
             </ScrollReveal>
             
             <ScrollReveal delay={400}>
-              <Card className="relative overflow-hidden bg-black backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+              <Card className="relative overflow-hidden bg-black backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   <div className="card-sky-background"></div>
                   <CardHeader className="relative items-center text-center p-6">
                       <div className="relative h-48 w-full mb-4">
@@ -114,8 +113,28 @@ export default function HowItWorksSection() {
                       </div>
                       <CardTitle className="font-headline text-xl">Criação de Sites</CardTitle>
                   </CardHeader>
-                  <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400">
+                  <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400 flex-grow">
                      Ter um site é abrir as portas do seu negócio para o mundo. Ele trabalha por você 24h, atrai clientes, gera confiança e transforma oportunidades em resultados reais.
+                  </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            <ScrollReveal delay={600}>
+              <Card className="relative overflow-hidden bg-black backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
+                  <div className="card-sky-background"></div>
+                  <CardHeader className="relative items-center text-center p-6">
+                      <div className="relative h-48 w-full mb-4">
+                           <div className="card-sky-background"></div>
+                          <div className="absolute inset-0 flex items-center justify-center">
+                              <div className="bg-card p-4 rounded-full border border-border/50">
+                                  <Clapperboard className="h-12 w-12 text-muted-foreground icon-pulse-glow" />
+                              </div>
+                          </div>
+                      </div>
+                      <CardTitle className="font-headline text-xl">Criação de Conteúdo Criativo</CardTitle>
+                  </CardHeader>
+                  <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400 flex-grow">
+                     Criamos conteúdo que engaja, inspira e converte. Do roteiro à produção, transformamos suas ideias em vídeos, imagens e textos que capturam a atenção do seu público.
                   </CardContent>
               </Card>
             </ScrollReveal>

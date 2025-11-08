@@ -1,12 +1,12 @@
+
 'use client';
 
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, Clapperboard, MonitorSmartphone } from 'lucide-react';
+import { ArrowUpRight, Clapperboard, MonitorSmartphone, Share2 } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
-import LottiePlayer from '../common/lottie-player';
 import Image from 'next/image';
 
 export default function HowItWorksSection() {
@@ -35,9 +35,9 @@ export default function HowItWorksSection() {
                       <div className="relative h-48 w-full mb-4">
                           <div className="card-sky-background"></div>
                           <div className="absolute inset-0 flex items-center justify-center">
-                              <div className="h-24 w-24">
-                                <LottiePlayer src="https://lottie.host/e3f2409c-29a3-485a-8b77-afa385844883/tQk1xRk57e.json" />
-                              </div>
+                            <div className="bg-card p-4 rounded-full border border-border/50">
+                              <Share2 className="h-12 w-12 text-muted-foreground icon-pulse-glow" />
+                            </div>
                           </div>
                       </div>
                       <CardTitle className="font-headline text-xl">Gestão de Mídias</CardTitle>

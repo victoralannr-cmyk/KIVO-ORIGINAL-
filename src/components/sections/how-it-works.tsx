@@ -1,11 +1,13 @@
+
 'use client';
 
 import React from 'react';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
-import { Share2, BarChart3, Users, ArrowUpRight } from 'lucide-react';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Share2, BarChart3 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { ArrowUpRight } from 'lucide-react';
 
 export default function HowItWorksSection() {
   return (
@@ -24,7 +26,7 @@ export default function HowItWorksSection() {
         </div>
 
         <div className="mt-12 flex flex-wrap justify-center gap-8">
-            <Card className="relative overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+            <Card className="relative overflow-hidden bg-card/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
                 <div className="card-sky-background"></div>
                 <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">
@@ -42,7 +44,7 @@ export default function HowItWorksSection() {
                 </CardContent>
             </Card>
 
-            <Card className="relative overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+            <Card className="relative overflow-hidden bg-card/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
                 <div className="card-sky-background"></div>
                 <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">
@@ -60,7 +62,7 @@ export default function HowItWorksSection() {
                 </CardContent>
             </Card>
             
-            <Card className="relative overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+            <Card className="relative overflow-hidden bg-card/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
                 <div className="card-sky-background"></div>
                 <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">

@@ -26,7 +26,7 @@ export default function HowItWorksSection() {
         </div>
 
         <div className="mt-12 flex flex-wrap justify-center gap-8">
-            <Card className="relative overflow-hidden bg-gray-900/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+            <Card className="relative overflow-hidden bg-black/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
                 <div className="card-sky-background"></div>
                 <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">
@@ -44,7 +44,7 @@ export default function HowItWorksSection() {
                 </CardContent>
             </Card>
 
-            <Card className="relative overflow-hidden bg-gray-900/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+            <Card className="relative overflow-hidden bg-black/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
                 <div className="card-sky-background"></div>
                 <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">
@@ -62,7 +62,7 @@ export default function HowItWorksSection() {
                 </CardContent>
             </Card>
             
-            <Card className="relative overflow-hidden bg-gray-900/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+            <Card className="relative overflow-hidden bg-black/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
                 <div className="card-sky-background"></div>
                 <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">
@@ -81,10 +81,10 @@ export default function HowItWorksSection() {
                                     strokeLinejoin="round"
                                     className="h-12 w-12 text-muted-foreground"
                                 >
-                                    <polyline points="5 19 5 5" />
-                                    <polyline points="5 19 19 19" />
-                                    <polyline points="9 15 15 9" />
-                                    <polyline points="11 9 15 9 15 13" />
+                                    <path d="M3 21L3 3" />
+                                    <path d="M3 21L21 21" />
+                                    <path className="animate-zigzag" d="M7 17L11 11L15 14L19 8" />
+                                    <path d="M15 8L19 8L19 12" />
                                 </svg>
                             </div>
                         </div>

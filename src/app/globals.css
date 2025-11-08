@@ -241,24 +241,36 @@
 
   .card-sky-background::before {
     background-image: 
-      radial-gradient(1px 1px at 10% 20%, white, transparent),
-      radial-gradient(1px 1px at 40% 60%, white, transparent),
-      radial-gradient(1.5px 1.5px at 70% 80%, white, transparent);
+      radial-gradient(1.5px 1.5px at 10% 20%, white, transparent),
+      radial-gradient(1.5px 1.5px at 40% 60%, white, transparent),
+      radial-gradient(2px 2px at 70% 80%, white, transparent);
     background-size: 150px 150px;
     animation: twinkle 10s infinite linear;
   }
 
   .card-sky-background::after {
     background-image:
-      radial-gradient(1px 1px at 25% 90%, white, transparent),
-      radial-gradient(1.5px 1.5px at 55% 15%, white, transparent),
-      radial-gradient(1px 1px at 85% 50%, white, transparent);
+      radial-gradient(1.5px 1.5px at 25% 90%, white, transparent),
+      radial-gradient(2px 2px at 55% 15%, white, transparent),
+      radial-gradient(1.5px 1.5px at 85% 50%, white, transparent);
     background-size: 200px 200px;
     animation: twinkle 15s infinite linear reverse;
   }
   
   .icon-pulse-glow {
     animation: pulse-glow 2s infinite ease-in-out;
+  }
+
+  .animate-zigzag {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: draw-zigzag 2.5s linear infinite;
+  }
+
+  @keyframes draw-zigzag {
+    to {
+      stroke-dashoffset: 0;
+    }
   }
 
   @keyframes pulse-glow {

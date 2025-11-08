@@ -69,7 +69,7 @@ export default function HowItWorksSection() {
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
                                 <svg width="48" height="48" viewBox="0 0 16 16" fill="none" className="h-12 w-12 text-muted-foreground">
-                                    <g transform="matrix(0.5,0,0,0.5,4,4)">
+                                    <g transform="matrix(0.7,0,0,0.7,4,4)">
                                         <path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="currentColor" stroke-opacity="1" stroke-width="3" d=" M3.0980000495910645,-1.5980000495910645 C1.121999979019165,0.3779999911785126 -1.5,3 -1.5,3 C-1.5,3 -4.5,0 -4.5,0"></path>
                                     </g>
                                 </svg>

@@ -268,11 +268,16 @@
   }
 
   @keyframes draw-zigzag {
-    from {
+    0% {
       stroke-dashoffset: 100;
+      opacity: 1;
     }
-    to {
-      stroke-dashoffset: 0;
+    80% {
+      opacity: 1;
+    }
+    100% {
+      stroke-dashoffset: -100;
+      opacity: 0;
     }
   }
 

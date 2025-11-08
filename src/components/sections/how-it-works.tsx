@@ -5,9 +5,28 @@ import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, Clapperboard, MonitorSmartphone, LineChart } from 'lucide-react';
+import { ArrowUpRight, Clapperboard, MonitorSmartphone } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import Image from 'next/image';
+
+const AnimatedLineChart = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="48"
+    height="48"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M3 3v18h18" />
+    <path d="m19 9-5 5-4-4-3 3" className="animate-zigzag" />
+  </svg>
+);
+
 
 export default function HowItWorksSection() {
   return (
@@ -36,7 +55,7 @@ export default function HowItWorksSection() {
                           <div className="card-sky-background"></div>
                           <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
-                              <LineChart className="h-12 w-12 text-muted-foreground icon-pulse-glow" />
+                              <AnimatedLineChart className="h-12 w-12 text-muted-foreground" />
                             </div>
                           </div>
                       </div>

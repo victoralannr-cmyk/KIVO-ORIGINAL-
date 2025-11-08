@@ -2,7 +2,7 @@
 'use client';
 
 import React from 'react';
-import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Share2, BarChart3, Users, ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -25,8 +25,9 @@ export default function HowItWorksSection() {
         </div>
 
         <div className="mt-12 flex flex-wrap justify-center gap-8">
-            <Card className="overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
-                <CardHeader className="items-center text-center p-6">
+            <Card className="relative overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+                <div className="card-sky-background"></div>
+                <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">
                         <Image src="https://framerusercontent.com/images/EaQHg2lXGfJYdlkVzsdOTUA4AIk.png" alt="Grid Background" fill style={{objectFit: 'contain', transform: 'scale(0.8)'}} />
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -37,13 +38,14 @@ export default function HowItWorksSection() {
                     </div>
                     <CardTitle className="font-headline text-xl">Gestão de Mídias</CardTitle>
                 </CardHeader>
-                <CardDescription className="p-6 pt-0 text-center text-base text-muted-foreground">
+                <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400">
                     As redes sociais da sua empresa são sua vitrine digital, o primeiro passo. <span className="text-primary">Google Business Center, Instagram, Facebook e mais.</span>
-                </CardDescription>
+                </CardContent>
             </Card>
 
-            <Card className="overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
-                <CardHeader className="items-center text-center p-6">
+            <Card className="relative overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+                <div className="card-sky-background"></div>
+                <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">
                          <Image src="https://framerusercontent.com/images/EaQHg2lXGfJYdlkVzsdOTUA4AIk.png" alt="Grid Background" fill style={{objectFit: 'contain', transform: 'scale(0.8)'}} />
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -54,13 +56,14 @@ export default function HowItWorksSection() {
                     </div>
                     <CardTitle className="font-headline text-xl">Tráfego Pago</CardTitle>
                 </CardHeader>
-                <CardDescription className="p-6 pt-0 text-center text-base text-muted-foreground">
+                <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400">
                    Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. <span className="text-primary">Google e Meta Ads.</span>
-                </CardDescription>
+                </CardContent>
             </Card>
             
-            <Card className="overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
-                <CardHeader className="items-center text-center p-6">
+            <Card className="relative overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+                <div className="card-sky-background"></div>
+                <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">
                          <Image src="https://framerusercontent.com/images/EaQHg2lXGfJYdlkVzsdOTUA4AIk.png" alt="Grid Background" fill style={{objectFit: 'contain', transform: 'scale(0.8)'}} />
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -71,9 +74,9 @@ export default function HowItWorksSection() {
                     </div>
                     <CardTitle className="font-headline text-xl">Consultoria de Vendas</CardTitle>
                 </CardHeader>
-                <CardDescription className="p-6 pt-0 text-center text-base text-muted-foreground">
+                <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400">
                    Nosso objetivo é te entregar vendas, e não mensagens. <span className="text-primary">Time Comercial, Consultoria, Agente de Vendas.</span>
-                </CardDescription>
+                </CardContent>
             </Card>
         </div>
 
@@ -90,3 +93,5 @@ export default function HowItWorksSection() {
     </section>
   );
 }
+
+    

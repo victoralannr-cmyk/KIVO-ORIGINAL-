@@ -218,6 +218,45 @@
     background-size: 400px 400px;
     animation: twinkle 12s infinite alternate-reverse;
   }
+
+  .card-sky-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+
+  .card-sky-background::before,
+  .card-sky-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    z-index: 0;
+  }
+
+  .card-sky-background::before {
+    background-image: 
+      radial-gradient(0.5px 0.5px at 10% 20%, white, transparent),
+      radial-gradient(0.5px 0.5px at 40% 60%, white, transparent),
+      radial-gradient(0.75px 0.75px at 70% 80%, white, transparent);
+    background-size: 150px 150px;
+    animation: twinkle 10s infinite linear;
+  }
+
+  .card-sky-background::after {
+    background-image:
+      radial-gradient(0.5px 0.5px at 25% 90%, white, transparent),
+      radial-gradient(0.75px 0.75px at 55% 15%, white, transparent),
+      radial-gradient(0.5px 0.5px at 85% 50%, white, transparent);
+    background-size: 200px 200px;
+    animation: twinkle 15s infinite linear reverse;
+  }
+  
   .icon-pulse-glow {
     animation: pulse-glow 2s infinite ease-in-out;
   }
@@ -236,15 +275,17 @@
 
 @keyframes twinkle {
   0% {
-    opacity: 0.7;
-    transform: scale(1);
+    opacity: 0.2;
+    transform: translate(0, 0);
   }
   50% {
-    opacity: 1;
-    transform: scale(1.05);
+    opacity: 0.8;
+    transform: translate(-10px, 10px);
   }
   100% {
-    opacity: 0.7;
-    transform: scale(1);
+    opacity: 0.2;
+    transform: translate(0, 0);
   }
 }
+
+    

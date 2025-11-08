@@ -11,23 +11,23 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from '@/components/ui/carousel';
-import { Brain, Mic, Eye, Code, Puzzle } from 'lucide-react';
+import { Megaphone, Bot, Code } from 'lucide-react';
 
 const capabilities = [
   {
-    icon: <Brain className="h-10 w-10 text-primary" />,
-    title: 'Compreender o cliente',
-    description: 'Interpretar o contexto e responder de forma natural.',
+    icon: <Megaphone className="h-10 w-10 text-primary" />,
+    title: 'Tráfego Pago',
+    description: 'Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.',
   },
   {
-    icon: <Mic className="h-10 w-10 text-primary" />,
-    title: 'Ouvir e transcrever áudios',
-    description: 'Interpreta mensagens de voz e responde automaticamente.',
+    icon: <Code className="h-10 w-10 text-primary" />,
+    title: 'Criação de Sites',
+    description: 'Desenvolvemos sites de alta performance que convertem visitantes em clientes.',
   },
   {
-    icon: <Eye className="h-10 w-10 text-primary" />,
-    title: 'Analisar imagens',
-    description: 'Reconhecer documentos, fotos de produtos ou comprovantes.',
+    icon: <Bot className="h-10 w-10 text-primary" />,
+    title: 'Automação com IA',
+    description: 'Integramos agentes de IA para automatizar tarefas e otimizar processos.',
   },
   {
     icon: <Code className="h-10 w-10 text-primary" />,
@@ -35,7 +35,7 @@ const capabilities = [
     description: 'Integra sistemas, ERPs, bancos de dados e plataformas externas.',
   },
   {
-    icon: <Puzzle className="h-10 w-10 text-primary" />,
+    icon: <Bot className="h-10 w-10 text-primary" />,
     title: 'Executar lógica avançada',
     description: 'Gerar orçamentos, validar informações e aplicar regras de negócio.',
   },

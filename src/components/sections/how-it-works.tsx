@@ -36,7 +36,7 @@ export default function HowItWorksSection() {
                           <div className="card-sky-background"></div>
                           <div className="absolute inset-0 flex items-center justify-center">
                               <div className="h-24 w-24">
-                                <LottiePlayer src="https://framerusercontent.com/assets/kBcE45MCQmZncyr3HpCtuBAYw.json" />
+                                <LottiePlayer src="https://lottie.host/e3f2409c-29a3-485a-8b77-afa385844883/tQk1xRk57e.json" />
                               </div>
                           </div>
                       </div>

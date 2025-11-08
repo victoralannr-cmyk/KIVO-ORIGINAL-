@@ -115,7 +115,7 @@ export default function HowItWorksSection() {
                       <CardTitle className="font-headline text-xl">Consultoria de Vendas</CardTitle>
                   </CardHeader>
                   <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400">
-                     Nosso objetivo é te entregar vendas, e não mensagens. <span className="text-gray-500">Time Comercial, Consultoria, Agente de Vendas.</span>
+                     Ter um site é abrir as portas do seu negócio para o mundo. Ele trabalha por você 24h, atrai clientes, gera confiança e transforma oportunidades em resultados reais.
                   </CardContent>
               </Card>
             </ScrollReveal>

@@ -29,9 +29,7 @@ export default function Home() {
           <ScrollReveal>
             <WhatIsAgent />
           </ScrollReveal>
-          <ScrollReveal>
-            <HowItWorksSection />
-          </ScrollReveal>
+          <HowItWorksSection />
           <ScrollReveal>
             <AutopilotSection />
           </ScrollReveal>

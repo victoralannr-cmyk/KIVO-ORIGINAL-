@@ -1,9 +1,8 @@
-
 'use client';
 
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Share2, Users, TrendingUp } from 'lucide-react';
+import { Share2, Users } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -26,14 +25,14 @@ export default function HowItWorksSection() {
         </div>
 
         <div className="mt-12 flex flex-wrap justify-center gap-8">
-            <Card className="relative overflow-hidden bg-black/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+            <Card className="relative overflow-hidden bg-black backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
                 <div className="card-sky-background"></div>
                 <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">
                         <div className="card-sky-background"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
-                                <Share2 className="h-12 w-12 text-muted-foreground" />
+                                <Share2 className="h-12 w-12 text-muted-foreground icon-pulse-glow" />
                             </div>
                         </div>
                     </div>
@@ -44,7 +43,7 @@ export default function HowItWorksSection() {
                 </CardContent>
             </Card>
 
-            <Card className="relative overflow-hidden bg-black/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+            <Card className="relative overflow-hidden bg-black backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
                 <div className="card-sky-background"></div>
                 <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">
@@ -62,7 +61,7 @@ export default function HowItWorksSection() {
                 </CardContent>
             </Card>
             
-            <Card className="relative overflow-hidden bg-black/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
+            <Card className="relative overflow-hidden bg-black backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm">
                 <div className="card-sky-background"></div>
                 <CardHeader className="relative items-center text-center p-6">
                     <div className="relative h-48 w-full mb-4">

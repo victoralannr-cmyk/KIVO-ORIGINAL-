@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -19,7 +18,7 @@ export default function HowItWorksSection() {
           <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground">
             O que ele é capaz de fazer
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl">
+          <p className="mx-auto mt-4 max-w-2xl text-gray-400 md:text-xl">
             Nosso agente de IA é um assistente digital completo para sua empresa.
           </p>
         </div>
@@ -68,7 +67,13 @@ export default function HowItWorksSection() {
                          <Image src="https://framerusercontent.com/images/EaQHg2lXGfJYdlkVzsdOTUA4AIk.png" alt="Grid Background" fill style={{objectFit: 'contain', transform: 'scale(0.8)'}} />
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
-                                <Users className="h-12 w-12 text-primary" />
+                                <svg width="48" height="48" viewBox="0 0 72 72" fill="none" className="h-12 w-12 text-primary">
+                                    <g transform="matrix(1.2207369804382324,0,0,1.2207369804382324,39.83444595336914,40.16555404663086)">
+                                        <g transform="matrix(2,0,0,2,0,0)">
+                                            <path strokeLinecap="round" strokeLinejoin="round" fillOpacity="0" stroke="currentColor" strokeOpacity="1" strokeWidth="3" d=" M3.0980000495910645,-1.5980000495910645 C1.121999979019165,0.3779999911785126 -1.5,3 -1.5,3 C-1.5,3 -4.5,0 -4.5,0"></path>
+                                        </g>
+                                    </g>
+                                </svg>
                             </div>
                         </div>
                     </div>
@@ -93,5 +98,3 @@ export default function HowItWorksSection() {
     </section>
   );
 }
-
-    

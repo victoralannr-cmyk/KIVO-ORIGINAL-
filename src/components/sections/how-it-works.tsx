@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -36,7 +37,7 @@ export default function HowItWorksSection() {
                     </div>
                     <CardTitle className="font-headline text-xl">Gestão de Mídias</CardTitle>
                 </CardHeader>
-                <CardDescription className="p-6 pt-0 text-center text-base">
+                <CardDescription className="p-6 pt-0 text-center text-base text-foreground/80">
                     As redes sociais da sua empresa são sua vitrine digital, o primeiro passo. <span className="text-primary">Google Business Center, Instagram, Facebook e mais.</span>
                 </CardDescription>
             </Card>
@@ -53,7 +54,7 @@ export default function HowItWorksSection() {
                     </div>
                     <CardTitle className="font-headline text-xl">Tráfego Pago</CardTitle>
                 </CardHeader>
-                <CardDescription className="p-6 pt-0 text-center text-base">
+                <CardDescription className="p-6 pt-0 text-center text-base text-foreground/80">
                    Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. <span className="text-primary">Google e Meta Ads.</span>
                 </CardDescription>
             </Card>
@@ -70,7 +71,7 @@ export default function HowItWorksSection() {
                     </div>
                     <CardTitle className="font-headline text-xl">Consultoria de Vendas</CardTitle>
                 </CardHeader>
-                <CardDescription className="p-6 pt-0 text-center text-base">
+                <CardDescription className="p-6 pt-0 text-center text-base text-foreground/80">
                    Nosso objetivo é te entregar vendas, e não mensagens. <span className="text-primary">Time Comercial, Consultoria, Agente de Vendas.</span>
                 </CardDescription>
             </Card>

@@ -6,8 +6,6 @@ import HowItWorksSection from '@/components/sections/how-it-works';
 import SuccessCasesSection from '@/components/sections/success-cases';
 import WhatIsAgent from '@/components/sections/what-is-agent';
 import AutopilotSection from '@/components/sections/autopilot';
-import WhyKyonSection from '@/components/sections/why-kyon';
-import BeyondServiceSection from '@/components/sections/beyond-service';
 import IntegrationsSection from '@/components/sections/integrations';
 import FinalCtaSection from '@/components/sections/final-cta';
 import FaqSection from '@/components/sections/faq';
@@ -30,12 +28,6 @@ export default function Home() {
           <HowItWorksSection />
           <ScrollReveal>
             <AutopilotSection />
-          </ScrollReveal>
-          <ScrollReveal>
-            <WhyKyonSection />
-          </ScrollReveal>
-          <ScrollReveal>
-            <BeyondServiceSection />
           </ScrollReveal>
           <ScrollReveal>
             <IntegrationsSection />

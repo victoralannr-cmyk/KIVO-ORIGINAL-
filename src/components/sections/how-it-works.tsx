@@ -1,11 +1,10 @@
-
 'use client';
 
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, Clapperboard, MonitorSmartphone } from 'lucide-react';
+import { ArrowUpRight, Clapperboard, MonitorSmartphone, Keyhole } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
@@ -137,7 +136,7 @@ export default function HowItWorksSection() {
                            <div className="card-sky-background"></div>
                           <div className="absolute inset-0 flex items-center justify-center">
                               <div className="bg-card p-4 rounded-full border border-border/50">
-                                  <Clapperboard className="h-12 w-12 text-muted-foreground" />
+                                  <Keyhole className="h-12 w-12 text-muted-foreground icon-pulse-glow" />
                               </div>
                           </div>
                       </div>

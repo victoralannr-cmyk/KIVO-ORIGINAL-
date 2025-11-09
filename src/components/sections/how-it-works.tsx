@@ -23,8 +23,8 @@ const AnimatedLineChart = ({ className }: { className?: string }) => (
       strokeLinejoin="round"
       className={cn("h-12 w-12 text-muted-foreground", className)}
     >
-      <path d="M3 3v18h18" />
-      <path d="M7 17L12 12L15 15L21 9" className="animate-zigzag" />
+        <path d="M3 3v18h18" />
+        <path d="M7 17L12 12L15 15L21 9" className="animate-zigzag" />
     </svg>
 );
 

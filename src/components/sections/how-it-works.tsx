@@ -22,8 +22,21 @@ const AnimatedLineChart = ({ className }: { className?: string }) => (
     strokeLinejoin="round"
     className={className}
   >
+    <defs>
+      <marker
+        id="arrowhead"
+        viewBox="0 0 10 10"
+        refX="5"
+        refY="5"
+        markerWidth="6"
+        markerHeight="6"
+        orient="auto-start-reverse"
+      >
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" />
+      </marker>
+    </defs>
     <path d="M3 3v18h18" />
-    <path d="m19 9-5 5-4-4-3 3" className="animate-zigzag" />
+    <path d="m19 9-5 5-4-4-3 3" className="animate-zigzag" markerEnd="url(#arrowhead)" />
   </svg>
 );
 

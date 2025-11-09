@@ -295,8 +295,12 @@
     animation: gentle-bob 3s ease-in-out infinite 0.5s;
   }
 
-  .animate-slide-up-icon {
-    animation: slide-up-icon 1.5s ease-out infinite;
+  .animate-slide-in-left {
+    animation: slide-in-left 1.5s ease-out infinite;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 1.5s ease-out infinite;
   }
 
   @keyframes draw-zigzag {
@@ -333,16 +337,30 @@
     }
   }
 
-  @keyframes slide-up-icon {
+  @keyframes slide-in-left {
     0% {
-      transform: translateY(100%);
+      transform: translateX(-50%);
       opacity: 0;
     }
     50% {
       opacity: 1;
     }
     100% {
-      transform: translateY(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-right {
+    0% {
+      transform: translateX(50%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0);
       opacity: 1;
     }
   }

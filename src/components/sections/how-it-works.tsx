@@ -23,10 +23,9 @@ const AnimatedLineChart = ({ className }: { className?: string }) => (
     className={cn("h-12 w-12 text-muted-foreground", className)}
   >
     <path d="M3 3v18h18" />
-    <path d="M7 17 12 12l5 5 5-12" className="animate-zigzag" />
+    <path d="M7 17L12 12l5 5l5-12" className="animate-zigzag" />
   </svg>
 );
-
 
 const AnimatedUsersIcon = ({ className }: { className?: string }) => (
   <svg
@@ -48,6 +47,28 @@ const AnimatedUsersIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const AnimatedResponsiveIcon = ({ className }: { className?: string }) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="48"
+      height="48"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={cn("h-12 w-12 text-muted-foreground", className)}
+    >
+      <g className="animate-slide-in-left">
+        <rect width="16" height="12" x="2" y="5" rx="2" />
+        <line x1="2" x2="18" y1="13" y2="13" />
+      </g>
+      <g className="animate-slide-in-right">
+        <rect width="6" height="10" x="16" y="9" rx="1" />
+      </g>
+    </svg>
+  );
 
 export default function HowItWorksSection() {
   return (
@@ -116,7 +137,7 @@ export default function HowItWorksSection() {
                            <div className="card-sky-background"></div>
                           <div className="absolute inset-0 flex items-center justify-center">
                               <div className="bg-card p-4 rounded-full border border-border/50">
-                                <MonitorSmartphone className="h-12 w-12 text-muted-foreground animate-slide-up-icon" />
+                                <AnimatedResponsiveIcon />
                               </div>
                           </div>
                       </div>

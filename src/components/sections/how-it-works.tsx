@@ -5,39 +5,13 @@ import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, Clapperboard, MonitorSmartphone } from 'lucide-react';
+import { ArrowUpRight, Clapperboard, MonitorSmartphone, TrendingUp } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import Image from 'next/image';
+import { cn } from '@/lib/utils';
 
 const AnimatedLineChart = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="48"
-    height="48"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <defs>
-      <marker
-        id="arrowhead"
-        viewBox="0 0 10 10"
-        refX="5"
-        refY="5"
-        markerWidth="6"
-        markerHeight="6"
-        orient="auto-start-reverse"
-      >
-        <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" />
-      </marker>
-    </defs>
-    <path d="M3 3v18h18" />
-    <path d="m19 9-5 5-4-4-3 3" className="animate-zigzag" markerEnd="url(#arrowhead)" />
-  </svg>
+    <TrendingUp className={cn("h-12 w-12 text-muted-foreground", className)} />
 );
 
 
@@ -68,7 +42,7 @@ export default function HowItWorksSection() {
                           <div className="card-sky-background"></div>
                           <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
-                              <AnimatedLineChart className="h-12 w-12 text-muted-foreground" />
+                              <AnimatedLineChart className="icon-pulse-glow" />
                             </div>
                           </div>
                       </div>

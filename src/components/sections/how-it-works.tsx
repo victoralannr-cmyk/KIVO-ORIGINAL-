@@ -5,7 +5,7 @@ import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, Clapperboard, MonitorSmartphone, TrendingUp } from 'lucide-react';
+import { ArrowUpRight, Clapperboard, MonitorSmartphone } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
@@ -24,7 +24,7 @@ const AnimatedLineChart = ({ className }: { className?: string }) => (
       className={cn("h-12 w-12 text-muted-foreground", className)}
     >
       <path d="M3 3v18h18" />
-      <path d="M7 14l5-5 5 5" className="animate-zigzag" />
+      <path d="M7 17l10-10" className="animate-zigzag" />
     </svg>
 );
 

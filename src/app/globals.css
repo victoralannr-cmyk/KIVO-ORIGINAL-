@@ -295,6 +295,10 @@
     animation: gentle-bob 3s ease-in-out infinite 0.5s;
   }
 
+  .animate-slide-up-icon {
+    animation: slide-up-icon 1.5s ease-out infinite;
+  }
+
   @keyframes draw-zigzag {
     0% {
       stroke-dashoffset: 100;
@@ -326,6 +330,20 @@
     }
     50% {
       transform: translateY(-2px);
+    }
+  }
+
+  @keyframes slide-up-icon {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 }

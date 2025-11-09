@@ -11,7 +11,21 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 const AnimatedLineChart = ({ className }: { className?: string }) => (
-    <TrendingUp className={cn("h-12 w-12 text-muted-foreground", className)} />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="48"
+      height="48"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={cn("h-12 w-12 text-muted-foreground", className)}
+    >
+      <path d="M3 3v18h18" />
+      <path d="M7 14l5-5 5 5" className="animate-zigzag" />
+    </svg>
 );
 
 
@@ -42,7 +56,7 @@ export default function HowItWorksSection() {
                           <div className="card-sky-background"></div>
                           <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
-                              <AnimatedLineChart className="icon-pulse-glow" />
+                              <AnimatedLineChart />
                             </div>
                           </div>
                       </div>

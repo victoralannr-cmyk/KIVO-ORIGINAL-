@@ -1,10 +1,11 @@
+
 'use client';
 
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, MonitorSmartphone, Key } from 'lucide-react';
+import { ArrowUpRight, Clapperboard, MonitorSmartphone } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
@@ -23,7 +24,7 @@ const AnimatedLineChart = ({ className }: { className?: string }) => (
     className={cn("h-12 w-12 text-muted-foreground", className)}
   >
       <path d="M3 3v18h18" />
-      <path d="M7 17L12 12L15 15L21 9" className="animate-zigzag" />
+      <path d="M7 12l5 5L17 9" className="animate-zigzag" />
   </svg>
 );
 
@@ -136,7 +137,7 @@ export default function HowItWorksSection() {
                            <div className="card-sky-background"></div>
                           <div className="absolute inset-0 flex items-center justify-center">
                               <div className="bg-card p-4 rounded-full border border-border/50">
-                                  <Key className="h-12 w-12 text-muted-foreground icon-pulse-glow" />
+                                  <Clapperboard className="h-12 w-12 text-muted-foreground icon-pulse-glow" />
                               </div>
                           </div>
                       </div>

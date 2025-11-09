@@ -24,7 +24,7 @@ const AnimatedLineChart = ({ className }: { className?: string }) => (
     className={cn("h-12 w-12 text-muted-foreground", className)}
   >
       <path d="M3 3v18h18" />
-      <path d="M7 12l5 5L17 9" className="animate-zigzag" />
+      <path d="M7 12l5 5 5-12" className="animate-zigzag" />
   </svg>
 );
 
@@ -137,7 +137,7 @@ export default function HowItWorksSection() {
                            <div className="card-sky-background"></div>
                           <div className="absolute inset-0 flex items-center justify-center">
                               <div className="bg-card p-4 rounded-full border border-border/50">
-                                  <Clapperboard className="h-12 w-12 text-muted-foreground icon-pulse-glow" />
+                                  <Clapperboard className="h-12 w-12 text-muted-foreground" />
                               </div>
                           </div>
                       </div>

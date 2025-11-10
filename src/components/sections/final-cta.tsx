@@ -18,8 +18,8 @@ export default function FinalCtaSection() {
               alt={kLogo.description}
               width={500}
               height={500}
-              className="absolute -top-1/4 -left-1/4 w-3/4 h-auto opacity-5 animate-float hidden md:block"
-              style={{ animationDuration: '15s' }}
+              className="absolute -top-1/4 -left-1/4 w-3/4 h-auto opacity-20 mix-blend-screen animate-orbit hidden md:block"
+              style={{ animationDuration: '45s' }}
           />
       )}
 
@@ -29,8 +29,8 @@ export default function FinalCtaSection() {
               alt={kivoText.description}
               width={600}
               height={200}
-              className="absolute -bottom-1/4 -right-1/4 w-2/3 h-auto opacity-5 animate-float hidden md:block"
-              style={{ animationDuration: '20s' }}
+              className="absolute -bottom-1/4 -right-1/4 w-2/3 h-auto opacity-10 animate-orbit hidden md:block"
+              style={{ animationDuration: '60s' }}
           />
       )}
 

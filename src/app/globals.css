@@ -308,8 +308,8 @@
     animation: clap-animation 2s ease-in-out infinite;
   }
 
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
+  .animate-orbit {
+    animation: orbit 15s linear infinite;
   }
 
   @keyframes float {

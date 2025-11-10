@@ -46,8 +46,8 @@ export default function FaqSection() {
               alt={kivoText.description}
               width={600}
               height={200}
-              className="absolute top-20 right-20 w-1/4 h-auto opacity-5 animate-float hidden md:block"
-              style={{ animationDuration: '21s' }}
+              className="absolute top-20 right-20 w-1/4 h-auto opacity-10 animate-orbit hidden md:block"
+              style={{ animationDuration: '51s' }}
           />
       )}
        {kLogo && (
@@ -56,8 +56,8 @@ export default function FaqSection() {
               alt={kLogo.description}
               width={500}
               height={500}
-              className="absolute bottom-20 left-20 w-1/5 h-auto opacity-5 animate-float hidden md:block"
-              style={{ animationDuration: '26s' }}
+              className="absolute bottom-20 left-20 w-1/5 h-auto opacity-20 mix-blend-screen animate-orbit hidden md:block"
+              style={{ animationDuration: '56s' }}
           />
       )}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">

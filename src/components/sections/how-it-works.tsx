@@ -112,8 +112,8 @@ export default function HowItWorksSection() {
               alt={kLogo.description}
               width={500}
               height={500}
-              className="absolute -top-10 -right-10 w-1/3 h-auto opacity-5 animate-float hidden md:block"
-              style={{ animationDuration: '25s' }}
+              className="absolute -top-10 -right-10 w-1/3 h-auto opacity-20 mix-blend-screen animate-orbit hidden md:block"
+              style={{ animationDuration: '55s' }}
           />
       )}
 
@@ -123,8 +123,8 @@ export default function HowItWorksSection() {
               alt={kivoText.description}
               width={600}
               height={200}
-              className="absolute bottom-10 -left-20 w-1/2 h-auto opacity-5 animate-float hidden md:block"
-              style={{ animationDuration: '28s' }}
+              className="absolute bottom-10 -left-20 w-1/2 h-auto opacity-10 animate-orbit hidden md:block"
+              style={{ animationDuration: '58s' }}
           />
       )}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

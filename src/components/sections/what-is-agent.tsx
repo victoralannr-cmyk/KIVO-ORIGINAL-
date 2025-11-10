@@ -31,7 +31,7 @@ export default function WhatIsAgent() {
                   )}
                 </div>
                 <div className="bg-muted text-foreground p-3 rounded-lg rounded-bl-none max-w-[80%]">
-                  <p className="text-sm">Claro, posso ajudar com o seu agendamento da sua consulta.</p>
+                  <p className="text-sm">O horário das 17h não está disponível amanhã. Posso te sugerir outro?</p>
                 </div>
               </div>
 

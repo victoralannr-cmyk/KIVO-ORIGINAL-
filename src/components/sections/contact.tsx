@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useFormState, useFormStatus } from 'react-dom';
@@ -65,16 +64,6 @@ export default function ContactSection() {
             <p className="text-muted-foreground md:text-lg">
                 Nosso time entrará em contato para fazer uma demonstração gratuita.
             </p>
-            <div className="space-y-4 pt-4">
-                <div className="flex items-center gap-4">
-                    <Image src="https://kyondigital.com/wp-content/uploads/2025/08/Frame-2147207702.png" alt="Email icon" width={60} height={60} />
-                    <p className="text-muted-foreground text-left">Veja sua caixa de e-mails, incluindo SPAM e Lixo Eletrônico</p>
-                </div>
-                <div className="flex items-center gap-4">
-                    <Image src="https://kyondigital.com/wp-content/uploads/2025/08/Frame-2147207703.png" alt="WhatsApp icon" width={60} height={60} />
-                    <p className="text-muted-foreground text-left">Verifique suas mensagens no WhatsApp e mantenha seu celular ligado</p>
-                </div>
-            </div>
         </div>
 
         <Card className="w-full max-w-lg mx-auto bg-card/80 backdrop-blur-sm border-border/20 shadow-lg rounded-2xl">

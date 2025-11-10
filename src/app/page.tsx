@@ -21,6 +21,9 @@ export default function Home() {
         </div>
         <div className="sky-background">
           <ScrollReveal>
+            <ContactSection />
+          </ScrollReveal>
+          <ScrollReveal>
             <SuccessCasesSection />
           </ScrollReveal>
           <WhatIsAgent />
@@ -33,9 +36,6 @@ export default function Home() {
           </ScrollReveal>
           <ScrollReveal>
             <FaqSection />
-          </ScrollReveal>
-          <ScrollReveal>
-            <ContactSection />
           </ScrollReveal>
         </div>
       </main>

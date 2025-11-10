@@ -1,4 +1,3 @@
-
 'use client';
 import Image from 'next/image';
 import ScrollReveal from '../common/scroll-reveal';
@@ -17,12 +16,13 @@ export default function WhatIsAgent() {
         <ScrollReveal className='scroll-reveal-left'>
           <div className="relative h-[500px] md:h-[600px] flex items-center justify-center">
             <Image
-              src="https://kyondigital.com/wp-content/uploads/2025/08/Background-celular-v2.png"
+              src="https://i.postimg.cc/MKMGLpSz/Chat-GPT-Image-31-de-out-de-2025-12-01-53.png"
               alt="Celular com conversas de IA"
               width={400}
               height={800}
-              className="object-contain h-full w-auto brightness-50"
+              className="object-contain h-full w-auto"
             />
+            <div className="absolute inset-0 bg-black/60"></div>
             <div className="absolute inset-0 flex flex-col justify-center items-center p-4 space-y-4 max-w-[380px] mx-auto">
               <Image src="https://kyondigital.com/wp-content/uploads/2025/08/Mensagem-1.png" width={315} height={75} alt="Chat message 1" className="self-end animate-float" />
               

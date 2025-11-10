@@ -309,24 +309,42 @@
   }
 
   .animate-orbit {
-    animation: orbit 12s ease-in-out infinite;
+    animation: orbit 10s ease-in-out infinite;
   }
 
   @keyframes orbit {
     0% {
-      transform: translate(0, 0) scale(1);
+      transform: translate(0px, 0px) rotate(0deg) scale(1);
     }
-    25% {
-      transform: translate(10px, 5px) scale(1.01);
+    10% {
+      transform: translate(-5px, -10px) rotate(-1deg) scale(1.01);
+    }
+    20% {
+      transform: translate(10px, 5px) rotate(1.5deg) scale(0.99);
+    }
+    30% {
+      transform: translate(5px, -15px) rotate(-0.5deg) scale(1.02);
+    }
+    40% {
+      transform: translate(-15px, 0px) rotate(1deg) scale(1);
     }
     50% {
-      transform: translate(0px, 10px) scale(1);
+      transform: translate(0px, 15px) rotate(0deg) scale(0.98);
     }
-    75% {
-      transform: translate(-10px, 5px) scale(0.99);
+    60% {
+      transform: translate(10px, -5px) rotate(-1.5deg) scale(1.01);
+    }
+    70% {
+      transform: translate(-5px, 10px) rotate(0.5deg) scale(0.99);
+    }
+    80% {
+      transform: translate(15px, 5px) rotate(1deg) scale(1);
+    }
+    90% {
+      transform: translate(-10px, -5px) rotate(-1deg) scale(1.02);
     }
     100% {
-      transform: translate(0, 0) scale(1);
+      transform: translate(0px, 0px) rotate(0deg) scale(1);
     }
   }
 
@@ -416,6 +434,8 @@
     transform: translate(0, 0);
   }
 }
+
+    
 
     
 

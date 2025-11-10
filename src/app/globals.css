@@ -197,7 +197,7 @@
   
   .sky-background {
     position: relative;
-    background: linear-gradient(to bottom, #000000 0%, #050515 60%, #0a0a1a 100%);
+    background: linear-gradient(to bottom, #02040a 0%, #000000 60%, #02040a 100%);
     overflow: hidden;
   }
 
@@ -462,6 +462,9 @@
   animation: subtle-pan 30s ease-in-out infinite;
 }
 
+
+
+    
 
 
     

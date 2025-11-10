@@ -58,8 +58,8 @@ export default function ContactSection() {
       className="relative bg-transparent py-12 md:py-24"
     >
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-4">
-            <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-foreground">
+        <div className="space-y-4 text-center md:text-left">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-foreground">
                 Preencha com seus dados para começar
             </h2>
             <p className="text-muted-foreground md:text-lg">
@@ -68,11 +68,11 @@ export default function ContactSection() {
             <div className="space-y-4 pt-4">
                 <div className="flex items-center gap-4">
                     <Image src="https://kyondigital.com/wp-content/uploads/2025/08/Frame-2147207702.png" alt="Email icon" width={60} height={60} />
-                    <p className="text-muted-foreground">Veja sua caixa de e-mails, incluindo SPAM e Lixo Eletrônico</p>
+                    <p className="text-muted-foreground text-left">Veja sua caixa de e-mails, incluindo SPAM e Lixo Eletrônico</p>
                 </div>
                 <div className="flex items-center gap-4">
                     <Image src="https://kyondigital.com/wp-content/uploads/2025/08/Frame-2147207703.png" alt="WhatsApp icon" width={60} height={60} />
-                    <p className="text-muted-foreground">Verifique suas mensagens no WhatsApp e mantenha seu celular ligado</p>
+                    <p className="text-muted-foreground text-left">Verifique suas mensagens no WhatsApp e mantenha seu celular ligado</p>
                 </div>
             </div>
         </div>

@@ -17,7 +17,7 @@ export default function WhatIsAgent() {
               alt="Celular com conversas de IA"
               width={400}
               height={800}
-              className="object-contain h-full w-auto"
+              className="object-contain h-full w-auto brightness-50"
             />
             <div className="absolute inset-0 flex flex-col justify-center items-center p-4 space-y-4">
               <Image src="https://kyondigital.com/wp-content/uploads/2025/08/Mensagem-1.png" width={315} height={75} alt="Chat message 1" className="self-end animate-float" />
@@ -41,5 +41,3 @@ export default function WhatIsAgent() {
     </section>
   );
 }
-
-    

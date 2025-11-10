@@ -66,7 +66,7 @@ export default function ContactSection() {
               alt={kLogo.description}
               width={500}
               height={500}
-              className="absolute top-0 -left-20 w-1/2 h-auto opacity-10 mix-blend-screen animate-orbit hidden md:block"
+              className="absolute top-0 -left-20 w-1/2 h-auto opacity-5 mix-blend-screen animate-orbit hidden md:block"
               style={{ animationDuration: '60s' }}
           />
       )}

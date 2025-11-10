@@ -46,7 +46,7 @@ export default function FaqSection() {
               alt={kivoText.description}
               width={600}
               height={200}
-              className="absolute top-20 right-20 w-1/4 h-auto opacity-5 animate-orbit hidden md:block"
+              className="absolute top-20 right-20 w-1/4 h-auto opacity-[0.03] mix-blend-screen animate-orbit hidden md:block"
               style={{ animationDuration: '51s' }}
           />
       )}
@@ -56,7 +56,7 @@ export default function FaqSection() {
               alt={kLogo.description}
               width={500}
               height={500}
-              className="absolute bottom-20 left-20 w-1/5 h-auto opacity-10 mix-blend-screen animate-orbit hidden md:block"
+              className="absolute bottom-20 left-20 w-1/5 h-auto opacity-5 mix-blend-screen animate-orbit hidden md:block"
               style={{ animationDuration: '56s' }}
           />
       )}

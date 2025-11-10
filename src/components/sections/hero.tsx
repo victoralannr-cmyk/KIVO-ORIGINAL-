@@ -18,27 +18,9 @@ export default function HeroSection() {
             className="relative w-full h-screen min-h-[600px] md:min-h-[700px] flex flex-col justify-center items-center text-center overflow-hidden"
         >
 
-            {kLogo && (
-                <Image
-                    src={kLogo.imageUrl}
-                    alt={kLogo.description}
-                    width={500}
-                    height={500}
-                    className="absolute top-1/4 left-1/4 w-1/2 h-auto opacity-10 mix-blend-screen animate-orbit hidden md:block"
-                    style={{ animationDuration: '30s' }}
-                />
-            )}
+            
 
-            {kivoText && (
-                <Image
-                    src={kivoText.imageUrl}
-                    alt={kivoText.description}
-                    width={600}
-                    height={200}
-                    className="absolute bottom-1/4 right-1/4 w-1/3 h-auto opacity-5 mix-blend-screen animate-orbit hidden md:block"
-                    style={{ animationDuration: '45s' }}
-                />
-            )}
+            
 
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
                 <div className="flex-grow flex flex-col justify-center items-center">

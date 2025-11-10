@@ -9,13 +9,13 @@ export default function HeroSection() {
     return (
         <section
             id="home"
-            className="relative w-full h-screen min-h-[900px] flex flex-col justify-center items-center text-center overflow-hidden"
+            className="relative w-full h-screen min-h-[900px] flex flex-col justify-center items-center text-center overflow-hidden sky-background"
         >
             <Image
                 src="https://i.postimg.cc/MKMGLpSz/Chat-GPT-Image-31-de-out-de-2025-12-01-53.png"
                 alt="Kivo background"
                 fill
-                className="object-cover object-bottom"
+                className="object-cover object-bottom opacity-50"
                 quality={100}
             />
             <div className="absolute inset-0 bg-black/50" />

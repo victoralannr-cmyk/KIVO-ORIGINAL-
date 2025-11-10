@@ -11,6 +11,7 @@ import { Input } from '@/components/ui/input';
 import { Loader2 } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import ScrollReveal from '../common/scroll-reveal';
 
 const initialState: ContactFormState = {
   message: '',
@@ -70,53 +71,57 @@ export default function ContactSection() {
           />
       )}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-4 text-center md:text-left">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground">
-                Preencha com seus dados para começar
-            </h2>
-            <p className="text-muted-foreground md:text-lg">
-                Nosso time entrará em contato para fazer uma demonstração gratuita.
-            </p>
-        </div>
+        <ScrollReveal className="scroll-reveal-left">
+          <div className="space-y-4 text-center md:text-left">
+              <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground">
+                  Preencha com seus dados para começar
+              </h2>
+              <p className="text-muted-foreground md:text-lg">
+                  Nosso time entrará em contato para fazer uma demonstração gratuita.
+              </p>
+          </div>
+        </ScrollReveal>
 
-        <Card className="w-full max-w-lg mx-auto bg-card/80 backdrop-blur-sm border-border/20 shadow-lg rounded-2xl">
-          <form action={formAction}>
-            <CardContent className="pt-6 space-y-4">
-              <div className="space-y-2">
-                <Input id="name" name="name" placeholder="Seu nome" required className="bg-background rounded-full"/>
-                {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name.join(', ')}</p>}
-              </div>
-              <div className="space-y-2">
-                <Input id="email" name="email" type="email" placeholder="Seu melhor e-mail" required className="bg-background rounded-full"/>
-                 {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email.join(', ')}</p>}
-              </div>
-              <div className="space-y-2">
-                <Input id="whatsapp" name="whatsapp" placeholder="WhatsApp" required className="bg-background rounded-full"/>
-              </div>
-              <div className="spacey-2">
-                <Input id="company" name="company" placeholder="Qual é o nome da sua empresa?" required className="bg-background rounded-full"/>
-              </div>
-               <div className="space-y-2">
-                <Input id="segment" name="segment" placeholder="Qual o segmento da sua empresa?" required className="bg-background rounded-full"/>
-              </div>
-              <div className="space-y-2">
-                <select name="revenue" id="revenue" className="w-full h-10 rounded-full border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-muted-foreground" required>
-                    <option value="" disabled selected>Qual é o seu faturamento mensal atual?</option>
-                    <option value="Até R$ 20.000">Até R$ 20.000</option>
-                    <option value="de R$ 20.000 a R$ 40.000">de R$ 20.000 a R$ 40.000</option>
-                    <option value="de R$ 41.000 a R$ 60.000">de R$ 41.000 a R$ 60.000</option>
-                    <option value="de R$ 61.000 a R$ 100.000">de R$ 61.000 a R$ 100.000</option>
-                    <option value="de R$ 100.000 a R$ 500.000">de R$ 100.000 a R$ 500.000</option>
-                    <option value="de R$ 500.000 a R$ 1.000.000">de R$ 500.000 a R$ 1.000.000</option>
-                    <option value="Mais de R$ 1.000.000 por mês">Mais de R$ 1.000.000 por mês</option>
-                </select>
-              </div>
-            </CardContent>
-            <CardFooter>
-              <SubmitButton />
-            </CardFooter>
-          </form>
-        </Card>
+        <ScrollReveal className="scroll-reveal-right">
+          <Card className="w-full max-w-lg mx-auto bg-card/80 backdrop-blur-sm border-border/20 shadow-lg rounded-2xl">
+            <form action={formAction}>
+              <CardContent className="pt-6 space-y-4">
+                <div className="space-y-2">
+                  <Input id="name" name="name" placeholder="Seu nome" required className="bg-background rounded-full"/>
+                  {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name.join(', ')}</p>}
+                </div>
+                <div className="space-y-2">
+                  <Input id="email" name="email" type="email" placeholder="Seu melhor e-mail" required className="bg-background rounded-full"/>
+                  {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email.join(', ')}</p>}
+                </div>
+                <div className="space-y-2">
+                  <Input id="whatsapp" name="whatsapp" placeholder="WhatsApp" required className="bg-background rounded-full"/>
+                </div>
+                <div className="spacey-2">
+                  <Input id="company" name="company" placeholder="Qual é o nome da sua empresa?" required className="bg-background rounded-full"/>
+                </div>
+                <div className="space-y-2">
+                  <Input id="segment" name="segment" placeholder="Qual o segmento da sua empresa?" required className="bg-background rounded-full"/>
+                </div>
+                <div className="space-y-2">
+                  <select name="revenue" id="revenue" className="w-full h-10 rounded-full border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-muted-foreground" required>
+                      <option value="" disabled selected>Qual é o seu faturamento mensal atual?</option>
+                      <option value="Até R$ 20.000">Até R$ 20.000</option>
+                      <option value="de R$ 20.000 a R$ 40.000">de R$ 20.000 a R$ 40.000</option>
+                      <option value="de R$ 41.000 a R$ 60.000">de R$ 41.000 a R$ 60.000</option>
+                      <option value="de R$ 61.000 a R$ 100.000">de R$ 61.000 a R$ 100.000</option>
+                      <option value="de R$ 100.000 a R$ 500.000">de R$ 100.000 a R$ 500.000</option>
+                      <option value="de R$ 500.000 a R$ 1.000.000">de R$ 500.000 a R$ 1.000.000</option>
+                      <option value="Mais de R$ 1.000.000 por mês">Mais de R$ 1.000.000 por mês</option>
+                  </select>
+                </div>
+              </CardContent>
+              <CardFooter>
+                <SubmitButton />
+              </CardFooter>
+            </form>
+          </Card>
+        </ScrollReveal>
       </div>
     </section>
   );

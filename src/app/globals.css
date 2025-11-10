@@ -311,6 +311,20 @@
   .animate-orbit {
     animation: orbit 10s ease-in-out infinite;
   }
+  
+  .animate-subtle-pan {
+    animation: subtle-pan 30s ease-in-out infinite alternate;
+  }
+
+  @keyframes subtle-pan {
+    0% {
+      transform: scale(1) translate(0, 0);
+    }
+    100% {
+      transform: scale(1.05) translate(2%, -2%);
+    }
+  }
+
 
   @keyframes orbit {
     0% {

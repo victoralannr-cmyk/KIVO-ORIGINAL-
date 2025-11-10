@@ -17,7 +17,7 @@ export default function HeroSection() {
                 src="https://i.postimg.cc/MKMGLpSz/Chat-GPT-Image-31-de-out-de-2025-12-01-53.png"
                 alt="Kivo background"
                 fill
-                className="object-cover object-bottom opacity-50 animate-orbit"
+                className="object-cover object-bottom opacity-50 animate-subtle-pan"
                 quality={100}
                 priority
             />

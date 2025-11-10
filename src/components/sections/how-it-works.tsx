@@ -76,7 +76,7 @@ const AnimatedClapperboard = ({ className }: { className?: string }) => (
     xmlns="http://www.w3.org/2000/svg"
     width="48"
     height="48"
-    viewBox="0 0 24 24"
+    viewBox="-2 -2 28 28"
     fill="none"
     stroke="currentColor"
     strokeWidth="1.5"
@@ -116,7 +116,7 @@ export default function HowItWorksSection() {
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-8">
             <ScrollReveal delay={0}>
-              <Card className="relative overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
+              <Card className="relative overflow-hidden bg-background/50 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   <div className="card-sky-background"></div>
                   <CardHeader className="relative items-center text-center p-6">
                       <div className="relative h-48 w-full mb-4">
@@ -135,7 +135,7 @@ export default function HowItWorksSection() {
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
-              <Card className="relative overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
+              <Card className="relative overflow-hidden bg-background/50 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   <div className="card-sky-background"></div>
                   <CardHeader className="relative items-center text-center p-6">
                       <div className="relative h-48 w-full mb-4">
@@ -154,7 +154,7 @@ export default function HowItWorksSection() {
             </ScrollReveal>
             
             <ScrollReveal delay={400}>
-              <Card className="relative overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
+              <Card className="relative overflow-hidden bg-background/50 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   <div className="card-sky-background"></div>
                   <CardHeader className="relative items-center text-center p-6">
                       <div className="relative h-48 w-full mb-4">
@@ -173,7 +173,7 @@ export default function HowItWorksSection() {
             </ScrollReveal>
 
             <ScrollReveal delay={600}>
-              <Card className="relative overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
+              <Card className="relative overflow-hidden bg-background/50 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   <div className="card-sky-background"></div>
                   <CardHeader className="relative items-center text-center p-6">
                       <div className="relative h-48 w-full mb-4">

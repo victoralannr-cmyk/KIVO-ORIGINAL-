@@ -1,12 +1,39 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function FinalCtaSection() {
+  const kLogo = PlaceHolderImages.find(img => img.id === 'k-logo-hero');
+  const kivoText = PlaceHolderImages.find(img => img.id === 'kivo-text-hero');
+
   return (
     <section 
-      className="relative py-12 md:py-24 lg:py-32 bg-transparent"
+      className="relative py-12 md:py-24 lg:py-32 bg-transparent overflow-hidden"
     >
+       {kLogo && (
+          <Image
+              src={kLogo.imageUrl}
+              alt={kLogo.description}
+              width={500}
+              height={500}
+              className="absolute -top-1/4 -left-1/4 w-3/4 h-auto opacity-5 animate-float"
+              style={{ animationDuration: '15s' }}
+          />
+      )}
+
+      {kivoText && (
+          <Image
+              src={kivoText.imageUrl}
+              alt={kivoText.description}
+              width={600}
+              height={200}
+              className="absolute -bottom-1/4 -right-1/4 w-2/3 h-auto opacity-5 animate-float"
+              style={{ animationDuration: '20s' }}
+          />
+      )}
+
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-foreground">
           Pronto para ter um agente de IA trabalhando por você?

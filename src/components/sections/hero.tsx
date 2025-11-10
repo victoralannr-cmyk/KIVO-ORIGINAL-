@@ -5,13 +5,41 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function HeroSection() {
+    const kLogo = PlaceHolderImages.find(img => img.id === 'k-logo-hero');
+    const kivoText = PlaceHolderImages.find(img => img.id === 'kivo-text-hero');
+
     return (
         <section
             id="home"
             className="relative w-full h-screen min-h-[700px] md:min-h-[800px] flex flex-col justify-center items-center text-center overflow-hidden"
         >
+
+            {kLogo && (
+                <Image
+                    src={kLogo.imageUrl}
+                    alt={kLogo.description}
+                    width={500}
+                    height={500}
+                    className="absolute top-1/4 left-1/4 w-1/2 h-auto opacity-10 animate-float"
+                    style={{ animationDuration: '8s' }}
+                />
+            )}
+
+            {kivoText && (
+                <Image
+                    src={kivoText.imageUrl}
+                    alt={kivoText.description}
+                    width={600}
+                    height={200}
+                    className="absolute bottom-1/4 right-1/4 w-1/3 h-auto opacity-10 animate-float"
+                    style={{ animationDuration: '12s' }}
+                />
+            )}
+
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
                 <div className="flex-grow flex flex-col justify-center items-center">
                     <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-center text-white">

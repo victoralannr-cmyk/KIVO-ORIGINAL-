@@ -7,12 +7,34 @@ import ChatMessage from '../common/chat-message';
 
 export default function WhatIsAgent() {
   const logo = PlaceHolderImages.find(img => img.id === 'aetherai-logo');
+  const kLogo = PlaceHolderImages.find(img => img.id === 'k-logo-hero');
+  const kivoText = PlaceHolderImages.find(img => img.id === 'kivo-text-hero');
   
   return (
     <section 
       id="sobre" 
-      className="bg-transparent py-12 md:py-24 lg:py-32"
+      className="relative bg-transparent py-12 md:py-24 lg:py-32 overflow-hidden"
     >
+       {kivoText && (
+          <Image
+              src={kivoText.imageUrl}
+              alt={kivoText.description}
+              width={600}
+              height={200}
+              className="absolute top-1/4 left-10 w-1/3 h-auto opacity-5 animate-float"
+              style={{ animationDuration: '18s' }}
+          />
+      )}
+       {kLogo && (
+          <Image
+              src={kLogo.imageUrl}
+              alt={kLogo.description}
+              width={500}
+              height={500}
+              className="absolute bottom-1/4 right-10 w-1/4 h-auto opacity-5 animate-float"
+              style={{ animationDuration: '22s' }}
+          />
+      )}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
         <ScrollReveal className='scroll-reveal-left'>
           <div className="relative h-[500px] md:h-[600px] flex items-center justify-center">

@@ -1,6 +1,7 @@
 
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const autopilotItems = [
   {
@@ -21,11 +22,35 @@ const autopilotItems = [
 ];
 
 export default function AutopilotSection() {
+  const kLogo = PlaceHolderImages.find(img => img.id === 'k-logo-hero');
+  const kivoText = PlaceHolderImages.find(img => img.id === 'kivo-text-hero');
+
   return (
     <section 
-      className="bg-transparent py-12 md:py-24 lg:py-32"
+      className="relative bg-transparent py-12 md:py-24 lg:py-32 overflow-hidden"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+       {kLogo && (
+          <Image
+              src={kLogo.imageUrl}
+              alt={kLogo.description}
+              width={500}
+              height={500}
+              className="absolute bottom-5 left-5 w-1/4 h-auto opacity-5 animate-float"
+              style={{ animationDuration: '19s' }}
+          />
+      )}
+
+      {kivoText && (
+          <Image
+              src={kivoText.imageUrl}
+              alt={kivoText.description}
+              width={600}
+              height={200}
+              className="absolute top-5 right-5 w-1/3 h-auto opacity-5 animate-float"
+              style={{ animationDuration: '24s' }}
+          />
+      )}
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-foreground">
             Seu atendimento, vendas e suporte no piloto automático

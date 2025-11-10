@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useFormState, useFormStatus } from 'react-dom';
@@ -9,6 +10,7 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Loader2 } from 'lucide-react';
 import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const initialState: ContactFormState = {
   message: '',
@@ -27,6 +29,7 @@ function SubmitButton() {
 export default function ContactSection() {
   const [state, formAction] = useFormState(submitContactForm, initialState);
   const { toast } = useToast();
+  const kLogo = PlaceHolderImages.find(img => img.id === 'k-logo-hero');
 
   useEffect(() => {
     if (state.message) {
@@ -54,8 +57,18 @@ export default function ContactSection() {
   return (
     <section 
       id="agendar" 
-      className="relative bg-transparent py-12 md:py-24"
+      className="relative bg-transparent py-12 md:py-24 overflow-hidden"
     >
+       {kLogo && (
+          <Image
+              src={kLogo.imageUrl}
+              alt={kLogo.description}
+              width={500}
+              height={500}
+              className="absolute top-0 -left-20 w-1/2 h-auto opacity-5 animate-float"
+              style={{ animationDuration: '20s' }}
+          />
+      )}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-4 text-center md:text-left">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-foreground">
@@ -80,7 +93,7 @@ export default function ContactSection() {
               <div className="space-y-2">
                 <Input id="whatsapp" name="whatsapp" placeholder="WhatsApp" required className="bg-background rounded-full"/>
               </div>
-              <div className="space-y-2">
+              <div className="spacey-2">
                 <Input id="company" name="company" placeholder="Qual é o nome da sua empresa?" required className="bg-background rounded-full"/>
               </div>
                <div className="space-y-2">

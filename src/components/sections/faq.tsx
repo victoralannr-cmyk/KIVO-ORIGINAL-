@@ -5,6 +5,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const faqs = [
     {
@@ -30,11 +32,34 @@ const faqs = [
 ]
 
 export default function FaqSection() {
+  const kLogo = PlaceHolderImages.find(img => img.id === 'k-logo-hero');
+  const kivoText = PlaceHolderImages.find(img => img.id === 'kivo-text-hero');
+
   return (
     <section 
       id="faq" 
-      className="relative bg-transparent py-12 md:py-24 lg:py-32"
+      className="relative bg-transparent py-12 md:py-24 lg:py-32 overflow-hidden"
     >
+       {kivoText && (
+          <Image
+              src={kivoText.imageUrl}
+              alt={kivoText.description}
+              width={600}
+              height={200}
+              className="absolute top-20 right-20 w-1/4 h-auto opacity-5 animate-float"
+              style={{ animationDuration: '21s' }}
+          />
+      )}
+       {kLogo && (
+          <Image
+              src={kLogo.imageUrl}
+              alt={kLogo.description}
+              width={500}
+              height={500}
+              className="absolute bottom-20 left-20 w-1/5 h-auto opacity-5 animate-float"
+              style={{ animationDuration: '26s' }}
+          />
+      )}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-foreground">

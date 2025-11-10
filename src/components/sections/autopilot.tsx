@@ -17,12 +17,7 @@ const autopilotItems = [
     video: 'https://kyondigital.com/wp-content/uploads/2025/09/Card-3-1-1.mp4',
     title: 'Reduz custos operacionais',
     description: 'elimina tarefas repetitivas e libera sua equipe para o que realmente importa.',
-  },
-  {
-    video: 'https://framerusercontent.com/modules/assets/4569G5GgI0f681v431A7M4d1s~i_GApjzrmpTz36Ld2o8L22fECg87n8mkdg0dI6p-24c.mp4',
-    title: 'Resolve problemas',
-    description: 'agenda compromissos, abre tickets, envia notificações e atualiza dados.',
-  },
+  }
 ];
 
 export default function AutopilotSection() {
@@ -39,7 +34,7 @@ export default function AutopilotSection() {
             Imagine ter um assistente inteligente, disponível o tempo todo, que:
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {autopilotItems.map((item, index) => (
             <Card key={index} className="overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl">
               <div className="relative h-48 w-full">

@@ -157,7 +157,7 @@ export default function HowItWorksSection() {
                            <div className="card-sky-background"></div>
                           <div className="absolute inset-0 flex items-center justify-center">
                               <div className="bg-card p-4 rounded-full border border-border/50">
-                                  <Clapperboard className="h-12 w-12 text-muted-foreground" />
+                                  <Clapperboard className="h-12 w-12 text-muted-foreground icon-pulse-glow" />
                               </div>
                           </div>
                       </div>

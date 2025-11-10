@@ -10,10 +10,11 @@ import FinalCtaSection from '@/components/sections/final-cta';
 import FaqSection from '@/components/sections/faq';
 import ContactSection from '@/components/sections/contact';
 import ScrollReveal from '@/components/common/scroll-reveal';
+import { cn } from '@/lib/utils';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen overflow-x-hidden">
+    <div className={cn("flex flex-col min-h-screen overflow-x-hidden sky-background")}>
       <Header />
       <main className="flex-grow">
         <HeroSection />

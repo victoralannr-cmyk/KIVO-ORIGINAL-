@@ -289,10 +289,10 @@
   }
 
   .animate-bob-1 {
-    animation: gentle-bob 3s ease-in-out infinite;
+    animation: gentle-bob 1.5s ease-in-out infinite;
   }
   .animate-bob-2 {
-    animation: gentle-bob 3s ease-in-out infinite 0.5s;
+    animation: gentle-bob 1.5s ease-in-out infinite 0.5s;
   }
 
   .animate-slide-in-left {

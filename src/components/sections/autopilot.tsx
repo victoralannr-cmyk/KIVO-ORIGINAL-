@@ -19,7 +19,7 @@ const autopilotItems = [
     description: 'elimina tarefas repetitivas e libera sua equipe para o que realmente importa.',
   },
   {
-    video: 'https://kyondigital.com/wp-content/uploads/2025/09/6946fe20-e355-4b46-a659-14f2302128c0-video.mp4',
+    video: 'https://framerusercontent.com/modules/assets/4569G5GgI0f681v431A7M4d1s~i_GApjzrmpTz36Ld2o8L22fECg87n8mkdg0dI6p-24c.mp4',
     title: 'Resolve problemas',
     description: 'agenda compromissos, abre tickets, envia notificações e atualiza dados.',
   },

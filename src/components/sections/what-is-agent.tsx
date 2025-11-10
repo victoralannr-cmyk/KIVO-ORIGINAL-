@@ -36,7 +36,18 @@ export default function WhatIsAgent() {
               </div>
 
               <Image src="https://kyondigital.com/wp-content/uploads/2025/08/Mensagem-3.png" width={315} height={75} alt="Chat message 3" className="self-end animate-float animation-delay-2000" />
-              <Image src="https://kyondigital.com/wp-content/uploads/2025/08/Mensagem-4.png" width={317} height={105} alt="Chat message 4" className="self-start animate-float animation-delay-3000" />
+              
+              <div className="self-start animate-float animation-delay-3000 flex items-start gap-2 w-full">
+                <div className="bg-card p-1.5 rounded-full mt-2 border border-border/50">
+                  {logo && (
+                    <Image src={logo.imageUrl} width={32} height={32} alt="Kivo Logo" className="rounded-full object-contain" />
+                  )}
+                </div>
+                <div className="bg-muted text-foreground p-3 rounded-lg rounded-bl-none max-w-[80%]">
+                  <p className="text-sm">Claro! Agendei para as 18h e enviei a confirmação para o seu e-mail.</p>
+                </div>
+              </div>
+
             </div>
           </div>
         </ScrollReveal>

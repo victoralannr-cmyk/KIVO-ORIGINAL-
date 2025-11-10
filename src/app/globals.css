@@ -296,11 +296,11 @@
   }
 
   .animate-slide-in-left {
-    animation: slide-in-left 1.5s ease-out infinite;
+    animation: slide-in-left 1.5s ease-out;
   }
 
   .animate-slide-in-right {
-    animation: slide-in-right 1.5s ease-out infinite;
+    animation: slide-in-right 1.5s ease-out;
   }
 
   .animate-clap {
@@ -395,28 +395,22 @@
   }
 
   @keyframes slide-in-left {
-    0% {
-      transform: translateX(-50%);
+    from {
+      transform: translateX(-30px);
       opacity: 0;
     }
-    50% {
-      opacity: 1;
-    }
-    100% {
+    to {
       transform: translateX(0);
       opacity: 1;
     }
   }
 
   @keyframes slide-in-right {
-    0% {
-      transform: translateX(50%);
+    from {
+      transform: translateX(30px);
       opacity: 0;
     }
-    50% {
-      opacity: 1;
-    }
-    100% {
+    to {
       transform: translateX(0);
       opacity: 1;
     }
@@ -468,3 +462,6 @@
   animation: subtle-pan 30s ease-in-out infinite;
 }
 
+
+
+    

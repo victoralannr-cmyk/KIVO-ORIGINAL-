@@ -6,7 +6,6 @@ import HowItWorksSection from '@/components/sections/how-it-works';
 import SuccessCasesSection from '@/components/sections/success-cases';
 import WhatIsAgent from '@/components/sections/what-is-agent';
 import AutopilotSection from '@/components/sections/autopilot';
-import IntegrationsSection from '@/components/sections/integrations';
 import FinalCtaSection from '@/components/sections/final-cta';
 import FaqSection from '@/components/sections/faq';
 import ContactSection from '@/components/sections/contact';
@@ -28,9 +27,6 @@ export default function Home() {
           <HowItWorksSection />
           <ScrollReveal>
             <AutopilotSection />
-          </ScrollReveal>
-          <ScrollReveal>
-            <IntegrationsSection />
           </ScrollReveal>
           <ScrollReveal>
             <FinalCtaSection />

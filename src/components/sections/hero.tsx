@@ -24,7 +24,7 @@ export default function HeroSection() {
                     alt={kLogo.description}
                     width={500}
                     height={500}
-                    className="absolute top-1/4 left-1/4 w-1/2 h-auto opacity-20 mix-blend-screen animate-orbit hidden md:block"
+                    className="absolute top-1/4 left-1/4 w-1/2 h-auto opacity-10 mix-blend-screen animate-orbit hidden md:block"
                     style={{ animationDuration: '30s' }}
                 />
             )}
@@ -35,7 +35,7 @@ export default function HeroSection() {
                     alt={kivoText.description}
                     width={600}
                     height={200}
-                    className="absolute bottom-1/4 right-1/4 w-1/3 h-auto opacity-10 animate-orbit hidden md:block"
+                    className="absolute bottom-1/4 right-1/4 w-1/3 h-auto opacity-5 mix-blend-screen animate-orbit hidden md:block"
                     style={{ animationDuration: '45s' }}
                 />
             )}

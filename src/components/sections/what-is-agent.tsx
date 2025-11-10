@@ -21,7 +21,7 @@ export default function WhatIsAgent() {
               alt={kivoText.description}
               width={600}
               height={200}
-              className="absolute top-1/4 left-10 w-1/3 h-auto opacity-10 animate-orbit hidden md:block"
+              className="absolute top-1/4 left-10 w-1/3 h-auto opacity-5 animate-orbit hidden md:block"
               style={{ animationDuration: '48s' }}
           />
       )}
@@ -31,7 +31,7 @@ export default function WhatIsAgent() {
               alt={kLogo.description}
               width={500}
               height={500}
-              className="absolute bottom-1/4 right-10 w-1/4 h-auto opacity-20 mix-blend-screen animate-orbit hidden md:block"
+              className="absolute bottom-1/4 right-10 w-1/4 h-auto opacity-10 mix-blend-screen animate-orbit hidden md:block"
               style={{ animationDuration: '52s' }}
           />
       )}

@@ -21,7 +21,7 @@ export default function WhatIsAgent() {
               alt={kivoText.description}
               width={600}
               height={200}
-              className="absolute top-1/4 left-10 w-1/3 h-auto opacity-5 animate-float"
+              className="absolute top-1/4 left-10 w-1/3 h-auto opacity-5 animate-float hidden md:block"
               style={{ animationDuration: '18s' }}
           />
       )}
@@ -31,7 +31,7 @@ export default function WhatIsAgent() {
               alt={kLogo.description}
               width={500}
               height={500}
-              className="absolute bottom-1/4 right-10 w-1/4 h-auto opacity-5 animate-float"
+              className="absolute bottom-1/4 right-10 w-1/4 h-auto opacity-5 animate-float hidden md:block"
               style={{ animationDuration: '22s' }}
           />
       )}
@@ -67,7 +67,7 @@ export default function WhatIsAgent() {
         </ScrollReveal>
         <ScrollReveal className='scroll-reveal-right'>
           <div className="space-y-4 text-center md:text-left">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-foreground">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground">
               SUPORTE KIVO 24H
             </h2>
             <p className="text-muted-foreground md:text-lg">

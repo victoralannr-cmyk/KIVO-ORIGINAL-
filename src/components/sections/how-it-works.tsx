@@ -112,7 +112,7 @@ export default function HowItWorksSection() {
               alt={kLogo.description}
               width={500}
               height={500}
-              className="absolute -top-10 -right-10 w-1/3 h-auto opacity-5 animate-float"
+              className="absolute -top-10 -right-10 w-1/3 h-auto opacity-5 animate-float hidden md:block"
               style={{ animationDuration: '25s' }}
           />
       )}
@@ -123,14 +123,14 @@ export default function HowItWorksSection() {
               alt={kivoText.description}
               width={600}
               height={200}
-              className="absolute bottom-10 -left-20 w-1/2 h-auto opacity-5 animate-float"
+              className="absolute bottom-10 -left-20 w-1/2 h-auto opacity-5 animate-float hidden md:block"
               style={{ animationDuration: '28s' }}
           />
       )}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
           <div className="text-center">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-center text-foreground">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center text-foreground">
               O que ele é capaz de fazer
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl">

@@ -35,7 +35,7 @@ export default function AutopilotSection() {
               alt={kLogo.description}
               width={500}
               height={500}
-              className="absolute bottom-5 left-5 w-1/4 h-auto opacity-5 animate-float"
+              className="absolute bottom-5 left-5 w-1/4 h-auto opacity-5 animate-float hidden md:block"
               style={{ animationDuration: '19s' }}
           />
       )}
@@ -46,13 +46,13 @@ export default function AutopilotSection() {
               alt={kivoText.description}
               width={600}
               height={200}
-              className="absolute top-5 right-5 w-1/3 h-auto opacity-5 animate-float"
+              className="absolute top-5 right-5 w-1/3 h-auto opacity-5 animate-float hidden md:block"
               style={{ animationDuration: '24s' }}
           />
       )}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-foreground">
+          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground">
             Seu atendimento, vendas e suporte no piloto automático
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl">

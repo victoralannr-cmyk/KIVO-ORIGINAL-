@@ -15,7 +15,7 @@ export default function HeroSection() {
     return (
         <section
             id="home"
-            className="relative w-full h-screen min-h-[700px] md:min-h-[800px] flex flex-col justify-center items-center text-center overflow-hidden"
+            className="relative w-full h-screen min-h-[600px] md:min-h-[700px] flex flex-col justify-center items-center text-center overflow-hidden"
         >
 
             {kLogo && (
@@ -24,7 +24,7 @@ export default function HeroSection() {
                     alt={kLogo.description}
                     width={500}
                     height={500}
-                    className="absolute top-1/4 left-1/4 w-1/2 h-auto opacity-10 animate-float"
+                    className="absolute top-1/4 left-1/4 w-1/2 h-auto opacity-10 animate-float hidden md:block"
                     style={{ animationDuration: '8s' }}
                 />
             )}
@@ -35,7 +35,7 @@ export default function HeroSection() {
                     alt={kivoText.description}
                     width={600}
                     height={200}
-                    className="absolute bottom-1/4 right-1/4 w-1/3 h-auto opacity-10 animate-float"
+                    className="absolute bottom-1/4 right-1/4 w-1/3 h-auto opacity-10 animate-float hidden md:block"
                     style={{ animationDuration: '12s' }}
                 />
             )}

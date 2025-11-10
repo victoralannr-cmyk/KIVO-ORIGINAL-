@@ -65,13 +65,13 @@ export default function ContactSection() {
               alt={kLogo.description}
               width={500}
               height={500}
-              className="absolute top-0 -left-20 w-1/2 h-auto opacity-5 animate-float"
+              className="absolute top-0 -left-20 w-1/2 h-auto opacity-5 animate-float hidden md:block"
               style={{ animationDuration: '20s' }}
           />
       )}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-4 text-center md:text-left">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-foreground">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground">
                 Preencha com seus dados para começar
             </h2>
             <p className="text-muted-foreground md:text-lg">

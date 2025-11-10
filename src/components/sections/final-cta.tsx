@@ -18,7 +18,7 @@ export default function FinalCtaSection() {
               alt={kLogo.description}
               width={500}
               height={500}
-              className="absolute -top-1/4 -left-1/4 w-3/4 h-auto opacity-5 animate-float"
+              className="absolute -top-1/4 -left-1/4 w-3/4 h-auto opacity-5 animate-float hidden md:block"
               style={{ animationDuration: '15s' }}
           />
       )}
@@ -29,13 +29,13 @@ export default function FinalCtaSection() {
               alt={kivoText.description}
               width={600}
               height={200}
-              className="absolute -bottom-1/4 -right-1/4 w-2/3 h-auto opacity-5 animate-float"
+              className="absolute -bottom-1/4 -right-1/4 w-2/3 h-auto opacity-5 animate-float hidden md:block"
               style={{ animationDuration: '20s' }}
           />
       )}
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-foreground">
+        <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground">
           Pronto para ter um agente de IA trabalhando por você?
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl">

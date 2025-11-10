@@ -80,7 +80,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground sky-background;
   }
   section {
     @apply w-full py-12 md:py-24 lg:py-32;
@@ -454,3 +454,4 @@
     
 
     
+

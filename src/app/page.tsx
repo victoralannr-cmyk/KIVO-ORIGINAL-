@@ -16,28 +16,24 @@ export default function Home() {
     <div className="flex flex-col min-h-screen overflow-x-hidden">
       <Header />
       <main className="flex-grow">
-        <div className="animated-gradient">
-          <HeroSection />
-        </div>
-        <div className="sky-background">
-          <ScrollReveal>
-            <ContactSection />
-          </ScrollReveal>
-          <ScrollReveal>
-            <SuccessCasesSection />
-          </ScrollReveal>
-          <WhatIsAgent />
-          <HowItWorksSection />
-          <ScrollReveal>
-            <AutopilotSection />
-          </ScrollReveal>
-          <ScrollReveal>
-            <FinalCtaSection />
-          </ScrollReveal>
-          <ScrollReveal>
-            <FaqSection />
-          </ScrollReveal>
-        </div>
+        <HeroSection />
+        <ScrollReveal>
+          <ContactSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <SuccessCasesSection />
+        </ScrollReveal>
+        <WhatIsAgent />
+        <HowItWorksSection />
+        <ScrollReveal>
+          <AutopilotSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <FinalCtaSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <FaqSection />
+        </ScrollReveal>
       </main>
       <Footer />
     </div>

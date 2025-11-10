@@ -5,12 +5,13 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import { cn } from '@/lib/utils';
 
 export default function HeroSection() {
     return (
         <section
             id="home"
-            className="relative w-full h-screen min-h-[700px] md:min-h-[900px] flex flex-col justify-center items-center text-center overflow-hidden"
+            className="relative w-full h-screen min-h-[700px] md:min-h-[800px] flex flex-col justify-center items-center text-center overflow-hidden"
         >
             <Image
                 src="https://i.postimg.cc/MKMGLpSz/Chat-GPT-Image-31-de-out-de-2025-12-01-53.png"
@@ -21,7 +22,7 @@ export default function HeroSection() {
                 priority
             />
             <div className="absolute inset-0 bg-black/70" />
-            <div className="container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center">
+            <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center animate-orbit")}>
                 <div className="flex-grow flex flex-col justify-center items-center">
                     <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-center text-white">
 						<span className='outline-none' >
@@ -44,3 +45,5 @@ export default function HeroSection() {
         </section>
     );
 }
+
+    

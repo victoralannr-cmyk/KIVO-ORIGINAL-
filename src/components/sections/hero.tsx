@@ -17,12 +17,12 @@ export default function HeroSection() {
                 src="https://i.postimg.cc/MKMGLpSz/Chat-GPT-Image-31-de-out-de-2025-12-01-53.png"
                 alt="Kivo background"
                 fill
-                className="object-cover object-bottom opacity-50"
+                className="object-cover object-bottom opacity-50 animate-orbit"
                 quality={100}
                 priority
             />
             <div className="absolute inset-0 bg-black/70" />
-            <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center animate-orbit")}>
+            <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
                 <div className="flex-grow flex flex-col justify-center items-center">
                     <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-center text-white">
 						<span className='outline-none' >

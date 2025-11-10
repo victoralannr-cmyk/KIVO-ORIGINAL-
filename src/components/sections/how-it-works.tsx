@@ -4,7 +4,7 @@ import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, Clapperboard, MonitorSmartphone } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
@@ -69,6 +69,31 @@ const AnimatedResponsiveIcon = ({ className }: { className?: string }) => (
       </g>
     </svg>
   );
+
+const AnimatedClapperboard = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="48"
+    height="48"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={cn("h-12 w-12 text-muted-foreground", className)}
+  >
+    <g className="animate-clap">
+      <path d="M20.2 6.2 3.8 6.2c-.5 0-.8.3-.8.8v2.4c0 .5.3.8.8.8h16.4c.5 0 .8-.3.8-.8V7c0-.5-.3-.8-.8-.8Z" />
+      <path d="m4.2 4.2 15 4" />
+    </g>
+    <path d="M2.8 10.2v10c0 .5.3.8.8.8h16.8c.5 0 .8-.3.8-.8v-10" />
+    <path d="m7 15-2-2" />
+    <path d="m12 15-2-2" />
+    <path d="m17 15-2-2" />
+  </svg>
+);
+
 
 export default function HowItWorksSection() {
   return (
@@ -157,7 +182,7 @@ export default function HowItWorksSection() {
                            <div className="card-sky-background"></div>
                           <div className="absolute inset-0 flex items-center justify-center">
                               <div className="bg-card p-4 rounded-full border border-border/50">
-                                  <Clapperboard className="h-12 w-12 text-muted-foreground icon-pulse-glow" />
+                                  <AnimatedClapperboard />
                               </div>
                           </div>
                       </div>
@@ -183,3 +208,5 @@ export default function HowItWorksSection() {
     </section>
   );
 }
+
+    

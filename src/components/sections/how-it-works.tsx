@@ -153,8 +153,8 @@ export default function HowItWorksSection() {
                       </div>
                       <CardTitle className="font-headline text-xl">Gestão de Mídias</CardTitle>
                   </CardHeader>
-                  <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400 flex-grow">
-                      As redes sociais da sua empresa são sua vitrine digital, o primeiro passo. <span className="text-gray-500">Google Business Center, Instagram, Facebook e mais.</span>
+                  <CardContent className="relative p-6 pt-0 text-center text-base text-muted-foreground flex-grow">
+                      As redes sociais da sua empresa são sua vitrine digital, o primeiro passo. <span className="text-muted-foreground">Google Business Center, Instagram, Facebook e mais.</span>
                   </CardContent>
               </Card>
             </ScrollReveal>
@@ -172,8 +172,8 @@ export default function HowItWorksSection() {
                       </div>
                       <CardTitle className="font-headline text-xl">Tráfego Pago</CardTitle>
                   </CardHeader>
-                  <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400 flex-grow">
-                     Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. <span className="text-gray-500">Google e Meta Ads.</span>
+                  <CardContent className="relative p-6 pt-0 text-center text-base text-muted-foreground flex-grow">
+                     Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. <span className="text-muted-foreground">Google e Meta Ads.</span>
                   </CardContent>
               </Card>
             </ScrollReveal>
@@ -191,7 +191,7 @@ export default function HowItWorksSection() {
                       </div>
                       <CardTitle className="font-headline text-xl">Criação de Sites</CardTitle>
                   </CardHeader>
-                  <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400 flex-grow">
+                  <CardContent className="relative p-6 pt-0 text-center text-base text-muted-foreground flex-grow">
                      Ter um site é abrir as portas do seu negócio para o mundo. Ele trabalha por você 24h, atrai clientes, gera confiança e transforma oportunidades em resultados reais.
                   </CardContent>
               </Card>
@@ -210,7 +210,7 @@ export default function HowItWorksSection() {
                       </div>
                       <CardTitle className="font-headline text-xl">Criação de Conteúdo Criativo</CardTitle>
                   </CardHeader>
-                  <CardContent className="relative p-6 pt-0 text-center text-base text-gray-400 flex-grow">
+                  <CardContent className="relative p-6 pt-0 text-center text-base text-muted-foreground flex-grow">
                      Criamos conteúdo que engaja, inspira e converte. Do roteiro à produção, transformamos suas ideias em vídeos, imagens e textos que capturam a atenção do seu público.
                   </CardContent>
               </Card>

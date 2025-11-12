@@ -35,7 +35,7 @@ export default function AutopilotSection() {
               alt={kLogo.description}
               width={500}
               height={500}
-              className="absolute bottom-5 left-5 w-1/4 h-auto opacity-5 animate-orbit hidden md:block"
+              className="absolute bottom-5 left-5 w-1/4 h-auto opacity-20 animate-orbit hidden md:block"
               style={{ animationDuration: '49s' }}
           />
       )}

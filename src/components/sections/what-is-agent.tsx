@@ -31,12 +31,12 @@ export default function WhatIsAgent() {
               alt={kLogo.description}
               width={500}
               height={500}
-              className="absolute bottom-1/4 right-10 w-1/4 h-auto opacity-5 animate-orbit hidden md:block"
+              className="absolute bottom-1/4 right-10 w-1/4 h-auto opacity-20 animate-orbit hidden md:block"
               style={{ animationDuration: '52s' }}
           />
       )}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
-        <ScrollReveal className='scroll-reveal-left'>
+        <div className='animate-slide-in-left'>
           <div className="relative h-[500px] md:h-[600px] flex items-center justify-center">
             <Image
               src="https://kyondigital.com/wp-content/uploads/2025/08/Background-celular-v2.png"
@@ -64,8 +64,8 @@ export default function WhatIsAgent() {
 
             </div>
           </div>
-        </ScrollReveal>
-        <ScrollReveal className='scroll-reveal-right'>
+        </div>
+        <div className='animate-slide-in-right'>
           <div className="space-y-4 text-center md:text-left">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground">
               SUPORTE KIVO 24H
@@ -74,7 +74,7 @@ export default function WhatIsAgent() {
               Ele é um atendente digital inteligente que entende mensagens, busca informações em tempo real, toma decisões e executa tarefas de ponta a ponta, tudo de forma autônoma e personalizada.
             </p>
           </div>
-        </ScrollReveal>
+        </div>
       </div>
     </section>
   );

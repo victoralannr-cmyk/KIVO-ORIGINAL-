@@ -56,7 +56,7 @@ export default function FaqSection() {
               alt={kLogo.description}
               width={500}
               height={500}
-              className="absolute bottom-20 left-20 w-1/5 h-auto opacity-5 animate-orbit hidden md:block"
+              className="absolute bottom-20 left-20 w-1/5 h-auto opacity-20 animate-orbit hidden md:block"
               style={{ animationDuration: '56s' }}
           />
       )}

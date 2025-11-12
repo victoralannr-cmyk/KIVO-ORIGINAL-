@@ -66,12 +66,12 @@ export default function ContactSection() {
               alt={kLogo.description}
               width={500}
               height={500}
-              className="absolute top-0 -left-20 w-1/2 h-auto opacity-5 animate-orbit hidden md:block"
+              className="absolute top-0 -left-20 w-1/2 h-auto opacity-20 animate-orbit hidden md:block"
               style={{ animationDuration: '60s' }}
           />
       )}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
-        <ScrollReveal className="scroll-reveal-left">
+        <div className="animate-slide-in-left">
           <div className="space-y-4 text-center md:text-left">
               <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground">
                   Preencha com seus dados para começar
@@ -80,9 +80,9 @@ export default function ContactSection() {
                   Nosso time entrará em contato para fazer uma demonstração gratuita.
               </p>
           </div>
-        </ScrollReveal>
+        </div>
 
-        <ScrollReveal className="scroll-reveal-right">
+        <div className="animate-slide-in-right">
           <Card className="w-full max-w-lg mx-auto bg-card/80 backdrop-blur-sm border-border/20 shadow-lg rounded-2xl">
             <form action={formAction}>
               <CardContent className="pt-6 space-y-4">
@@ -121,7 +121,7 @@ export default function ContactSection() {
               </CardFooter>
             </form>
           </Card>
-        </ScrollReveal>
+        </div>
       </div>
     </section>
   );

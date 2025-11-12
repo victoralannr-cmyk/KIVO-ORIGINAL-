@@ -6,13 +6,13 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const logos = [
-  { logoId: 'client-logo-1' },
-  { logoId: 'client-logo-2' },
-  { logoId: 'client-logo-3' },
-  { logoId: 'client-logo-4' },
-  { logoId: 'client-logo-5' },
-  { logoId: 'client-logo-6' },
-  { logoId: 'client-logo-7' },
+  { logoId: 'client-logo-very-pizza' },
+  { logoId: 'client-logo-very-pizza' },
+  { logoId: 'client-logo-very-pizza' },
+  { logoId: 'client-logo-very-pizza' },
+  { logoId: 'client-logo-very-pizza' },
+  { logoId: 'client-logo-very-pizza' },
+  { logoId: 'client-logo-very-pizza' },
 ];
 
 // Duplicate logos for a seamless loop
@@ -42,7 +42,7 @@ export default function SuccessCasesSection() {
                            alt={logo.description}
                            width={140}
                            height={50}
-                           className="h-10 w-auto object-contain grayscale"
+                           className="h-10 w-auto object-contain"
                            data-ai-hint={logo.imageHint}
                          />
                        )}

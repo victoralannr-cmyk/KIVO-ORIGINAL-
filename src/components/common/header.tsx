@@ -1,23 +1,37 @@
 
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Home, Puzzle, Award, Info } from 'lucide-react';
+import { ExpandableTabs } from '../ui/expandable-tabs';
 
 const navItems = [
-  { name: 'Como Funciona', href: '#como-funciona' },
-  { name: 'Benefícios', href: '#beneficios' },
-  { name: 'Sobre', href: '#sobre' },
+  { name: 'Home', href: '#home', icon: Home },
+  { name: 'Como Funciona', href: '#como-funciona', icon: Puzzle },
+  { name: 'Benefícios', href: '#sucesso', icon: Award },
+  { name: 'Sobre', href: '#sobre', icon: Info },
 ];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const logo = PlaceHolderImages.find(img => img.id === 'aetherai-logo');
+
+  const handleTabChange = (index: number | null) => {
+    if (index !== null) {
+      const item = navItems[index];
+      const element = document.querySelector(item.href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  const tabs = navItems.map(item => ({ title: item.name, icon: item.icon }));
 
   return (
     <header
@@ -42,15 +56,7 @@ export default function Header() {
           </div>
           
           <nav className="hidden md:flex md:items-center md:space-x-10">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="font-medium text-foreground transition-colors hover:text-primary"
-              >
-                {item.name}
-              </Link>
-            ))}
+            <ExpandableTabs tabs={tabs} onChange={handleTabChange} />
           </nav>
 
           <div className="hidden md:flex items-center">

@@ -13,7 +13,7 @@ import { ExpandableTabs } from '../ui/expandable-tabs';
 const navItems = [
   { name: 'Home', href: '#home', icon: Home },
   { name: 'O que somos capazes de Fazer', href: '#como-funciona', icon: Puzzle },
-  { name: 'Benefícios', href: '#sucesso', icon: Award },
+  { name: 'Apoiadores', href: '#sucesso', icon: Award },
   { name: 'Sobre', href: '#sobre', icon: Info },
 ];
 

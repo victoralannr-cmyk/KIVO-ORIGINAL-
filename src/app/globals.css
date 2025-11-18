@@ -197,8 +197,8 @@
   
   .dotted-background {
     background-color: #FFFFFF;
-    background-image: radial-gradient(hsl(var(--foreground)) 1.5px, transparent 1.5px);
-    background-size: 24px 24px;
+    background-image: radial-gradient(hsl(var(--foreground)) 2.5px, transparent 2.5px);
+    background-size: 30px 30px;
   }
 
   .vignette-overlay {
@@ -386,5 +386,7 @@
 .animate-subtle-pan {
   animation: subtle-pan 30s ease-in-out infinite;
 }
+
+    
 
     

@@ -130,7 +130,7 @@ export default function HowItWorksSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
           <div className="text-center">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center text-foreground">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-center text-foreground">
               O que ele é capaz de fazer
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl">
@@ -144,7 +144,7 @@ export default function HowItWorksSection() {
               <Card className="relative overflow-hidden bg-card/50 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   
                   <CardHeader className="relative items-center text-center p-6">
-                      <div className="relative h-48 w-full mb-4">
+                      <div className="relative h-32 md:h-48 w-full mb-4">
                           <div className="absolute inset-0 flex items-center justify-center">
                             <div className="bg-card p-4 rounded-full border border-border/50">
                               <AnimatedLineChart />
@@ -163,7 +163,7 @@ export default function HowItWorksSection() {
               <Card className="relative overflow-hidden bg-card/50 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   
                   <CardHeader className="relative items-center text-center p-6">
-                      <div className="relative h-48 w-full mb-4">
+                      <div className="relative h-32 md:h-48 w-full mb-4">
                           <div className="absolute inset-0 flex items-center justify-center">
                               <div className="bg-card p-4 rounded-full border border-border/50">
                                   <AnimatedUsersIcon />
@@ -182,7 +182,7 @@ export default function HowItWorksSection() {
               <Card className="relative overflow-hidden bg-card/50 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   
                   <CardHeader className="relative items-center text-center p-6">
-                      <div className="relative h-48 w-full mb-4">
+                      <div className="relative h-32 md:h-48 w-full mb-4">
                           <div className="absolute inset-0 flex items-center justify-center">
                               <div className="bg-card p-4 rounded-full border border-border/50">
                                 <AnimatedResponsiveIcon />
@@ -201,7 +201,7 @@ export default function HowItWorksSection() {
               <Card className="relative overflow-hidden bg-card/50 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   
                   <CardHeader className="relative items-center text-center p-6">
-                      <div className="relative h-48 w-full mb-4">
+                      <div className="relative h-32 md:h-48 w-full mb-4">
                           <div className="absolute inset-0 flex items-center justify-center">
                               <div className="bg-card p-4 rounded-full border border-border/50">
                                   <AnimatedClapperboard />
@@ -230,5 +230,7 @@ export default function HowItWorksSection() {
     </section>
   );
 }
+
+    
 
     

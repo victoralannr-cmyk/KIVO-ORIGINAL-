@@ -62,7 +62,7 @@ export default function FaqSection() {
       )}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground">
+          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-foreground">
             Perguntas Frequentes
           </h2>
         </div>
@@ -70,10 +70,10 @@ export default function FaqSection() {
             <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, index) => (
                     <AccordionItem key={index} value={`item-${index}`} className="border-b-border/20">
-                        <AccordionTrigger className="font-headline text-lg text-left hover:no-underline text-foreground">
+                        <AccordionTrigger className="font-headline text-base md:text-lg text-left hover:no-underline text-foreground">
                           {faq.question}
                         </AccordionTrigger>
-                        <AccordionContent className="text-base text-muted-foreground">
+                        <AccordionContent className="text-sm md:text-base text-muted-foreground">
                           {faq.answer}
                         </AccordionContent>
                     </AccordionItem>
@@ -84,3 +84,5 @@ export default function FaqSection() {
     </section>
   );
 }
+
+    

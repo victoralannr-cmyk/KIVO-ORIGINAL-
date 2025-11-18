@@ -35,14 +35,14 @@ export default function FinalCtaSection() {
       )}
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground">
+        <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-foreground">
           Pronto para ter um agente de IA trabalhando por você?
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl">
           Nós criamos, treinamos e entregamos seu agente pronto para atender.
         </p>
         <div className="mt-8">
-          <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-8 py-4 text-lg animate-pulse">
+          <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-8 py-3 text-base md:text-lg md:py-4 animate-pulse">
             <Link href="#agendar">
               Agendar uma demonstração
             </Link>
@@ -54,4 +54,6 @@ export default function FinalCtaSection() {
 }
 
     
+    
+
     

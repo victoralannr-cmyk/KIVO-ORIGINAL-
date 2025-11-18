@@ -82,9 +82,9 @@ export default function AutopilotSection() {
                 )}
               </div>
               <CardHeader>
-                <CardTitle className="font-headline text-xl">{item.title}</CardTitle>
+                <CardTitle className="font-headline text-lg md:text-xl">{item.title}</CardTitle>
               </CardHeader>
-              <CardDescription className="px-6 pb-6 text-base">{item.description}</CardDescription>
+              <CardDescription className="px-6 pb-6 text-sm md:text-base">{item.description}</CardDescription>
             </Card>
           ))}
         </div>
@@ -92,3 +92,5 @@ export default function AutopilotSection() {
     </section>
   );
 }
+
+    

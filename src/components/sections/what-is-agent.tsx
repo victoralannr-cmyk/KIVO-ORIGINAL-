@@ -37,7 +37,7 @@ export default function WhatIsAgent() {
       )}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
         <div className='animate-slide-in-left'>
-          <div className="relative h-[500px] md:h-[600px] flex items-center justify-center">
+          <div className="relative h-[400px] md:h-[600px] flex items-center justify-center">
             <Image
               src="https://kyondigital.com/wp-content/uploads/2025/08/Background-celular-v2.png"
               alt="Celular com conversas de IA"
@@ -45,7 +45,7 @@ export default function WhatIsAgent() {
               height={800}
               className="object-contain h-full w-auto"
             />
-            <div className="absolute inset-0 flex flex-col justify-center items-center p-4 space-y-4 max-w-[380px] mx-auto">
+            <div className="absolute inset-0 flex flex-col justify-center items-center p-4 space-y-4 max-w-[320px] md:max-w-[380px] mx-auto">
               <Image src="https://kyondigital.com/wp-content/uploads/2025/08/Mensagem-1.png" width={315} height={75} alt="Chat message 1" className="self-end animate-float" />
               
               <ChatMessage
@@ -67,7 +67,7 @@ export default function WhatIsAgent() {
         </div>
         <div className='animate-slide-in-right'>
           <div className="space-y-4 text-center md:text-left">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground">
+            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-foreground">
               SUPORTE KIVO 24H
             </h2>
             <p className="text-muted-foreground md:text-lg">
@@ -79,3 +79,5 @@ export default function WhatIsAgent() {
     </section>
   );
 }
+
+    

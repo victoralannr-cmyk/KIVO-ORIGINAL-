@@ -36,20 +36,20 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 p-4 transition-all duration-300 ease-in-out'
+        'fixed top-0 left-0 right-0 z-50 p-2 md:p-4 transition-all duration-300 ease-in-out'
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 bg-background/50 backdrop-blur-lg border border-black/10 shadow-lg rounded-full">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-2">
               {logo && (
                 <Image
                   src={logo.imageUrl}
                   alt="Kivo Logo"
-                  width={200}
-                  height={50}
-                  className="h-16 w-auto"
+                  width={150}
+                  height={40}
+                  className="h-12 w-auto md:h-16"
                 />
               )}
             </Link>
@@ -101,4 +101,6 @@ export default function Header() {
     
 
     
+    
+
     

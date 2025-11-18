@@ -12,7 +12,7 @@ export default function HeroSection() {
     return (
         <section
             id="home"
-            className="relative w-full pt-48 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden"
+            className="relative w-full pt-40 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden"
         >
 
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
@@ -23,7 +23,7 @@ export default function HeroSection() {
 						</span>
 					</h1>
                     <div className="mt-8 animate-slide-in-left">
-                        <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-8 py-4 text-lg animate-pulse">
+                        <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-6 py-3 text-base md:px-8 md:py-4 md:text-lg animate-pulse">
                             <Link href="#agendar">
                                 Agendar uma demonstração
                             </Link>
@@ -43,4 +43,6 @@ export default function HeroSection() {
     
 
     
+    
+
     

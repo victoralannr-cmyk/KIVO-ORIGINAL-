@@ -86,7 +86,7 @@
     animation: gradient-animation 15s ease infinite;
   }
   section {
-    @apply w-full py-12 md:py-24 lg:py-32;
+    @apply w-full py-12 md:py-20;
   }
 }
 
@@ -199,15 +199,15 @@
   }
   
   .dotted-background {
-    background-color: #FFFFFF;
-    background-image: radial-gradient(#19233a 2.5px, transparent 2.5px);
+    background-color: #AEB7C4;
+    background-image: radial-gradient(#19233A 2.5px, transparent 2.5px);
     background-size: 30px 30px;
   }
 
   .vignette-overlay {
     position: fixed;
     inset: 0;
-    background: radial-gradient(ellipse at center, transparent 50%, hsla(227, 30%, 11%, 0.3) 100%);
+    background: radial-gradient(ellipse at center, transparent 50%, hsla(227, 30%, 9%, 0.7) 100%);
     pointer-events: none;
     z-index: 999;
   }
@@ -389,3 +389,5 @@
 .animate-subtle-pan {
   animation: subtle-pan 30s ease-in-out infinite;
 }
+
+    

@@ -88,19 +88,6 @@
 }
 
 @layer utilities {
-  .animated-gradient {
-    background: linear-gradient(-45deg, #19233A, #AEB7C4, #F8F9FB, #19233A);
-    background-size: 400% 400%;
-    animation: gradient-animation 15s ease infinite;
-  }
-
-  .gradient-background {
-    background: linear-gradient(140deg, #19233A 0%, #AEB7C4 50%, #19233A 100%);
-    background-size: 400% 400%;
-    opacity: 0;
-    animation: fadeIn 4s ease forwards, gradientShift 20s ease-in-out infinite alternate 4s;
-  }
-
   .button-wavy-gradient {
     background: linear-gradient(90deg, #0b0b64, #151515, #0b0b64);
     background-size: 200% 100%;
@@ -126,31 +113,52 @@
     }
   }
 
-
-  @keyframes gradient-animation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+  .ink-spread-background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #0E1428;
   }
 
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
+  .ink-dark, .ink-light {
+    position: absolute;
+    width: 140vmax;
+    height: 140vmax;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.8;
+    transform: scale(0);
+    animation: spread 8s ease-in-out forwards;
   }
 
-  @keyframes gradientShift {
+  .ink-dark {
+    background: #19233A;
+    top: -40vmax;
+    left: -40vmax;
+    animation-delay: 0s;
+  }
+
+  .ink-light {
+    background: #AEB7C4;
+    bottom: -40vmax;
+    right: -40vmax;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes spread {
     0% {
-      background-position: 0% 50%;
+      transform: scale(0.05);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.7;
     }
     100% {
-      background-position: 100% 50%;
+      transform: scale(1);
+      opacity: 0.9;
     }
   }
 
@@ -217,12 +225,6 @@
     to { transform: translateX(-50%); }
   }
   
-  .dotted-background {
-    background-color: #AEB7C4;
-    background-image: radial-gradient(#19233A 2.5px, transparent 2.5px);
-    background-size: 30px 30px;
-  }
-
   .vignette-overlay {
     position: fixed;
     inset: 0;
@@ -410,3 +412,4 @@
 }
 
     
+

@@ -1,10 +1,12 @@
-
 'use client';
 
 export default function AnimatedGradientBackground() {
   return (
     <div
-      className="gradient-background fixed inset-0 -z-10 h-full w-full pointer-events-none"
-    />
+      className="ink-spread-background"
+    >
+      <div className="ink-dark"></div>
+      <div className="ink-light"></div>
+    </div>
   );
 }

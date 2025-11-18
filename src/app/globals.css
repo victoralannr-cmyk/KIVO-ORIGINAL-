@@ -196,9 +196,9 @@
   }
   
   .dotted-background {
-    background-color: #AEB7C4;
-    background-image: radial-gradient(hsl(227 30% 11%) 2.5px, transparent 2.5px);
-    background-size: 30px 30px;
+    background: linear-gradient(-45deg, #19233A, #AEB7C4);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
   }
 
   .vignette-overlay {

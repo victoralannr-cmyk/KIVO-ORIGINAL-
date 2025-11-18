@@ -197,7 +197,7 @@
   
   .sky-background {
     position: relative;
-    background: linear-gradient(to bottom, #000205 0%, #000000 60%, #000205 100%);
+    background: linear-gradient(to bottom, #19233A 0%, #19233A 60%, #19233A 100%);
     overflow: hidden;
   }
 
@@ -219,23 +219,23 @@
 
   .sky-background::before {
     background-image: 
-      radial-gradient(1.5px 1.5px at 20% 30%, white, transparent),
-      radial-gradient(1px 1px at 80% 10%, white, transparent),
-      radial-gradient(1px 1px at 50% 50%, white, transparent),
-      radial-gradient(2px 2px at 90% 80%, white, transparent),
-      radial-gradient(1.5px 1.5px at 10% 90%, white, transparent),
-      radial-gradient(2px 2px at 40% 20%, white, transparent),
-      radial-gradient(1px 1px at 70% 60%, white, transparent);
+      radial-gradient(1.5px 1.5px at 20% 30%, #F8F9FB, transparent),
+      radial-gradient(1px 1px at 80% 10%, #F8F9FB, transparent),
+      radial-gradient(1px 1px at 50% 50%, #AEB7C4, transparent),
+      radial-gradient(2px 2px at 90% 80%, #F8F9FB, transparent),
+      radial-gradient(1.5px 1.5px at 10% 90%, #AEB7C4, transparent),
+      radial-gradient(2px 2px at 40% 20%, #F8F9FB, transparent),
+      radial-gradient(1px 1px at 70% 60%, #AEB7C4, transparent);
     background-size: 300px 300px;
     animation: twinkle 8s infinite alternate;
   }
 
   .sky-background::after {
     background-image:
-      radial-gradient(1px 1px at 5% 70%, white, transparent),
-      radial-gradient(1px 1px at 35% 40%, white, transparent),
-      radial-gradient(1.5px 1.5px at 65% 5%, white, transparent),
-      radial-gradient(1px 1px at 95% 45%, white, transparent);
+      radial-gradient(1px 1px at 5% 70%, #F8F9FB, transparent),
+      radial-gradient(1px 1px at 35% 40%, #AEB7C4, transparent),
+      radial-gradient(1.5px 1.5px at 65% 5%, #F8F9FB, transparent),
+      radial-gradient(1px 1px at 95% 45%, #AEB7C4, transparent);
     background-size: 400px 400px;
     animation: twinkle 12s infinite alternate-reverse;
   }
@@ -262,18 +262,18 @@
 
   .card-sky-background::before {
     background-image: 
-      radial-gradient(2px 2px at 10% 20%, white, transparent),
-      radial-gradient(2px 2px at 40% 60%, white, transparent),
-      radial-gradient(2.5px 2.5px at 70% 80%, white, transparent);
+      radial-gradient(2px 2px at 10% 20%, #F8F9FB, transparent),
+      radial-gradient(2px 2px at 40% 60%, #AEB7C4, transparent),
+      radial-gradient(2.5px 2.5px at 70% 80%, #F8F9FB, transparent);
     background-size: 150px 150px;
     animation: twinkle 10s infinite linear;
   }
 
   .card-sky-background::after {
     background-image:
-      radial-gradient(2px 2px at 25% 90%, white, transparent),
-      radial-gradient(2.5px 2.5px at 55% 15%, white, transparent),
-      radial-gradient(2px 2px at 85% 50%, white, transparent);
+      radial-gradient(2px 2px at 25% 90%, #AEB7C4, transparent),
+      radial-gradient(2.5px 2.5px at 55% 15%, #F8F9FB, transparent),
+      radial-gradient(2px 2px at 85% 50%, #AEB7C4, transparent);
     background-size: 200px 200px;
     animation: twinkle 15s infinite linear reverse;
   }
@@ -466,5 +466,7 @@
 
     
 
+
+    
 
     

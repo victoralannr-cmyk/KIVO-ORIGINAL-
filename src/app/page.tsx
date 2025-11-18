@@ -15,30 +15,30 @@ import { cn } from '@/lib/utils';
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
-      <div className={cn("flex flex-col min-h-screen overflow-x-hidden animated-gradient")}>
-        <Header />
-        <main className="flex-grow">
-          <HeroSection />
-          <ScrollReveal>
-            <ContactSection />
-          </ScrollReveal>
-          <ScrollReveal>
-            <SuccessCasesSection />
-          </ScrollReveal>
-          <WhatIsAgent />
-          <HowItWorksSection />
-          <ScrollReveal>
-            <AutopilotSection />
-          </ScrollReveal>
-          <ScrollReveal>
-            <FinalCtaSection />
-          </ScrollReveal>
-          <ScrollReveal>
-            <FaqSection />
-          </ScrollReveal>
-        </main>
-        <Footer />
-      </div>
+      <Header />
+      <main className="flex-grow">
+        <HeroSection />
+        <ScrollReveal>
+          <ContactSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <SuccessCasesSection />
+        </ScrollReveal>
+        <WhatIsAgent />
+        <HowItWorksSection />
+        <ScrollReveal>
+          <AutopilotSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <FinalCtaSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <FaqSection />
+        </ScrollReveal>
+      </main>
+      <Footer />
     </div>
   );
 }
+
+    

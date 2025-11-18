@@ -56,7 +56,7 @@ export default function Header() {
           </div>
           
           <nav className="hidden md:flex md:items-center md:space-x-10">
-            <ExpandableTabs tabs={tabs} onChange={handleTabChange} />
+            <ExpandableTabs tabs={tabs} onChange={handleTabChange} activeColor='text-primary' />
           </nav>
 
           <div className="hidden md:flex items-center">

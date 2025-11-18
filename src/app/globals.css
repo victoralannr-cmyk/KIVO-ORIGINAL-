@@ -197,14 +197,14 @@
   
   .dotted-background {
     background-color: #FFFFFF;
-    background-image: radial-gradient(hsl(var(--foreground)) 2.5px, transparent 2.5px);
+    background-image: radial-gradient(hsl(227 30% 11%) 2.5px, transparent 2.5px);
     background-size: 30px 30px;
   }
 
   .vignette-overlay {
     position: fixed;
     inset: 0;
-    background: radial-gradient(ellipse at center, transparent 50%, hsla(227, 44%, 14%, 0.3) 100%);
+    background: radial-gradient(ellipse at center, transparent 50%, hsla(227, 30%, 11%, 0.3) 100%);
     pointer-events: none;
     z-index: 999;
   }
@@ -252,7 +252,7 @@
       transform: translateY(0px);
     }
     50% {
-      transform: translateY(-20px);
+      transform: translateY(-10px);
     }
     100% {
       transform: translateY(0px);
@@ -386,7 +386,3 @@
 .animate-subtle-pan {
   animation: subtle-pan 30s ease-in-out infinite;
 }
-
-    
-
-    

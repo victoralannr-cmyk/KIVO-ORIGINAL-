@@ -7,16 +7,13 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const logos = [
   { logoId: 'client-logo-very-pizza' },
-  { logoId: 'client-logo-very-pizza' },
-  { logoId: 'client-logo-very-pizza' },
-  { logoId: 'client-logo-very-pizza' },
-  { logoId: 'client-logo-very-pizza' },
-  { logoId: 'client-logo-very-pizza' },
-  { logoId: 'client-logo-very-pizza' },
+  { logoId: 'client-logo-2' },
+  { logoId: 'client-logo-3' },
+  { logoId: 'client-logo-4' },
+  { logoId: 'client-logo-5' },
+  { logoId: 'client-logo-6' },
+  { logoId: 'client-logo-7' },
 ];
-
-// Duplicate logos for a seamless loop
-const extendedLogos = [...logos, ...logos];
 
 export default function SuccessCasesSection() {
   return (
@@ -30,12 +27,17 @@ export default function SuccessCasesSection() {
                 Apoiada por grandes empresas
             </h2>
         </div>
-        <div className="w-full mt-12 overflow-x-hidden relative">
-          <div className="flex w-max animate-marquee">
-            {extendedLogos.map((item, index) => {
+        <div className="w-full mt-12">
+          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+            {logos.map((item, index) => {
                const logo = PlaceHolderImages.find(p => p.id === item.logoId);
+               const animationDelay = `${index * 0.3}s`;
                return (
-                <div key={index} className="p-4 flex-shrink-0 flex justify-center items-center h-full mx-4">
+                <div 
+                  key={index} 
+                  className="p-4 animate-float"
+                  style={{ animationDelay }}
+                >
                      {logo && (
                          <Image
                            src={logo.imageUrl}

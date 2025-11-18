@@ -26,7 +26,9 @@ export default function RootLayout({
       <body className={cn("font-body antialiased")}>
         <AnimatedGradientBackground />
         <div className="vignette-overlay" />
-        {children}
+        <div className="relative z-10">
+          {children}
+        </div>
         <Toaster />
         <BackToTop />
         </body>

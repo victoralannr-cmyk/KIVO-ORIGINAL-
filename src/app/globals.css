@@ -80,13 +80,10 @@
     @apply border-border;
   }
   body {
-    @apply text-foreground;
-    background: linear-gradient(-45deg, #19233A, #AEB7C4);
-    background-size: 400% 400%;
-    animation: gradient-animation 15s ease infinite;
+    @apply bg-background text-foreground;
   }
   section {
-    @apply w-full py-12 md:py-20;
+    @apply w-full py-12 md:py-20 lg:py-24;
   }
 }
 
@@ -95,6 +92,13 @@
     background: linear-gradient(-45deg, #19233A, #AEB7C4, #F8F9FB, #19233A);
     background-size: 400% 400%;
     animation: gradient-animation 15s ease infinite;
+  }
+
+  .gradient-background {
+    background: linear-gradient(140deg, #19233A 0%, #AEB7C4 50%, #19233A 100%);
+    background-size: 400% 400%;
+    opacity: 0;
+    animation: fadeIn 4s ease forwards, gradientShift 20s ease-in-out infinite alternate 4s;
   }
 
   .button-wavy-gradient {
@@ -132,6 +136,21 @@
     }
     100% {
       background-position: 0% 50%;
+    }
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
     }
   }
 
@@ -207,7 +226,7 @@
   .vignette-overlay {
     position: fixed;
     inset: 0;
-    background: radial-gradient(ellipse at center, transparent 50%, hsla(227, 30%, 9%, 0.7) 100%);
+    background: radial-gradient(ellipse at center, transparent 50%, hsla(227, 47%, 13%, 0.7) 100%);
     pointer-events: none;
     z-index: 999;
   }

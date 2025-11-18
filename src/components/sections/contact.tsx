@@ -21,7 +21,7 @@ const initialState: ContactFormState = {
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" className="w-full rounded-full" disabled={pending}>
+    <Button type="submit" className="w-full rounded-full animate-pulse" disabled={pending}>
       {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : 'Enviar'}
     </Button>
   );
@@ -126,5 +126,3 @@ export default function ContactSection() {
     </section>
   );
 }
-
-    

@@ -5,25 +5,25 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 227 30% 11%;
-    --card: 0 0% 96%;
-    --card-foreground: 227 30% 11%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 227 30% 11%;
-    --primary: 195 85% 48%;
+    --background: 227 30% 9%;
+    --foreground: 0 0% 100%;
+    --card: 227 30% 15%;
+    --card-foreground: 0 0% 100%;
+    --popover: 227 30% 11%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 195 85% 58%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 94%;
-    --secondary-foreground: 227 30% 11%;
-    --muted: 0 0% 94%;
-    --muted-foreground: 227 30% 40%;
+    --secondary: 227 30% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 227 30% 20%;
+    --muted-foreground: 0 0% 70%;
     --accent: 170 84% 49%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84.2% 60.2%;
+    --accent-foreground: 227 30% 11%;
+    --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89%;
-    --input: 0 0% 89%;
-    --ring: 195 85% 48%;
+    --border: 222 47% 25%;
+    --input: 227 30% 25%;
+    --ring: 195 85% 58%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -80,7 +80,10 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background: linear-gradient(-45deg, #19233A, #AEB7C4);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
   }
   section {
     @apply w-full py-12 md:py-24 lg:py-32;
@@ -196,9 +199,9 @@
   }
   
   .dotted-background {
-    background: linear-gradient(-45deg, #19233A, #AEB7C4);
-    background-size: 400% 400%;
-    animation: gradient-animation 15s ease infinite;
+    background-color: #FFFFFF;
+    background-image: radial-gradient(#19233a 2.5px, transparent 2.5px);
+    background-size: 30px 30px;
   }
 
   .vignette-overlay {

@@ -3,10 +3,10 @@
 export default function AnimatedGradientBackground() {
   return (
     <div
-      className="ink-spread-background"
+      className="lines-background"
     >
-      <div className="ink-dark"></div>
-      <div className="ink-light"></div>
+      <div className="lines-dark"></div>
+      <div className="lines-light"></div>
     </div>
   );
 }

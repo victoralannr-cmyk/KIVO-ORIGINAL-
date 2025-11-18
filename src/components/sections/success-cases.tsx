@@ -27,16 +27,15 @@ export default function SuccessCasesSection() {
                 Apoiada por grandes empresas
             </h2>
         </div>
-        <div className="w-full mt-12">
-          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
-            {logos.map((item, index) => {
+        <div className="w-full mt-12 overflow-x-hidden relative">
+          <div className="flex marquee">
+            {[...logos, ...logos].map((item, index) => {
                const logo = PlaceHolderImages.find(p => p.id === item.logoId);
-               const animationDelay = `${index * 0.3}s`;
                return (
                 <div 
                   key={index} 
-                  className="p-4 animate-float"
-                  style={{ animationDelay }}
+                  className="p-4 flex-shrink-0"
+                  style={{ minWidth: '180px' }}
                 >
                      {logo && (
                          <Image
@@ -44,7 +43,7 @@ export default function SuccessCasesSection() {
                            alt={logo.description}
                            width={140}
                            height={50}
-                           className="h-10 w-auto object-contain"
+                           className="h-10 w-auto object-contain mx-auto"
                            data-ai-hint={logo.imageHint}
                          />
                        )}

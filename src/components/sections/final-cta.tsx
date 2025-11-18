@@ -18,7 +18,7 @@ export default function FinalCtaSection() {
               alt={kLogo.description}
               width={500}
               height={500}
-              className="absolute -top-1/4 -left-1/4 w-3/4 h-auto opacity-20 animate-orbit hidden md:block"
+              className="absolute -top-1/4 -left-1/4 w-3/4 h-auto opacity-5 animate-orbit"
               style={{ animationDuration: '45s' }}
           />
       )}
@@ -29,7 +29,7 @@ export default function FinalCtaSection() {
               alt={kivoText.description}
               width={600}
               height={200}
-              className="absolute -bottom-1/4 -right-1/4 w-2/3 h-auto opacity-[0.03] animate-orbit hidden md:block"
+              className="absolute -bottom-1/4 -right-1/4 w-2/3 h-auto opacity-[0.03] animate-orbit"
               style={{ animationDuration: '60s' }}
           />
       )}
@@ -42,7 +42,7 @@ export default function FinalCtaSection() {
           Nós criamos, treinamos e entregamos seu agente pronto para atender.
         </p>
         <div className="mt-8">
-          <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-8 py-4 text-lg">
+          <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-8 py-4 text-lg animate-pulse">
             <Link href="#agendar">
               Agendar uma demonstração
             </Link>
@@ -52,3 +52,5 @@ export default function FinalCtaSection() {
     </section>
   );
 }
+
+    

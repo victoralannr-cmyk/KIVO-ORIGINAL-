@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --background: 227 30% 11%;
+    --background: 227 30% 9%;
     --foreground: 0 0% 100%;
     --card: 227 30% 15%;
     --card-foreground: 0 0% 100%;
@@ -40,7 +40,7 @@
     --sidebar-ring: 195 85% 58%;
   }
   .dark {
-    --background: 227 30% 11%;
+    --background: 227 30% 9%;
     --foreground: 0 0% 100%;
     --card: 227 30% 15%;
     --card-foreground: 0 0% 100%;
@@ -312,6 +312,10 @@
     animation: orbit 15s linear infinite;
   }
 
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
   @keyframes float {
     0% {
       transform: translateY(0px);
@@ -424,6 +428,12 @@
       transform: rotate(-15deg);
     }
   }
+  
+  @keyframes pulse {
+    50% {
+      transform: scale(1.05);
+    }
+  }
 }
 
 @keyframes twinkle {
@@ -466,6 +476,8 @@
 
     
 
+
+    
 
     
 

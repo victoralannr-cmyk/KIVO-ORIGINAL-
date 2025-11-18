@@ -60,7 +60,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden md:flex items-center">
-             <Button asChild className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-6 py-3">
+             <Button asChild className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-6 py-3 animate-pulse">
               <Link href="#agendar">
                 Agendar uma demonstração
               </Link>
@@ -85,7 +85,7 @@ export default function Header() {
              </Link>
            ))}
             <div className="pt-4">
-              <Button asChild className="w-full group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-6 py-3">
+              <Button asChild className="w-full group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-6 py-3 animate-pulse">
                 <Link href="#agendar" onClick={() => setIsMenuOpen(false)}>
                   Agendar uma demonstração
                 </Link>
@@ -97,3 +97,5 @@ export default function Header() {
     </header>
   );
 }
+
+    

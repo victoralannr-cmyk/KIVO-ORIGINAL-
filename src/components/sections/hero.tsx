@@ -9,18 +9,11 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function HeroSection() {
-    const kLogo = PlaceHolderImages.find(img => img.id === 'k-logo-hero');
-    const kivoText = PlaceHolderImages.find(img => img.id === 'kivo-text-hero');
-
     return (
         <section
             id="home"
             className="relative w-full h-screen min-h-[600px] md:min-h-[700px] flex flex-col justify-center items-center text-center overflow-hidden"
         >
-
-            
-
-            
 
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
                 <div className="flex-grow flex flex-col justify-center items-center">
@@ -30,7 +23,7 @@ export default function HeroSection() {
 						</span>
 					</h1>
                     <div className="mt-8 animate-slide-in-left">
-                        <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-8 py-4 text-lg">
+                        <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-8 py-4 text-lg animate-pulse">
                             <Link href="#agendar">
                                 Agendar uma demonstração
                             </Link>
@@ -45,3 +38,5 @@ export default function HeroSection() {
         </section>
     );
 }
+
+    

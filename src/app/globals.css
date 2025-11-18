@@ -204,10 +204,7 @@
   .vignette-overlay {
     position: fixed;
     inset: 0;
-    background: radial-gradient(ellipse at center, 
-      transparent 30%, 
-      hsla(220, 30%, 65%, 0.1) 70%, 
-      hsla(227, 44%, 14%, 0.5) 100%);
+    background: radial-gradient(ellipse at center, transparent 50%, hsla(227, 44%, 14%, 0.3) 100%);
     pointer-events: none;
     z-index: 999;
   }

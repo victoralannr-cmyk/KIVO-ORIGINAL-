@@ -39,7 +39,7 @@ export default function Header() {
         'fixed top-0 left-0 right-0 z-50 p-4 transition-all duration-300 ease-in-out'
       )}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 bg-background/50 backdrop-blur-lg border border-white/20 shadow-lg rounded-full">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 bg-background/50 backdrop-blur-lg border border-black/10 shadow-lg rounded-full">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-2">
@@ -97,5 +97,7 @@ export default function Header() {
     </header>
   );
 }
+
+    
 
     

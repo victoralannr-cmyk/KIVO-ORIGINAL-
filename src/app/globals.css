@@ -5,25 +5,25 @@
 
 @layer base {
   :root {
-    --background: 227 30% 9%;
-    --foreground: 0 0% 100%;
-    --card: 227 30% 15%;
-    --card-foreground: 0 0% 100%;
-    --popover: 227 30% 11%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 195 85% 58%;
+    --background: 0 0% 100%;
+    --foreground: 227 30% 11%;
+    --card: 0 0% 96%;
+    --card-foreground: 227 30% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 227 30% 11%;
+    --primary: 195 85% 48%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 227 30% 20%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 227 30% 20%;
-    --muted-foreground: 0 0% 70%;
+    --secondary: 0 0% 94%;
+    --secondary-foreground: 227 30% 11%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 227 30% 40%;
     --accent: 170 84% 49%;
-    --accent-foreground: 227 30% 11%;
-    --destructive: 0 63% 31%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 222 47% 25%;
-    --input: 227 30% 25%;
-    --ring: 195 85% 58%;
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 195 85% 48%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -196,8 +196,8 @@
   }
   
   .dotted-background {
-    background-color: #19233A;
-    background-image: radial-gradient(hsl(var(--foreground) / 0.1) 1px, transparent 1px);
+    background-color: #FFFFFF;
+    background-image: radial-gradient(#19233A 1px, transparent 1px);
     background-size: 16px 16px;
   }
 
@@ -438,6 +438,8 @@
 
     
 
+
+    
 
     
 

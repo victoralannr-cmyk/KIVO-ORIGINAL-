@@ -3,31 +3,19 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Button } from '../ui/button';
-
+import { Home, Settings, Briefcase, Info, HelpCircle } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 const navItems = [
-  { name: 'Home', href: '#home' },
-  { name: 'Serviços', href: '#como-funciona' },
-  { name: 'Apoiadores', href: '#sucesso'},
-  { name: 'Sobre', href: '#sobre' },
-  { name: 'FAQ', href: '#faq' },
+  { name: 'Home', href: '#home', icon: Home },
+  { name: 'Serviços', href: '#como-funciona', icon: Settings },
+  { name: 'Apoiadores', href: '#sucesso', icon: Briefcase },
+  { name: 'Sobre', href: '#sobre', icon: Info },
+  { name: 'FAQ', href: '#faq', icon: HelpCircle },
 ];
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState('home');
-  const [scrolled, setScrolled] = useState(false);
-  const logo = PlaceHolderImages.find(img => img.id === 'aetherai-logo');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,20 +26,20 @@ export default function Header() {
           }
         });
       },
-      { rootMargin: '-20% 0px -80% 0px', threshold: 0 }
+      { rootMargin: '-50% 0px -50% 0px', threshold: 0 }
     );
 
     const sections = document.querySelectorAll('section');
     sections.forEach((section) => {
-        if (section.id) {
-            observer.observe(section);
-        }
+      if (section.id) {
+        observer.observe(section);
+      }
     });
 
     return () => {
       sections.forEach((section) => {
         if (section.id) {
-            observer.unobserve(section);
+          observer.unobserve(section);
         }
       });
     };
@@ -67,58 +55,43 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 w-full z-50 transition-all duration-300',
-        scrolled ? 'bg-background/80 backdrop-blur-lg border-b border-white/10' : 'bg-transparent'
+        'fixed bottom-4 left-1/2 -translate-x-1/2 w-auto z-50 transition-all duration-300'
       )}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }} className="flex items-center">
-             {logo && (
-              <Image
-                src={logo.imageUrl}
-                alt="Kivo Logo"
-                width={120}
-                height={30}
-                className="h-10 w-auto"
-              />
-            )}
-          </Link>
-
-          <nav className="hidden md:flex items-center space-x-6">
-            {navItems.map((item) => {
-              const isActive = activeSection === item.href.substring(1);
-              return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(item.href);
-                  }}
-                  className={cn(
-                    'relative font-medium text-sm transition-colors duration-300',
-                    isActive ? 'text-primary' : 'text-muted-foreground hover:text-foreground',
-                  )}
-                >
-                  {item.name}
-                  {isActive && (
-                     <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full" />
-                  )}
-                </Link>
-              );
-            })}
-          </nav>
-
-          <div className="flex items-center gap-4">
-             <Button asChild size="sm" className="hidden md:flex group transition-all duration-300 ease-in-out bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20 hover:border-primary/50 rounded-full px-5 py-2">
-                <Link href="#agendar">
-                    Agendar
-                </Link>
-             </Button>
+      <TooltipProvider>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-center h-16 bg-background/30 backdrop-blur-lg border border-white/10 shadow-lg rounded-2xl p-2">
+            <nav className="flex items-center space-x-2">
+              {navItems.map((item) => {
+                const isActive = activeSection === item.href.substring(1);
+                const Icon = item.icon;
+                return (
+                  <Tooltip key={item.name} delayDuration={0}>
+                    <TooltipTrigger asChild>
+                      <Link
+                        href={item.href}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNavClick(item.href);
+                        }}
+                        className={cn(
+                          'relative flex items-center justify-center h-12 w-12 rounded-xl transition-colors duration-300',
+                          isActive ? 'bg-muted text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
+                        )}
+                      >
+                        <Icon className="h-6 w-6" />
+                      </Link>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>{item.name}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                );
+              })}
+            </nav>
           </div>
         </div>
-      </div>
+      </TooltipProvider>
     </header>
   );
 }

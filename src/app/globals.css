@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --background: 227 30% 9%;
+    --background: 0 0% 0%;
     --foreground: 0 0% 100%;
     --card: 227 30% 15%;
     --card-foreground: 0 0% 100%;
@@ -40,7 +40,7 @@
     --sidebar-ring: 195 85% 58%;
   }
   .dark {
-    --background: 227 30% 9%;
+    --background: 0 0% 0%;
     --foreground: 0 0% 100%;
     --card: 227 30% 15%;
     --card-foreground: 0 0% 100%;
@@ -368,3 +368,6 @@
 
 
 
+
+
+    

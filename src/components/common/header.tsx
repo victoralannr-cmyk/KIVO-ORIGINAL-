@@ -1,22 +1,34 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { Home, Puzzle, Award, Info, Handshake } from 'lucide-react';
-import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Button } from '../ui/button';
+
 
 const navItems = [
-  { name: 'Home', href: '#home', icon: Home },
-  { name: 'Serviços', href: '#como-funciona', icon: Puzzle },
-  { name: 'Apoiadores', href: '#sucesso', icon: Award },
-  { name: 'Sobre', href: '#sobre', icon: Info },
-  { name: 'Contato', href: '#agendar', icon: Handshake },
+  { name: 'Home', href: '#home' },
+  { name: 'Serviços', href: '#como-funciona' },
+  { name: 'Apoiadores', href: '#sucesso'},
+  { name: 'Sobre', href: '#sobre' },
+  { name: 'FAQ', href: '#faq' },
 ];
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState('home');
+  const [scrolled, setScrolled] = useState(false);
+  const logo = PlaceHolderImages.find(img => img.id === 'aetherai-logo');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -27,7 +39,7 @@ export default function Header() {
           }
         });
       },
-      { rootMargin: '-50% 0px -50% 0px', threshold: 0 }
+      { rootMargin: '-20% 0px -80% 0px', threshold: 0 }
     );
 
     const sections = document.querySelectorAll('section');
@@ -56,32 +68,57 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'fixed bottom-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ease-in-out'
+        'fixed top-0 left-0 w-full z-50 transition-all duration-300',
+        scrolled ? 'bg-background/80 backdrop-blur-lg border-b border-white/10' : 'bg-transparent'
       )}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 bg-background/50 backdrop-blur-lg border border-white/10 shadow-lg rounded-full">
-        <nav className="flex items-center justify-center h-16 md:h-20 space-x-2">
-          {navItems.map((item) => {
-            const isActive = activeSection === item.href.substring(1);
-            return (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(item.href);
-                }}
-                className={cn(
-                  'flex flex-col items-center justify-center w-16 h-16 rounded-full text-center p-2 transition-all duration-300 ease-in-out',
-                  isActive ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
-                )}
-              >
-                <item.icon className="h-6 w-6 mb-1" />
-                <span className="text-xs font-medium">{item.name}</span>
-              </Link>
-            );
-          })}
-        </nav>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }} className="flex items-center">
+             {logo && (
+              <Image
+                src={logo.imageUrl}
+                alt="Kivo Logo"
+                width={120}
+                height={30}
+                className="h-10 w-auto"
+              />
+            )}
+          </Link>
+
+          <nav className="hidden md:flex items-center space-x-6">
+            {navItems.map((item) => {
+              const isActive = activeSection === item.href.substring(1);
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(item.href);
+                  }}
+                  className={cn(
+                    'relative font-medium text-sm transition-colors duration-300',
+                    isActive ? 'text-primary' : 'text-muted-foreground hover:text-foreground',
+                  )}
+                >
+                  {item.name}
+                  {isActive && (
+                     <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full" />
+                  )}
+                </Link>
+              );
+            })}
+          </nav>
+
+          <div className="flex items-center gap-4">
+             <Button asChild size="sm" className="hidden md:flex group transition-all duration-300 ease-in-out bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20 hover:border-primary/50 rounded-full px-5 py-2">
+                <Link href="#agendar">
+                    Agendar
+                </Link>
+             </Button>
+          </div>
+        </div>
       </div>
     </header>
   );

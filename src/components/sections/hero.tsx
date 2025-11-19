@@ -158,7 +158,7 @@ export default function HeroSection() {
                             <div className="space-y-2">
                               <Input id="whatsapp" name="whatsapp" placeholder="WhatsApp" required className="bg-background/80 rounded-full text-foreground placeholder:text-muted-foreground"/>
                             </div>
-                            <div className="spacey-2">
+                            <div className="space-y-2">
                               <Input id="company" name="company" placeholder="Qual é o nome da sua empresa?" required className="bg-background/80 rounded-full text-foreground placeholder:text-muted-foreground"/>
                             </div>
                             <div className="space-y-2">

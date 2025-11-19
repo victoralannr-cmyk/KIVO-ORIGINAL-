@@ -1,4 +1,3 @@
-
 import {
   Accordion,
   AccordionContent,
@@ -84,5 +83,3 @@ export default function FaqSection() {
     </section>
   );
 }
-
-    

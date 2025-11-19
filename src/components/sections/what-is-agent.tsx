@@ -1,4 +1,3 @@
-
 'use client';
 import Image from 'next/image';
 import ScrollReveal from '../common/scroll-reveal';
@@ -79,5 +78,3 @@ export default function WhatIsAgent() {
     </section>
   );
 }
-
-    

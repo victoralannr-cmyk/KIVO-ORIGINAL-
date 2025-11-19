@@ -1,4 +1,3 @@
-
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -92,5 +91,3 @@ export default function AutopilotSection() {
     </section>
   );
 }
-
-    

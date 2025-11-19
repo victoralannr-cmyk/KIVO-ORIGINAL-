@@ -118,7 +118,15 @@ export default function HeroSection() {
                       <motion.span variants={wordAnimation} className="inline-block text-wavy-gradient">
                         {lastPart}
                       </motion.span>
-					          </motion.h1>
+					</motion.h1>
+                    <motion.p 
+                        className="mx-auto mt-6 max-w-xl text-muted-foreground md:text-xl"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1, duration: 0.8 }}
+                    >
+                        Transformamos ideias em resultados. Combinamos design, tecnologia e IA para criar soluções digitais que impulsionam o crescimento do seu negócio.
+                    </motion.p>
                     <motion.div 
                       className="mt-8"
                       variants={buttonAnimation}
@@ -137,8 +145,11 @@ export default function HeroSection() {
                   <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="animate-slide-in-left">
                       <div className="space-y-4 text-center md:text-left">
+                          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-foreground">
+                            Vamos conversar?
+                          </h2>
                           <p className="text-muted-foreground md:text-lg">
-                              Nosso time entrará em contato para fazer uma demonstração gratuita.
+                              Nosso time entrará em contato para fazer uma demonstração gratuita e mostrar como podemos ajudar.
                           </p>
                       </div>
                     </div>

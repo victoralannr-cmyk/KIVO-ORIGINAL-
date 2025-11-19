@@ -54,11 +54,31 @@ export default function Header() {
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-white hover:bg-muted/50">
+              <Button variant="ghost" size="icon" className="text-white hover:bg-muted/50 md:hidden">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Abrir menu</span>
               </Button>
             </SheetTrigger>
+             <div className="hidden md:flex items-center space-x-2">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(item.href);
+                  }}
+                  className="px-3 py-2 rounded-lg hover:bg-muted/20 text-sm font-medium text-white transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ))}
+               <Button asChild className="button-wavy-gradient rounded-full ml-2">
+                <Link href="#agendar" onClick={(e) => { e.preventDefault(); handleNavClick('#agendar'); }}>
+                  Agendar
+                </Link>
+              </Button>
+            </div>
             <SheetContent side="right" className="bg-background border-border/50">
               <div className="flex flex-col h-full">
                 <div className="flex justify-between items-center py-4 border-b border-border/20">
@@ -88,7 +108,7 @@ export default function Header() {
                           e.preventDefault();
                           handleNavClick(item.href);
                         }}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted text-lg"
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted text-lg text-foreground"
                       >
                         <Icon className="h-5 w-5" />
                         <span>{item.name}</span>

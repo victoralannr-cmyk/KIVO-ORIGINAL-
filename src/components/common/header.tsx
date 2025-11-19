@@ -1,97 +1,87 @@
-"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
+'use client';
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Menu, X, Home, Puzzle, Award, Info } from 'lucide-react';
-import { ExpandableTabs } from '../ui/expandable-tabs';
+import { Home, Puzzle, Award, Info, Handshake } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 const navItems = [
   { name: 'Home', href: '#home', icon: Home },
-  { name: 'O que somos capazes de Fazer', href: '#como-funciona', icon: Puzzle },
+  { name: 'Serviços', href: '#como-funciona', icon: Puzzle },
   { name: 'Apoiadores', href: '#sucesso', icon: Award },
   { name: 'Sobre', href: '#sobre', icon: Info },
+  { name: 'Contato', href: '#agendar', icon: Handshake },
 ];
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const logo = PlaceHolderImages.find(img => img.id === 'aetherai-logo');
+  const [activeSection, setActiveSection] = useState('home');
 
-  const handleTabChange = (index: number | null) => {
-    if (index !== null) {
-      const item = navItems[index];
-      const element = document.querySelector(item.href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: '-50% 0px -50% 0px', threshold: 0 }
+    );
+
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section) => {
+        if (section.id) {
+            observer.observe(section);
+        }
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        if (section.id) {
+            observer.unobserve(section);
+        }
+      });
+    };
+  }, []);
+
+  const handleNavClick = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  const tabs = navItems.map(item => ({ title: item.name, icon: item.icon }));
 
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 p-2 md:p-4 transition-all duration-300 ease-in-out'
+        'fixed bottom-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ease-in-out'
       )}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 bg-background/50 backdrop-blur-lg border border-black/10 shadow-lg rounded-full">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center gap-2">
-              {logo && (
-                <Image
-                  src={logo.imageUrl}
-                  alt="Kivo Logo"
-                  width={150}
-                  height={40}
-                  className="h-12 w-auto md:h-16"
-                />
-              )}
-            </Link>
-          </div>
-          
-          <nav className="hidden md:flex md:items-center md:space-x-10">
-            <ExpandableTabs tabs={tabs} onChange={handleTabChange} activeColor='text-primary' />
-          </nav>
-
-          <div className="hidden md:flex items-center">
-             <Button asChild className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-6 py-3 animate-pulse">
-              <Link href="#agendar">
-                Agendar uma demonstração
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 bg-background/50 backdrop-blur-lg border border-white/10 shadow-lg rounded-full">
+        <nav className="flex items-center justify-center h-16 md:h-20 space-x-2">
+          {navItems.map((item) => {
+            const isActive = activeSection === item.href.substring(1);
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(item.href);
+                }}
+                className={cn(
+                  'flex flex-col items-center justify-center w-16 h-16 rounded-full text-center p-2 transition-all duration-300 ease-in-out',
+                  isActive ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                )}
+              >
+                <item.icon className="h-6 w-6 mb-1" />
+                <span className="text-xs font-medium">{item.name}</span>
               </Link>
-            </Button>
-          </div>
-          <div className="md:hidden">
-            <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
-          </div>
-        </div>
-        {isMenuOpen && (
-           <div className="md:hidden pt-2 pb-4 space-y-1 sm:px-3">
-           {navItems.map((item) => (
-             <Link
-               key={item.name}
-               href={item.href}
-               onClick={() => setIsMenuOpen(false)}
-               className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-muted"
-             >
-               {item.name}
-             </Link>
-           ))}
-            <div className="pt-4">
-              <Button asChild className="w-full group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-6 py-3 animate-pulse">
-                <Link href="#agendar" onClick={() => setIsMenuOpen(false)}>
-                  Agendar uma demonstração
-                </Link>
-              </Button>
-            </div>
-         </div>
-        )}
+            );
+          })}
+        </nav>
       </div>
     </header>
   );

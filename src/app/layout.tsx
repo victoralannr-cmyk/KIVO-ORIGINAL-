@@ -4,6 +4,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import BackToTop from '@/components/common/back-to-top';
 import { cn } from '@/lib/utils';
+import FloatingLines from '@/components/common/floating-lines';
 
 export const metadata: Metadata = {
   title: 'Kivo | Agentes de IA sob medida',
@@ -24,6 +25,7 @@ export default function RootLayout({
       </head>
       <body className={cn("font-body antialiased bg-background")}>
         <div className="vignette-overlay" />
+        <FloatingLines linesGradient={["#19233A", "#AEB7C4"]} />
         <div className="relative z-10">
           {children}
         </div>

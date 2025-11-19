@@ -38,7 +38,7 @@ export default function Header() {
             background: 'linear-gradient(180deg, rgb(33, 33, 33) 0%, rgba(33, 33, 33, 0.4) 100%)'
           }}
         >
-          <div className="w-full h-full flex flex-col justify-center bg-black rounded-xl px-4">
+          <div className="w-full h-full flex flex-col justify-center rounded-xl px-4">
             <div className="w-full flex items-center justify-between">
               <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }}>
                 {logo && (

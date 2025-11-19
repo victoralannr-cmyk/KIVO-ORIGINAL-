@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useEffect } from 'react';
@@ -64,7 +63,7 @@ export default function HeroSection() {
         >
             <DotGrid
               baseColor="#d1d5db"
-              activeColor="#374151"
+              activeColor="#111827"
               className="absolute inset-0 -z-10"
             />
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>

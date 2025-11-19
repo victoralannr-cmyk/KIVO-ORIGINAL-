@@ -62,8 +62,12 @@ export default function HeroSection() {
             className="relative w-full pt-40 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden bg-white"
         >
             <DotGrid
+              dotSize={1}
+              gap={24}
               baseColor="#d1d5db"
               activeColor="#111827"
+              proximity={120}
+              resistance={500}
               className="absolute inset-0 -z-10"
             />
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
@@ -93,28 +97,28 @@ export default function HeroSection() {
                     </div>
 
                     <div className="animate-slide-in-right">
-                      <Card className="w-full max-w-lg mx-auto bg-card/80 backdrop-blur-sm border-border/20 shadow-lg rounded-2xl">
+                      <Card className="w-full max-w-lg mx-auto bg-card/10 backdrop-blur-sm border-border/20 shadow-lg rounded-2xl">
                         <form action={formAction}>
                           <CardContent className="pt-6 space-y-4">
                             <div className="space-y-2">
-                              <Input id="name" name="name" placeholder="Seu nome" required className="bg-input rounded-full"/>
+                              <Input id="name" name="name" placeholder="Seu nome" required className="bg-white/80 rounded-full text-black placeholder:text-gray-500"/>
                               {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name.join(', ')}</p>}
                             </div>
                             <div className="space-y-2">
-                              <Input id="email" name="email" type="email" placeholder="Seu melhor e-mail" required className="bg-input rounded-full"/>
+                              <Input id="email" name="email" type="email" placeholder="Seu melhor e-mail" required className="bg-white/80 rounded-full text-black placeholder:text-gray-500"/>
                               {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email.join(', ')}</p>}
                             </div>
                             <div className="space-y-2">
-                              <Input id="whatsapp" name="whatsapp" placeholder="WhatsApp" required className="bg-input rounded-full"/>
+                              <Input id="whatsapp" name="whatsapp" placeholder="WhatsApp" required className="bg-white/80 rounded-full text-black placeholder:text-gray-500"/>
                             </div>
                             <div className="spacey-2">
-                              <Input id="company" name="company" placeholder="Qual é o nome da sua empresa?" required className="bg-input rounded-full"/>
+                              <Input id="company" name="company" placeholder="Qual é o nome da sua empresa?" required className="bg-white/80 rounded-full text-black placeholder:text-gray-500"/>
                             </div>
                             <div className="space-y-2">
-                              <Input id="segment" name="segment" placeholder="Qual o segmento da sua empresa?" required className="bg-input rounded-full"/>
+                              <Input id="segment" name="segment" placeholder="Qual o segmento da sua empresa?" required className="bg-white/80 rounded-full text-black placeholder:text-gray_500"/>
                             </div>
                             <div className="space-y-2">
-                              <select name="revenue" id="revenue" className="w-full h-10 rounded-full border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-muted-foreground" required defaultValue="">
+                              <select name="revenue" id="revenue" className="w-full h-10 rounded-full border border-input bg-white/80 px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-gray-500" required defaultValue="">
                                   <option value="" disabled>Qual é o seu faturamento mensal atual?</option>
                                   <option value="Até R$ 20.000">Até R$ 20.000</option>
                                   <option value="de R$ 20.000 a R$ 40.000">de R$ 20.000 a R$ 40.000</option>

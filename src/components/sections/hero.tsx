@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import DotGrid from '@/components/common/dot-grid';
 
 export default function HeroSection() {
     return (
@@ -14,10 +15,18 @@ export default function HeroSection() {
             id="home"
             className="relative w-full pt-40 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden"
         >
+            <DotGrid
+              dotSize={2}
+              gap={25}
+              baseColor="#19233A"
+              activeColor="#AEB7C4"
+              proximity={120}
+              shockRadius={200}
+            />
 
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
                 <div className="flex-grow flex flex-col justify-center items-center">
-                    <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-center text-foreground animate-slide-in-right">
+                    <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground animate-slide-in-right">
 						<span className='outline-none' >
 							Visão estratégica. Execução completa. <span className="text-wavy-gradient">Resultado real.</span>
 						</span>
@@ -38,11 +47,3 @@ export default function HeroSection() {
         </section>
     );
 }
-
-    
-    
-
-    
-    
-
-    

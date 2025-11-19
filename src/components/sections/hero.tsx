@@ -7,7 +7,6 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import DotGrid from '../common/dot-grid';
 import { useFormState, useFormStatus } from 'react-dom';
 import { submitContactForm, type ContactFormState } from '@/app/actions';
 import { useToast } from '@/hooks/use-toast';
@@ -60,22 +59,11 @@ export default function HeroSection() {
     return (
         <section
             id="home"
-            className="relative w-full pt-40 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden bg-background bg-none"
+            className="relative w-full pt-40 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden bg-white"
         >
-            <DotGrid
-              className="absolute inset-0 z-0"
-              dotSize={2}
-              gap={24}
-              baseColor="#2A334A"
-              activeColor="#F0F0F0"
-              proximity={120}
-              resistance={500}
-              returnDuration={0.8}
-            />
-
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
                 <div className="flex-grow flex flex-col justify-center items-center">
-                    <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground animate-slide-in-right">
+                    <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-black animate-slide-in-right">
 						<span className='outline-none' >
 							Visão estratégica. Execução completa. <span className="text-wavy-gradient">Resultado real.</span>
 						</span>
@@ -93,7 +81,7 @@ export default function HeroSection() {
                   <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="animate-slide-in-left">
                       <div className="space-y-4 text-center md:text-left">
-                          <p className="text-muted-foreground md:text-lg">
+                          <p className="text-gray-600 md:text-lg">
                               Nosso time entrará em contato para fazer uma demonstração gratuita.
                           </p>
                       </div>

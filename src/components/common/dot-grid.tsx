@@ -165,7 +165,11 @@ const DotGrid = ({
       window.addEventListener('resize', buildGrid);
     }
     return () => {
-      if (ro && wrapperRef.current) ro.unobserve(wrapperRef.current);
+      if (ro && wrapperRef.current) {
+        ro.unobserve(wrapperRef.current);
+      } else if (ro) {
+        ro.disconnect();
+      }
       else window.removeEventListener('resize', buildGrid);
     };
   }, [buildGrid]);
@@ -193,6 +197,7 @@ const DotGrid = ({
       pr.vy = vy;
       pr.speed = speed;
 
+      if (!canvasRef.current) return;
       const rect = canvasRef.current.getBoundingClientRect();
       pr.x = e.clientX - rect.left;
       pr.y = e.clientY - rect.top;

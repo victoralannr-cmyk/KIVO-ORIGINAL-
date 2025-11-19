@@ -52,6 +52,20 @@ const wordAnimation = {
   },
 };
 
+const buttonAnimation = {
+  hidden: { opacity: 0, x: -20 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: 'spring',
+      damping: 12,
+      stiffness: 100,
+      delay: 0.5, // Delay to let the title animate first
+    },
+  },
+}
+
 const textParts = "Visão estratégica. Execução completa.".split(" ");
 const lastPart = "Resultado real.";
 
@@ -105,13 +119,18 @@ export default function HeroSection() {
                         {lastPart}
                       </motion.span>
 					          </motion.h1>
-                    <div className="mt-8 animate-slide-in-left">
+                    <motion.div 
+                      className="mt-8"
+                      variants={buttonAnimation}
+                      initial="hidden"
+                      animate="visible"
+                    >
                         <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-6 py-3 text-base md:px-8 md:py-4 md:text-lg animate-pulse">
                             <Link href="#agendar">
                                 Agendar uma demonstração
                             </Link>
                         </Button>
-                    </div>
+                    </motion.div>
                 </div>
 
                 <div id="agendar" className="w-full max-w-4xl mx-auto pt-16 md:pt-24">

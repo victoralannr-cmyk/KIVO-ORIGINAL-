@@ -13,6 +13,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Loader2 } from 'lucide-react';
+import DotGrid from '../common/dot-grid';
 
 const initialState: ContactFormState = {
   message: '',
@@ -61,6 +62,11 @@ export default function HeroSection() {
             id="home"
             className="relative w-full pt-40 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden bg-white"
         >
+            <DotGrid
+              baseColor="#d1d5db"
+              activeColor="#374151"
+              className="absolute inset-0 -z-10"
+            />
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
                 <div className="flex-grow flex flex-col justify-center items-center">
                     <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-black animate-slide-in-right">

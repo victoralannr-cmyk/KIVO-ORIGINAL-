@@ -12,6 +12,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Loader2 } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const initialState: ContactFormState = {
   message: '',
@@ -26,6 +27,33 @@ function SubmitButton() {
     </Button>
   );
 }
+
+const sentence = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const wordAnimation = {
+  hidden: { opacity: 0, x: -20 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: 'spring',
+      damping: 12,
+      stiffness: 100,
+    },
+  },
+};
+
+const textParts = "Visão estratégica. Execução completa.".split(" ");
+const lastPart = "Resultado real.";
 
 export default function HeroSection() {
     const [state, formAction] = useFormState(submitContactForm, initialState);
@@ -62,11 +90,21 @@ export default function HeroSection() {
         >
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
                 <div className="flex-grow flex flex-col justify-center items-center">
-                    <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground animate-slide-in-right">
-						<span className='outline-none' >
-							Visão estratégica. Execução completa. <span className="text-wavy-gradient">Resultado real.</span>
-						</span>
-					</h1>
+                    <motion.h1 
+                      className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground"
+                      variants={sentence}
+                      initial="hidden"
+                      animate="visible"
+                    >
+                      {textParts.map((word, index) => (
+                        <motion.span key={index} variants={wordAnimation} className="inline-block mr-4">
+                          {word}
+                        </motion.span>
+                      ))}
+                      <motion.span variants={wordAnimation} className="inline-block text-wavy-gradient">
+                        {lastPart}
+                      </motion.span>
+					          </motion.h1>
                     <div className="mt-8 animate-slide-in-left">
                         <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-6 py-3 text-base md:px-8 md:py-4 md:text-lg animate-pulse">
                             <Link href="#agendar">

@@ -1,10 +1,14 @@
+
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
-import { Home, Settings, Briefcase, Info, HelpCircle } from 'lucide-react';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Home, Settings, Briefcase, Info, HelpCircle, X, Menu } from 'lucide-react';
 
 const navItems = [
   { name: 'Home', href: '#home', icon: Home },
@@ -15,37 +19,11 @@ const navItems = [
 ];
 
 export default function Header() {
-  const [activeSection, setActiveSection] = useState('home');
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { rootMargin: '-50% 0px -50% 0px', threshold: 0 }
-    );
-
-    const sections = document.querySelectorAll('section');
-    sections.forEach((section) => {
-      if (section.id) {
-        observer.observe(section);
-      }
-    });
-
-    return () => {
-      sections.forEach((section) => {
-        if (section.id) {
-          observer.unobserve(section);
-        }
-      });
-    };
-  }, []);
+  const [isOpen, setIsOpen] = useState(false);
+  const logo = PlaceHolderImages.find(img => img.id === 'aetherai-logo');
 
   const handleNavClick = (href: string) => {
+    setIsOpen(false);
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -53,45 +31,84 @@ export default function Header() {
   };
 
   return (
-    <header
-      className={cn(
-        'fixed bottom-4 left-1/2 -translate-x-1/2 w-auto z-50 transition-all duration-300'
-      )}
-    >
-      <TooltipProvider>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center h-16 bg-background/30 backdrop-blur-lg border border-white/10 shadow-lg rounded-2xl p-2">
-            <nav className="flex items-center space-x-2">
-              {navItems.map((item) => {
-                const isActive = activeSection === item.href.substring(1);
-                const Icon = item.icon;
-                return (
-                  <Tooltip key={item.name} delayDuration={0}>
-                    <TooltipTrigger asChild>
-                      <Link
-                        href={item.href}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          handleNavClick(item.href);
-                        }}
-                        className={cn(
-                          'relative flex items-center justify-center h-12 w-12 rounded-xl transition-colors duration-300',
-                          isActive ? 'bg-muted text-primary' : 'text-muted-foreground hover:bg-muted/50 hover:text-foreground',
-                        )}
-                      >
-                        <Icon className="h-6 w-6" />
-                      </Link>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>{item.name}</p>
-                    </TooltipContent>
-                  </Tooltip>
-                );
-              })}
-            </nav>
+    <header className="fixed top-4 left-0 right-0 z-50 px-4">
+      <div className="container mx-auto">
+        <nav 
+          className="w-full h-16 p-1 rounded-2xl"
+          style={{
+            background: 'linear-gradient(180deg, rgb(33, 33, 33) 0%, rgba(33, 33, 33, 0.4) 100%)'
+          }}
+        >
+          <div className="w-full h-full flex items-center justify-between px-4 bg-black rounded-xl">
+            <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }}>
+              {logo && (
+                <Image
+                  src={logo.imageUrl}
+                  alt="Kivo Logo"
+                  width={100}
+                  height={30}
+                  className="h-8 w-auto object-contain"
+                />
+              )}
+            </Link>
+
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="text-white hover:bg-muted/50">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Abrir menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="bg-background border-border/50">
+                <div className="flex flex-col h-full">
+                  <div className="flex justify-between items-center py-4 border-b border-border/20">
+                     <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }}>
+                      {logo && (
+                        <Image
+                          src={logo.imageUrl}
+                          alt="Kivo Logo"
+                          width={100}
+                          height={30}
+                          className="h-8 w-auto object-contain"
+                        />
+                      )}
+                    </Link>
+                    <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="text-white">
+                      <X />
+                    </Button>
+                  </div>
+                  <div className="flex flex-col space-y-4 mt-8">
+                    {navItems.map((item) => {
+                      const Icon = item.icon;
+                      return (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleNavClick(item.href);
+                          }}
+                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted text-lg"
+                        >
+                          <Icon className="h-5 w-5" />
+                          <span>{item.name}</span>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                   <div className="mt-auto pt-4 border-t border-border/20">
+                     <Button asChild className="w-full button-wavy-gradient rounded-full">
+                        <Link href="#agendar" onClick={(e) => { e.preventDefault(); handleNavClick('#agendar'); }}>
+                          Agendar uma demonstração
+                        </Link>
+                      </Button>
+                   </div>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
-        </div>
-      </TooltipProvider>
+        </nav>
+      </div>
     </header>
   );
 }

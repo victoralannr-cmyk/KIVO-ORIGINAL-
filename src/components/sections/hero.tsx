@@ -53,15 +53,15 @@ const wordAnimation = {
 };
 
 const buttonAnimation = {
-  hidden: { opacity: 0, x: -20 },
+  hidden: { opacity: 0, y: -20 },
   visible: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: {
       type: 'spring',
       damping: 12,
       stiffness: 100,
-      delay: 0.5, // Delay to let the title animate first
+      delay: 0.8, 
     },
   },
 }

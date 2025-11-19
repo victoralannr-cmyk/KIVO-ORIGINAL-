@@ -57,7 +57,7 @@ export default function ContactSection() {
   return (
     <section 
       id="agendar" 
-      className="relative bg-transparent py-12 md:py-24 overflow-hidden"
+      className="relative bg-background py-12 md:py-24 overflow-hidden"
     >
        {kLogo && (
           <Image

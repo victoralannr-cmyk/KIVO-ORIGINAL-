@@ -12,7 +12,6 @@ import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Loader2 } from 'lucide-react';
-import DotGrid from '../common/dot-grid';
 
 const initialState: ContactFormState = {
   message: '',
@@ -59,20 +58,11 @@ export default function HeroSection() {
     return (
         <section
             id="home"
-            className="relative w-full pt-40 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden bg-white"
+            className="relative w-full pt-40 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden"
         >
-            <DotGrid
-              dotSize={1}
-              gap={24}
-              baseColor="#d1d5db"
-              activeColor="#111827"
-              proximity={120}
-              resistance={500}
-              className="absolute inset-0 -z-10"
-            />
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
                 <div className="flex-grow flex flex-col justify-center items-center">
-                    <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-black animate-slide-in-right">
+                    <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground animate-slide-in-right">
 						<span className='outline-none' >
 							Visão estratégica. Execução completa. <span className="text-wavy-gradient">Resultado real.</span>
 						</span>
@@ -90,7 +80,7 @@ export default function HeroSection() {
                   <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="animate-slide-in-left">
                       <div className="space-y-4 text-center md:text-left">
-                          <p className="text-gray-600 md:text-lg">
+                          <p className="text-muted-foreground md:text-lg">
                               Nosso time entrará em contato para fazer uma demonstração gratuita.
                           </p>
                       </div>
@@ -101,24 +91,24 @@ export default function HeroSection() {
                         <form action={formAction}>
                           <CardContent className="pt-6 space-y-4">
                             <div className="space-y-2">
-                              <Input id="name" name="name" placeholder="Seu nome" required className="bg-white/80 rounded-full text-black placeholder:text-gray-500"/>
+                              <Input id="name" name="name" placeholder="Seu nome" required className="bg-background/80 rounded-full text-foreground placeholder:text-muted-foreground"/>
                               {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name.join(', ')}</p>}
                             </div>
                             <div className="space-y-2">
-                              <Input id="email" name="email" type="email" placeholder="Seu melhor e-mail" required className="bg-white/80 rounded-full text-black placeholder:text-gray-500"/>
+                              <Input id="email" name="email" type="email" placeholder="Seu melhor e-mail" required className="bg-background/80 rounded-full text-foreground placeholder:text-muted-foreground"/>
                               {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email.join(', ')}</p>}
                             </div>
                             <div className="space-y-2">
-                              <Input id="whatsapp" name="whatsapp" placeholder="WhatsApp" required className="bg-white/80 rounded-full text-black placeholder:text-gray-500"/>
+                              <Input id="whatsapp" name="whatsapp" placeholder="WhatsApp" required className="bg-background/80 rounded-full text-foreground placeholder:text-muted-foreground"/>
                             </div>
                             <div className="spacey-2">
-                              <Input id="company" name="company" placeholder="Qual é o nome da sua empresa?" required className="bg-white/80 rounded-full text-black placeholder:text-gray-500"/>
+                              <Input id="company" name="company" placeholder="Qual é o nome da sua empresa?" required className="bg-background/80 rounded-full text-foreground placeholder:text-muted-foreground"/>
                             </div>
                             <div className="space-y-2">
-                              <Input id="segment" name="segment" placeholder="Qual o segmento da sua empresa?" required className="bg-white/80 rounded-full text-black placeholder:text-gray_500"/>
+                              <Input id="segment" name="segment" placeholder="Qual o segmento da sua empresa?" required className="bg-background/80 rounded-full text-foreground placeholder:text-muted-foreground"/>
                             </div>
                             <div className="space-y-2">
-                              <select name="revenue" id="revenue" className="w-full h-10 rounded-full border border-input bg-white/80 px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-gray-500" required defaultValue="">
+                              <select name="revenue" id="revenue" className="w-full h-10 rounded-full border border-input bg-background/80 px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-muted-foreground" required defaultValue="">
                                   <option value="" disabled>Qual é o seu faturamento mensal atual?</option>
                                   <option value="Até R$ 20.000">Até R$ 20.000</option>
                                   <option value="de R$ 20.000 a R$ 40.000">de R$ 20.000 a R$ 40.000</option>

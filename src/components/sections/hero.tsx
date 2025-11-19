@@ -13,7 +13,7 @@ export default function HeroSection() {
     return (
         <section
             id="home"
-            className="relative w-full pt-40 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden bg-background"
+            className="relative w-full pt-40 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden"
         >
             <DotGrid
               dotSize={2}
@@ -47,5 +47,3 @@ export default function HeroSection() {
         </section>
     );
 }
-
-    

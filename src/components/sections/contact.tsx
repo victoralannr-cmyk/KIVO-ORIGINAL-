@@ -103,8 +103,8 @@ export default function ContactSection() {
                   <Input id="segment" name="segment" placeholder="Qual o segmento da sua empresa?" required className="bg-input rounded-full"/>
                 </div>
                 <div className="space-y-2">
-                  <select name="revenue" id="revenue" className="w-full h-10 rounded-full border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-muted-foreground" required>
-                      <option value="" disabled selected>Qual é o seu faturamento mensal atual?</option>
+                  <select name="revenue" id="revenue" className="w-full h-10 rounded-full border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-muted-foreground" required defaultValue="">
+                      <option value="" disabled>Qual é o seu faturamento mensal atual?</option>
                       <option value="Até R$ 20.000">Até R$ 20.000</option>
                       <option value="de R$ 20.000 a R$ 40.000">de R$ 20.000 a R$ 40.000</option>
                       <option value="de R$ 41.000 a R$ 60.000">de R$ 41.000 a R$ 60.000</option>

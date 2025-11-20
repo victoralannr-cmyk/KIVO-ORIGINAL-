@@ -184,7 +184,7 @@ Trabalhamos com Facebook/Instagram Ads e Google Ads, criando campanhas de vendas
         
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-8">
-            <ScrollReveal delay={0}>
+            <ScrollReveal direction="right" delay={0}>
               <Card className="relative overflow-hidden bg-card/50 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   
                   <CardHeader className="relative items-center text-center p-6">
@@ -204,7 +204,7 @@ Cuidamos da estratégia, do conteúdo e da construção de uma imagem forte nas 
               </Card>
             </ScrollReveal>
 
-            <ScrollReveal delay={200}>
+            <ScrollReveal direction="right" delay={200}>
               <Card className="relative overflow-hidden bg-card/50 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   
                   <CardHeader className="relative items-center text-center p-6">
@@ -223,7 +223,7 @@ Cuidamos da estratégia, do conteúdo e da construção de uma imagem forte nas 
               </Card>
             </ScrollReveal>
             
-            <ScrollReveal delay={400}>
+            <ScrollReveal direction="right" delay={400}>
               <Card className="relative overflow-hidden bg-card/50 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   
                   <CardHeader className="relative items-center text-center p-6">
@@ -242,7 +242,7 @@ Cuidamos da estratégia, do conteúdo e da construção de uma imagem forte nas 
               </Card>
             </ScrollReveal>
 
-            <ScrollReveal delay={600}>
+            <ScrollReveal direction="right" delay={600}>
               <Card className="relative overflow-hidden bg-card/50 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   
                   <CardHeader className="relative items-center text-center p-6">
@@ -264,12 +264,14 @@ Vídeos, designs e textos feitos sob medida para aumentar seu desempenho nos an�
         </div>
 
         <div className="mt-16 text-center">
-          <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-8 py-4 text-lg">
-            <Link href="#agendar">
-              Fale com um especialista
-              <ArrowUpRight className="h-5 w-5 ml-2 transition-transform group-hover:rotate-45" />
-            </Link>
-          </Button>
+          <ScrollReveal direction="right" delay={800}>
+            <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-8 py-4 text-lg">
+              <Link href="#agendar">
+                Fale com um especialista
+                <ArrowUpRight className="h-5 w-5 ml-2 transition-transform group-hover:rotate-45" />
+              </Link>
+            </Button>
+          </ScrollReveal>
         </div>
 
       </div>

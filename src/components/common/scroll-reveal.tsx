@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useRef, useState, type ReactNode } from 'react';
@@ -8,9 +7,15 @@ interface ScrollRevealProps {
   children: ReactNode;
   className?: string;
   delay?: number;
+  direction?: 'up' | 'down' | 'left' | 'right';
 }
 
-export default function ScrollReveal({ children, className, delay = 0 }: ScrollRevealProps) {
+export default function ScrollReveal({ 
+  children, 
+  className, 
+  delay = 0,
+  direction = 'up'
+}: ScrollRevealProps) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -40,10 +45,23 @@ export default function ScrollReveal({ children, className, delay = 0 }: ScrollR
     };
   }, [delay]);
 
+  const getDirectionClass = () => {
+    switch (direction) {
+      case 'up':
+        return 'scroll-reveal';
+      case 'left':
+        return 'scroll-reveal-left';
+      case 'right':
+        return 'scroll-reveal-right';
+      default:
+        return 'scroll-reveal';
+    }
+  }
+
   return (
     <div
       ref={ref}
-      className={cn('scroll-reveal', isVisible && 'visible', className)}
+      className={cn(getDirectionClass(), isVisible && 'visible', className)}
     >
       {children}
     </div>

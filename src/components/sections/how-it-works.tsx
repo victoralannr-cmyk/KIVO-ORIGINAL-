@@ -36,7 +36,7 @@ const wordAnimation = {
   },
 };
 
-const title = "O que ele é capaz de fazer".split(" ");
+const title = "Estratégias de Vendas".split(" ");
 
 const AnimatedLineChart = ({ className }: { className?: string }) => (
   <svg

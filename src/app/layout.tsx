@@ -1,3 +1,4 @@
+
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
@@ -24,7 +25,7 @@ export default function RootLayout({
       </head>
       <body className={cn("font-body antialiased text-foreground")}>
         <FloatingLines 
-          linesGradient={['#19233A']}
+          linesGradient={['#10182A']}
           mixBlendMode="screen"
         />
         <div className="relative z-10 app-container">

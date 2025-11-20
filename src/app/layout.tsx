@@ -3,7 +3,6 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import BackToTop from '@/components/common/back-to-top';
 import { cn } from '@/lib/utils';
-import FloatingLines from '@/components/common/FloatingLines';
 
 export const metadata: Metadata = {
   title: 'Kivo | Agentes de IA sob medida',
@@ -23,7 +22,6 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("font-body antialiased text-foreground")}>
-        <FloatingLines />
         <div className="relative z-10 app-container">
           {children}
         </div>

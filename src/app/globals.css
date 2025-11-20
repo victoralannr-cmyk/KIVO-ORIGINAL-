@@ -56,8 +56,12 @@
   }
   body {
     margin: 0;
+    background-image: url('https://i.postimg.cc/pdjZVGJV/Chat-GPT-Image-20-de-nov-de-2025-00-25-16.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #19233A;
-    background-image: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(174, 183, 196, 0.3), rgba(25, 35, 58, 0));
   }
   
   .app-container {

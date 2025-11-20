@@ -177,7 +177,8 @@ export default function HowItWorksSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Nosso agente de IA é um assistente digital completo para sua empresa.
+              Aumente seu reconhecimento, alcance e conversões todos os dias.
+Trabalhamos com Facebook/Instagram Ads e Google Ads, criando campanhas de vendas eficientes e alinhadas com o objetivo do seu negócio.
             </motion.p>
           </div>
         

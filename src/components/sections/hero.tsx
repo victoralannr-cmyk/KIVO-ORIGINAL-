@@ -33,7 +33,7 @@ const sentence = {
   visible: (i:number = 1) => ({
     opacity: 1,
     transition: {
-      staggerChildren: 0.04,
+      staggerChildren: 0.02,
       delayChildren: i * 0.05,
     },
   }),

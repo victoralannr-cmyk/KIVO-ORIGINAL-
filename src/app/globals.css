@@ -56,7 +56,7 @@
   }
   body {
     margin: 0;
-    background: #19233A;
+    background-color: hsl(var(--background));
     overflow-x: hidden;
     @apply text-foreground;
   }
@@ -64,28 +64,6 @@
     @apply w-full py-12 md:py-20 lg:py-24;
   }
 }
-
-.linhas-animadas {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  background: 
-    linear-gradient(135deg, transparent 40%, #AEB7C4 49%, #AEB7C4 51%, transparent 60%),
-    linear-gradient(135deg, transparent 30%, #AEB7C4 44%, #AEB7C4 46%, transparent 55%);
-  background-size: 300% 300%;
-  animation: mover 12s ease-in-out infinite;
-  filter: blur(30px);
-  opacity: 0.2;
-}
-
-
-@keyframes mover {
-  0% { background-position: 0% 100%; }
-  50% { background-position: 100% 0%; }
-  100% { background-position: 0% 100%; }
-}
-
 
 @layer utilities {
   .button-wavy-gradient {
@@ -173,14 +151,6 @@
   @keyframes marquee {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
-  }
-  
-  .vignette-overlay {
-    position: fixed;
-    inset: 0;
-    background: radial-gradient(ellipse at center, transparent 35%, black 85%);
-    pointer-events: none;
-    z-index: 999;
   }
 
   .icon-pulse-glow {
@@ -356,4 +326,3 @@
 .animate-subtle-pan {
   animation: subtle-pan 30s ease-in-out infinite;
 }
-

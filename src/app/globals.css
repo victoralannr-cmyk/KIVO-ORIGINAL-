@@ -57,9 +57,13 @@
   body {
     margin: 0;
     background-color: hsl(var(--background));
-    overflow-x: hidden;
     @apply text-foreground;
   }
+  
+  .app-container {
+    overflow-x: hidden;
+  }
+
   section {
     @apply w-full py-12 md:py-20 lg:py-24;
   }
@@ -326,3 +330,5 @@
 .animate-subtle-pan {
   animation: subtle-pan 30s ease-in-out infinite;
 }
+
+    

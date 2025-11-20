@@ -25,12 +25,14 @@ export default function RootLayout({
       </head>
       <body className={cn("font-body antialiased")}>
         <AnimatedGradientBackground className="fixed top-0 left-0 w-full h-full z-[-1]" />
-        <div className="relative z-10">
+        <div className="relative z-10 app-container">
           {children}
         </div>
         <Toaster />
         <BackToTop />
-        </body>
+      </body>
     </html>
   );
 }
+
+    

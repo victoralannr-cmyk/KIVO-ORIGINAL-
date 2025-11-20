@@ -24,7 +24,7 @@ export default function RootLayout({
       </head>
       <body className={cn("font-body antialiased text-foreground")}>
         <FloatingLines 
-          linesGradient={['#2ED5A9', '#151515', '#2ED5A9']}
+          linesGradient={['#19233A']}
           mixBlendMode="screen"
         />
         <div className="relative z-10 app-container">

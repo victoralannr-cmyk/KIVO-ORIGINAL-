@@ -131,3 +131,5 @@ const FloatingLines: React.FC = () => {
 };
 
 export default FloatingLines;
+
+    

@@ -195,7 +195,7 @@ Trabalhamos com Facebook/Instagram Ads e Google Ads, criando campanhas de vendas
                             </div>
                           </div>
                       </div>
-                      <CardTitle className="font-headline text-xl">Gestão de Mídias</CardTitle>
+                      <CardTitle className="font-headline text-xl">Social Media</CardTitle>
                   </CardHeader>
                   <CardContent className="relative p-6 pt-0 text-center text-base text-muted-foreground flex-grow">
                       As redes sociais da sua empresa são sua vitrine digital, o primeiro passo. <span className="text-muted-foreground">Google Business Center, Instagram, Facebook e mais.</span>

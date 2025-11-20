@@ -3,6 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import BackToTop from '@/components/common/back-to-top';
 import { cn } from '@/lib/utils';
+import AnimatedGradientBackground from '@/components/common/AnimatedGradientBackground';
 
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("font-body antialiased")}>
+        <AnimatedGradientBackground className="fixed top-0 left-0 w-full h-full z-[-1]" />
         <div className="relative z-10">
           {children}
         </div>

@@ -71,13 +71,14 @@
   pointer-events: none;
   z-index: -1;
   background: 
-    linear-gradient(135deg, transparent 30%, #AEB7C4 48%, #AEB7C4 52%, transparent 70%),
-    linear-gradient(135deg, transparent 20%, #AEB7C4 43%, #AEB7C4 47%, transparent 60%);
+    linear-gradient(135deg, transparent 40%, #AEB7C4 49%, #AEB7C4 51%, transparent 60%),
+    linear-gradient(135deg, transparent 30%, #AEB7C4 44%, #AEB7C4 46%, transparent 55%);
   background-size: 300% 300%;
-  animation: mover 15s ease-in-out infinite;
+  animation: mover 12s ease-in-out infinite;
   filter: blur(30px);
-  opacity: 0.3;
+  opacity: 0.2;
 }
+
 
 @keyframes mover {
   0% { background-position: 0% 100%; }

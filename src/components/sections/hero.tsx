@@ -66,10 +66,9 @@ export default function HeroSection() {
         >
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
                 <motion.div 
-                    initial={{ opacity: 0, rotateY: 90 }}
-                    animate={{ opacity: 1, rotateY: 0 }}
-                    transition={{ duration: 2, ease: "easeOut" }}
-                    style={{ transformOrigin: 'left', perspective: 1000 }}
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
                     className="flex-grow flex flex-col justify-center items-center w-full"
                 >
                     <h1 
@@ -98,15 +97,11 @@ export default function HeroSection() {
                     </div>
                 </motion.div>
 
-                <motion.div 
-                    initial={{ opacity: 0, rotateY: 90 }}
-                    animate={{ opacity: 1, rotateY: 0 }}
-                    transition={{ duration: 2, ease: "easeOut", delay: 0.5 }}
-                    style={{ transformOrigin: 'left', perspective: 1000 }}
+                <div 
                     id="agendar" className="w-full max-w-4xl mx-auto pt-16 md:pt-24"
                 >
                   <div className="grid md:grid-cols-2 gap-12 items-center">
-                    <div className="space-y-4 text-center md:text-left">
+                    <div className="space-y-4 text-center md:text-left animate-slide-in-left">
                         <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-foreground">
                           Vamos conversar?
                         </h2>
@@ -115,7 +110,7 @@ export default function HeroSection() {
                         </p>
                     </div>
 
-                    <div >
+                    <div className="animate-slide-in-right">
                       <Card className="w-full max-w-lg mx-auto bg-card/10 backdrop-blur-sm border-border/20 shadow-lg rounded-2xl">
                         <form action={formAction}>
                           <CardContent className="pt-6 space-y-4">
@@ -156,7 +151,7 @@ export default function HeroSection() {
                       </Card>
                     </div>
                   </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

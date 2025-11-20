@@ -55,16 +55,40 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
-    background-image: url('https://i.postimg.cc/C1P9JS4N/black-screen-39.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    margin: 0;
+    background: #19233A;
+    overflow-x: hidden;
+    @apply text-foreground;
   }
   section {
     @apply w-full py-12 md:py-20 lg:py-24;
   }
 }
+
+.linhas-animadas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: linear-gradient(
+      135deg,
+      #19233A 0%,
+      #AEB7C4 25%,
+      #19233A 50%,
+      #AEB7C4 75%,
+      #19233A 100%
+  );
+  background-size: 300% 300%;
+  animation: mover 12s ease-in-out infinite;
+  filter: blur(40px);
+}
+
+@keyframes mover {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 @layer utilities {
   .button-wavy-gradient {

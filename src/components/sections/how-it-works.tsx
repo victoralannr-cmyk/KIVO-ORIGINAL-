@@ -255,7 +255,8 @@ Trabalhamos com Facebook/Instagram Ads e Google Ads, criando campanhas de vendas
                       <CardTitle className="font-headline text-xl">Criação de Conteúdo Criativo</CardTitle>
                   </CardHeader>
                   <CardContent className="relative p-6 pt-0 text-center text-base text-muted-foreground flex-grow">
-                     Criamos conteúdo que engaja, inspira e converte. Do roteiro à produção, transformamos suas ideias em vídeos, imagens e textos que capturam a atenção do seu público.
+                     Desenvolvemos criativos que realmente chamam atenção e convertem.
+Vídeos, designs e textos feitos sob medida para aumentar seu desempenho nos anúncios e destacar sua marca.
                   </CardContent>
               </Card>
             </ScrollReveal>

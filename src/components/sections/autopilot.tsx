@@ -79,7 +79,13 @@ export default function AutopilotSection() {
           />
       )}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <motion.div 
+          initial={{ opacity: 0, x: 50, y: -50 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
             <motion.h2 
               className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground"
               variants={sentence}
@@ -102,8 +108,14 @@ export default function AutopilotSection() {
           >
             Imagine ter um assistente inteligente, disponível o tempo todo, que:
           </motion.p>
-        </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        </motion.div>
+        <motion.div 
+          initial={{ opacity: 0, x: 50, y: -50 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+        >
           {autopilotItems.map((item, index) => (
             <Card key={index} className="overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl">
               <div className="relative h-48 w-full">
@@ -131,7 +143,7 @@ export default function AutopilotSection() {
               <CardDescription className="px-6 pb-6 text-sm md:text-base">{item.description}</CardDescription>
             </Card>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -28,8 +28,34 @@ function SubmitButton() {
   );
 }
 
+const sentence = {
+  hidden: { opacity: 0 },
+  visible: (i:number = 1) => ({
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.04,
+      delayChildren: i * 0.05,
+    },
+  }),
+};
+
+const letter = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      damping: 12,
+      stiffness: 200,
+    },
+  },
+};
+
 const textParts = "Visão estratégica. Execução completa.".split(" ");
 const lastPart = "Resultado real.";
+const paragraphText = "Transformamos ideias em resultados. Combinamos design, tecnologia e IA para criar soluções digitais que impulsionam o crescimento do seu negócio.";
+
 
 export default function HeroSection() {
     const [state, formAction] = useFormState(submitContactForm, initialState);
@@ -66,28 +92,49 @@ export default function HeroSection() {
         >
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
                 <motion.div 
-                    initial={{ opacity: 0, x: -100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    initial="hidden"
+                    animate="visible"
                     className="flex-grow flex flex-col justify-center items-center w-full"
                 >
-                    <h1 
+                    <motion.h1 
                       className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground"
+                      variants={sentence}
+                      initial="hidden"
+                      animate="visible"
                     >
-                      {textParts.map((word, index) => (
-                        <span key={index} className="inline-block mr-4">
-                          {word}
+                      {textParts.map((word, wordIndex) => (
+                        <span key={wordIndex} className="inline-block mr-4 whitespace-nowrap">
+                          {word.split("").map((char, charIndex) => (
+                            <motion.span key={charIndex} variants={letter} className="inline-block">
+                              {char}
+                            </motion.span>
+                          ))}
                         </span>
                       ))}
-                      <span className="inline-block text-wavy-gradient">
-                        {lastPart}
+                      <span className="inline-block text-wavy-gradient whitespace-nowrap">
+                        {lastPart.split("").map((char, charIndex) => (
+                            <motion.span key={charIndex} variants={letter} className="inline-block">
+                              {char}
+                            </motion.span>
+                          ))}
                       </span>
-					          </h1>
-                    <p 
+					          </motion.h1>
+                    <motion.p 
                         className="mx-auto mt-6 max-w-xl text-muted-foreground md:text-xl"
+                        variants={sentence}
+                        initial="hidden"
+                        animate="visible"
                     >
-                        Transformamos ideias em resultados. Combinamos design, tecnologia e IA para criar soluções digitais que impulsionam o crescimento do seu negócio.
-                    </p>
+                        {paragraphText.split(" ").map((word, wordIndex) => (
+                            <span key={wordIndex} className="inline-block mr-1.5 whitespace-nowrap">
+                                {word.split("").map((char, charIndex) => (
+                                    <motion.span key={charIndex} variants={letter} className="inline-block">
+                                        {char}
+                                    </motion.span>
+                                ))}
+                            </span>
+                        ))}
+                    </motion.p>
                     <div className="mt-8">
                         <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-6 py-3 text-base md:px-8 md:py-4 md:text-lg animate-pulse">
                             <Link href="#agendar">

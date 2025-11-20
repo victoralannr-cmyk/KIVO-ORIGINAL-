@@ -29,29 +29,29 @@ function SubmitButton() {
 }
 
 const sentence = {
-  hidden: { opacity: 0, x: -50 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.2,
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
     },
-  },
-};
-
-const wordAnimation = {
-  hidden: { opacity: 0, x: -20 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: 'spring',
-      damping: 12,
-      stiffness: 100,
+  };
+  
+  const wordAnimation = {
+    hidden: { opacity: 0, y: 20, rotateX: -90 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      rotateX: 0,
+      transition: {
+        type: 'spring',
+        damping: 12,
+        stiffness: 100,
+      },
     },
-  },
-};
+  };
 
 const buttonAnimation = {
   hidden: { opacity: 0, y: 20 },
@@ -110,6 +110,7 @@ export default function HeroSection() {
                       variants={sentence}
                       initial="hidden"
                       animate="visible"
+                      style={{ perspective: 1000 }}
                     >
                       {textParts.map((word, index) => (
                         <motion.span key={index} variants={wordAnimation} className="inline-block mr-4">
@@ -122,9 +123,10 @@ export default function HeroSection() {
 					</motion.h1>
                     <motion.p 
                         className="mx-auto mt-6 max-w-xl text-muted-foreground md:text-xl"
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 1, duration: 0.8, ease: "easeInOut" }}
+                        initial={{ opacity: 0, y: 20, rotateX: -90 }}
+                        animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                        transition={{ delay: 0.6, duration: 0.8, ease: "easeInOut" }}
+                        style={{ perspective: 1000 }}
                     >
                         Transformamos ideias em resultados. Combinamos design, tecnologia e IA para criar soluções digitais que impulsionam o crescimento do seu negócio.
                     </motion.p>

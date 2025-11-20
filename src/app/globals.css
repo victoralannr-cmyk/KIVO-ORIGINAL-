@@ -56,7 +56,7 @@
   }
   body {
     margin: 0;
-    background: #19233A;
+    background-color: hsl(var(--background));
   }
   
   .app-container {
@@ -69,31 +69,6 @@
 }
 
 @layer utilities {
-  .linhas-animadas {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: -1;
-    background: linear-gradient(
-        135deg,
-        #19233A 0%,
-        #AEB7C4 25%,
-        #19233A 50%,
-        #AEB7C4 75%,
-        #19233A 100%
-    );
-    background-size: 300% 300%;
-    animation: mover 12s ease-in-out infinite;
-    filter: blur(40px);
-  }
-
-  @keyframes mover {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
-
   .button-wavy-gradient {
     background: linear-gradient(90deg, #0b0b64, #151515, #0b0b64);
     background-size: 200% 100%;
@@ -354,5 +329,3 @@
 .animate-subtle-pan {
   animation: subtle-pan 30s ease-in-out infinite;
 }
-
-    

@@ -3,6 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import BackToTop from '@/components/common/back-to-top';
 import { cn } from '@/lib/utils';
+import AnimatedGradientBackground from '@/components/common/AnimatedGradientBackground';
 
 export const metadata: Metadata = {
   title: 'Kivo | Agentes de IA sob medida',
@@ -22,7 +23,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("font-body antialiased text-foreground")}>
-        <div className="linhas-animadas"></div>
+        <AnimatedGradientBackground className="fixed top-0 left-0 w-full h-full z-[-1] pointer-events-none" />
         <div className="relative z-10 app-container">
           {children}
         </div>

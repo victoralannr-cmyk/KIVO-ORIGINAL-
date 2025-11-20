@@ -236,7 +236,7 @@ Trabalhamos com Facebook/Instagram Ads e Google Ads, criando campanhas de vendas
                       <CardTitle className="font-headline text-xl">Criação de Sites</CardTitle>
                   </CardHeader>
                   <CardContent className="relative p-6 pt-0 text-center text-base text-muted-foreground flex-grow">
-                     Ter um site é abrir as portas do seu negócio para o mundo. Ele trabalha por você 24h, atrai clientes, gera confiança e transforma oportunidades em resultados reais.
+                     Tenha um site profissional que funciona 24h por dia, rápido, fácil de navegar e pensado para facilitar a vida do seu cliente. Desenvolvemos sites com catálogo, contato direto, agendamentos e tudo que sua empresa precisa para vender online.
                   </CardContent>
               </Card>
             </ScrollReveal>

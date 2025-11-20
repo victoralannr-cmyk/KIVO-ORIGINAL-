@@ -28,45 +28,6 @@ function SubmitButton() {
   );
 }
 
-const sentence = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  };
-  
-  const wordAnimation = {
-    hidden: { opacity: 0, y: 20, rotateX: -90 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      rotateX: 0,
-      transition: {
-        type: 'spring',
-        damping: 12,
-        stiffness: 100,
-      },
-    },
-  };
-
-const buttonAnimation = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: 'spring',
-      damping: 12,
-      stiffness: 100,
-      delay: 0.8, 
-    },
-  },
-}
-
 const textParts = "Visão estratégica. Execução completa.".split(" ");
 const lastPart = "Resultado real.";
 
@@ -107,34 +68,39 @@ export default function HeroSection() {
                 <div className="flex-grow flex flex-col justify-center items-center">
                     <motion.h1 
                       className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground"
-                      variants={sentence}
-                      initial="hidden"
-                      animate="visible"
+                      initial={{ opacity: 0, y: 50, rotateX: -90 }}
+                      animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                      transition={{ delay: 0.2, duration: 1.2, ease: "anticipate" }}
                       style={{ perspective: 1000 }}
                     >
                       {textParts.map((word, index) => (
-                        <motion.span key={index} variants={wordAnimation} className="inline-block mr-4">
+                        <motion.span key={index} className="inline-block mr-4">
                           {word}
                         </motion.span>
                       ))}
-                      <motion.span variants={wordAnimation} className="inline-block text-wavy-gradient">
+                      <motion.span className="inline-block text-wavy-gradient">
                         {lastPart}
                       </motion.span>
 					</motion.h1>
                     <motion.p 
                         className="mx-auto mt-6 max-w-xl text-muted-foreground md:text-xl"
-                        initial={{ opacity: 0, y: 20, rotateX: -90 }}
+                        initial={{ opacity: 0, y: 50, rotateX: -90 }}
                         animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                        transition={{ delay: 0.6, duration: 0.8, ease: "easeInOut" }}
+                        transition={{ delay: 0.6, duration: 1.2, ease: "anticipate" }}
                         style={{ perspective: 1000 }}
                     >
                         Transformamos ideias em resultados. Combinamos design, tecnologia e IA para criar soluções digitais que impulsionam o crescimento do seu negócio.
                     </motion.p>
                     <motion.div 
                       className="mt-8"
-                      variants={buttonAnimation}
-                      initial="hidden"
-                      animate="visible"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        type: 'spring',
+                        damping: 12,
+                        stiffness: 100,
+                        delay: 0.8, 
+                      }}
                     >
                         <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-6 py-3 text-base md:px-8 md:py-4 md:text-lg animate-pulse">
                             <Link href="#agendar">

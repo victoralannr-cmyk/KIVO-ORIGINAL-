@@ -3,6 +3,7 @@ import Image from 'next/image';
 import ScrollReveal from '../common/scroll-reveal';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import ChatMessage from '../common/chat-message';
+import { motion } from 'framer-motion';
 
 export default function WhatIsAgent() {
   const logo = PlaceHolderImages.find(img => img.id === 'aetherai-logo');
@@ -35,7 +36,12 @@ export default function WhatIsAgent() {
           />
       )}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
-        <div className='animate-slide-in-left'>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9, y: 50 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <div className="relative h-[400px] md:h-[600px] flex items-center justify-center">
             <Image
               src="https://kyondigital.com/wp-content/uploads/2025/08/Background-celular-v2.png"
@@ -63,8 +69,13 @@ export default function WhatIsAgent() {
 
             </div>
           </div>
-        </div>
-        <div className='animate-slide-in-right'>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9, y: -50 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <div className="space-y-4 text-center md:text-left">
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-foreground">
               SUPORTE KIVO 24H
@@ -73,7 +84,7 @@ export default function WhatIsAgent() {
               Ele é um atendente digital inteligente que entende mensagens, busca informações em tempo real, toma decisões e executa tarefas de ponta a ponta, tudo de forma autônoma e personalizada.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

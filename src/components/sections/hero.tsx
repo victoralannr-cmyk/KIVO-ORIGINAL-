@@ -29,11 +29,12 @@ function SubmitButton() {
 }
 
 const sentence = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0, x: -50 },
   visible: {
     opacity: 1,
+    x: 0,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.2,
       delayChildren: 0.2,
     },
   },
@@ -53,7 +54,7 @@ const wordAnimation = {
 };
 
 const buttonAnimation = {
-  hidden: { opacity: 0, y: -20 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
@@ -121,9 +122,9 @@ export default function HeroSection() {
 					</motion.h1>
                     <motion.p 
                         className="mx-auto mt-6 max-w-xl text-muted-foreground md:text-xl"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1, duration: 0.8 }}
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 1, duration: 0.8, ease: "easeInOut" }}
                     >
                         Transformamos ideias em resultados. Combinamos design, tecnologia e IA para criar soluções digitais que impulsionam o crescimento do seu negócio.
                     </motion.p>

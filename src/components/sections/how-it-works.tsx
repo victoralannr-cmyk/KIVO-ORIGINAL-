@@ -198,7 +198,8 @@ Trabalhamos com Facebook/Instagram Ads e Google Ads, criando campanhas de vendas
                       <CardTitle className="font-headline text-xl">Social Media</CardTitle>
                   </CardHeader>
                   <CardContent className="relative p-6 pt-0 text-center text-base text-muted-foreground flex-grow">
-                      As redes sociais da sua empresa são sua vitrine digital, o primeiro passo. <span className="text-muted-foreground">Google Business Center, Instagram, Facebook e mais.</span>
+                      Posicionamos sua marca da forma correta, criando uma presença digital profissional que transmite autoridade, desejo e confiança.
+Cuidamos da estratégia, do conteúdo e da construção de uma imagem forte nas redes sociais.
                   </CardContent>
               </Card>
             </ScrollReveal>

@@ -65,65 +65,57 @@ export default function HeroSection() {
             className="relative w-full pt-40 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden"
         >
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
-                <div className="flex-grow flex flex-col justify-center items-center">
-                    <motion.h1 
+                <motion.div 
+                    initial={{ opacity: 0, rotateY: 90 }}
+                    animate={{ opacity: 1, rotateY: 0 }}
+                    transition={{ duration: 2, ease: "easeOut" }}
+                    style={{ transformOrigin: 'left', perspective: 1000 }}
+                    className="flex-grow flex flex-col justify-center items-center w-full"
+                >
+                    <h1 
                       className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground"
-                      initial={{ opacity: 0, y: 50, rotateX: -90 }}
-                      animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                      transition={{ delay: 0.2, duration: 1.2, ease: "anticipate" }}
-                      style={{ perspective: 1000 }}
                     >
                       {textParts.map((word, index) => (
-                        <motion.span key={index} className="inline-block mr-4">
+                        <span key={index} className="inline-block mr-4">
                           {word}
-                        </motion.span>
+                        </span>
                       ))}
-                      <motion.span className="inline-block text-wavy-gradient">
+                      <span className="inline-block text-wavy-gradient">
                         {lastPart}
-                      </motion.span>
-					</motion.h1>
-                    <motion.p 
+                      </span>
+					          </h1>
+                    <p 
                         className="mx-auto mt-6 max-w-xl text-muted-foreground md:text-xl"
-                        initial={{ opacity: 0, y: 50, rotateX: -90 }}
-                        animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                        transition={{ delay: 0.6, duration: 1.2, ease: "anticipate" }}
-                        style={{ perspective: 1000 }}
                     >
                         Transformamos ideias em resultados. Combinamos design, tecnologia e IA para criar soluções digitais que impulsionam o crescimento do seu negócio.
-                    </motion.p>
-                    <motion.div 
-                      className="mt-8"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{
-                        type: 'spring',
-                        damping: 12,
-                        stiffness: 100,
-                        delay: 0.8, 
-                      }}
-                    >
+                    </p>
+                    <div className="mt-8">
                         <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-6 py-3 text-base md:px-8 md:py-4 md:text-lg animate-pulse">
                             <Link href="#agendar">
                                 Agendar uma demonstração
                             </Link>
                         </Button>
-                    </motion.div>
-                </div>
+                    </div>
+                </motion.div>
 
-                <div id="agendar" className="w-full max-w-4xl mx-auto pt-16 md:pt-24">
+                <motion.div 
+                    initial={{ opacity: 0, rotateY: 90 }}
+                    animate={{ opacity: 1, rotateY: 0 }}
+                    transition={{ duration: 2, ease: "easeOut", delay: 0.5 }}
+                    style={{ transformOrigin: 'left', perspective: 1000 }}
+                    id="agendar" className="w-full max-w-4xl mx-auto pt-16 md:pt-24"
+                >
                   <div className="grid md:grid-cols-2 gap-12 items-center">
-                    <div className="animate-slide-in-left">
-                      <div className="space-y-4 text-center md:text-left">
-                          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-foreground">
-                            Vamos conversar?
-                          </h2>
-                          <p className="text-muted-foreground md:text-lg">
-                              Nosso time entrará em contato para fazer uma demonstração gratuita e mostrar como podemos ajudar.
-                          </p>
-                      </div>
+                    <div className="space-y-4 text-center md:text-left">
+                        <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl text-foreground">
+                          Vamos conversar?
+                        </h2>
+                        <p className="text-muted-foreground md:text-lg">
+                            Nosso time entrará em contato para fazer uma demonstração gratuita e mostrar como podemos ajudar.
+                        </p>
                     </div>
 
-                    <div className="animate-slide-in-right">
+                    <div >
                       <Card className="w-full max-w-lg mx-auto bg-card/10 backdrop-blur-sm border-border/20 shadow-lg rounded-2xl">
                         <form action={formAction}>
                           <CardContent className="pt-6 space-y-4">
@@ -164,7 +156,7 @@ export default function HeroSection() {
                       </Card>
                     </div>
                   </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

@@ -53,7 +53,7 @@ const letter = {
 };
 
 const textParts = "ALAVANCAMOS SUA EMPRESA PRA CIMA".split(" ");
-const lastPart = "E PARA SE MANTER.";
+const lastPart = "PARA SE MANTER.";
 const paragraphText = "Transformamos ideias em resultados. Combinamos design, tecnologia e IA para criar soluções digitais que impulsionam o crescimento do seu negócio.";
 
 

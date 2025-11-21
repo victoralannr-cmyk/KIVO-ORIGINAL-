@@ -22,6 +22,7 @@ void main() {
 }
 `;
 
+// O FRAGMENT SHADER FOI ATUALIZADO COM AS NOVAS CORES DE FUNDO
 const fragmentShader = `
 precision highp float;
 
@@ -58,25 +59,26 @@ uniform vec2 parallaxOffset;
 uniform vec3 lineGradient[8];
 uniform int lineGradientCount;
 
-const vec3 BASE_COLOR = vec3(25.0/255.0, 35.0/255.0, 58.0/255.0); // #19233A
+const vec3 BLACK = vec3(0.0);
+// Cores de fundo modificadas:
+const vec3 DARK_BLUE = vec3(25.0, 35.0, 58.0) / 255.0;    // Cor 19233A
+const vec3 LIGHT_GRAY_BLUE  = vec3(174.0, 183.0, 196.0) / 255.0; // Cor AEB7C4
 
 mat2 rotate(float r) {
   return mat2(cos(r), sin(r), -sin(r), cos(r));
 }
 
 vec3 background_color(vec2 uv) {
-  vec2 center = vec2(0.5, 0.5);
-  float radial = smoothstep(0.0, 1.2, length(uv - center));
-  
-  vec3 color1 = vec3(25.0/255.0, 35.0/255.0, 58.0/255.0); // #19233A
-  vec3 color2 = vec3(174.0/255.0, 183.0/255.0, 196.0/255.0); // #AEB7C4
+  vec3 col = vec3(0.0);
 
-  float t = 0.5 + 0.5 * sin(iTime * 0.1);
-  vec3 mixed_color = mix(color1, color2, t) * 0.2;
-  
-  vec3 final_color = mix(color1, mixed_color, radial);
+  float y = sin(uv.x - 0.2) * 0.3 - 0.1;
+  float m = uv.y - y;
 
-  return final_color;
+  // Usa a cor 19233A como fundo principal
+  col += mix(DARK_BLUE, BLACK, smoothstep(0.0, 1.0, abs(m)));
+  // Usa a cor AEB7C4 como destaque/segunda onda
+  col += mix(LIGHT_GRAY_BLUE, BLACK, smoothstep(0.0, 1.0, abs(m - 0.8)));
+  return col * 0.5;
 }
 
 vec3 getLineColor(float t, vec3 baseColor) {
@@ -101,15 +103,15 @@ vec3 getLineColor(float t, vec3 baseColor) {
     gradientColor = mix(c1, c2, f);
   }
   
-  return gradientColor;
+  return gradientColor * 0.5;
 }
 
-float wave(vec2 uv, float offset, vec2 screenUv, vec2 mouseUv, bool shouldBend) {
+  float wave(vec2 uv, float offset, vec2 screenUv, vec2 mouseUv, bool shouldBend) {
   float time = iTime * animationSpeed;
 
-  float x_offset   = offset;
+  float x_offset    = offset;
   float x_movement = time * 0.1;
-  float amp        = sin(offset + time * 0.2) * 0.4;
+  float amp        = sin(offset + time * 0.2) * 0.3;
   float y          = sin(uv.x + x_offset + x_movement) * amp;
 
   if (shouldBend) {
@@ -120,7 +122,7 @@ float wave(vec2 uv, float offset, vec2 screenUv, vec2 mouseUv, bool shouldBend) 
   }
 
   float m = uv.y - y;
-  return 0.0175 / max(abs(m) + 0.005, 1e-3) + 0.005;
+  return 0.0175 / max(abs(m) + 0.01, 1e-3) + 0.01;
 }
 
 void mainImage(out vec4 fragColor, in vec2 fragCoord) {
@@ -131,7 +133,9 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     baseUv += parallaxOffset;
   }
 
-  vec3 col = BASE_COLOR;
+  vec3 col = vec3(0.0);
+
+  vec3 b = lineGradientCount > 0 ? vec3(0.0) : background_color(baseUv);
 
   vec2 mouseUv = vec2(0.0);
   if (interactive) {
@@ -143,7 +147,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     for (int i = 0; i < bottomLineCount; ++i) {
       float fi = float(i);
       float t = fi / max(float(bottomLineCount - 1), 1.0);
-      vec3 lineCol = getLineColor(t, col);
+      vec3 lineCol = getLineColor(t, b);
       
       float angle = bottomWavePosition.z * log(length(baseUv) + 1.0);
       vec2 ruv = baseUv * rotate(angle);
@@ -161,7 +165,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     for (int i = 0; i < middleLineCount; ++i) {
       float fi = float(i);
       float t = fi / max(float(middleLineCount - 1), 1.0);
-      vec3 lineCol = getLineColor(t, col);
+      vec3 lineCol = getLineColor(t, b);
       
       float angle = middleWavePosition.z * log(length(baseUv) + 1.0);
       vec2 ruv = baseUv * rotate(angle);
@@ -179,7 +183,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     for (int i = 0; i < topLineCount; ++i) {
       float fi = float(i);
       float t = fi / max(float(topLineCount - 1), 1.0);
-      vec3 lineCol = getLineColor(t, col);
+      vec3 lineCol = getLineColor(t, b);
       
       float angle = topWavePosition.z * log(length(baseUv) + 1.0);
       vec2 ruv = baseUv * rotate(angle);
@@ -206,7 +210,7 @@ void main() {
 
 const MAX_GRADIENT_STOPS = 8;
 
-function hexToVec3(hex) {
+function hexToVec3(hex: string) {
   let value = hex.trim();
 
   if (value.startsWith('#')) {
@@ -246,8 +250,8 @@ export default function FloatingLines({
   parallax = true,
   parallaxStrength = 0.2,
   mixBlendMode = 'screen'
-}) {
-  const containerRef = useRef(null);
+}: any) {
+  const containerRef = useRef<HTMLDivElement>(null);
   const targetMouseRef = useRef(new Vector2(-1000, -1000));
   const currentMouseRef = useRef(new Vector2(-1000, -1000));
   const targetInfluenceRef = useRef(0);
@@ -255,14 +259,14 @@ export default function FloatingLines({
   const targetParallaxRef = useRef(new Vector2(0, 0));
   const currentParallaxRef = useRef(new Vector2(0, 0));
 
-  const getLineCount = waveType => {
+  const getLineCount = (waveType: string) => {
     if (typeof lineCount === 'number') return lineCount;
     if (!enabledWaves.includes(waveType)) return 0;
     const index = enabledWaves.indexOf(waveType);
     return lineCount[index] ?? 6;
   };
 
-  const getLineDistance = waveType => {
+  const getLineDistance = (waveType: string) => {
     if (typeof lineDistance === 'number') return lineDistance;
     if (!enabledWaves.includes(waveType)) return 0.1;
     const index = enabledWaves.indexOf(waveType);
@@ -346,7 +350,7 @@ export default function FloatingLines({
       const stops = linesGradient.slice(0, MAX_GRADIENT_STOPS);
       uniforms.lineGradientCount.value = stops.length;
 
-      stops.forEach((hex, i) => {
+      stops.forEach((hex: string, i: number) => {
         const color = hexToVec3(hex);
         uniforms.lineGradient.value[i].set(color.x, color.y, color.z);
       });
@@ -385,7 +389,8 @@ export default function FloatingLines({
       ro.observe(containerRef.current);
     }
 
-    const handlePointerMove = event => {
+    const handlePointerMove = (event: PointerEvent) => {
+      if (!renderer.domElement) return;
       const rect = renderer.domElement.getBoundingClientRect();
       const x = event.clientX - rect.left;
       const y = event.clientY - rect.top;
@@ -440,7 +445,7 @@ export default function FloatingLines({
         ro.disconnect();
       }
 
-      if (interactive) {
+      if (interactive && renderer.domElement) {
         renderer.domElement.removeEventListener('pointermove', handlePointerMove);
         renderer.domElement.removeEventListener('pointerleave', handlePointerLeave);
       }

@@ -24,10 +24,10 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("font-body antialiased text-foreground")}>
-        <FloatingLines 
+        {/* <FloatingLines 
           linesGradient={['#0b0b64', '#151515', '#0b0b64']}
           mixBlendMode="screen"
-        />
+        /> */}
         <div className="relative z-10 app-container">
           {children}
         </div>

@@ -57,6 +57,7 @@
   body {
     margin: 0;
     background-color: hsl(var(--background));
+    font-family: 'Poppins', sans-serif;
   }
   
   .app-container {
@@ -336,3 +337,4 @@
     
 
     
+

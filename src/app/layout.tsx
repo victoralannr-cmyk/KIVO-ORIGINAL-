@@ -24,10 +24,12 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("font-body antialiased text-foreground")}>
-        {/* <FloatingLines 
-          linesGradient={['#0b0b64', '#151515', '#0b0b64']}
+        <FloatingLines 
+          animationSpeed={0.5}
+          lineCount={[3, 4, 3]}
+          linesGradient={['hsl(var(--primary))', 'hsl(var(--background))', 'hsl(var(--accent))']}
           mixBlendMode="screen"
-        /> */}
+        />
         <div className="relative z-10 app-container">
           {children}
         </div>

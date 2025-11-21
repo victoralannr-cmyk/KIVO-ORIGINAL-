@@ -78,7 +78,7 @@
   }
 
    .text-wavy-gradient {
-    background: linear-gradient(90deg, hsl(var(--background)), hsl(var(--foreground)), hsl(var(--background)));
+    background: linear-gradient(90deg, hsl(var(--background)), #AEB7C4, hsl(var(--background)));
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
@@ -330,5 +330,7 @@
 .animate-subtle-pan {
   animation: subtle-pan 30s ease-in-out infinite;
 }
+
+    
 
     

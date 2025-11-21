@@ -71,14 +71,14 @@
 
 @layer utilities {
   .button-wavy-gradient {
-    background: linear-gradient(90deg, #0b0b64, #151515, #0b0b64);
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--primary)));
     background-size: 200% 100%;
     animation: gradient-wave 5s linear infinite;
     color: white;
   }
 
    .text-wavy-gradient {
-    background: linear-gradient(90deg, #0b0b64, #151515, #0b0b64);
+    background: linear-gradient(90deg, hsl(var(--background)), hsl(var(--foreground)), hsl(var(--background)));
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;

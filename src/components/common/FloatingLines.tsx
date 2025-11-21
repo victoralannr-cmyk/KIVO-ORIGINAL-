@@ -120,7 +120,7 @@ float wave(vec2 uv, float offset, vec2 screenUv, vec2 mouseUv, bool shouldBend) 
   }
 
   float m = uv.y - y;
-  return 0.0175 / max(abs(m) + 0.005, 1e-3) + 0.01;
+  return 0.0175 / max(abs(m) + 0.005, 1e-3) + 0.005;
 }
 
 void mainImage(out vec4 fragColor, in vec2 fragCoord) {

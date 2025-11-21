@@ -171,7 +171,8 @@ export default function HowItWorksSection() {
               ))}
             </motion.h2>
             <motion.p 
-              className="mx-auto mt-4 max-w-2xl text-foreground font-bold md:text-xl"
+              className="mx-auto mt-4 text-foreground font-bold md:text-xl"
+              style={{ maxWidth: '260.4px' }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -248,7 +249,7 @@ Cuidamos da estratégia, do conteúdo e da construção de uma imagem forte nas 
                       <div className="relative h-32 md:h-48 w-full mb-4">
                           <div className="absolute inset-0 flex items-center justify-center">
                               <div className="bg-card p-4 rounded-full border border-border/50">
-                                  <AnimatedClapperboard />
+                                <AnimatedClapperboard />
                               </div>
                           </div>
                       </div>

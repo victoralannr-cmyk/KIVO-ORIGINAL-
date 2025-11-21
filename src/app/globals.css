@@ -5,8 +5,8 @@
 
 @layer base {
   :root {
-    --background: 222 83% 4%;
-    --foreground: 210 40% 98%;
+    --background: 222 42% 16%; /* #19233A */
+    --foreground: 218 25% 98%; /* #F8F9FB */
     --card: 222 84% 9%;
     --card-foreground: 210 40% 98%;
     --popover: 222 84% 9%;
@@ -16,7 +16,7 @@
     --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted-foreground: 216 13% 73%; /* #AEB7C4 */
     --accent: 217 89% 61%; /* #4285F4 */
     --accent-foreground: 210 40% 98%;
     --destructive: 0 63% 31%;
@@ -28,8 +28,8 @@
   }
 
   .dark {
-    --background: 222 83% 4%;
-    --foreground: 210 40% 98%;
+    --background: 222 42% 16%; /* #19233A */
+    --foreground: 218 25% 98%; /* #F8F9FB */
     --card: 222 84% 9%;
     --card-foreground: 210 40% 98%;
     --popover: 222 84% 9%;
@@ -39,7 +39,7 @@
     --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted-foreground: 216 13% 73%; /* #AEB7C4 */
     --accent: 217 89% 61%; /* #4285F4 */
     --accent-foreground: 210 40% 98%;
     --destructive: 0 63% 31%;
@@ -79,7 +79,7 @@
   }
 
    .text-wavy-gradient {
-    background: linear-gradient(90deg, hsl(var(--background)), hsl(var(--accent)), hsl(var(--background)));
+    background: linear-gradient(90deg, hsl(var(--background)), #AEB7C4, hsl(var(--background)));
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
@@ -331,10 +331,3 @@
 .animate-subtle-pan {
   animation: subtle-pan 30s ease-in-out infinite;
 }
-
-    
-
-    
-
-    
-

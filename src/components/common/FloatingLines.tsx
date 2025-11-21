@@ -131,7 +131,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     baseUv += parallaxOffset;
   }
 
-  vec3 col = background_color(gl_FragCoord.xy / iResolution.xy);
+  vec3 col = BASE_COLOR;
 
   vec2 mouseUv = vec2(0.0);
   if (interactive) {

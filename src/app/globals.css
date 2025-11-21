@@ -56,7 +56,7 @@
   }
   body {
     margin: 0;
-    background: linear-gradient(to bottom, #19233A, #AEB7C4, #F8F9FB);
+    background-color: #19233A; 
     background-attachment: fixed;
     color: #F8F9FB;
     font-family: 'Poppins', sans-serif;
@@ -334,4 +334,5 @@
   animation: subtle-pan 30s ease-in-out infinite;
 }
 
+    
     

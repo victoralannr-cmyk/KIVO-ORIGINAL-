@@ -4,6 +4,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import BackToTop from '@/components/common/back-to-top';
 import { cn } from '@/lib/utils';
+import FloatingLines from '@/components/common/FloatingLines';
 
 
 export const metadata: Metadata = {
@@ -25,6 +26,11 @@ export default function RootLayout({
       </head>
       <body className={cn("font-body antialiased text-foreground")}>
         
+        <FloatingLines 
+          linesGradient={['#E947F5', '#2F4BA2']}
+          animationSpeed={0.5}
+        />
+
         <div className="relative z-10 app-container">
           {children}
         </div>
@@ -35,4 +41,5 @@ export default function RootLayout({
   );
 }
 
+    
     

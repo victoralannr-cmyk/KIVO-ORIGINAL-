@@ -171,7 +171,7 @@ export default function HowItWorksSection() {
               ))}
             </motion.h2>
             <motion.p 
-              className="mx-auto mt-4 max-w-2xl text-muted-foreground md:text-xl"
+              className="mx-auto mt-4 max-w-2xl text-foreground font-bold md:text-xl"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

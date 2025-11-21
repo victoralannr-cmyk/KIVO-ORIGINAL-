@@ -53,7 +53,7 @@ const letter = {
 };
 
 const textParts = "ALAVANCAMOS SUA EMPRESA PRA CIMA".split(" ");
-const lastPart = "PARA SE MANTER.";
+const lastPart = "PARA SE MANTER.".split(" ");
 const paragraphText = "Transformamos ideias em resultados. Combinamos design, tecnologia e IA para criar soluções digitais que impulsionam o crescimento do seu negócio.";
 
 
@@ -112,11 +112,15 @@ export default function HeroSection() {
                         </span>
                       ))}
                       <span className="inline-block text-wavy-gradient whitespace-nowrap">
-                        {lastPart.split("").map((char, charIndex) => (
-                            <motion.span key={charIndex} variants={letter} className="inline-block">
-                              {char}
-                            </motion.span>
-                          ))}
+                        {lastPart.map((word, wordIndex) => (
+                          <span key={wordIndex} className="inline-block mr-4 whitespace-nowrap">
+                            {word.split("").map((char, charIndex) => (
+                              <motion.span key={charIndex} variants={letter} className="inline-block">
+                                {char}
+                              </motion.span>
+                            ))}
+                          </span>
+                        ))}
                       </span>
 					          </motion.h1>
                     <motion.p 

@@ -177,8 +177,7 @@ export default function HowItWorksSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Aumente seu reconhecimento, alcance e conversões todos os dias.
-Trabalhamos com Facebook/Instagram Ads e Google Ads, criando campanhas de vendas eficientes e alinhadas com o objetivo do seu negócio.
+              ENTENDA COMO IREMOS IMPULSIONAR SUA EMPRESA ATRAVÉS DA INTERNET
             </motion.p>
           </div>
         

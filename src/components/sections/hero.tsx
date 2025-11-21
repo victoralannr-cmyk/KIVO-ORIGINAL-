@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useEffect } from 'react';
@@ -52,8 +53,8 @@ const letter = {
   },
 };
 
-const textParts = "ALAVANCAMOS SUA EMPRESA PRA CIMA".split(" ");
-const lastPart = "PARA SE MANTER.".split(" ");
+const textParts = "ALAVANCAMOS SUA EMPRESA PARA CIMA".split(" ");
+const lastPart = "PARA SE MANTER".split(" ");
 const paragraphText = "Transformamos ideias em resultados. Combinamos design, tecnologia e IA para criar soluções digitais que impulsionam o crescimento do seu negócio.";
 
 

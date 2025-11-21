@@ -56,7 +56,9 @@
   }
   body {
     margin: 0;
-    background-color: hsl(var(--background));
+    background: linear-gradient(to bottom, #19233A, #AEB7C4, #F8F9FB);
+    background-attachment: fixed;
+    color: #F8F9FB;
     font-family: 'Poppins', sans-serif;
   }
   
@@ -79,7 +81,7 @@
   }
 
    .text-wavy-gradient {
-    background: linear-gradient(90deg, hsl(var(--background)), #AEB7C4, hsl(var(--background)));
+    background: linear-gradient(90deg, #19233A, #AEB7C4, #19233A);
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
@@ -331,3 +333,5 @@
 .animate-subtle-pan {
   animation: subtle-pan 30s ease-in-out infinite;
 }
+
+    

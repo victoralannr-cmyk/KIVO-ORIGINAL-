@@ -267,6 +267,8 @@ export default function FloatingLines({
   const currentInfluenceRef = useRef(0);
   const targetParallaxRef = useRef(new Vector2(0, 0));
   const currentParallaxRef = useRef(new Vector2(0, 0));
+  
+  const uniformsRef = useRef<any>(null);
 
   const getLineCount = (waveType: 'top' | 'middle' | 'bottom') => {
     if (typeof lineCount === 'number') return lineCount;
@@ -354,16 +356,8 @@ export default function FloatingLines({
       },
       lineGradientCount: { value: 0 }
     };
-
-    if (linesGradient && linesGradient.length > 0) {
-      const stops = linesGradient.slice(0, MAX_GRADIENT_STOPS);
-      uniforms.lineGradientCount.value = stops.length;
-
-      stops.forEach((hex, i) => {
-        const color = hexToVec3(hex);
-        uniforms.lineGradient.value[i].set(color.x, color.y, color.z);
-      });
-    }
+    
+    uniformsRef.current = uniforms;
 
     const material = new ShaderMaterial({
       uniforms,
@@ -468,10 +462,27 @@ export default function FloatingLines({
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [
-    linesGradient,
-    // dependencies are intentionally limited to avoid re-creating the scene on every prop change
-  ]);
+  }, []);
+
+  useEffect(() => {
+    if (uniformsRef.current) {
+      const stops = linesGradient.slice(0, MAX_GRADIENT_STOPS);
+      uniformsRef.current.lineGradientCount.value = stops.length;
+
+      stops.forEach((hex, i) => {
+        const color = hexToVec3(hex);
+        uniformsRef.current.lineGradient.value[i].set(color.x, color.y, color.z);
+      });
+      
+      const newTop = new Vector3(topWavePosition?.x, topWavePosition?.y, topWavePosition?.rotate);
+      const newMiddle = new Vector3(middleWavePosition?.x, middleWavePosition?.y, middleWavePosition?.rotate);
+      const newBottom = new Vector3(bottomWavePosition?.x, bottomWavePosition?.y, bottomWavePosition?.rotate);
+
+      uniformsRef.current.topWavePosition.value.lerp(newTop, 0.1);
+      uniformsRef.current.middleWavePosition.value.lerp(newMiddle, 0.1);
+      uniformsRef.current.bottomWavePosition.value.lerp(newBottom, 0.1);
+    }
+  }, [linesGradient, topWavePosition, middleWavePosition, bottomWavePosition]);
 
   return (
     <div

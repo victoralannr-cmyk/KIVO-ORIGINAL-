@@ -8,7 +8,6 @@ import WhatIsAgent from '@/components/sections/what-is-agent';
 import AutopilotSection from '@/components/sections/autopilot';
 import FinalCtaSection from '@/components/sections/final-cta';
 import FaqSection from '@/components/sections/faq';
-import ScrollReveal from '@/components/common/scroll-reveal';
 
 export default function Home() {
   return (
@@ -16,20 +15,12 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <HeroSection />
-        <ScrollReveal>
-          <SuccessCasesSection />
-        </ScrollReveal>
+        <SuccessCasesSection />
         <WhatIsAgent />
         <HowItWorksSection />
-        <ScrollReveal>
-          <AutopilotSection />
-        </ScrollReveal>
-        <ScrollReveal>
-          <FinalCtaSection />
-        </ScrollReveal>
-        <ScrollReveal>
-          <FaqSection />
-        </ScrollReveal>
+        <AutopilotSection />
+        <FinalCtaSection />
+        <FaqSection />
       </main>
       <Footer />
     </div>

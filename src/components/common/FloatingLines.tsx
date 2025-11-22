@@ -95,6 +95,7 @@ float wave(vec2 uv, float offset, vec2 screenUv, vec2 mouseUv, bool shouldBend) 
 
   float x_offset    = offset;
   float x_movement = time * 0.1;
+  float y_movement = time * 0.03; // Subtle upward movement for "growth"
   float amp        = sin(offset + time * 0.2) * 0.3;
   float y          = sin(uv.x + x_offset + x_movement) * amp;
 
@@ -105,8 +106,8 @@ float wave(vec2 uv, float offset, vec2 screenUv, vec2 mouseUv, bool shouldBend) 
     y += bendOffset;
   }
 
-  float m = uv.y - y;
-  // Apply a glow effect by using smoothstep
+  float m = uv.y - y + y_movement;
+  // Use smoothstep for a softer, more controlled glow instead of a sharp line
   float line = smoothstep(0.015, 0.0, abs(m));
   return line * 0.5; // Controls brightness/glow
 }
@@ -218,14 +219,20 @@ function hexToVec3(hex: string) {
   return new Vector3(r / 255, g / 255, b / 255);
 }
 
+interface WavePosition {
+  x: number;
+  y: number;
+  rotate: number;
+}
+
 interface FloatingLinesProps {
-  linesGradient?: string[];
-  enabledWaves?: ('top' | 'middle' | 'bottom')[];
+  linesGradient: string[];
+  enabledWaves?: Array<'top' | 'middle' | 'bottom'>;
   lineCount?: number | number[];
   lineDistance?: number | number[];
-  topWavePosition?: { x: number; y: number; rotate: number };
-  middleWavePosition?: { x: number; y: number; rotate: number };
-  bottomWavePosition?: { x: number; y: number; rotate: number };
+  topWavePosition?: WavePosition;
+  middleWavePosition?: WavePosition;
+  bottomWavePosition?: WavePosition;
   animationSpeed?: number;
   interactive?: boolean;
   bendRadius?: number;
@@ -243,7 +250,7 @@ export default function FloatingLines({
   lineDistance = [5],
   topWavePosition,
   middleWavePosition,
-  bottomWavePosition,
+  bottomWavePosition = { x: 2.0, y: -0.7, rotate: -1 },
   animationSpeed = 1,
   interactive = true,
   bendRadius = 5.0,
@@ -291,7 +298,7 @@ export default function FloatingLines({
     const camera = new OrthographicCamera(-1, 1, 1, -1, 0, 1);
     camera.position.z = 1;
 
-    const renderer = new WebGLRenderer({ antialias: true, alpha: true });
+    const renderer = new WebGLRenderer({ antialias: true, alpha: true }); // alpha: true for transparent background
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     renderer.domElement.style.width = '100%';
     renderer.domElement.style.height = '100%';
@@ -443,9 +450,9 @@ export default function FloatingLines({
 
     return () => {
       cancelAnimationFrame(raf);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      if (ro && containerRef.current) {
-        ro.disconnect();
+      const currentContainer = containerRef.current;
+      if (ro && currentContainer) {
+        ro.unobserve(currentContainer);
       }
 
       if (interactive) {
@@ -456,26 +463,14 @@ export default function FloatingLines({
       geometry.dispose();
       material.dispose();
       renderer.dispose();
-      if (renderer.domElement && renderer.domElement.parentElement) {
+      if (renderer.domElement.parentElement) {
         renderer.domElement.parentElement.removeChild(renderer.domElement);
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     linesGradient,
-    enabledWaves,
-    lineCount,
-    lineDistance,
-    topWavePosition,
-    middleWavePosition,
-    bottomWavePosition,
-    animationSpeed,
-    interactive,
-    bendRadius,
-    bendStrength,
-    mouseDamping,
-    parallax,
-    parallaxStrength
+    // dependencies are intentionally limited to avoid re-creating the scene on every prop change
   ]);
 
   return (

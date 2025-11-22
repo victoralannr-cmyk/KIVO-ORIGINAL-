@@ -25,10 +25,6 @@
     --input: 217 33% 17%;
     --ring: 215 28% 91%;
     --radius: 0.8rem;
-    
-    --bg-color: #19233A;
-    --line-color-1: #AEB7C4;
-    --line-color-2: #F8F9FB;
   }
 
   .dark {
@@ -58,13 +54,17 @@
   * {
     @apply border-border;
   }
-  body {
+  html, body {
+    height: 100%;
     margin: 0;
-    background-color: var(--bg-color);
+  }
+  body {
+    background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
+    overflow-x:hidden;
   }
   
   .app-container {
@@ -76,64 +76,19 @@
   }
 }
 
-.animated-background {
+#bg-canvas {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   z-index: 0;
-  overflow: hidden;
-  background-color: var(--bg-color);
+  pointer-events: none;
+  display: block;
 }
 
-.animated-background::before,
-.animated-background::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background-repeat: no-repeat;
-  mix-blend-mode: screen; /* Ou 'overlay' para um efeito diferente */
-  opacity: 0.1;
-}
-
-.animated-background::before {
-  background-image: radial-gradient(
-    circle at center,
-    var(--line-color-1),
-    var(--bg-color) 60%
-  );
-  animation: wave-1 25s ease-in-out infinite;
-}
-
-.animated-background::after {
-  background-image: radial-gradient(
-    circle at center,
-    var(--line-color-2),
-    var(--bg-color) 55%
-  );
-  animation: wave-2 30s ease-in-out infinite -15s;
-}
-
-@keyframes wave-1 {
-  0% { transform: translate(-20%, 20%) scale(0.8); opacity: 0.1; }
-  50% { transform: translate(20%, -20%) scale(1.2); opacity: 0.15; }
-  100% { transform: translate(-20%, 20%) scale(0.8); opacity: 0.1; }
-}
-
-@keyframes wave-2 {
-  0% { transform: translate(20%, -20%) scale(0.9); opacity: 0.1; }
-  50% { transform: translate(-20%, 20%) scale(1.1); opacity: 0.2; }
-  100% { transform: translate(20%, -20%) scale(0.9); opacity: 0.1; }
-}
-
-.main-content{
-  position:relative;
-  z-index:1;
-  background-color: transparent;
+.main-content {
+  position: relative;
+  z-index: 1;
 }
 
 

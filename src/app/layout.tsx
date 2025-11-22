@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={cn("font-body antialiased text-foreground")}>
         
         <FloatingLines
-          linesGradient={['#4FC3F7', '#F06292']}
+          linesGradient={['#AEB7C4', '#F8F9FB']}
           enabledWaves={['middle', 'bottom']}
           lineCount={[10, 6]}
           lineDistance={[0.5, 3]}

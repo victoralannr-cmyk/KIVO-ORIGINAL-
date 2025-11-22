@@ -59,7 +59,8 @@ uniform vec3 lineGradient[8];
 uniform int lineGradientCount;
 
 const vec3 BLACK = vec3(0.0);
-const vec3 DARK_BLUE = vec3(25.0, 35.0, 58.0) / 255.0; // #19233A
+// Cores de fundo modificadas:
+const vec3 DARK_BLUE = vec3(25.0, 35.0, 58.0) / 255.0;    // Cor 19233A
 
 mat2 rotate(float r) {
   return mat2(cos(r), sin(r), -sin(r), cos(r));
@@ -71,7 +72,9 @@ vec3 background_color(vec2 uv) {
   float y = sin(uv.x - 0.2) * 0.3 - 0.1;
   float m = uv.y - y;
 
+  // Usa a cor 19233A como fundo principal
   col += mix(DARK_BLUE, BLACK, smoothstep(0.0, 1.0, abs(m)));
+  // Usa a cor 19233A como destaque/segunda onda
   col += mix(DARK_BLUE, BLACK, smoothstep(0.0, 1.0, abs(m - 0.8)));
   return col * 0.5;
 }

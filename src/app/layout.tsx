@@ -4,6 +4,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import BackToTop from '@/components/common/back-to-top';
 import { cn } from '@/lib/utils';
+import FloatingLines from '@/components/common/FloatingLines';
 
 export const metadata: Metadata = {
   title: 'Kivo | Agentes de IA sob medida',
@@ -24,7 +25,23 @@ export default function RootLayout({
       </head>
       <body className={cn("font-body antialiased text-foreground")}>
         
-        <div className="animated-bg"></div>
+        <FloatingLines
+          linesGradient={['#4FC3F7', '#F06292']}
+          enabledWaves={['middle', 'bottom']}
+          lineCount={[10, 6]}
+          lineDistance={[0.5, 3]}
+          topWavePosition={{ x: 10.0, y: 0.5, rotate: -0.4 }}
+          middleWavePosition={{ x: 5.0, y: 0.0, rotate: 0.2 }}
+          bottomWavePosition={{ x: 2.0, y: -0.7, rotate: -0.8 }}
+          animationSpeed={0.5}
+          interactive={true}
+          bendRadius={8.0}
+          bendStrength={-0.3}
+          mouseDamping={0.03}
+          parallax={true}
+          parallaxStrength={0.15}
+          mixBlendMode="screen"
+        />
 
         <div className="relative z-10 app-container main-content">
           {children}

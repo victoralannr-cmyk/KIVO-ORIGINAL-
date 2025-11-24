@@ -28,9 +28,9 @@ const VideoCard = ({ videoId, title, description, delay }: { videoId: string; ti
         <CardHeader>
           <CardTitle className="text-xl font-bold text-foreground text-center">{title}</CardTitle>
         </CardHeader>
-        <div className="relative aspect-video">
+        <div className="relative aspect-video px-4">
            <iframe
-            className="absolute top-0 left-0 w-full h-full"
+            className="absolute top-0 left-0 w-full h-full rounded-xl"
             src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}`}
             title={`YouTube video player for ${title}`}
             frameBorder="0"

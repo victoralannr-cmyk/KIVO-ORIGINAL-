@@ -72,6 +72,14 @@ export default function AutopilotSection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
+            <div className="mb-8">
+                <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-8 py-4 text-lg">
+                  <Link href="#agendar">
+                    Fale com um especialista
+                    <ArrowUpRight className="h-5 w-5 ml-2 transition-transform group-hover:rotate-45" />
+                  </Link>
+                </Button>
+            </div>
 
             <motion.h2 
               className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground"

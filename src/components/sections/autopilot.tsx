@@ -6,7 +6,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 
 const sentence = {
   hidden: { opacity: 0 },
@@ -84,7 +84,7 @@ export default function AutopilotSection() {
                 <div className="mt-6 flex justify-center">
                     <Button asChild className="animate-pulse">
                         <Link href="#agendar">
-                            Fale Conosco <ArrowRight className="ml-2 h-4 w-4" />
+                            Fale Conosco <ArrowUp className="ml-2 h-4 w-4" />
                         </Link>
                     </Button>
                 </div>

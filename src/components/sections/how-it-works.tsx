@@ -178,7 +178,7 @@ export default function HowItWorksSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              ENTENDA COMO IREMOS IMPULSIONAR SUA EMPRESA ATRAVÉS DA INTERNET
+              entenda como iremos impulsionar sua empresa através da internet
             </motion.p>
           </div>
         

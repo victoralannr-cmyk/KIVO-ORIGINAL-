@@ -6,7 +6,7 @@ import ScrollReveal from '../common/scroll-reveal';
 const videoCardsData = [
   {
     videoId: 'L_LUpnjgPso',
-    title: 'Automações',
+    title: 'Estratégias de Vendas',
     description: 'Nossos agentes de IA podem automatizar tarefas repetitivas, liberando sua equipe para se concentrar no que realmente importa.',
   },
   {
@@ -28,7 +28,7 @@ const VideoCard = ({ videoId, title, description, delay }: { videoId: string; ti
         <CardHeader>
           <CardTitle className="text-xl font-bold text-foreground text-center">{title}</CardTitle>
         </CardHeader>
-        <div className="relative aspect-video px-4">
+        <div className="relative aspect-video p-4">
            <iframe
             className="absolute top-0 left-0 w-full h-full rounded-xl"
             src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}`}
@@ -38,7 +38,7 @@ const VideoCard = ({ videoId, title, description, delay }: { videoId: string; ti
             allowFullScreen
           ></iframe>
         </div>
-        <CardContent className="p-6 flex-grow flex flex-col">
+        <CardContent className="p-6 pt-0 flex-grow flex flex-col">
           <p className="text-muted-foreground text-sm flex-grow">{description}</p>
         </CardContent>
       </Card>

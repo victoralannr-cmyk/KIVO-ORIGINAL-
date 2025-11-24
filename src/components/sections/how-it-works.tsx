@@ -197,8 +197,7 @@ export default function HowItWorksSection() {
                       <CardTitle className="font-headline text-xl">Social Media</CardTitle>
                   </CardHeader>
                   <CardContent className="relative p-6 pt-0 text-center text-base text-muted-foreground flex-grow">
-                      Posicionamos sua marca da forma correta, criando uma presença digital profissional que transmite autoridade, desejo e confiança.
-Cuidamos da estratégia, do conteúdo e da construção de uma imagem forte nas redes sociais.
+                      Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.
                   </CardContent>
               </Card>
             </ScrollReveal>

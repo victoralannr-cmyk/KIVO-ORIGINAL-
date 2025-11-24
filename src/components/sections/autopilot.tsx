@@ -4,6 +4,8 @@ import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/ca
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const sentence = {
   hidden: { opacity: 0 },
@@ -78,9 +80,13 @@ export default function AutopilotSection() {
                 <h2 className="font-headline text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl text-foreground">
                     <span className="text-primary">Tráfego</span> colocam o seu negócio à frente dos <span className="text-primary">olhares certos.</span> O seu posicionamento é a sua <span className="text-primary">vitrine digital!</span>
                 </h2>
-                <p className="mx-auto mt-4 max-w-3xl text-muted-foreground md:text-xl">
-                    Gerimos mais de U$400.000,00 em campanhas para clientes. Temos uma equipe especialista em Google e Meta Ads.
-                </p>
+                <div className="mt-6 flex justify-center">
+                    <Button asChild>
+                        <Link href="#agendar">
+                            Fale Conosco
+                        </Link>
+                    </Button>
+                </div>
             </motion.div>
 
             <motion.h2 

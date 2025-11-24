@@ -76,7 +76,7 @@ export default function AutopilotSection() {
                 transition={{ duration: 0.8, delay: 0.2 }}
              >
                 <h2 className="font-headline text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl text-foreground">
-                    Tráfego colocam o seu negócio à frente dos olhares certos. 
+                    <span className="text-wavy-gradient">Tráfego</span> colocam o seu negócio à frente dos olhares certos. 
                     O seu posicionamento é a sua vitrine digital!
                 </h2>
                 <p className="mx-auto mt-4 max-w-3xl text-muted-foreground md:text-xl">

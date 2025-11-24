@@ -81,7 +81,7 @@ export default function AutopilotSection() {
                     <span className="text-primary">Tráfego</span> colocam o seu negócio à frente dos <span className="text-primary">olhares certos.</span> O seu posicionamento é a sua <span className="text-primary">vitrine digital!</span>
                 </h2>
                 <div className="mt-6 flex justify-center">
-                    <Button asChild>
+                    <Button asChild className="animate-pulse">
                         <Link href="#agendar">
                             Fale Conosco
                         </Link>

@@ -5,6 +5,7 @@ import HeroSection from '@/components/sections/hero';
 import HowItWorksSection from '@/components/sections/how-it-works';
 import SuccessCasesSection from '@/components/sections/success-cases';
 import WhatIsAgent from '@/components/sections/what-is-agent';
+import VideoCtaSection from '@/components/sections/video-cta';
 import VideoCardsSection from '@/components/sections/video-cards';
 import AutopilotSection from '@/components/sections/autopilot';
 import FinalCtaSection from '@/components/sections/final-cta';
@@ -19,6 +20,7 @@ export default function Home() {
         <SuccessCasesSection />
         <WhatIsAgent />
         <HowItWorksSection />
+        <VideoCtaSection />
         <VideoCardsSection />
         <AutopilotSection />
         <FinalCtaSection />

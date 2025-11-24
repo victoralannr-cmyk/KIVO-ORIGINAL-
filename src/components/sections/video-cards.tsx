@@ -28,18 +28,20 @@ const VideoCard = ({ videoId, title, description, delay }: { videoId: string; ti
         <CardHeader>
           <CardTitle className="text-xl font-bold text-foreground text-center">{title}</CardTitle>
         </CardHeader>
-        <div className="relative aspect-video p-4">
-           <iframe
-            className="absolute top-0 left-0 w-full h-full rounded-xl"
-            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}`}
-            title={`YouTube video player for ${title}`}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+        <div className="flex-grow flex items-center justify-center p-4">
+            <div className="relative w-full" style={{paddingBottom: '56.25%' /* 16:9 Aspect Ratio */}}>
+                <iframe
+                    className="absolute top-0 left-0 w-full h-full rounded-xl"
+                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}`}
+                    title={`YouTube video player for ${title}`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                ></iframe>
+            </div>
         </div>
-        <CardContent className="p-6 pt-0 flex-grow flex flex-col">
-          <p className="text-muted-foreground text-sm flex-grow">{description}</p>
+        <CardContent className="p-6 pt-2">
+          <p className="text-muted-foreground text-sm text-center">{description}</p>
         </CardContent>
       </Card>
     </ScrollReveal>

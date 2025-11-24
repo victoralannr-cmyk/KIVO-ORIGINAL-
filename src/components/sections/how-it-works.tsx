@@ -254,8 +254,7 @@ export default function HowItWorksSection() {
                       <CardTitle className="font-headline text-xl">Criação de Conteúdo Criativo</CardTitle>
                   </CardHeader>
                   <CardContent className="relative p-6 pt-0 text-center text-base text-muted-foreground flex-grow">
-                     Desenvolvemos criativos que realmente chamam atenção e convertem.
-Vídeos, designs e textos feitos sob medida para aumentar seu desempenho nos anúncios e destacar sua marca.
+                     Conteúdos criativos que realmente vendem — vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.
                   </CardContent>
               </Card>
             </ScrollReveal>

@@ -109,41 +109,6 @@ export default function AutopilotSection() {
             Imagine ter um assistente inteligente, disponível o tempo todo, que:
           </motion.p>
         </motion.div>
-        <motion.div 
-          initial={{ opacity: 0, x: 50, y: -50 }}
-          whileInView={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          viewport={{ once: true }}
-          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
-        >
-          {autopilotItems.map((item, index) => (
-            <Card key={index} className="overflow-hidden bg-background/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl">
-              <div className="relative h-48 w-full">
-                {item.video ? (
-                  <video
-                    src={item.video}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="h-full w-full object-cover"
-                  />
-                ) : (
-                  <Image
-                    src={item.image!}
-                    alt={item.title}
-                    fill
-                    className="object-contain p-4"
-                  />
-                )}
-              </div>
-              <CardHeader>
-                <CardTitle className="font-headline text-lg md:text-xl">{item.title}</CardTitle>
-              </CardHeader>
-              <CardDescription className="px-6 pb-6 text-sm md:text-base">{item.description}</CardDescription>
-            </Card>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

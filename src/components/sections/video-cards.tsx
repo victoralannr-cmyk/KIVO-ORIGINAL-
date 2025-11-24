@@ -1,4 +1,3 @@
-
 'use client';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -26,6 +25,9 @@ const VideoCard = ({ videoId, title, description, delay }: { videoId: string; ti
   return (
     <ScrollReveal delay={delay} direction="up">
       <Card className="bg-background/80 border-border/30 rounded-2xl shadow-lg overflow-hidden h-full flex flex-col glow-shadow-primary transition-all duration-300 hover:shadow-accent/50 hover:-translate-y-2">
+        <CardHeader>
+          <CardTitle className="text-xl font-bold text-foreground text-center">{title}</CardTitle>
+        </CardHeader>
         <div className="relative aspect-video">
            <iframe
             className="absolute top-0 left-0 w-full h-full"
@@ -37,7 +39,6 @@ const VideoCard = ({ videoId, title, description, delay }: { videoId: string; ti
           ></iframe>
         </div>
         <CardContent className="p-6 flex-grow flex flex-col">
-          <h3 className="text-xl font-bold text-foreground mb-2">{title}</h3>
           <p className="text-muted-foreground text-sm flex-grow">{description}</p>
         </CardContent>
       </Card>

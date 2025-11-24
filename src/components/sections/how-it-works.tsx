@@ -235,7 +235,7 @@ export default function HowItWorksSection() {
                       <CardTitle className="font-headline text-xl">Criação de Sites</CardTitle>
                   </CardHeader>
                   <CardContent className="relative p-6 pt-0 text-center text-base text-muted-foreground flex-grow">
-                     Tenha um site profissional que funciona 24h por dia, rápido, fácil de navegar e pensado para facilitar a vida do seu cliente. Desenvolvemos sites com catálogo, contato direto, agendamentos e tudo que sua empresa precisa para vender online.
+                     Sites profissionais que funcionam 24h e facilitam a vida do seu cliente. Catálogo, contato, agendamentos e recursos completos para vender online.
                   </CardContent>
               </Card>
             </ScrollReveal>

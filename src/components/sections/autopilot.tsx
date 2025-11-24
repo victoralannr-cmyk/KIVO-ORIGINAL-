@@ -76,8 +76,7 @@ export default function AutopilotSection() {
                 transition={{ duration: 0.8, delay: 0.2 }}
              >
                 <h2 className="font-headline text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl text-foreground">
-                    <span className="text-primary">Tráfego</span> colocam o seu negócio à frente dos <span className="text-primary">olhares certos.</span>
-                    O seu posicionamento é a sua vitrine digital!
+                    <span className="text-primary">Tráfego</span> colocam o seu negócio à frente dos <span className="text-primary">olhares certos.</span> O seu posicionamento é a sua <span className="text-primary">vitrine digital!</span>
                 </h2>
                 <p className="mx-auto mt-4 max-w-3xl text-muted-foreground md:text-xl">
                     Gerimos mais de U$400.000,00 em campanhas para clientes. Temos uma equipe especialista em Google e Meta Ads.

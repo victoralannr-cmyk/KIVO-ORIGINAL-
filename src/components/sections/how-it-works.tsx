@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -178,7 +177,7 @@ export default function HowItWorksSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              entenda como iremos impulsionar sua empresa através da internet
+              Entenda como iremos impulsionar sua empresa através da internet
             </motion.p>
           </div>
         

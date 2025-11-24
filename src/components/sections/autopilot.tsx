@@ -31,24 +31,6 @@ const wordAnimation = {
 
 const title = "Seu atendimento, vendas e suporte no piloto automático".split(" ");
 
-const autopilotItems = [
-  {
-    image: 'https://kyondigital.com/wp-content/uploads/2025/09/Frame-1707480018.png',
-    title: 'Pode atender clientes automaticamente no WhatsApp, 24/7',
-    description: 'responde dúvidas, envia informações e resolve solicitações em segundos.',
-  },
-  {
-    video: 'https://kyondigital.com/wp-content/uploads/2025/09/adb6767d-30f9-43df-a05a-3f69dcef6e09-video.mp4',
-    title: 'Aprende continuamente',
-    description: 'melhora a cada interação, ficando mais eficiente com o tempo.',
-  },
-  {
-    video: 'https://kyondigital.com/wp-content/uploads/2025/09/Card-3-1-1.mp4',
-    title: 'Reduz custos operacionais',
-    description: 'elimina tarefas repetitivas e libera sua equipe para o que realmente importa.',
-  }
-];
-
 export default function AutopilotSection() {
   const kLogo = PlaceHolderImages.find(img => img.id === 'k-logo-hero');
   const kivoText = PlaceHolderImages.find(img => img.id === 'kivo-text-hero');
@@ -86,6 +68,22 @@ export default function AutopilotSection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
+             <motion.div 
+                className="mb-12"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+             >
+                <p className="mx-auto max-w-3xl text-foreground md:text-xl">
+                    Tráfego colocam o seu negócio à frente dos olhares certos. 
+                    O seu posicionamento é a sua vitrine digital!
+                </p>
+                <p className="mx-auto mt-4 max-w-3xl text-muted-foreground">
+                    Gerimos mais de U$400.000,00 em campanhas para clientes. Temos uma equipe especialista em Google e Meta Ads.
+                </p>
+            </motion.div>
+
             <motion.h2 
               className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-foreground"
               variants={sentence}

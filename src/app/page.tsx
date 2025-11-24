@@ -8,7 +8,6 @@ import WhatIsAgent from '@/components/sections/what-is-agent';
 import VideoCtaSection from '@/components/sections/video-cta';
 import VideoCardsSection from '@/components/sections/video-cards';
 import AutopilotSection from '@/components/sections/autopilot';
-import FinalCtaSection from '@/components/sections/final-cta';
 import FaqSection from '@/components/sections/faq';
 
 export default function Home() {
@@ -23,7 +22,6 @@ export default function Home() {
         <VideoCtaSection />
         <VideoCardsSection />
         <AutopilotSection />
-        <FinalCtaSection />
         <FaqSection />
       </main>
       <Footer />

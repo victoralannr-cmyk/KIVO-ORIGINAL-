@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -88,7 +89,7 @@ export default function AutopilotSection() {
                         </Link>
                     </Button>
                 </div>
-                 <div className="mt-4 flex justify-center text-primary animate-bounce">
+                 <div className="mt-12 flex justify-center text-primary animate-bounce">
                     <svg width="59.22" height="59.24" viewBox="0 0 59.22 59.24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M29.61 1V58.24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         <path d="M58.22 29.62L29.61 58.23L1 29.62" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

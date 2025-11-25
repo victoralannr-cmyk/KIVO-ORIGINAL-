@@ -84,6 +84,8 @@ export default function HeroSection() {
         }
     }, [state, toast]);
 
+    const wordsWithGradient = ["Impulsionamos", "para", "preditivos", "de", "conversão"];
+
     return (
         <section
             id="home"
@@ -102,7 +104,7 @@ export default function HeroSection() {
                       animate="visible"
                     >
                       {titleText.split(" ").map((word, wordIndex) => (
-                        <span key={wordIndex} className={cn("inline-block mr-3 whitespace-nowrap", word === "Impulsionamos" ? "text-wavy-gradient" : "")}>
+                        <span key={wordIndex} className={cn("inline-block mr-3 whitespace-nowrap", wordsWithGradient.includes(word) ? "text-wavy-gradient" : "")}>
                           {word.split("").map((char, charIndex) => (
                             <motion.span key={charIndex} variants={letter} className="inline-block">
                               {char}

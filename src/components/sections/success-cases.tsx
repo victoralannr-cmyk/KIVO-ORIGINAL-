@@ -65,7 +65,7 @@ export default function SuccessCasesSection() {
         </div>
         <div className="w-full mt-12 overflow-x-hidden relative">
           <div className="flex marquee">
-            {[...logos, ...logos].map((item, index) => {
+            {logos.map((item, index) => {
                const logo = PlaceHolderImages.find(p => p.id === item.logoId);
                return (
                 <div 

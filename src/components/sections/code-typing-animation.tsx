@@ -156,9 +156,9 @@ export default function CodeTypingAnimation() {
         .dot.green { background: #28c93f; box-shadow: 0 0 6px rgba(40,201,63,0.12); }
         .code-wrap { display: flex; gap: 16px; align-items: flex-start; flex-grow: 1; overflow: hidden; }
         .gutter {
-          width: 48px;
+          width: 38px;
           color: #8b97a6;
-          font-size: 13px;
+          font-size: 11px;
           text-align: right;
           padding-right: 12px;
           user-select: none;
@@ -168,8 +168,8 @@ export default function CodeTypingAnimation() {
         }
         pre.code {
           margin: 0;
-          font-size: 14px;
-          line-height: 1.5;
+          font-size: 12px;
+          line-height: 1.4;
           white-space: pre-wrap;
           word-break: break-word;
           color: #e6eef8;
@@ -186,8 +186,8 @@ export default function CodeTypingAnimation() {
         pre.code :global(.tok-punct) { color: #e6eef8; }
         pre.code :global(.caret) {
           display: inline-block;
-          width: 10px;
-          height: 18px;
+          width: 8px;
+          height: 16px;
           background: linear-gradient(90deg, #e6eef8, #e6eef8);
           margin-left: 2px;
           vertical-align: bottom;

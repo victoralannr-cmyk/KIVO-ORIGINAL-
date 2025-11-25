@@ -68,21 +68,21 @@ export default function SalesStrategyCard() {
           <path className="line-3" d="M120 120 H 190 C 220 120, 240 162.5, 290 182.5" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
           
           <g className="icon-box icon-box-1" style={{ transformOrigin: 'center' }}>
-            <rect x="290" y="30" width="55" height="55" rx="10" fill="#DAA520"/>
+            <rect x="290" y="30" width="55" height="55" rx="10" fill="#19233A" stroke="#F8F9FB" strokeWidth="2"/>
             <foreignObject x="302.5" y="42.5" width="30" height="30">
                 <Folder color="#F8F9FB" strokeWidth="2" size={30} />
             </foreignObject>
           </g>
           
           <g className="icon-box icon-box-2" style={{ transformOrigin: 'center' }}>
-            <rect x="290" y="92.5" width="55" height="55" rx="10" fill="#DAA520"/>
+            <rect x="290" y="92.5" width="55" height="55" rx="10" fill="#19233A" stroke="#F8F9FB" strokeWidth="2"/>
             <foreignObject x="302.5" y="105" width="30" height="30">
                 <FileText color="#F8F9FB" strokeWidth="2" size={30} />
             </foreignObject>
           </g>
 
           <g className="icon-box icon-box-3" style={{ transformOrigin: 'center' }}>
-            <rect x="290" y="155" width="55" height="55" rx="10" fill="#DAA520"/>
+            <rect x="290" y="155" width="55" height="55" rx="10" fill="#19233A" stroke="#F8F9FB" strokeWidth="2"/>
              <foreignObject x="302.5" y="167.5" width="30" height="30">
                 <Users color="#F8F9FB" strokeWidth="2" size={30} />
             </foreignObject>

@@ -9,8 +9,8 @@ export default function SalesStrategyCard() {
       <style jsx>{`
         .diagram-container {
           width: 100%;
-          max-width: 420px;
-          aspect-ratio: 1.75 / 1;
+          max-width: 400px;
+          aspect-ratio: 400 / 190;
         }
 
         .animated-svg {
@@ -56,35 +56,35 @@ export default function SalesStrategyCard() {
         }
       `}</style>
        <div className="diagram-container">
-        <svg className="animated-svg" viewBox="0 0 420 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="420" height="240" rx="20" fill="#19233A"/>
+        <svg className="animated-svg" viewBox="0 0 400 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="400" height="190" rx="20" fill="#19233A"/>
           
           <g className="central-cube" style={{ transformOrigin: 'center' }}>
-            <rect x="50" y="85" width="70" height="70" rx="10" fill="none" stroke="#F8F9FB" strokeWidth="3"/>
+            <rect x="40" y="65" width="60" height="60" rx="10" fill="none" stroke="#F8F9FB" strokeWidth="2.5"/>
           </g>
 
-          <path className="line-1" d="M120 120 H 190 C 220 120, 240 77.5, 290 57.5" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
-          <path className="line-2" d="M120 120 H 290" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
-          <path className="line-3" d="M120 120 H 190 C 220 120, 240 162.5, 290 182.5" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line-1" d="M100 95 H 170 C 200 95, 220 50, 270 30" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line-2" d="M100 95 H 270" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line-3" d="M100 95 H 170 C 200 95, 220 140, 270 160" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
           
           <g className="icon-box icon-box-1" style={{ transformOrigin: 'center' }}>
-            <rect x="290" y="30" width="55" height="55" rx="10" fill="#19233A" stroke="#F8F9FB" strokeWidth="2"/>
-            <foreignObject x="302.5" y="42.5" width="30" height="30">
-                <Folder color="#F8F9FB" strokeWidth="2" size={30} />
+            <rect x="270" y="5" width="50" height="50" rx="10" fill="#19233A" stroke="#F8F9FB" strokeWidth="2"/>
+            <foreignObject x="282.5" y="17.5" width="25" height="25">
+                <Folder color="#F8F9FB" strokeWidth="2" size={25} />
             </foreignObject>
           </g>
           
           <g className="icon-box icon-box-2" style={{ transformOrigin: 'center' }}>
-            <rect x="290" y="92.5" width="55" height="55" rx="10" fill="#19233A" stroke="#F8F9FB" strokeWidth="2"/>
-            <foreignObject x="302.5" y="105" width="30" height="30">
-                <FileText color="#F8F9FB" strokeWidth="2" size={30} />
+            <rect x="270" y="70" width="50" height="50" rx="10" fill="#19233A" stroke="#F8F9FB" strokeWidth="2"/>
+            <foreignObject x="282.5" y="82.5" width="25" height="25">
+                <FileText color="#F8F9FB" strokeWidth="2" size={25} />
             </foreignObject>
           </g>
 
           <g className="icon-box icon-box-3" style={{ transformOrigin: 'center' }}>
-            <rect x="290" y="155" width="55" height="55" rx="10" fill="#19233A" stroke="#F8F9FB" strokeWidth="2"/>
-             <foreignObject x="302.5" y="167.5" width="30" height="30">
-                <Users color="#F8F9FB" strokeWidth="2" size={30} />
+            <rect x="270" y="135" width="50" height="50" rx="10" fill="#19233A" stroke="#F8F9FB" strokeWidth="2"/>
+             <foreignObject x="282.5" y="147.5" width="25" height="25">
+                <Users color="#F8F9FB" strokeWidth="2" size={25} />
             </foreignObject>
           </g>
         </svg>

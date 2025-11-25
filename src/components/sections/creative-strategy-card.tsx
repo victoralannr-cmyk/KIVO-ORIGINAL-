@@ -10,7 +10,7 @@ export default function CreativeStrategyCard() {
         .creative-strategy-card-container {
           perspective: 1000px;
         }
-        .clip-card {
+        .clip-box {
           width: 250px;
           height: 150px;
           border-radius: 12px;
@@ -31,22 +31,22 @@ export default function CreativeStrategyCard() {
           background-color: #4285f4;
           animation: move-circle 8s infinite ease-in-out;
         }
-        .text-area {
+        .content {
           z-index: 1;
           color: white;
           text-align: center;
           font-family: 'Poppins', sans-serif;
           font-weight: 600;
         }
-        .text-area h3 {
+        .content .line {
           margin: 4px 0;
           font-size: 1rem;
           opacity: 0;
           animation: fade-in-text 8s infinite ease-in-out;
         }
-        .text-area h3:nth-child(1) { animation-delay: 0s; }
-        .text-area h3:nth-child(2) { animation-delay: 2s; }
-        .text-area h3:nth-child(3) { animation-delay: 4s; }
+        .content .line:nth-child(1) { animation-delay: 0s; }
+        .content .line:nth-child(2) { animation-delay: 2.6s; }
+        .content .line:nth-child(3) { animation-delay: 5.2s; }
 
         @keyframes rotate-card {
           0% { transform: rotateY(0deg) rotateX(0deg); }
@@ -70,12 +70,12 @@ export default function CreativeStrategyCard() {
           60% { opacity: 0; transform: translateY(-10px); }
         }
       `}</style>
-      <div className="clip-card">
+      <div className="clip-box">
         <div className="circle"></div>
-        <div className="text-area">
-          <h3>Estratégia</h3>
-          <h3>Arquitetura Criativa</h3>
-          <h3>Execução Visual</h3>
+        <div className="content">
+          <p className="line">Estratégia Criativa</p>
+          <p className="line">Desenvolvimento Visual</p>
+          <p className="line">Entrega Final</p>
         </div>
       </div>
     </div>

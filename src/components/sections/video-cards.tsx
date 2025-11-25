@@ -70,9 +70,9 @@ export default function VideoCardsSection() {
                 <div className="flex-grow flex items-center justify-center p-4">
                    <div className="relative w-full h-full p-2">
                     {item.type === 'video' ? (
-                      <div className="relative w-full" style={{ paddingTop: '56.25%' /* 16:9 Aspect Ratio */ }}>
+                      <div className="relative w-full overflow-hidden rounded-lg" style={{ paddingTop: '56.25%' /* 16:9 Aspect Ratio */ }}>
                         <iframe
-                          className="absolute top-0 left-0 w-full h-full rounded-lg"
+                          className="absolute top-0 left-0 w-full h-full"
                           src={`https://www.youtube.com/embed/${item.videoId}`}
                           title={item.title}
                           frameBorder="0"

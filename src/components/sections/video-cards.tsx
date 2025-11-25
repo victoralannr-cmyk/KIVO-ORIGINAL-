@@ -3,6 +3,7 @@
 import { Card } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import CodeTypingAnimation from './code-typing-animation';
+import CreativeStrategyCard from './creative-strategy-card';
 
 const cardContent = [
   {
@@ -17,8 +18,7 @@ const cardContent = [
     description: 'Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.',
   },
   {
-    type: 'video',
-    videoId: 'm_u6m3kJr58',
+    type: 'creative',
     title: 'Vendas',
     description: 'Desenvolvemos posicionamento e vitrines digitais que elevam sua autoridade, despertam desejo e impulsionam vendas — mesmo sem depender de investimento em anúncios.',
   },
@@ -68,7 +68,7 @@ export default function VideoCardsSection() {
                    <h3 className="relative text-white font-bold text-xl mb-4 text-center">{item.title}</h3>
                 </div>
                 <div className="flex-grow flex items-center justify-center p-2">
-                   <div className="relative w-full h-full flex items-center justify-center">
+                   <div className="relative w-full h-[190px] flex items-center justify-center">
                     {item.type === 'video' ? (
                       <div className="relative w-full overflow-hidden rounded-lg" style={{ paddingTop: '56.25%' /* 16:9 Aspect Ratio */ }}>
                         <iframe
@@ -80,10 +80,12 @@ export default function VideoCardsSection() {
                           allowFullScreen
                         ></iframe>
                       </div>
-                    ) : (
-                      <div className="w-full h-[190px] rounded-lg overflow-hidden relative flex justify-center items-center">
+                    ) : item.type === 'animation' ? (
+                      <div className="w-full h-full rounded-lg overflow-hidden relative flex justify-center items-center">
                          <CodeTypingAnimation />
                       </div>
+                    ): (
+                      <CreativeStrategyCard />
                     )}
                   </div>
                 </div>

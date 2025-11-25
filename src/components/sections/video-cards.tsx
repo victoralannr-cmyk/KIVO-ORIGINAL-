@@ -4,11 +4,11 @@ import { Card } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import CodeTypingAnimation from './code-typing-animation';
 import CreativeStrategyCard from './creative-strategy-card';
+import SalesStrategyCard from './sales-strategy-card';
 
 const cardContent = [
   {
-    type: 'video',
-    videoId: 'dQw4w9WgXcQ', // Placeholder, to be replaced
+    type: 'sales',
     title: 'Estratégias de Vendas',
     description: 'Atraímos atenção qualificada, geramos conversões reais e ampliamos suas visualizações. Aqui, sua marca deixa de ser invisível. Estratégias precisas em Google e Facebook Ads para resultados que realmente aparecem.',
   },
@@ -69,17 +69,8 @@ export default function VideoCardsSection() {
                 </div>
                 <div className="flex-grow flex items-center justify-center p-2">
                    <div className="relative w-full h-[190px] flex items-center justify-center">
-                    {item.type === 'video' ? (
-                      <div className="relative w-full overflow-hidden rounded-lg" style={{ paddingTop: '56.25%' /* 16:9 Aspect Ratio */ }}>
-                        <iframe
-                          className="absolute top-0 left-0 w-full h-full rounded-lg"
-                          src={`https://www.youtube.com/embed/${item.videoId}`}
-                          title={item.title}
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
+                    {item.type === 'sales' ? (
+                        <SalesStrategyCard />
                     ) : item.type === 'animation' ? (
                       <div className="w-full h-full rounded-lg overflow-hidden relative flex justify-center items-center">
                          <CodeTypingAnimation />

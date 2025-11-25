@@ -71,12 +71,6 @@
       "description": "The letter K from the Kivo logo.",
       "imageUrl": "https://i.postimg.cc/d1g4x2Dq/Wallpaper-Kivo-PC-2-removebg-preview.png",
       "imageHint": "K logo"
-    },
-    {
-      "id": "kivo-text-hero",
-      "description": "The text 'Kivo' from the Kivo logo.",
-      "imageUrl": "https://i.postimg.cc/6pFBhBwC/kivo.png",
-      "imageHint": "Kivo text"
     }
   ]
 }

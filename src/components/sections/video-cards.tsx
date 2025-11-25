@@ -8,7 +8,7 @@ import CreativeStrategyCard from './creative-strategy-card';
 const cardContent = [
   {
     type: 'video',
-    videoId: 'm_u6m3kJr58',
+    videoId: 'dQw4w9WgXcQ', // Placeholder, to be replaced
     title: 'Estratégias de Vendas',
     description: 'Atraímos atenção qualificada, geramos conversões reais e ampliamos suas visualizações. Aqui, sua marca deixa de ser invisível. Estratégias precisas em Google e Facebook Ads para resultados que realmente aparecem.',
   },

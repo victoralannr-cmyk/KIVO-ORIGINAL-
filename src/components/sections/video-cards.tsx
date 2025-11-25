@@ -67,12 +67,12 @@ export default function VideoCardsSection() {
                   ></div>
                    <h3 className="relative text-white font-bold text-xl mb-4 text-center">{item.title}</h3>
                 </div>
-                <div className="flex-grow flex items-center justify-center p-4">
-                   <div className="relative w-full h-full p-2">
+                <div className="flex-grow flex items-center justify-center p-2">
+                   <div className="relative w-full h-full">
                     {item.type === 'video' ? (
                       <div className="relative w-full overflow-hidden rounded-lg" style={{ paddingTop: '56.25%' /* 16:9 Aspect Ratio */ }}>
                         <iframe
-                          className="absolute top-0 left-0 w-full h-full"
+                          className="absolute top-0 left-0 w-full h-full rounded-lg"
                           src={`https://www.youtube.com/embed/${item.videoId}`}
                           title={item.title}
                           frameBorder="0"
@@ -81,7 +81,7 @@ export default function VideoCardsSection() {
                         ></iframe>
                       </div>
                     ) : (
-                      <div className="w-full h-full rounded-lg overflow-hidden relative" style={{ width: '400px', height: '190px', margin: 'auto' }}>
+                      <div className="w-full h-[190px] rounded-lg overflow-hidden relative flex justify-center items-center">
                          <CodeTypingAnimation />
                       </div>
                     )}

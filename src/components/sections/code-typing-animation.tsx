@@ -119,7 +119,7 @@ export default function CodeTypingAnimation() {
   }, []);
 
   return (
-    <div className="code-animation-container h-full w-full">
+    <div className="code-animation-container h-full w-full max-w-[400px]">
       <style jsx>{`
         .code-animation-container {
           --bg: #0f1724; /* panel color */
@@ -139,6 +139,7 @@ export default function CodeTypingAnimation() {
           z-index: 2;
           overflow: hidden;
           border: 1px solid rgba(255,255,255,0.04);
+          border-radius: 0.5rem;
           display: flex;
           flex-direction: column;
         }

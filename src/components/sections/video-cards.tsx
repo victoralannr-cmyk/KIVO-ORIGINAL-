@@ -12,7 +12,7 @@ const videos = [
   {
     videoId: 'm_u6m3kJr58',
     title: 'Atendimento',
-    description: 'Automatize tarefas repetitivas e libere sua equipe para focar em atividades estratégicas que geram mais valor.',
+    description: 'Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.',
   },
   {
     videoId: 'm_u6m3kJr58',

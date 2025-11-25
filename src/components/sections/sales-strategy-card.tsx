@@ -25,8 +25,8 @@ export default function SalesStrategyCard() {
         }
         
         .line-1, .line-2, .line-3 {
-          stroke-dasharray: 150;
-          stroke-dashoffset: 150;
+          stroke-dasharray: 180;
+          stroke-dashoffset: 180;
           animation: draw-line 5s ease-in-out infinite;
         }
 
@@ -45,9 +45,9 @@ export default function SalesStrategyCard() {
         }
 
         @keyframes draw-line {
-          0%, 20% { stroke-dashoffset: 150; }
+          0%, 20% { stroke-dashoffset: 180; }
           50% { stroke-dashoffset: 0; }
-          80%, 100% { stroke-dashoffset: -150; }
+          80%, 100% { stroke-dashoffset: -180; }
         }
 
         @keyframes pulse-icon {
@@ -63,7 +63,9 @@ export default function SalesStrategyCard() {
             <rect x="50" y="85" width="70" height="70" rx="10" fill="none" stroke="#F8F9FB" strokeWidth="3"/>
           </g>
 
-          <path className="line-1" d="M125 120 H 260" stroke="#F8F9FB" strokeWidth="2"/>
+          <path className="line-1" d="M120 120 H 190 C 220 120, 240 77.5, 290 57.5" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line-2" d="M120 120 H 290" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line-3" d="M120 120 H 190 C 220 120, 240 162.5, 290 182.5" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
           
           <g className="icon-box icon-box-1" style={{ transformOrigin: 'center' }}>
             <rect x="290" y="30" width="55" height="55" rx="10" fill="#DAA520"/>

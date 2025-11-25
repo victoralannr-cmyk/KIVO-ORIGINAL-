@@ -53,9 +53,8 @@ const letter = {
   },
 };
 
-const textParts = "ALAVANCAMOS SUA EMPRESA PARA CIMA".split(" ");
-const lastPart = "PARA SE MANTER".split(" ");
-const paragraphText = "Transformamos ideias em resultados. Combinamos design, tecnologia e IA para criar soluções digitais que impulsionam o crescimento do seu negócio.";
+const titleText = "Impulsionamos sua empresa para o topo com estratégias de alta performance";
+const paragraphText = "e mantemos você lá — dominante, relevante e sempre acima da concorrência.";
 
 
 export default function HeroSection() {
@@ -98,13 +97,13 @@ export default function HeroSection() {
                     className="flex-grow flex flex-col justify-center items-center w-full"
                 >
                     <motion.h1 
-                      className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground"
+                      className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-center text-foreground max-w-4xl"
                       variants={sentence}
                       initial="hidden"
                       animate="visible"
                     >
-                      {textParts.map((word, wordIndex) => (
-                        <span key={wordIndex} className="inline-block mr-4 whitespace-nowrap">
+                      {titleText.split(" ").map((word, wordIndex) => (
+                        <span key={wordIndex} className="inline-block mr-3 whitespace-nowrap">
                           {word.split("").map((char, charIndex) => (
                             <motion.span key={charIndex} variants={letter} className="inline-block">
                               {char}
@@ -112,33 +111,14 @@ export default function HeroSection() {
                           ))}
                         </span>
                       ))}
-                      <span className="inline-block text-wavy-gradient whitespace-nowrap">
-                        {lastPart.map((word, wordIndex) => (
-                          <span key={wordIndex} className="inline-block mr-4 whitespace-nowrap">
-                            {word.split("").map((char, charIndex) => (
-                              <motion.span key={charIndex} variants={letter} className="inline-block">
-                                {char}
-                              </motion.span>
-                            ))}
-                          </span>
-                        ))}
-                      </span>
 					          </motion.h1>
                     <motion.p 
-                        className="mx-auto mt-6 max-w-xl text-muted-foreground md:text-xl"
-                        variants={sentence}
-                        initial="hidden"
-                        animate="visible"
+                        className="mx-auto mt-6 max-w-3xl text-muted-foreground md:text-xl"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.8, duration: 0.8 }}
                     >
-                        {paragraphText.split(" ").map((word, wordIndex) => (
-                            <span key={wordIndex} className="inline-block mr-1.5 whitespace-nowrap">
-                                {word.split("").map((char, charIndex) => (
-                                    <motion.span key={charIndex} variants={letter} className="inline-block">
-                                        {char}
-                                    </motion.span>
-                                ))}
-                            </span>
-                        ))}
+                        {paragraphText}
                     </motion.p>
                     <div className="mt-8">
                         <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-6 py-3 text-base md:px-8 md:py-4 md:text-lg animate-pulse">

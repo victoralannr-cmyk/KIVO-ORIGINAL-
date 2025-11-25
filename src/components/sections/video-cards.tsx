@@ -3,7 +3,7 @@
 import { Card } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import CodeTypingAnimation from './code-typing-animation';
-import CreativeStrategyCard from './creative-strategy-card';
+import CreativeWorkflowCard from './creative-workflow-card';
 import SalesStrategyCard from './sales-strategy-card';
 
 const cardContent = [
@@ -68,7 +68,7 @@ export default function VideoCardsSection() {
                    <h3 className="relative text-white font-bold text-xl mb-4 text-center">{item.title}</h3>
                 </div>
                 <div className="flex-grow flex items-center justify-center p-2">
-                   <div className="relative w-full h-[190px] flex items-center justify-center">
+                   <div className="relative w-full h-[300px] flex items-center justify-center">
                     {item.type === 'sales' ? (
                         <SalesStrategyCard />
                     ) : item.type === 'animation' ? (
@@ -76,7 +76,7 @@ export default function VideoCardsSection() {
                          <CodeTypingAnimation />
                       </div>
                     ): (
-                      <CreativeStrategyCard />
+                      <CreativeWorkflowCard />
                     )}
                   </div>
                 </div>

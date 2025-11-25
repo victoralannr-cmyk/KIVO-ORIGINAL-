@@ -17,7 +17,7 @@ const videos = [
   {
     videoId: 'm_u6m3kJr58',
     title: 'Vendas',
-    description: 'Qualifique leads e agende reuniões automaticamente, aumentando a eficiência do seu time de vendas.',
+    description: 'Desenvolvemos posicionamento e vitrines digitais que elevam sua autoridade, despertam desejo e impulsionam vendas — mesmo sem depender de investimento em anúncios.',
   },
 ];
 
@@ -49,9 +49,9 @@ export default function VideoCardsSection() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             >
-              <Card className="bg-[#19233A] rounded-lg shadow-lg overflow-hidden h-[550px] flex flex-col p-4">
+              <Card className="bg-card/10 backdrop-blur-sm border-border/20 shadow-lg rounded-2xl overflow-hidden h-[550px] flex flex-col p-4">
                 <div 
-                  className="relative h-[200px] w-full"
+                  className="relative"
                   style={{
                     border: '1px solid rgba(255, 255, 255, 0.1)',
                     borderRadius: '8px',
@@ -62,13 +62,10 @@ export default function VideoCardsSection() {
                     className="absolute inset-0 bg-cover bg-center opacity-10"
                     style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/futuristic.png')" }}
                   ></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-white/10 rounded-full animate-pulse"></div>
-                  </div>
                    <h3 className="relative text-white font-bold text-xl mb-4 text-center">{video.title}</h3>
                 </div>
                 <div className="flex-grow flex items-center justify-center p-4">
-                   <div className="relative w-full h-full">
+                   <div className="relative w-full h-full p-2">
                     <iframe
                       className="absolute top-0 left-0 w-full h-full rounded-lg"
                       src={`https://www.youtube.com/embed/${video.videoId}`}

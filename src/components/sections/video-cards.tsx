@@ -13,7 +13,7 @@ const cardContent = [
   },
   {
     type: 'animation',
-    title: 'Atendimento',
+    title: 'Criação de Sites',
     description: 'Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.',
   },
   {
@@ -68,7 +68,7 @@ export default function VideoCardsSection() {
                    <h3 className="relative text-white font-bold text-xl mb-4 text-center">{item.title}</h3>
                 </div>
                 <div className="flex-grow flex items-center justify-center p-2">
-                   <div className="relative w-full h-full">
+                   <div className="relative w-full h-full flex items-center justify-center">
                     {item.type === 'video' ? (
                       <div className="relative w-full overflow-hidden rounded-lg" style={{ paddingTop: '56.25%' /* 16:9 Aspect Ratio */ }}>
                         <iframe

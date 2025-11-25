@@ -4,7 +4,6 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import BackToTop from '@/components/common/back-to-top';
 import { cn } from '@/lib/utils';
-import BackgroundCanvas from '@/components/common/BackgroundCanvas';
 
 export const metadata: Metadata = {
   title: 'Kivo | Agentes de IA sob medida',
@@ -24,7 +23,6 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("font-body antialiased text-foreground")}>
-        <BackgroundCanvas />
         <div className="main-content">
           {children}
         </div>

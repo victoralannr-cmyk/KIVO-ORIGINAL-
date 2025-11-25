@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useEffect } from 'react';
@@ -53,8 +52,8 @@ const letter = {
   },
 };
 
-const titleText = "Impulsionamos sua empresa para o topo com estratégias de alta performance";
-const paragraphText = "e mantemos você lá — dominante, relevante e sempre";
+const titleText = "Impulsionamos sua empresa para o topo com modelos preditivos de conversão";
+const paragraphText = "e mantemos você dominante, relevante e sempre";
 
 
 export default function HeroSection() {

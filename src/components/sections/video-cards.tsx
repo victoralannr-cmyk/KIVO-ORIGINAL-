@@ -68,7 +68,7 @@ export default function VideoCardsSection() {
                    <h3 className="relative text-white font-bold text-xl mb-4 text-center">{item.title}</h3>
                 </div>
                 <div className="flex-grow flex items-center justify-center p-2">
-                   <div className="relative w-full h-[300px] flex items-center justify-center">
+                   <div className="relative w-full flex items-center justify-center" style={{aspectRatio: '400 / 190'}}>
                     {item.type === 'sales' ? (
                         <SalesStrategyCard />
                     ) : item.type === 'animation' ? (

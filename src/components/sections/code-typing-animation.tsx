@@ -128,6 +128,9 @@ export default function CodeTypingAnimation() {
           background: var(--bg);
           font-family: var(--mono);
           -webkit-font-smoothing: antialiased;
+          width: 100%;
+          max-width: 400px;
+          aspect-ratio: 400 / 190;
         }
         .editor {
           width: 100%;

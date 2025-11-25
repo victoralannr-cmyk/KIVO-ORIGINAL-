@@ -5,12 +5,11 @@ import { Folder, FileText, Users } from 'lucide-react';
 
 export default function SalesStrategyCard() {
   return (
-    <div className="w-full h-full flex items-center justify-center p-4">
+    <div className="w-full h-full flex items-center justify-center">
       <style jsx>{`
         .diagram-container {
           width: 100%;
-          max-width: 400px;
-          aspect-ratio: 400 / 190;
+          height: 100%;
         }
 
         .animated-svg {
@@ -60,16 +59,16 @@ export default function SalesStrategyCard() {
           <rect width="400" height="190" rx="20" fill="#19233A"/>
           
           <g className="central-cube" style={{ transformOrigin: 'center' }}>
-            <circle cx="70" cy="95" r="40" fill="none" stroke="#F8F9FB" strokeWidth="2.5"/>
-            <g transform="translate(70, 95) scale(0.45)">
+            <circle cx="70" cy="95" r="50" fill="none" stroke="#F8F9FB" strokeWidth="2.5"/>
+            <g transform="translate(70, 95) scale(0.6)">
                 <path d="M0 -30 L26 -15 V15 L0 30 L-26 15 V-15 Z M0 -30 L0 0 M-26 -15 L0 0 M26 -15 L0 0" stroke="#F8F9FB" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M0 30 L0 0" stroke="#F8F9FB" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
             </g>
           </g>
 
-          <path className="line-1" d="M110 95 H 170 C 200 95, 220 50, 270 30" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
-          <path className="line-2" d="M110 95 H 270" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
-          <path className="line-3" d="M110 95 H 170 C 200 95, 220 140, 270 160" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line-1" d="M120 95 H 170 C 200 95, 220 50, 270 30" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line-2" d="M120 95 H 270" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line-3" d="M120 95 H 170 C 200 95, 220 140, 270 160" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
           
           <g className="icon-box icon-box-1" style={{ transformOrigin: 'center' }}>
             <rect x="270" y="5" width="50" height="50" rx="10" fill="#19233A" stroke="#F8F9FB" strokeWidth="2"/>

@@ -5,12 +5,11 @@ import { Settings, Mail, Video } from 'lucide-react';
 
 export default function CreativeWorkflowCard() {
   return (
-    <div className="w-full h-full flex items-center justify-center p-4">
+    <div className="w-full h-full flex items-center justify-center">
       <style jsx>{`
         .workflow-diagram-container {
           width: 100%;
-          max-width: 400px;
-          aspect-ratio: 400 / 190;
+          height: 100%;
         }
 
         .animated-svg {

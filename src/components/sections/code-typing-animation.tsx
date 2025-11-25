@@ -119,7 +119,7 @@ export default function CodeTypingAnimation() {
   }, []);
 
   return (
-    <div className="code-animation-container h-full w-full max-w-[400px]">
+    <div className="code-animation-container h-full w-full">
       <style jsx>{`
         .code-animation-container {
           --bg: #0f1724; /* panel color */
@@ -129,8 +129,7 @@ export default function CodeTypingAnimation() {
           font-family: var(--mono);
           -webkit-font-smoothing: antialiased;
           width: 100%;
-          max-width: 400px;
-          aspect-ratio: 400 / 190;
+          height: 100%;
         }
         .editor {
           width: 100%;

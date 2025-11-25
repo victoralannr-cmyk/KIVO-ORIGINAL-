@@ -7,7 +7,7 @@ const videos = [
   {
     videoId: 'm_u6m3kJr58',
     title: 'Estratégias de Vendas',
-    description: 'Ofereça suporte 24/7 aos seus clientes com respostas instantâneas e personalizadas, melhorando a satisfação.',
+    description: 'Atraímos atenção qualificada, geramos conversões reais e ampliamos suas visualizações. Aqui, sua marca deixa de ser invisível. Estratégias precisas em Google e Facebook Ads para resultados que realmente aparecem.',
   },
   {
     videoId: 'm_u6m3kJr58',
@@ -68,7 +68,7 @@ export default function VideoCardsSection() {
                    <h3 className="relative text-white font-bold text-xl mb-4 text-center">{video.title}</h3>
                 </div>
                 <div className="flex-grow flex items-center justify-center p-4">
-                   <div className="relative w-full h-full pb-[56.25%]" style={{paddingBottom: 0}}>
+                   <div className="relative w-full h-full">
                     <iframe
                       className="absolute top-0 left-0 w-full h-full rounded-lg"
                       src={`https://www.youtube.com/embed/${video.videoId}`}

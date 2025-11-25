@@ -85,9 +85,9 @@ export default function CreativeWorkflowCard() {
 
           {/* Box 3: Produção */}
           <g className="box box-3">
-            <rect x="50" y="225" width="150" height="50" rx="10" stroke="#DAA520" strokeWidth="2.5" fill="none"/>
+            <rect x="50" y="225" width="150" height="50" rx="10" stroke="#4285F4" strokeWidth="2.5" fill="none"/>
              <foreignObject x="65" y="240" width="20" height="20" className="icon icon-3">
-                <Video size={20} color="#DAA520" />
+                <Video size={20} color="#4285F4" />
             </foreignObject>
             <text x="95" y="255" fontFamily="Poppins, sans-serif" fontSize="14" fill="#F8F9FB" className="text text-3">Produção</text>
           </g>

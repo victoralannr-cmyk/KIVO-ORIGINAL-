@@ -54,7 +54,7 @@ const letter = {
 };
 
 const titleText = "Impulsionamos sua empresa para o topo com estratégias de alta performance";
-const paragraphText = "e mantemos você lá — dominante, relevante e sempre acima da concorrência.";
+const paragraphText = "e mantemos você lá — dominante, relevante e sempre";
 
 
 export default function HeroSection() {
@@ -103,7 +103,7 @@ export default function HeroSection() {
                       animate="visible"
                     >
                       {titleText.split(" ").map((word, wordIndex) => (
-                        <span key={wordIndex} className="inline-block mr-3 whitespace-nowrap">
+                        <span key={wordIndex} className={cn("inline-block mr-3 whitespace-nowrap", word === "Impulsionamos" ? "text-wavy-gradient" : "")}>
                           {word.split("").map((char, charIndex) => (
                             <motion.span key={charIndex} variants={letter} className="inline-block">
                               {char}
@@ -113,12 +113,12 @@ export default function HeroSection() {
                       ))}
 					          </motion.h1>
                     <motion.p 
-                        className="mx-auto mt-6 max-w-3xl text-muted-foreground md:text-xl"
+                        className="mx-auto mt-6 max-w-4xl text-muted-foreground md:text-xl"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8, duration: 0.8 }}
                     >
-                        {paragraphText}
+                        {paragraphText} <span className="text-wavy-gradient">acima da concorrência.</span>
                     </motion.p>
                     <div className="mt-8">
                         <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-6 py-3 text-base md:px-8 md:py-4 md:text-lg animate-pulse">

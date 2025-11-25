@@ -52,7 +52,7 @@ export default function VideoCardsSection() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             >
-              <Card className="bg-card/10 backdrop-blur-sm border-border/20 shadow-lg rounded-2xl overflow-hidden h-[550px] flex flex-col p-4">
+              <Card className="bg-card/10 backdrop-blur-sm border-border/20 shadow-lg rounded-2xl overflow-hidden h-full flex flex-col p-4">
                 <div 
                   className="relative"
                   style={{
@@ -70,23 +70,25 @@ export default function VideoCardsSection() {
                 <div className="flex-grow flex items-center justify-center p-4">
                    <div className="relative w-full h-full p-2">
                     {item.type === 'video' ? (
-                      <iframe
-                        className="absolute top-0 left-0 w-full h-full rounded-lg"
-                        src={`https://www.youtube.com/embed/${item.videoId}`}
-                        title={item.title}
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
+                      <div className="relative w-full" style={{ paddingTop: '56.25%' /* 16:9 Aspect Ratio */ }}>
+                        <iframe
+                          className="absolute top-0 left-0 w-full h-full rounded-lg"
+                          src={`https://www.youtube.com/embed/${item.videoId}`}
+                          title={item.title}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
                     ) : (
-                      <div className="w-full h-full rounded-lg overflow-hidden relative">
+                      <div className="w-full h-full rounded-lg overflow-hidden relative" style={{ width: '400px', height: '190px', margin: 'auto' }}>
                          <CodeTypingAnimation />
                       </div>
                     )}
                   </div>
                 </div>
 
-                <div className="p-4">
+                <div className="p-4 mt-auto">
                   <p className="text-white/80 text-sm text-center">{item.description}</p>
                 </div>
               </Card>

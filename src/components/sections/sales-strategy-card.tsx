@@ -61,7 +61,10 @@ export default function SalesStrategyCard() {
           
           <g className="central-cube" style={{ transformOrigin: 'center' }}>
             <circle cx="70" cy="95" r="40" fill="none" stroke="#F8F9FB" strokeWidth="2.5"/>
-            <rect x="55" y="80" width="30" height="30" rx="5" fill="none" stroke="#F8F9FB" strokeWidth="2.5"/>
+            <g transform="translate(70, 95) scale(0.35)">
+                <path d="M0 -30 L26 -15 V15 L0 30 L-26 15 V-15 Z M0 -30 L0 0 M-26 -15 L0 0 M26 -15 L0 0" stroke="#F8F9FB" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M0 30 L0 0" stroke="#F8F9FB" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/>
+            </g>
           </g>
 
           <path className="line-1" d="M110 95 H 170 C 200 95, 220 50, 270 30" stroke="#F8F9FB" strokeWidth="2" fill="none"/>

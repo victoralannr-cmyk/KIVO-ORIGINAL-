@@ -60,12 +60,13 @@ export default function SalesStrategyCard() {
           <rect width="400" height="190" rx="20" fill="#19233A"/>
           
           <g className="central-cube" style={{ transformOrigin: 'center' }}>
-            <rect x="40" y="65" width="60" height="60" rx="10" fill="none" stroke="#F8F9FB" strokeWidth="2.5"/>
+            <circle cx="70" cy="95" r="40" fill="none" stroke="#F8F9FB" strokeWidth="2.5"/>
+            <rect x="55" y="80" width="30" height="30" rx="5" fill="none" stroke="#F8F9FB" strokeWidth="2.5"/>
           </g>
 
-          <path className="line-1" d="M100 95 H 170 C 200 95, 220 50, 270 30" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
-          <path className="line-2" d="M100 95 H 270" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
-          <path className="line-3" d="M100 95 H 170 C 200 95, 220 140, 270 160" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line-1" d="M110 95 H 170 C 200 95, 220 50, 270 30" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line-2" d="M110 95 H 270" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line-3" d="M110 95 H 170 C 200 95, 220 140, 270 160" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
           
           <g className="icon-box icon-box-1" style={{ transformOrigin: 'center' }}>
             <rect x="270" y="5" width="50" height="50" rx="10" fill="#19233A" stroke="#F8F9FB" strokeWidth="2"/>

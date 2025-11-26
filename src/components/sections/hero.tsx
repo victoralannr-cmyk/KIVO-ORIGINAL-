@@ -14,7 +14,6 @@ import { Input } from '@/components/ui/input';
 import { Loader2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Aurora from '../common/aurora';
-import { BeamButton } from '../common/beam-button';
 
 const initialState: ContactFormState = {
   message: '',
@@ -24,9 +23,9 @@ const initialState: ContactFormState = {
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <BeamButton type="submit" className="w-full" disabled={pending}>
+    <Button type="submit" className="w-full button-wavy-gradient" disabled={pending}>
       {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : 'Enviar'}
-    </BeamButton>
+    </Button>
   );
 }
 
@@ -93,7 +92,7 @@ export default function HeroSection() {
             id="home"
             className="relative w-full pt-40 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden section-with-grid"
         >
-            <Aurora colorStops={['#1A237E', '#4285F4', '#1A237E']} amplitude={0.5} blend={0.2} />
+            <Aurora colorStops={['#1A237E', '#4285F4', '#1A237E']} amplitude={0.2} blend={1.0} />
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
                 <motion.div 
                     initial="hidden"
@@ -125,7 +124,7 @@ export default function HeroSection() {
                         {paragraphText} <span className="text-wavy-gradient">acima da concorrência.</span>
                     </motion.p>
                     <div className="mt-8">
-                        <BeamButton 
+                        <Button
                           onClick={(e) => {
                             e.preventDefault();
                             const element = document.querySelector('#agendar');
@@ -133,10 +132,10 @@ export default function HeroSection() {
                               element.scrollIntoView({ behavior: 'smooth' });
                             }
                           }}
-                          className="px-6 py-3 text-base md:px-8 md:py-4 md:text-lg"
+                          className="px-6 py-3 text-base md:px-8 md:py-4 md:text-lg button-wavy-gradient rounded-full"
                         >
                             Agendar uma demonstração
-                        </BeamButton>
+                        </Button>
                     </div>
                 </motion.div>
 

@@ -22,7 +22,7 @@ export default function VideoCtaSection() {
             <span className="text-primary">vitrine digital!</span>
           </h2>
           <div className="mt-6 flex justify-center">
-            <Button asChild className="animate-pulse">
+            <Button asChild className="button-wavy-gradient rounded-full">
               <Link href="#agendar">
                 Fale Conosco <ArrowUpRight className="ml-2 h-4 w-4" />
               </Link>

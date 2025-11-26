@@ -185,7 +185,7 @@ export default function HowItWorksSection() {
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-8">
             <ScrollReveal direction="right" delay={0}>
-              <Card className="relative overflow-hidden bg-card/50 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
+              <Card className="relative overflow-hidden bg-card/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   
                   <CardHeader className="relative items-center text-center p-6">
                       <div className="relative h-32 md:h-48 w-full mb-4">
@@ -204,7 +204,7 @@ export default function HowItWorksSection() {
             </ScrollReveal>
 
             <ScrollReveal direction="right" delay={200}>
-              <Card className="relative overflow-hidden bg-card/50 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
+              <Card className="relative overflow-hidden bg-card/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   
                   <CardHeader className="relative items-center text-center p-6">
                       <div className="relative h-32 md:h-48 w-full mb-4">
@@ -223,7 +223,7 @@ export default function HowItWorksSection() {
             </ScrollReveal>
             
             <ScrollReveal direction="right" delay={400}>
-              <Card className="relative overflow-hidden bg-card/50 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
+              <Card className="relative overflow-hidden bg-card/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   
                   <CardHeader className="relative items-center text-center p-6">
                       <div className="relative h-32 md:h-48 w-full mb-4">
@@ -242,7 +242,7 @@ export default function HowItWorksSection() {
             </ScrollReveal>
 
             <ScrollReveal direction="right" delay={600}>
-              <Card className="relative overflow-hidden bg-card/50 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
+              <Card className="relative overflow-hidden bg-card/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
                   
                   <CardHeader className="relative items-center text-center p-6">
                       <div className="relative h-32 md:h-48 w-full mb-4">

@@ -15,7 +15,7 @@ export const BeamButton = ({
   children,
   className,
   beamColor = "hsl(var(--primary))",
-  beamSize = 300,
+  beamSize = 400, // Aumentado para garantir que cubra o botão
   beamDuration = 4,
   ...props
 }: BeamButtonProps) => {
@@ -27,12 +27,13 @@ export const BeamButton = ({
     if (!container) return;
 
     const handleMouseMove = (e: MouseEvent) => {
-      const { left, top } = container.getBoundingClientRect();
+      const { left, top, width, height } = container.getBoundingClientRect();
       const x = e.clientX - left;
       const y = e.clientY - top;
 
       if (beamRef.current) {
-        beamRef.current.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px) rotate(0deg)`;
+         // Mantém o feixe centrado verticalmente e movendo-se horizontalmente
+        beamRef.current.style.transform = `translate(-50%, -50%) translate(${x}px, ${height / 2}px) rotate(0deg)`;
       }
     };
     

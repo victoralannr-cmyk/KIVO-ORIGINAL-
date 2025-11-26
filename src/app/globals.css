@@ -346,8 +346,12 @@
   }
 
   .beam-button > .beam {
-    width: var(--beam-size);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
     height: var(--beam-size);
+    transform-origin: left;
     animation: beam-spin var(--beam-duration) linear infinite;
   }
 
@@ -357,26 +361,14 @@
   }
 
   .beam {
-    background: conic-gradient(
+     background: conic-gradient(
       from 180deg at 50% 50%,
       transparent 0deg,
       var(--beam-color) 300deg,
       transparent 360deg
     );
-    mask: radial-gradient(
-      farthest-side,
-      transparent,
-      black 40%,
-      black 60%,
-      transparent 100%
-    );
-    -webkit-mask: radial-gradient(
-      farthest-side,
-      transparent,
-      black 40%,
-      black 60%,
-      transparent 100%
-    );
+    mask: linear-gradient(to right, transparent, black 20%, black 80%, transparent 100%);
+    -webkit-mask: linear-gradient(to right, transparent, black 20%, black 80%, transparent 100%);
   }
 }
     

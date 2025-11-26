@@ -10,7 +10,7 @@ import CountUpStats from '../common/count-up-stats';
 
 const stats = [
     { to: 50, prefix: '+', sufix: '', label: 'Projetos Executados', subLabel: 'Transformando marcas e resultados.' },
-    { to: 250, prefix: '+', sufix: '', label: 'Clientes' },
+    { to: 200, prefix: '+', sufix: '', label: 'Estratégias de Crescimento', subLabel: 'Potencializando o digital com propósito.' },
     { to: 97, prefix: '', sufix: '%', label: 'de satisfação' },
 ]
 

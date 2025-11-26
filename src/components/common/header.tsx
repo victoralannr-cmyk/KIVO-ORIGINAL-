@@ -7,6 +7,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Home, Settings, Briefcase, Info, HelpCircle, X, Menu } from 'lucide-react';
+import { BeamButton } from './beam-button';
 
 const navItems = [
   { name: 'Home', href: '#home', id: 'home' },
@@ -73,11 +74,9 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
-               <Button asChild className="button-wavy-gradient rounded-full ml-2">
-                <Link href="#agendar" onClick={(e) => { e.preventDefault(); handleNavClick('#agendar'); }}>
+               <BeamButton onClick={(e) => { e.preventDefault(); handleNavClick('#agendar'); }} className="ml-2">
                   Agendar
-                </Link>
-              </Button>
+                </BeamButton>
             </div>
             <SheetContent side="right" className="bg-background border-border/50">
               <div className="flex flex-col h-full">
@@ -117,11 +116,9 @@ export default function Header() {
                   })}
                 </div>
                 <div className="mt-auto pt-4 border-t border-border/20">
-                  <Button asChild className="w-full button-wavy-gradient rounded-full">
-                      <Link href="#agendar" onClick={(e) => { e.preventDefault(); handleNavClick('#agendar'); }}>
-                        Agendar uma demonstração
-                      </Link>
-                    </Button>
+                  <BeamButton onClick={(e) => { e.preventDefault(); handleNavClick('#agendar'); }} className="w-full">
+                    Agendar uma demonstração
+                  </BeamButton>
                 </div>
               </div>
             </SheetContent>

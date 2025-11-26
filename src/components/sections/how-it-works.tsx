@@ -11,6 +11,7 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { motion } from 'framer-motion';
+import { BeamButton } from '../common/beam-button';
 
 const sentence = {
   hidden: { opacity: 0 },
@@ -263,12 +264,19 @@ export default function HowItWorksSection() {
 
         <div className="mt-16 text-center">
           <ScrollReveal direction="right" delay={800}>
-            <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-6 py-3 text-base md:px-8 md:py-4 md:text-lg">
-              <Link href="#agendar">
-                Fale com um especialista
-                <ArrowUpRight className="h-5 w-5 ml-2 transition-transform group-hover:rotate-45" />
-              </Link>
-            </Button>
+            <BeamButton 
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.querySelector('#agendar');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="px-6 py-3 text-base md:px-8 md:py-4 md:text-lg"
+            >
+              Fale com um especialista
+              <ArrowUpRight className="h-5 w-5 ml-2 transition-transform group-hover:rotate-45" />
+            </BeamButton>
           </ScrollReveal>
         </div>
 

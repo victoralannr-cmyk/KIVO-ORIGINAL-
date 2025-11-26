@@ -335,6 +335,49 @@
       transform: scale(1.05);
     }
   }
+
+  @keyframes beam-spin {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  .beam-button > .beam {
+    width: var(--beam-size);
+    height: var(--beam-size);
+    animation: beam-spin var(--beam-duration) linear infinite;
+  }
+
+  .beam-button:hover > .beam,
+  .beam-button:focus-visible > .beam {
+    opacity: 1;
+  }
+
+  .beam {
+    background: conic-gradient(
+      from 180deg at 50% 50%,
+      transparent 0deg,
+      var(--beam-color) 300deg,
+      transparent 360deg
+    );
+    mask: radial-gradient(
+      farthest-side,
+      transparent,
+      black 40%,
+      black 60%,
+      transparent 100%
+    );
+    -webkit-mask: radial-gradient(
+      farthest-side,
+      transparent,
+      black 40%,
+      black 60%,
+      transparent 100%
+    );
+  }
 }
     
 @keyframes subtle-pan {

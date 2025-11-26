@@ -14,6 +14,7 @@ import { Input } from '@/components/ui/input';
 import { Loader2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Aurora from '../common/aurora';
+import { BeamButton } from '../common/beam-button';
 
 const initialState: ContactFormState = {
   message: '',
@@ -23,9 +24,9 @@ const initialState: ContactFormState = {
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" className="w-full rounded-full animate-pulse" disabled={pending}>
+    <BeamButton type="submit" className="w-full" disabled={pending}>
       {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : 'Enviar'}
-    </Button>
+    </BeamButton>
   );
 }
 
@@ -92,7 +93,7 @@ export default function HeroSection() {
             id="home"
             className="relative w-full pt-40 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden section-with-grid"
         >
-            <Aurora colorStops={['#1A237E', '#4285F4', '#1A237E']} />
+            <Aurora colorStops={['#1A237E', '#4285F4', '#1A237E']} amplitude={0.5} blend={0.2} />
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
                 <motion.div 
                     initial="hidden"
@@ -124,11 +125,18 @@ export default function HeroSection() {
                         {paragraphText} <span className="text-wavy-gradient">acima da concorrência.</span>
                     </motion.p>
                     <div className="mt-8">
-                        <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-6 py-3 text-base md:px-8 md:py-4 md:text-lg animate-pulse">
-                            <Link href="#agendar">
-                                Agendar uma demonstração
-                            </Link>
-                        </Button>
+                        <BeamButton 
+                          onClick={(e) => {
+                            e.preventDefault();
+                            const element = document.querySelector('#agendar');
+                            if (element) {
+                              element.scrollIntoView({ behavior: 'smooth' });
+                            }
+                          }}
+                          className="px-6 py-3 text-base md:px-8 md:py-4 md:text-lg"
+                        >
+                            Agendar uma demonstração
+                        </BeamButton>
                     </div>
                 </motion.div>
 

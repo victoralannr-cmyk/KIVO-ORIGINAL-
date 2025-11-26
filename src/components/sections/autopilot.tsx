@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
+import { BeamButton } from '../common/beam-button';
 
 const sentence = {
   hidden: { opacity: 0 },
@@ -73,12 +74,19 @@ export default function AutopilotSection() {
           className="text-center mb-12"
         >
             <div className="mb-8">
-                <Button asChild size="lg" className="group transition-all duration-300 ease-in-out button-wavy-gradient hover:shadow-lg hover:shadow-blue-900/50 rounded-full px-6 py-3 text-base md:px-8 md:py-4 md:text-lg">
-                  <Link href="#agendar">
+                <BeamButton 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.querySelector('#agendar');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  className="px-6 py-3 text-base md:px-8 md:py-4 md:text-lg"
+                >
                     Fale com um especialista
                     <ArrowUpRight className="h-5 w-5 ml-2 transition-transform group-hover:rotate-45" />
-                  </Link>
-                </Button>
+                </BeamButton>
             </div>
         </motion.div>
       </div>

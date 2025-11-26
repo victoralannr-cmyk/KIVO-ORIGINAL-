@@ -4,8 +4,12 @@ import { Button } from '@/components/ui/button';
 import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function VideoCtaSection() {
+  const ctaImage = PlaceHolderImages.find(img => img.id === 'video-cta-image');
+
   return (
     <section className="py-12 md:py-24 bg-transparent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,6 +20,18 @@ export default function VideoCtaSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
+          {ctaImage && (
+            <div className="mb-8 flex justify-center">
+              <Image
+                src={ctaImage.imageUrl}
+                alt={ctaImage.description}
+                width={700}
+                height={400}
+                className="rounded-lg shadow-lg"
+                data-ai-hint={ctaImage.imageHint}
+              />
+            </div>
+          )}
           <h2 className="font-headline text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl text-foreground">
             <span className="text-primary">Tráfego</span> colocam o seu negócio à frente dos{' '}
             <span className="text-primary">olhares certos.</span> O seu posicionamento é a sua{' '}

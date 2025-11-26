@@ -71,6 +71,12 @@
       "description": "The letter K from the Kivo logo.",
       "imageUrl": "https://i.postimg.cc/d1g4x2Dq/Wallpaper-Kivo-PC-2-removebg-preview.png",
       "imageHint": "K logo"
+    },
+    {
+      "id": "video-cta-image",
+      "description": "Screenshot for the video CTA section.",
+      "imageUrl": "https://i.postimg.cc/BQf9stZQ/Captura-de-tela-2025-11-26-162734.png",
+      "imageHint": "digital marketing"
     }
   ]
 }

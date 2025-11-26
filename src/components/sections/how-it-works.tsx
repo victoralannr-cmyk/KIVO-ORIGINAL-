@@ -1,16 +1,14 @@
-
 'use client';
 
 import React from 'react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowUpRight } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { motion } from 'framer-motion';
+import CardSwap, { Card } from '../common/CardSwap';
 
 const sentence = {
   hidden: { opacity: 0 },
@@ -38,90 +36,28 @@ const wordAnimation = {
 
 const title = "Estratégias de Vendas".split(" ");
 
-const AnimatedLineChart = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="48"
-    height="48"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={cn("h-12 w-12 text-muted-foreground", className)}
-  >
-    <path d="M3 3v18h18" />
-    <path d="M7 17L12 12l5 5l5-12" className="animate-zigzag" />
-  </svg>
-);
-
-const AnimatedUsersIcon = ({ className }: { className?: string }) => (
-  <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="48"
-      height="48"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={cn("h-12 w-12 text-muted-foreground", className)}
-  >
-      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-      <circle cx="9" cy="7" r="4" className="animate-bob-1" />
-      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-      <path d="M16 3.13a4 4 0 0 1 0 7.75" className="animate-bob-2" />
-  </svg>
-);
-
-const AnimatedResponsiveIcon = ({ className }: { className?: string }) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="48"
-      height="48"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={cn("h-12 w-12 text-muted-foreground", className)}
-    >
-      <g className="animate-slide-in-left">
-        <rect width="16" height="12" x="2" y="5" rx="2" />
-        <line x1="2" x2="18" y1="13" y2="13" />
-      </g>
-      <g className="animate-slide-in-right">
-        <rect width="6" height="10" x="16" y="9" rx="1" />
-      </g>
-    </svg>
-  );
-
-const AnimatedClapperboard = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="48"
-    height="48"
-    viewBox="-2 -2 28 28"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={cn("h-12 w-12 text-muted-foreground", className)}
-  >
-    <g className="animate-clap">
-      <path d="M20.2 6.2 3.8 6.2c-.5 0-.8.3-.8.8v2.4c0 .5.3.8.8.8h16.4c.5 0 .8-.3.8-.8V7c0-.5-.3-.8-.8-.8Z" />
-      <path d="m4.2 4.2 15 4" />
-    </g>
-    <path d="M2.8 10.2v10c0 .5.3.8.8.8h16.8c.5 0 .8-.3.8-.8v-10" />
-    <path d="m7 15-2-2" />
-    <path d="m12 15-2-2" />
-    <path d="m17 15-2-2" />
-  </svg>
-);
+const cardData = [
+  {
+    title: 'Social Media',
+    description: 'Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.',
+    customClass: 'bg-gradient-to-br from-blue-900 to-indigo-900',
+  },
+  {
+    title: 'Tráfego Pago',
+    description: 'Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.',
+    customClass: 'bg-gradient-to-br from-purple-900 to-violet-900',
+  },
+  {
+    title: 'Criação de Sites',
+    description: 'Sites profissionais que funcionam 24h e facilitam a vida do seu cliente. Catálogo, contato, agendamentos e recursos completos para vender online.',
+    customClass: 'bg-gradient-to-br from-sky-900 to-cyan-900',
+  },
+  {
+    title: 'Criação de Conteúdo Criativo',
+    description: 'Conteúdos criativos que realmente vendem — vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.',
+    customClass: 'bg-gradient-to-br from-teal-900 to-emerald-900',
+  },
+];
 
 
 export default function HowItWorksSection() {
@@ -183,85 +119,22 @@ export default function HowItWorksSection() {
           </div>
         
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-8">
-            <ScrollReveal direction="right" delay={0}>
-              <Card className="relative overflow-hidden bg-card/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
-                  
-                  <CardHeader className="relative items-center text-center p-6">
-                      <div className="relative h-32 md:h-48 w-full mb-4">
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="bg-card p-4 rounded-full border border-border/50">
-                              <AnimatedLineChart />
-                            </div>
-                          </div>
-                      </div>
-                      <CardTitle className="font-headline text-xl">Social Media</CardTitle>
-                  </CardHeader>
-                  <CardContent className="relative p-6 pt-0 text-center text-base text-muted-foreground flex-grow">
-                      Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.
-                  </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            <ScrollReveal direction="right" delay={200}>
-              <Card className="relative overflow-hidden bg-card/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
-                  
-                  <CardHeader className="relative items-center text-center p-6">
-                      <div className="relative h-32 md:h-48 w-full mb-4">
-                          <div className="absolute inset-0 flex items-center justify-center">
-                              <div className="bg-card p-4 rounded-full border border-border/50">
-                                  <AnimatedUsersIcon />
-                              </div>
-                          </div>
-                      </div>
-                      <CardTitle className="font-headline text-xl">Tráfego Pago</CardTitle>
-                  </CardHeader>
-                  <CardContent className="relative p-6 pt-0 text-center text-base text-muted-foreground flex-grow">
-                     Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. <span className="text-muted-foreground">Google e Meta Ads.</span>
-                  </CardContent>
-              </Card>
-            </ScrollReveal>
-            
-            <ScrollReveal direction="right" delay={400}>
-              <Card className="relative overflow-hidden bg-card/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
-                  
-                  <CardHeader className="relative items-center text-center p-6">
-                      <div className="relative h-32 md:h-48 w-full mb-4">
-                          <div className="absolute inset-0 flex items-center justify-center">
-                              <div className="bg-card p-4 rounded-full border border-border/50">
-                                <AnimatedResponsiveIcon />
-                              </div>
-                          </div>
-                      </div>
-                      <CardTitle className="font-headline text-xl">Criação de Sites</CardTitle>
-                  </CardHeader>
-                  <CardContent className="relative p-6 pt-0 text-center text-base text-muted-foreground flex-grow">
-                     Sites profissionais que funcionam 24h e facilitam a vida do seu cliente. Catálogo, contato, agendamentos e recursos completos para vender online.
-                  </CardContent>
-              </Card>
-            </ScrollReveal>
-
-            <ScrollReveal direction="right" delay={600}>
-              <Card className="relative overflow-hidden bg-card/80 backdrop-blur-sm border-border/20 shadow-lg group rounded-2xl w-full max-w-sm h-full flex flex-col">
-                  
-                  <CardHeader className="relative items-center text-center p-6">
-                      <div className="relative h-32 md:h-48 w-full mb-4">
-                          <div className="absolute inset-0 flex items-center justify-center">
-                              <div className="bg-card p-4 rounded-full border border-border/50">
-                                <AnimatedClapperboard />
-                              </div>
-                          </div>
-                      </div>
-                      <CardTitle className="font-headline text-xl">Criação de Conteúdo Criativo</CardTitle>
-                  </CardHeader>
-                  <CardContent className="relative p-6 pt-0 text-center text-base text-muted-foreground flex-grow">
-                     Conteúdos criativos que realmente vendem — vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.
-                  </CardContent>
-              </Card>
-            </ScrollReveal>
+        <div className="mt-20 flex justify-center">
+            <CardSwap width={340} height={380} cardDistance={40} verticalDistance={15} skewAmount={4}>
+              {cardData.map((card, index) => (
+                <Card 
+                  key={index} 
+                  customClass={card.customClass}
+                  className="p-6 flex flex-col justify-center items-center text-center border-border/20 shadow-lg"
+                >
+                  <h3 className="font-headline text-2xl font-bold text-white mb-4">{card.title}</h3>
+                  <p className="text-white/80">{card.description}</p>
+                </Card>
+              ))}
+            </CardSwap>
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-20 text-center">
           <ScrollReveal direction="right" delay={800}>
             <Button 
               onClick={(e) => {

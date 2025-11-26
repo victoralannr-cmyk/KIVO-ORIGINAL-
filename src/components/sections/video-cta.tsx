@@ -9,7 +9,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import CountUpStats from '../common/count-up-stats';
 
 const stats = [
-    { to: 30, prefix: '+', sufix: 'M', label: 'de alcance' },
+    { to: 50, prefix: '+', sufix: '', label: 'Projetos Executados', subLabel: 'Transformando marcas e resultados.' },
     { to: 250, prefix: '+', sufix: '', label: 'Clientes' },
     { to: 97, prefix: '', sufix: '%', label: 'de satisfação' },
 ]
@@ -38,7 +38,11 @@ export default function VideoCtaSection() {
                         />
                         <span className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-wavy-gradient">{stat.sufix}</span>
                     </div>
-                    <p className="text-muted-foreground text-sm md:text-base">{stat.label}</p>
+                    <p className="text-muted-foreground text-sm md:text-base mt-2">
+                      {stat.label}
+                      {stat.subLabel && <br />}
+                      {stat.subLabel}
+                    </p>
                 </div>
             ))}
           </div>

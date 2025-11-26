@@ -41,25 +41,21 @@ const cardData = [
     icon: Users,
     title: 'Social Media',
     description: 'Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.',
-    customClass: 'bg-gradient-to-br from-blue-900 to-indigo-900',
   },
   {
     icon: DollarSign,
     title: 'Tráfego Pago',
     description: 'Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.',
-    customClass: 'bg-gradient-to-br from-purple-900 to-violet-900',
   },
   {
     icon: Code,
     title: 'Criação de Sites',
     description: 'Sites profissionais que funcionam 24h e facilitam a vida do seu cliente. Catálogo, contato, agendamentos e recursos completos para vender online.',
-    customClass: 'bg-gradient-to-br from-sky-900 to-cyan-900',
   },
   {
     icon: Camera,
     title: 'Criação de Conteúdo Criativo',
     description: 'Conteúdos criativos que realmente vendem — vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.',
-    customClass: 'bg-gradient-to-br from-teal-900 to-emerald-900',
   },
 ];
 
@@ -111,8 +107,8 @@ export default function HowItWorksSection() {
               ))}
             </motion.h2>
             <motion.p 
-              className="mx-auto mt-4 text-foreground font-bold md:text-xl"
-              style={{ maxWidth: '260.4px' }}
+              className="mx-auto mt-4 text-muted-foreground md:text-xl"
+              style={{ maxWidth: '600px' }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -122,20 +118,21 @@ export default function HowItWorksSection() {
             </motion.p>
           </div>
         
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {cardData.map((card, index) => {
                 const Icon = card.icon;
                 return (
-                  <Card 
-                    key={index} 
-                    className={`${card.customClass} p-6 flex flex-col justify-center items-center text-center border-border/20 shadow-lg`}
-                  >
-                    <div className="p-3 bg-white/10 rounded-full mb-4">
-                      <Icon className="h-8 w-8 text-white" />
-                    </div>
-                    <h3 className="font-headline text-2xl font-bold text-white mb-4">{card.title}</h3>
-                    <p className="text-white/80">{card.description}</p>
-                  </Card>
+                  <ScrollReveal key={index} delay={index * 150}>
+                    <Card 
+                      className="bg-card/10 backdrop-blur-sm border-border/20 shadow-lg p-6 flex flex-col justify-center items-center text-center h-full"
+                    >
+                      <div className="p-3 bg-primary/10 rounded-full mb-4">
+                        <Icon className="h-8 w-8 text-primary" />
+                      </div>
+                      <h3 className="font-headline text-2xl font-bold text-foreground mb-4">{card.title}</h3>
+                      <p className="text-muted-foreground">{card.description}</p>
+                    </Card>
+                  </ScrollReveal>
                 )
               })}
         </div>

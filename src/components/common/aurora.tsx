@@ -106,13 +106,15 @@ void main() {
   float auroraAlpha = smoothstep(midPoint - uBlend * 0.5, midPoint + uBlend * 0.5, intensity);
   
   vec3 auroraColor = intensity * rampColor;
+
+  float cornerFade = min(smoothstep(0.0, 0.2, uv.x), smoothstep(1.0, 0.8, uv.x));
   
-  fragColor = vec4(auroraColor * auroraAlpha, auroraAlpha);
+  fragColor = vec4(auroraColor * auroraAlpha, auroraAlpha * cornerFade);
 }
 `;
 
 export default function Aurora(props: any) {
-  const { colorStops = ['#5227FF', '#7cff67', '#5227FF'], amplitude = 1.0, blend = 0.5 } = props;
+  const { colorStops = ['#1A237E', '#4285F4', '#1A237E'], amplitude = 1.0, blend = 0.5 } = props;
   const propsRef = useRef(props);
   propsRef.current = props;
 

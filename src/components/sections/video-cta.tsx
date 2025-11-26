@@ -27,9 +27,9 @@ export default function VideoCtaSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="mb-16 grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-8 text-center max-w-5xl mx-auto">
             {stats.map((stat, index) => (
-                <div key={index} className="flex flex-col items-center">
+                <div key={index} className="flex flex-col items-center justify-start">
                     <div className="flex items-baseline">
                          <CountUpStats 
                             to={stat.to} 
@@ -38,7 +38,7 @@ export default function VideoCtaSection() {
                         />
                         <span className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-wavy-gradient">{stat.sufix}</span>
                     </div>
-                    <p className="text-muted-foreground text-sm md:text-base mt-2">
+                    <p className="text-muted-foreground text-sm md:text-base mt-4">
                       {stat.label}
                       {stat.subLabel && <br />}
                       {stat.subLabel}

@@ -90,7 +90,7 @@ export default function HeroSection() {
     return (
         <section
             id="home"
-            className="relative w-full pt-40 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden"
+            className="relative w-full pt-40 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden section-with-grid"
         >
             <Aurora colorStops={['#1A237E', '#4285F4', '#1A237E']} />
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>

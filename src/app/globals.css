@@ -60,46 +60,13 @@
   body {
     margin: 0;
     padding: 0;
-    background-color: #0E1524;
-    background-image:
-      linear-gradient(#ffffff10 1px, transparent 1px),
-      linear-gradient(90deg, #ffffff10 1px, transparent 1px);
-    background-size: 40px 40px, 40px 40px;
-    background-position: center;
+    background-color: #000000;
     position: relative;
     overflow-x: hidden;
     color: hsl(var(--foreground));
     font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
-  }
-
-  body::before {
-    content: "";
-    position: fixed;
-    top: -200px;
-    left: -150px;
-    width: 600px;
-    height: 350px;
-    background: #19233A;
-    filter: blur(220px);
-    opacity: 0.45;
-    border-radius: 60%;
-    z-index: -1;
-  }
-
-  body::after {
-    content: "";
-    position: fixed;
-    bottom: -220px;
-    right: -150px;
-    width: 700px;
-    height: 380px;
-    background: #19233A;
-    filter: blur(230px);
-    opacity: 0.50;
-    border-radius: 65%;
-    z-index: -1;
   }
   
   .app-container {
@@ -113,6 +80,14 @@
 
   section {
     @apply w-full py-12 md:py-20 lg:py-24;
+  }
+
+  .section-with-grid {
+    background-image:
+      linear-gradient(#ffffff10 1px, transparent 1px),
+      linear-gradient(90deg, #ffffff10 1px, transparent 1px);
+    background-size: 40px 40px, 40px 40px;
+    background-position: center;
   }
 }
 
@@ -381,3 +356,4 @@
     
 
     
+

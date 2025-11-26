@@ -130,7 +130,7 @@ export default function HowItWorksSection() {
   return (
     <section 
       id="como-funciona" 
-      className="relative bg-transparent py-12 md:py-24 lg:py-32 overflow-hidden"
+      className="relative bg-transparent py-12 md:py-24 lg:py-32 overflow-hidden section-with-grid"
     >
        {kLogo && (
           <Image

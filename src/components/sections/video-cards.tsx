@@ -40,7 +40,7 @@ const cardVariants = {
 
 export default function VideoCardsSection() {
   return (
-    <section className="py-12 md:py-24 bg-transparent">
+    <section className="py-12 md:py-24 bg-transparent section-with-grid">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {cardContent.map((item, index) => (

@@ -37,7 +37,7 @@ export default function FaqSection() {
   return (
     <section 
       id="faq" 
-      className="relative bg-transparent py-12 md:py-24 lg:py-32 overflow-hidden"
+      className="relative bg-transparent py-12 md:py-24 lg:py-32 overflow-hidden section-with-grid"
     >
        {kivoText && (
           <Image

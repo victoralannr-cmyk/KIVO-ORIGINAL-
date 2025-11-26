@@ -107,7 +107,7 @@ void main() {
   
   vec3 auroraColor = intensity * rampColor;
 
-  float cornerFade = min(smoothstep(0.0, 0.2, uv.x), smoothstep(1.0, 0.8, uv.x));
+  float cornerFade = min(smoothstep(0.0, 0.4, uv.x), smoothstep(1.0, 0.6, uv.x));
   
   fragColor = vec4(auroraColor * auroraAlpha, auroraAlpha * cornerFade);
 }

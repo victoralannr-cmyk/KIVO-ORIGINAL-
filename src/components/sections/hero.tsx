@@ -92,7 +92,7 @@ export default function HeroSection() {
             id="home"
             className="relative w-full pt-40 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden section-with-grid"
         >
-            <Aurora colorStops={['#1A237E', '#4285F4', '#1A237E']} />
+            <Aurora colorStops={['#5227FF', '#7cff67', '#5227FF']} />
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
                 <motion.div 
                     initial="hidden"

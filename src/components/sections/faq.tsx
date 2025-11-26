@@ -1,3 +1,4 @@
+
 import {
   Accordion,
   AccordionContent,
@@ -70,7 +71,7 @@ export default function FaqSection() {
                 {faqs.map((faq, index) => (
                     <AccordionItem key={index} value={`item-${index}`} className="border-b-border/20">
                         <AccordionTrigger className="font-headline text-base md:text-lg text-left hover:no-underline text-foreground">
-                          {faq.question}
+                          <span className="text-white mr-2">{index + 1}.</span> {faq.question}
                         </AccordionTrigger>
                         <AccordionContent className="text-sm md:text-base text-muted-foreground">
                           {faq.answer}

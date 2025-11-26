@@ -27,19 +27,6 @@ export default function VideoCtaSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {ctaImage && (
-            <div className="mb-8 flex justify-center">
-              <Image
-                src={ctaImage.imageUrl}
-                alt={ctaImage.description}
-                width={700}
-                height={400}
-                className="rounded-lg shadow-lg"
-                data-ai-hint={ctaImage.imageHint}
-              />
-            </div>
-          )}
-
           <div className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {stats.map((stat, index) => (
                 <div key={index} className="flex flex-col items-center">

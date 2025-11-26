@@ -6,6 +6,13 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import CountUpStats from '../common/count-up-stats';
+
+const stats = [
+    { to: 30, prefix: '+', sufix: 'M', label: 'de alcance' },
+    { to: 250, prefix: '+', sufix: '', label: 'Clientes' },
+    { to: 97, prefix: '', sufix: '%', label: 'de satisfação' },
+]
 
 export default function VideoCtaSection() {
   const ctaImage = PlaceHolderImages.find(img => img.id === 'video-cta-image');
@@ -32,6 +39,24 @@ export default function VideoCtaSection() {
               />
             </div>
           )}
+
+          <div className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            {stats.map((stat, index) => (
+                <div key={index} className="flex flex-col items-center">
+                    <div className="flex items-baseline">
+                         <CountUpStats 
+                            to={stat.to} 
+                            prefix={stat.prefix}
+                            className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-wavy-gradient"
+                        />
+                        <span className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-wavy-gradient">{stat.sufix}</span>
+                    </div>
+                    <p className="text-muted-foreground text-sm md:text-base">{stat.label}</p>
+                </div>
+            ))}
+          </div>
+
+
           <h2 className="font-headline text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl text-foreground">
             <span className="text-primary">Tráfego</span> colocam o seu negócio à frente dos{' '}
             <span className="text-primary">olhares certos.</span> O seu posicionamento é a sua{' '}

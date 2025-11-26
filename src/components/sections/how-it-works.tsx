@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Users, DollarSign, Code, Camera } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -38,21 +38,25 @@ const title = "Estratégias de Vendas".split(" ");
 
 const cardData = [
   {
+    icon: Users,
     title: 'Social Media',
     description: 'Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.',
     customClass: 'bg-gradient-to-br from-blue-900 to-indigo-900',
   },
   {
+    icon: DollarSign,
     title: 'Tráfego Pago',
     description: 'Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.',
     customClass: 'bg-gradient-to-br from-purple-900 to-violet-900',
   },
   {
+    icon: Code,
     title: 'Criação de Sites',
     description: 'Sites profissionais que funcionam 24h e facilitam a vida do seu cliente. Catálogo, contato, agendamentos e recursos completos para vender online.',
     customClass: 'bg-gradient-to-br from-sky-900 to-cyan-900',
   },
   {
+    icon: Camera,
     title: 'Criação de Conteúdo Criativo',
     description: 'Conteúdos criativos que realmente vendem — vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.',
     customClass: 'bg-gradient-to-br from-teal-900 to-emerald-900',
@@ -119,15 +123,21 @@ export default function HowItWorksSection() {
           </div>
         
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {cardData.map((card, index) => (
-                <Card 
-                  key={index} 
-                  className={`${card.customClass} p-6 flex flex-col justify-center items-center text-center border-border/20 shadow-lg`}
-                >
-                  <h3 className="font-headline text-2xl font-bold text-white mb-4">{card.title}</h3>
-                  <p className="text-white/80">{card.description}</p>
-                </Card>
-              ))}
+            {cardData.map((card, index) => {
+                const Icon = card.icon;
+                return (
+                  <Card 
+                    key={index} 
+                    className={`${card.customClass} p-6 flex flex-col justify-center items-center text-center border-border/20 shadow-lg`}
+                  >
+                    <div className="p-3 bg-white/10 rounded-full mb-4">
+                      <Icon className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="font-headline text-2xl font-bold text-white mb-4">{card.title}</h3>
+                    <p className="text-white/80">{card.description}</p>
+                  </Card>
+                )
+              })}
         </div>
 
 

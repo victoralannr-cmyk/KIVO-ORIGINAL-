@@ -106,15 +106,13 @@ void main() {
   float auroraAlpha = smoothstep(midPoint - uBlend * 0.5, midPoint + uBlend * 0.5, intensity);
   
   vec3 auroraColor = intensity * rampColor;
-
-  float cornerFade = min(smoothstep(0.0, 0.4, uv.x), smoothstep(1.0, 0.6, uv.x));
   
-  fragColor = vec4(auroraColor * auroraAlpha, auroraAlpha * cornerFade);
+  fragColor = vec4(auroraColor * auroraAlpha, auroraAlpha);
 }
 `;
 
 export default function Aurora(props: any) {
-  const { colorStops = ['#1A237E', '#4285F4', '#1A237E'], amplitude = 1.0, blend = 0.5 } = props;
+  const { colorStops = ['#5227FF', '#7cff67', '#5227FF'], amplitude = 1.0, blend = 0.5 } = props;
   const propsRef = useRef(props);
   propsRef.current = props;
 
@@ -173,7 +171,11 @@ export default function Aurora(props: any) {
     const mesh = new Mesh(gl, { geometry, program });
     ctn.appendChild(gl.canvas);
 
-    const render = () => {
+    let animateId = 0;
+    const update = (t: number) => {
+      animateId = requestAnimationFrame(update);
+      const { time = t * 0.01, speed = 1.0 } = propsRef.current;
+      program.uniforms.uTime.value = time * speed * 0.1;
       program.uniforms.uAmplitude.value = propsRef.current.amplitude ?? 1.0;
       program.uniforms.uBlend.value = propsRef.current.blend ?? blend;
       const stops = propsRef.current.colorStops ?? colorStops;
@@ -183,11 +185,12 @@ export default function Aurora(props: any) {
       });
       renderer.render({ scene: mesh });
     };
+    animateId = requestAnimationFrame(update);
     
-    render();
     resize();
 
     return () => {
+      cancelAnimationFrame(animateId);
       window.removeEventListener('resize', resize);
       if (ctn && gl.canvas.parentNode === ctn) {
         ctn.removeChild(gl.canvas);

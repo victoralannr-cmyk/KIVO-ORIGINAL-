@@ -8,7 +8,7 @@ import ScrollReveal from '../common/scroll-reveal';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { motion } from 'framer-motion';
-import CardSwap, { Card } from '../common/CardSwap';
+import { Card } from '../ui/card';
 
 const sentence = {
   hidden: { opacity: 0 },
@@ -118,21 +118,18 @@ export default function HowItWorksSection() {
             </motion.p>
           </div>
         
-
-        <div className="mt-20 flex justify-center">
-            <CardSwap width={340} height={380} cardDistance={40} verticalDistance={15} skewAmount={4}>
-              {cardData.map((card, index) => (
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {cardData.map((card, index) => (
                 <Card 
                   key={index} 
-                  customClass={card.customClass}
-                  className="p-6 flex flex-col justify-center items-center text-center border-border/20 shadow-lg"
+                  className={`${card.customClass} p-6 flex flex-col justify-center items-center text-center border-border/20 shadow-lg`}
                 >
                   <h3 className="font-headline text-2xl font-bold text-white mb-4">{card.title}</h3>
                   <p className="text-white/80">{card.description}</p>
                 </Card>
               ))}
-            </CardSwap>
         </div>
+
 
         <div className="mt-20 text-center">
           <ScrollReveal direction="right" delay={800}>

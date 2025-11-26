@@ -45,7 +45,7 @@ export default function SuccessCasesSection() {
   return (
     <section 
       id="sucesso" 
-      className="relative bg-transparent py-12 md:py-24 section-with-grid"
+      className="relative bg-transparent py-12 md:py-24"
     >
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">

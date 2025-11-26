@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function VideoCtaSection() {
   return (
-    <section className="py-12 md:py-24 bg-transparent section-with-grid">
+    <section className="py-12 md:py-24 bg-transparent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center"

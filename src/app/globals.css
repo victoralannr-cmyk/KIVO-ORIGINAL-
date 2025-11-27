@@ -218,8 +218,8 @@
   }
 
   .animate-draw-line {
-    stroke-dasharray: 100;
-    stroke-dashoffset: 100;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
     animation: draw-line 2s ease-out forwards;
   }
 

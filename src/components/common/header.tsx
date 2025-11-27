@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -31,7 +32,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full" style={{ backgroundColor: '#19233A' }}>
       <div className="container mx-auto px-5 md:px-10 h-[70px] md:h-20 flex items-center justify-between">
-        <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }} className="flex items-center">
+        <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }} className="flex items-center flex-shrink-0">
           {logo && (
             <Image
               src={logo.imageUrl}
@@ -44,6 +45,22 @@ export default function Header() {
           )}
         </Link>
 
+        <div className="hidden md:flex flex-grow items-center justify-center">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick(item.href);
+              }}
+              className="px-4 py-2 rounded-lg hover:bg-muted/20 text-sm font-medium text-white transition-colors"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
+
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <Button variant="ghost" size="icon" className="text-white hover:bg-muted/50 md:hidden">
@@ -51,20 +68,7 @@ export default function Header() {
               <span className="sr-only">Abrir menu</span>
             </Button>
           </SheetTrigger>
-          <div className="hidden md:flex items-center space-x-2">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(item.href);
-                }}
-                className="px-3 py-2 rounded-lg hover:bg-muted/20 text-sm font-medium text-white transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="hidden md:flex items-center flex-shrink-0">
             <Button onClick={(e) => { e.preventDefault(); handleNavClick('#agendar'); }} className="ml-2 button-wavy-gradient rounded-full">
               Agendar
             </Button>

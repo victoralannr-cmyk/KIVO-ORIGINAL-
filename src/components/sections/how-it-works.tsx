@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -100,7 +99,7 @@ export default function HowItWorksSection() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="2.5"
               strokeLinecap="round"
               strokeLinejoin="round"
               className="text-primary animate-spin-3d"
@@ -112,7 +111,27 @@ export default function HowItWorksSection() {
           </div>
         );
       case 'Code':
-        return <Code className="h-8 w-8 text-primary animate-fly-away" />;
+        return (
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="32" 
+              height="32" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              className="text-primary"
+            >
+              <g className="animate-fly-away-left">
+                <polyline points="16 18 22 12 16 6"></polyline>
+              </g>
+              <g className="animate-fly-away-right">
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </g>
+            </svg>
+        );
       case 'Clapperboard':
         return <Clapperboard className="h-8 w-8 text-primary animate-clap" />;
       default:

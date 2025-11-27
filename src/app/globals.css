@@ -233,25 +233,41 @@
     animation: spin-3d 8s linear infinite;
   }
 
-  .animate-fly-away {
-    animation: fly-away 4s ease-in-out infinite;
+  .animate-fly-away-left {
+    animation: fly-away-left 4s ease-in-out infinite;
+  }
+  
+  .animate-fly-away-right {
+    animation: fly-away-right 4s ease-in-out infinite;
   }
 
-  @keyframes fly-away {
-    0% {
+  @keyframes fly-away-left {
+    0%, 100% {
       transform: translate(0, 0) rotate(0deg);
     }
     25% {
-      transform: translate(30px, -30px) rotate(25deg);
+      transform: translate(20px, -20px) rotate(25deg);
     }
     50% {
       transform: translate(0, 0) rotate(0deg);
     }
     75% {
-      transform: translate(-30px, -30px) rotate(-25deg);
+      transform: translate(20px, 20px) rotate(-25deg);
     }
-    100% {
+  }
+
+  @keyframes fly-away-right {
+    0%, 100% {
       transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+      transform: translate(-20px, 20px) rotate(-25deg);
+    }
+    50% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    75% {
+      transform: translate(-20px, -20px) rotate(25deg);
     }
   }
 

@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -30,8 +29,8 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full" style={{ backgroundColor: '#19233A' }}>
-      <div className="container mx-auto px-5 md:px-10 h-[70px] md:h-20 flex items-center justify-between">
+    <header className="fixed top-4 left-0 right-0 z-50 w-full px-4">
+      <div className="container mx-auto h-[70px] md:h-20 flex items-center justify-between bg-background/80 backdrop-blur-md rounded-full border border-border/20 shadow-lg px-5 md:px-10">
         <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }} className="flex items-center flex-shrink-0">
           {logo && (
             <Image
@@ -54,7 +53,7 @@ export default function Header() {
                 e.preventDefault();
                 handleNavClick(item.href);
               }}
-              className="px-4 py-2 rounded-lg hover:bg-muted/20 text-sm font-medium text-white transition-colors"
+              className="px-4 py-2 rounded-lg hover:bg-muted text-sm font-medium text-white transition-colors"
             >
               {item.name}
             </Link>

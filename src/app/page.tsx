@@ -11,7 +11,7 @@ import FaqSection from '@/components/sections/faq';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen overflow-x-hidden pt-[70px] md:pt-[80px]">
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
       <Header />
       <main className="flex-grow">
         <HeroSection />

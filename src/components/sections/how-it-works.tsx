@@ -1,9 +1,10 @@
+
 'use client';
 
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, Camera, Code } from 'lucide-react';
+import { ArrowUpRight, Clapperboard, Code } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -53,7 +54,7 @@ const cardData = [
     description: 'Sites profissionais que funcionam 24h e facilitam a vida do seu cliente. Catálogo, contato, agendamentos e recursos completos para vender online.',
   },
   {
-    icon: 'Camera',
+    icon: 'Clapperboard',
     title: 'Criação de Conteúdo Criativo',
     description: 'Conteúdos criativos que realmente vendem — vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.',
   },
@@ -105,15 +106,15 @@ export default function HowItWorksSection() {
               className="text-primary animate-spin-3d"
             >
               <line x1="12" y1="2" x2="12" y2="22"></line>
-              <line x1="12" y1="2" x2="12" y2="22" transform="translate(-4, 0)"></line>
+              <line x1="12" y1="2" x2="12" y2="22"></line>
               <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
             </svg>
           </div>
         );
       case 'Code':
         return <Code className="h-8 w-8 text-primary animate-fly-away" />;
-      case 'Camera':
-        return <Camera className="h-8 w-8 text-primary" />;
+      case 'Clapperboard':
+        return <Clapperboard className="h-8 w-8 text-primary animate-clap" />;
       default:
         return null;
     }

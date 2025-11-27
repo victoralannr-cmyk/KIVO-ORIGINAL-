@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Clapperboard } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -134,26 +134,9 @@ export default function HowItWorksSection() {
         );
       case 'Clapperboard':
         return (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="text-primary"
-          >
-            <g className="animate-clap">
-              <path d="M4 11l16 0" />
-              <path d="M4 11V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7" />
-            </g>
-            <path d="M12 11h.01" />
-            <path d="M4 11v10" />
-            <path d="M20 11v10" />
-          </svg>
+          <Clapperboard
+            className="text-primary h-8 w-8"
+          />
         );
       default:
         return null;
@@ -180,7 +163,7 @@ export default function HowItWorksSection() {
                 alt={kLogo.description}
                 width={200}
                 height={200}
-                className="absolute bottom-10 -left-20 w-32 h-auto opacity-10 animate-orbit hidden md:block"
+                className="absolute bottom-10 -left-20 w-32 h-auto opacity-10 animate-orbit hidden md-block"
                 style={{ animationDuration: '58s', animationDelay: '2s' }}
             />
           </>

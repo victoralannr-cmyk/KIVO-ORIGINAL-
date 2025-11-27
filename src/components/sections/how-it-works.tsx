@@ -105,13 +105,13 @@ export default function HowItWorksSection() {
               className="text-primary animate-spin-3d"
             >
               <line x1="12" y1="2" x2="12" y2="22"></line>
-              <line x1="12" y1="2" x2="12" y2="22" style={{ transform: 'translateX(-4px)' }}></line>
+              <line x1="12" y1="2" x2="12" y2="22" transform="translate(-4, 0)"></line>
               <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
             </svg>
           </div>
         );
       case 'Code':
-        return <Code className="h-8 w-8 text-primary" />;
+        return <Code className="h-8 w-8 text-primary animate-fly-away" />;
       case 'Camera':
         return <Camera className="h-8 w-8 text-primary" />;
       default:

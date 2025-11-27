@@ -233,6 +233,28 @@
     animation: spin-3d 8s linear infinite;
   }
 
+  .animate-fly-away {
+    animation: fly-away 4s ease-in-out infinite;
+  }
+
+  @keyframes fly-away {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+      transform: translate(30px, -30px) rotate(25deg);
+    }
+    50% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    75% {
+      transform: translate(-30px, -30px) rotate(-25deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+  }
+
   @keyframes fall-and-bounce {
     0% {
       transform: translateY(-200px) scale(0.8);

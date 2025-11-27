@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, Clapperboard } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -134,9 +134,25 @@ export default function HowItWorksSection() {
         );
       case 'Clapperboard':
         return (
-          <Clapperboard
-            className="text-primary h-8 w-8"
-          />
+           <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="text-primary"
+          >
+            <g className="animate-clap">
+              <path d="M20.2 6 3.8 6" />
+              <path d="M6.8 12.3 3.8 6" />
+              <path d="m20.2 6-3.1 6.3" />
+            </g>
+            <path d="M3.8 6h16.4l3 6.3-3 6.3H3.8l-3-6.3Z" />
+          </svg>
         );
       default:
         return null;

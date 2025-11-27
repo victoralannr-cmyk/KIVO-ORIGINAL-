@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, Users, DollarSign, Code, Camera } from 'lucide-react';
+import { ArrowUpRight, DollarSign, Camera } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -38,23 +38,22 @@ const title = "Estratégias de Vendas".split(" ");
 
 const cardData = [
   {
-    icon: Users,
+    icon: 'Users',
     title: 'Social Media',
     description: 'Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.',
   },
   {
-    icon: DollarSign,
+    icon: 'DollarSign',
     title: 'Tráfego Pago',
     description: 'Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.',
   },
   {
-    icon: null,
     imageUrl: 'https://i.postimg.cc/rpKTcX9Z/image-removebg-preview.png',
     title: 'Criação de Sites',
     description: 'Sites profissionais que funcionam 24h e facilitam a vida do seu cliente. Catálogo, contato, agendamentos e recursos completos para vender online.',
   },
   {
-    icon: Camera,
+    icon: 'Camera',
     title: 'Criação de Conteúdo Criativo',
     description: 'Conteúdos criativos que realmente vendem — vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.',
   },
@@ -63,6 +62,41 @@ const cardData = [
 
 export default function HowItWorksSection() {
   const kLogo = PlaceHolderImages.find(img => img.id === 'k-logo-hero');
+
+  const getIcon = (iconName?: string) => {
+    switch(iconName) {
+      case 'Users':
+        return (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="text-primary"
+          >
+            <g className="animate-bob-1">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+            </g>
+            <g className="animate-bob-2">
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </g>
+          </svg>
+        );
+      case 'DollarSign':
+        return <DollarSign className="h-8 w-8 text-primary" />;
+      case 'Camera':
+        return <Camera className="h-8 w-8 text-primary" />;
+      default:
+        return null;
+    }
+  }
 
   return (
     <section 
@@ -120,15 +154,14 @@ export default function HowItWorksSection() {
         
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {cardData.map((card, index) => {
-                const Icon = card.icon;
                 return (
                   <ScrollReveal key={index} delay={index * 150}>
                     <Card 
                       className="bg-card/10 backdrop-blur-sm border-border/20 shadow-lg p-6 flex flex-col justify-center items-center text-center h-full"
                     >
                       <div className="p-3 bg-primary/10 rounded-full mb-4 flex items-center justify-center h-[56px] w-[56px]">
-                        {Icon ? (
-                          <Icon className="h-8 w-8 text-primary" />
+                        {card.icon ? (
+                          getIcon(card.icon)
                         ) : card.imageUrl ? (
                           <Image src={card.imageUrl} alt={card.title} width={32} height={32} className="object-contain" />
                         ) : null}

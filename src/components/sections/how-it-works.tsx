@@ -103,7 +103,8 @@ export default function HowItWorksSection() {
             strokeLinejoin="round"
             className="text-primary animate-fall-and-bounce"
           >
-            <path d="M12 2v20"/>
+            <path d="M10 2v20"/>
+            <path d="M14 2v20"/>
             <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
           </svg>
         );

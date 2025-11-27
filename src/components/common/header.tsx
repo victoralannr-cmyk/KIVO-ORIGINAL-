@@ -9,11 +9,11 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Home, Settings, Briefcase, Info, HelpCircle, X, Menu } from 'lucide-react';
 
 const navItems = [
-  { name: 'Home', href: '#home', id: 'home' },
-  { name: 'Serviços', href: '#como-funciona', id: 'como-funciona' },
-  { name: 'Apoiadores', href: '#sucesso', id: 'sucesso' },
-  { name: 'Sobre', href: '#sobre', id: 'sobre' },
-  { name: 'FAQ', href: '#faq', id: 'faq' },
+  { name: 'Home', href: '#home', id: 'home', icon: Home },
+  { name: 'Serviços', href: '#como-funciona', id: 'como-funciona', icon: Settings },
+  { name: 'Apoiadores', href: '#sucesso', id: 'sucesso', icon: Briefcase },
+  { name: 'Sobre', href: '#sobre', id: 'sobre', icon: Info },
+  { name: 'FAQ', href: '#faq', id: 'faq', icon: HelpCircle },
 ];
 
 export default function Header() {
@@ -45,9 +45,9 @@ export default function Header() {
               <Image
                 src={logo.imageUrl}
                 alt="Kivo Logo"
-                width={100}
-                height={30}
-                className="h-8 w-auto object-contain"
+                width={120}
+                height={40}
+                className="h-10 w-auto object-contain"
               />
             )}
           </Link>
@@ -85,9 +85,9 @@ export default function Header() {
                       <Image
                         src={logo.imageUrl}
                         alt="Kivo Logo"
-                        width={100}
-                        height={30}
-                        className="h-8 w-auto object-contain"
+                        width={120}
+                        height={40}
+                        className="h-10 w-auto object-contain"
                       />
                     )}
                   </Link>

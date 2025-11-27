@@ -13,9 +13,9 @@ export default function Footer() {
               <Image
                 src={logo.imageUrl}
                 alt="Kivo Logo"
-                width={200}
+                width={150}
                 height={50}
-                className="h-16 w-auto"
+                className="h-12 w-auto object-contain"
               />
             )}
           </div>

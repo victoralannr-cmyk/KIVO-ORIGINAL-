@@ -48,7 +48,8 @@ const cardData = [
     description: 'Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.',
   },
   {
-    icon: Code,
+    icon: null,
+    imageUrl: 'https://i.postimg.cc/rpKTcX9Z/image-removebg-preview.png',
     title: 'Criação de Sites',
     description: 'Sites profissionais que funcionam 24h e facilitam a vida do seu cliente. Catálogo, contato, agendamentos e recursos completos para vender online.',
   },
@@ -125,8 +126,12 @@ export default function HowItWorksSection() {
                     <Card 
                       className="bg-card/10 backdrop-blur-sm border-border/20 shadow-lg p-6 flex flex-col justify-center items-center text-center h-full"
                     >
-                      <div className="p-3 bg-primary/10 rounded-full mb-4">
-                        <Icon className="h-8 w-8 text-primary" />
+                      <div className="p-3 bg-primary/10 rounded-full mb-4 flex items-center justify-center h-[56px] w-[56px]">
+                        {Icon ? (
+                          <Icon className="h-8 w-8 text-primary" />
+                        ) : card.imageUrl ? (
+                          <Image src={card.imageUrl} alt={card.title} width={32} height={32} className="object-contain" />
+                        ) : null}
                       </div>
                       <h3 className="font-headline text-2xl font-bold text-foreground mb-4">{card.title}</h3>
                       <p className="text-muted-foreground">{card.description}</p>

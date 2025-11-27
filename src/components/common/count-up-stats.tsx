@@ -14,7 +14,7 @@ type CountUpStatsProps = {
 
 export default function CountUpStats({ from = 0, to, prefix = '', duration = 2.5, className }: CountUpStatsProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true });
+  const inView = useInView(ref, { once: false });
 
   useEffect(() => {
     if (inView && ref.current) {

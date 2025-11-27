@@ -227,6 +227,11 @@
     animation: fall-and-bounce 1.2s ease-out forwards;
     opacity: 0;
   }
+  
+  .animate-spin-3d {
+    transform-style: preserve-3d;
+    animation: spin-3d 8s linear infinite;
+  }
 
   @keyframes fall-and-bounce {
     0% {
@@ -404,6 +409,15 @@
     );
     mask: linear-gradient(to right, transparent, black 20%, black 80%, transparent 100%);
     -webkit-mask: linear-gradient(to right, transparent, black 20%, black 80%, transparent 100%);
+  }
+  
+  @keyframes spin-3d {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
   }
 }
     

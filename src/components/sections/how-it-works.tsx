@@ -101,10 +101,10 @@ export default function HowItWorksSection() {
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="text-primary"
+            className="text-primary animate-fall-and-bounce"
           >
-            <path d="M12 2v20" className="animate-draw-line" style={{animationDelay: '0s', animationDuration: '1s'}}/>
-            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" className="animate-draw-line" style={{animationDelay: '0.5s', animationDuration: '1.5s'}}/>
+            <path d="M12 2v20"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
           </svg>
         );
       case 'Camera':

@@ -218,9 +218,32 @@
   }
 
   .animate-draw-line {
-    stroke-dasharray: 50;
-    stroke-dashoffset: 50;
+    stroke-dasharray: 180;
+    stroke-dashoffset: 180;
     animation: draw-line 2s ease-out forwards;
+  }
+
+  .animate-fall-and-bounce {
+    animation: fall-and-bounce 1.2s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fall-and-bounce {
+    0% {
+      transform: translateY(-200px) scale(0.8);
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(10px) scale(1.1);
+      opacity: 1;
+    }
+    80% {
+      transform: translateY(-5px) scale(1.05);
+    }
+    100% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
   }
 
   @keyframes float {

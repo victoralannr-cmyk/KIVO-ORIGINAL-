@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -48,7 +49,7 @@ const cardData = [
     description: 'Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.',
   },
   {
-    imageUrl: 'https://i.postimg.cc/rpKTcX9Z/image-removebg-preview.png',
+    icon: 'Camera',
     title: 'Criação de Sites',
     description: 'Sites profissionais que funcionam 24h e facilitam a vida do seu cliente. Catálogo, contato, agendamentos e recursos completos para vender online.',
   },
@@ -105,9 +106,8 @@ export default function HowItWorksSection() {
               className="text-primary animate-spin-3d"
             >
               <path d="M12 2v20" />
+              <path d="M12 2v20" />
               <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-              <path d="M12 2v20" transform="translate(0, 0)" />
-              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" transform="translate(0, 0)" />
             </svg>
           </div>
         );

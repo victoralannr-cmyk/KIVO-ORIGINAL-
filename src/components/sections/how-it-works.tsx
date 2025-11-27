@@ -4,7 +4,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, Camera } from 'lucide-react';
+import { ArrowUpRight, Camera, Code } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -49,7 +49,7 @@ const cardData = [
     description: 'Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.',
   },
   {
-    icon: 'Camera',
+    icon: 'Code',
     title: 'Criação de Sites',
     description: 'Sites profissionais que funcionam 24h e facilitam a vida do seu cliente. Catálogo, contato, agendamentos e recursos completos para vender online.',
   },
@@ -105,12 +105,14 @@ export default function HowItWorksSection() {
               strokeLinejoin="round"
               className="text-primary animate-spin-3d"
             >
-              <path d="M12 2v20" />
-              <path d="M12 2v20" />
+              <line x1="12" y1="2" x2="12" y2="22"></line>
+              <line x1="12" y1="2" x2="12" y2="22" style={{ transform: 'translateX(-4px)' }}></line>
               <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
             </svg>
           </div>
         );
+      case 'Code':
+        return <Code className="h-8 w-8 text-primary" />;
       case 'Camera':
         return <Camera className="h-8 w-8 text-primary" />;
       default:
@@ -180,11 +182,7 @@ export default function HowItWorksSection() {
                       className="bg-card/10 backdrop-blur-sm border-border/20 shadow-lg p-6 flex flex-col justify-center items-center text-center h-full"
                     >
                       <div className="p-3 bg-primary/10 rounded-full mb-4 flex items-center justify-center h-[56px] w-[56px]">
-                        {card.icon ? (
-                          getIcon(card.icon)
-                        ) : card.imageUrl ? (
-                          <Image src={card.imageUrl} alt={card.title} width={32} height={32} className="object-contain" />
-                        ) : null}
+                        {getIcon(card.icon)}
                       </div>
                       <h3 className="font-headline text-2xl font-bold text-foreground mb-4">{card.title}</h3>
                       <p className="text-muted-foreground">{card.description}</p>

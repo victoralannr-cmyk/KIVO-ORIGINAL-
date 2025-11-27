@@ -217,6 +217,12 @@
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
+  .animate-draw-line {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: draw-line 2s ease-out forwards;
+  }
+
   @keyframes float {
     0% {
       transform: translateY(0px);
@@ -276,6 +282,12 @@
     100% {
       stroke-dashoffset: -100;
       opacity: 0;
+    }
+  }
+  
+  @keyframes draw-line {
+    to {
+      stroke-dashoffset: 0;
     }
   }
 

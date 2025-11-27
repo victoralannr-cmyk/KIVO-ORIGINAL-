@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight, DollarSign, Camera } from 'lucide-react';
+import { ArrowUpRight, Camera } from 'lucide-react';
 import ScrollReveal from '../common/scroll-reveal';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -90,7 +90,23 @@ export default function HowItWorksSection() {
           </svg>
         );
       case 'DollarSign':
-        return <DollarSign className="h-8 w-8 text-primary" />;
+        return (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="text-primary animate-draw-line"
+          >
+            <path d="M12 2v20" />
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+          </svg>
+        );
       case 'Camera':
         return <Camera className="h-8 w-8 text-primary" />;
       default:

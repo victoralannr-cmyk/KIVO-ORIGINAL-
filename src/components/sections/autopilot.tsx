@@ -37,7 +37,6 @@ const title = "Seu atendimento, vendas e suporte no piloto automático".split(" 
 
 export default function AutopilotSection() {
   const kLogo = PlaceHolderImages.find(img => img.id === 'k-logo-hero');
-  const kivoText = PlaceHolderImages.find(img => img.id === 'kivo-text-hero');
 
   return (
     <section 
@@ -49,19 +48,8 @@ export default function AutopilotSection() {
               alt={kLogo.description}
               width={500}
               height={500}
-              className="absolute bottom-5 left-5 w-1/4 h-auto opacity-20 animate-orbit hidden md:block"
+              className="absolute bottom-5 left-5 w-32 h-auto opacity-10 animate-orbit hidden md:block"
               style={{ animationDuration: '49s' }}
-          />
-      )}
-
-      {kivoText && (
-          <Image
-              src={kivoText.imageUrl}
-              alt={kivoText.description}
-              width={600}
-              height={200}
-              className="absolute top-5 right-5 w-1/3 h-auto opacity-[0.03] animate-orbit hidden md:block"
-              style={{ animationDuration: '54s' }}
           />
       )}
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">

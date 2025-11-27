@@ -93,6 +93,14 @@ export default function HeroSection() {
             className="relative w-full pt-40 pb-20 md:pt-64 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden section-with-grid"
         >
             <Aurora colorStops={['#1A237E', '#4285F4', '#1A237E']} amplitude={0.2} blend={1.0} />
+            {kLogo && (
+              <>
+                <Image src={kLogo.imageUrl} alt={kLogo.description} width={100} height={100} className="absolute top-1/4 left-[5%] w-16 h-auto opacity-10 animate-orbit" style={{ animationDuration: '45s' }} />
+                <Image src={kLogo.imageUrl} alt={kLogo.description} width={100} height={100} className="absolute top-1/2 right-[10%] w-24 h-auto opacity-5 animate-orbit" style={{ animationDuration: '55s', animationDelay: '3s' }} />
+                <Image src={kLogo.imageUrl} alt={kLogo.description} width={100} height={100} className="absolute bottom-[15%] left-[15%] w-12 h-auto opacity-10 animate-orbit" style={{ animationDuration: '65s' }} />
+                <Image src={kLogo.imageUrl} alt={kLogo.description} width={100} height={100} className="absolute bottom-[5%] right-[5%] w-20 h-auto opacity-5 animate-orbit" style={{ animationDuration: '40s', animationDelay: '5s' }} />
+              </>
+            )}
             <div className={cn("container relative z-10 px-4 md:px-6 flex flex-col justify-center items-center h-full text-center")}>
                 <motion.div 
                     initial="hidden"

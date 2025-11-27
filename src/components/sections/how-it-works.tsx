@@ -62,7 +62,6 @@ const cardData = [
 
 export default function HowItWorksSection() {
   const kLogo = PlaceHolderImages.find(img => img.id === 'k-logo-hero');
-  const kivoText = PlaceHolderImages.find(img => img.id === 'kivo-text-hero');
 
   return (
     <section 
@@ -70,27 +69,27 @@ export default function HowItWorksSection() {
       className="relative bg-transparent py-12 md:py-24 lg:py-32 overflow-hidden"
     >
        {kLogo && (
-          <Image
-              src={kLogo.imageUrl}
-              alt={kLogo.description}
-              width={500}
-              height={500}
-              className="absolute -top-10 -right-10 w-1/3 h-auto opacity-20 animate-orbit hidden md:block"
-              style={{ animationDuration: '55s' }}
-          />
+          <>
+            <Image
+                src={kLogo.imageUrl}
+                alt={kLogo.description}
+                width={500}
+                height={500}
+                className="absolute -top-10 -right-10 w-48 h-auto opacity-5 animate-orbit hidden md:block"
+                style={{ animationDuration: '55s' }}
+            />
+             <Image
+                src={kLogo.imageUrl}
+                alt={kLogo.description}
+                width={200}
+                height={200}
+                className="absolute bottom-10 -left-20 w-32 h-auto opacity-10 animate-orbit hidden md:block"
+                style={{ animationDuration: '58s', animationDelay: '2s' }}
+            />
+          </>
       )}
 
-      {kivoText && (
-          <Image
-              src={kivoText.imageUrl}
-              alt={kivoText.description}
-              width={600}
-              height={200}
-              className="absolute bottom-10 -left-20 w-1/2 h-auto opacity-[0.03] animate-orbit hidden md:block"
-              style={{ animationDuration: '58s' }}
-          />
-      )}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
           <div className="text-center">
              <motion.h2 

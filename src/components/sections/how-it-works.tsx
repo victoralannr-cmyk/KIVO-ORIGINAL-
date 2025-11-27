@@ -50,7 +50,7 @@ const cardData = [
   {
     icon: 'Code',
     title: 'Criação de Sites',
-    description: 'Sites profissionais que funcionam 24h e facilitam a vida do seu cliente. Catálogo, contato, agendamentos e recursos completos para vender online.',
+    description: 'Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.',
   },
   {
     icon: 'Clapperboard',
@@ -147,12 +147,12 @@ export default function HowItWorksSection() {
             className="text-primary"
           >
             <g className="animate-clap">
-              <path d="M4 11v10" />
-              <path d="M8.3 11.7 4 11" />
-              <path d="m20 11-4.3-.7" />
-              <path d="M12 11h.01" />
+              <path d="M4 11l16 0" />
+              <path d="M4 11V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7" />
             </g>
-            <path d="M4 11V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7" />
+            <path d="M12 11h.01" />
+            <path d="M4 11v10" />
+            <path d="M20 11v10" />
           </svg>
         );
       default:

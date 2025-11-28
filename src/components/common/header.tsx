@@ -38,7 +38,7 @@ export default function Header() {
               className="logo-gradient-effect"
               style={{
                 width: 35,
-                height: 19,
+                height: 18,
                 maskImage: `url(${logo.imageUrl})`,
                 WebkitMaskImage: `url(${logo.imageUrl})`,
               }}

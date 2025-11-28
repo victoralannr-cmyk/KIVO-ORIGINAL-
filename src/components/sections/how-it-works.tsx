@@ -55,7 +55,7 @@ const cardData = [
   {
     icon: 'Clapperboard',
     title: 'Criação de Conteúdo Criativo',
-    description: 'Conteúdos criativos que realmente vendem — vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.',
+    description: 'Conteúdos criativos que realmente vendem vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.',
   },
 ];
 

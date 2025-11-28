@@ -197,8 +197,8 @@ export default function HowItWorksSection() {
             </motion.p>
             <div className="mt-16 flex justify-center text-muted-foreground animate-bounce">
                 <svg width="59.22" height="78.96" viewBox="0 0 59.22 78.96" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M29.61 1V77.96" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M58.22 50.34L29.61 77.95L1 50.34" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M29.61 1V77.96" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M58.22 50.34L29.61 77.95L1 50.34" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
             </div>
           </div>

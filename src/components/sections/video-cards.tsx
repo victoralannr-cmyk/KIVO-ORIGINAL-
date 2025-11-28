@@ -50,7 +50,7 @@ export default function VideoCardsSection() {
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: false, amount: 0.3 }}
             >
               <Card className="bg-card/10 backdrop-blur-sm border-border/20 shadow-lg rounded-2xl overflow-hidden h-full flex flex-col p-4">
                 <div 

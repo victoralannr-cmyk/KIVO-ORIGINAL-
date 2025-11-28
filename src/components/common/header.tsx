@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -31,7 +30,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-4 left-0 right-0 z-50 w-full px-4">
-      <div className="container mx-auto h-[70px] md:h-20 flex items-center justify-between bg-background/60 backdrop-blur-md rounded-full border border-border/20 shadow-lg px-5 md:px-10">
+      <div className="container mx-auto h-[70px] md:h-20 flex items-center justify-between bg-background/80 backdrop-blur-md rounded-full border border-border/20 shadow-lg px-5 md:px-10">
         <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }} className="flex items-center flex-shrink-0">
           {logo && (
             <Image

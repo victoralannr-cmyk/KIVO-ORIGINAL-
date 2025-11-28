@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import { useInView } from 'framer-motion';
 
 const codeSamples = [
   `/* Reset & Grid */
@@ -43,16 +44,26 @@ body{
 export default function CodeTypingAnimation() {
   const codeElRef = useRef<HTMLPreElement>(null);
   const gutterElRef = useRef<HTMLDivElement>(null);
-  const animationFrameRef = useRef<number>();
+  const containerRef = useRef<HTMLDivElement>(null);
   const isMountedRef = useRef(true);
+  const hasAnimatedRef = useRef(false);
+
+  const isInView = useInView(containerRef, { once: true, amount: 0.5 });
 
   useEffect(() => {
     isMountedRef.current = true;
+    
+    if (!isInView || hasAnimatedRef.current) {
+      return;
+    }
+
     const codeEl = codeElRef.current;
     const gutterEl = gutterElRef.current;
     let sampleIndex = 0;
 
     if (!codeEl || !gutterEl) return;
+
+    hasAnimatedRef.current = true;
 
     function esc(s: string) {
       return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -74,7 +85,7 @@ export default function CodeTypingAnimation() {
         .replace(/(^|\n)([^\\n:{};]+)/g, (m, p1, p2) => p1 + '<span class="tok-selector">' + p2.trim() + '</span>');
     }
 
-    async function typeSample(text: string, opts = { speed: 18, pauseEnd: 1200 }) {
+    async function typeSample(text: string, opts = { speed: 4, pauseEnd: 1000 }) {
       if (!isMountedRef.current) return;
       codeEl.innerHTML = '';
       makeGutter(text.split('\n').length);
@@ -93,7 +104,7 @@ export default function CodeTypingAnimation() {
     async function runLoop() {
         while (isMountedRef.current) {
             const txt = codeSamples[sampleIndex % codeSamples.length];
-            await typeSample(txt, { speed: 4, pauseEnd: 1000 });
+            await typeSample(txt);
             
             if (!isMountedRef.current) break;
 
@@ -112,14 +123,11 @@ export default function CodeTypingAnimation() {
     
     return () => {
       isMountedRef.current = false;
-      if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current);
-      }
     };
-  }, []);
+  }, [isInView]);
 
   return (
-    <div className="code-animation-container h-full w-full">
+    <div className="code-animation-container h-full w-full" ref={containerRef}>
       <style jsx>{`
         .code-animation-container {
           --bg: #0f1724; /* panel color */

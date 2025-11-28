@@ -37,9 +37,9 @@ export default function Header() {
             <Image
               src={logo.imageUrl}
               alt="Kivo Logo"
-              width={120}
-              height={34}
-              className="h-auto w-auto object-contain"
+              width={130}
+              height={33}
+              className="object-contain"
               priority
             />
           )}
@@ -81,9 +81,9 @@ export default function Header() {
                     <Image
                       src={logo.imageUrl}
                       alt="Kivo Logo"
-                      width={120}
-                      height={40}
-                      className="h-10 w-auto object-contain"
+                      width={130}
+                      height={33}
+                      className="object-contain"
                     />
                   )}
                 </Link>

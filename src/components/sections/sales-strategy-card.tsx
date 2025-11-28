@@ -23,20 +23,23 @@ export default function SalesStrategyCard() {
           animation: float 1.5s ease-in-out infinite;
         }
         
-        .line-1, .line-2, .line-3 {
+        .line {
           stroke-dasharray: 180;
           stroke-dashoffset: 180;
           animation: draw-line 1.5s ease-in-out infinite;
         }
 
-        .line-2 { animation-delay: 0.1s; }
+        .line-main { animation-delay: 0s; }
+        .line-1 { animation-delay: 0.2s; }
+        .line-2 { animation-delay: 0.2s; }
         .line-3 { animation-delay: 0.2s; }
 
         .icon-box {
           animation: pulse-icon 1.5s ease-in-out infinite;
         }
-        .icon-box-2 { animation-delay: 0.15s; }
-        .icon-box-3 { animation-delay: 0.3s; }
+        .icon-box-1 { animation-delay: 0.15s; }
+        .icon-box-2 { animation-delay: 0.25s; }
+        .icon-box-3 { animation-delay: 0.35s; }
 
         @keyframes float {
           0%, 100% { transform: translateY(0); }
@@ -66,9 +69,13 @@ export default function SalesStrategyCard() {
             </g>
           </g>
 
-          <path className="line-1" d="M270 30 C 220 50, 200 95, 170 95 H 120" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
-          <path className="line-2" d="M270 95 H 120" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
-          <path className="line-3" d="M270 160 C 220 140, 200 95, 170 95 H 120" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          {/* Main trunk line */}
+          <path className="line line-main" d="M120 95 H 170" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          
+          {/* Branching lines */}
+          <path className="line line-1" d="M170 95 C 200 95, 220 50, 270 30" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line line-2" d="M170 95 H 270" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line line-3" d="M170 95 C 200 95, 220 140, 270 160" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
           
           <g className="icon-box icon-box-1" style={{ transformOrigin: 'center' }}>
             <rect x="270" y="5" width="50" height="50" rx="10" fill="#0f1724" stroke="#F8F9FB" strokeWidth="2"/>

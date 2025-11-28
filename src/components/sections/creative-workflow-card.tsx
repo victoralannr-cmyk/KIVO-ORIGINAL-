@@ -19,26 +19,26 @@ export default function CreativeWorkflowCard() {
         }
         
         .box {
-            animation: float-box 6s ease-in-out infinite;
+            animation: float-box 3s ease-in-out infinite;
         }
         .box-1 { animation-delay: 0s; }
-        .box-2 { animation-delay: 0.2s; }
-        .box-3 { animation-delay: 0.4s; }
+        .box-2 { animation-delay: 0.1s; }
+        .box-3 { animation-delay: 0.2s; }
         
         .connector-line {
             stroke-dasharray: 50;
             stroke-dashoffset: 50;
-            animation: draw-line 6s ease-in-out infinite;
+            animation: draw-line 3s ease-in-out infinite;
         }
-        .line-1 { animation-delay: 0.5s; }
-        .line-2 { animation-delay: 0.7s; }
+        .line-1 { animation-delay: 0.25s; }
+        .line-2 { animation-delay: 0.35s; }
 
         .icon, .text {
-            animation: fade-in 6s ease-in-out infinite;
+            animation: fade-in 3s ease-in-out infinite;
         }
-        .icon-1, .text-1 { animation-delay: 1s; }
-        .icon-2, .text-2 { animation-delay: 1.2s; }
-        .icon-3, .text-3 { animation-delay: 1.4s; }
+        .icon-1, .text-1 { animation-delay: 0.5s; }
+        .icon-2, .text-2 { animation-delay: 0.6s; }
+        .icon-3, .text-3 { animation-delay: 0.7s; }
 
         @keyframes float-box {
           0%, 100% { transform: translateY(0); }

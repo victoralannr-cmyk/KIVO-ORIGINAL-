@@ -20,23 +20,23 @@ export default function SalesStrategyCard() {
         }
 
         .central-cube {
-          animation: float 4s ease-in-out infinite;
+          animation: float 3s ease-in-out infinite;
         }
         
         .line-1, .line-2, .line-3 {
           stroke-dasharray: 180;
           stroke-dashoffset: 180;
-          animation: draw-line 5s ease-in-out infinite;
+          animation: draw-line 3s ease-in-out infinite;
         }
 
-        .line-2 { animation-delay: 0.2s; }
-        .line-3 { animation-delay: 0.4s; }
+        .line-2 { animation-delay: 0.1s; }
+        .line-3 { animation-delay: 0.2s; }
 
         .icon-box {
-          animation: pulse-icon 4s ease-in-out infinite;
+          animation: pulse-icon 3s ease-in-out infinite;
         }
-        .icon-box-2 { animation-delay: 0.3s; }
-        .icon-box-3 { animation-delay: 0.6s; }
+        .icon-box-2 { animation-delay: 0.15s; }
+        .icon-box-3 { animation-delay: 0.3s; }
 
         @keyframes float {
           0%, 100% { transform: translateY(0); }

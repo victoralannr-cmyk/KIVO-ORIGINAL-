@@ -77,7 +77,7 @@ export default function HowItWorksSection() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="text-primary"
+            className="text-accent"
           >
             <g className="animate-bob-1">
               <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
@@ -102,7 +102,7 @@ export default function HowItWorksSection() {
               strokeWidth="2.5"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="text-primary animate-spin-3d"
+              className="text-accent animate-spin-3d"
             >
               <line x1="12" y1="2" x2="12" y2="22"></line>
               <line x1="12" y1="2" x2="12" y2="22"></line>
@@ -122,7 +122,7 @@ export default function HowItWorksSection() {
               strokeWidth="2" 
               strokeLinecap="round" 
               strokeLinejoin="round" 
-              className="text-primary"
+              className="text-accent"
             >
               <g className="animate-fly-away-left">
                 <polyline points="16 18 22 12 16 6"></polyline>
@@ -135,7 +135,7 @@ export default function HowItWorksSection() {
       case 'Clapperboard':
         return (
            <Clapperboard
-              className="text-primary h-8 w-8"
+              className="text-accent h-8 w-8"
             />
         );
       default:

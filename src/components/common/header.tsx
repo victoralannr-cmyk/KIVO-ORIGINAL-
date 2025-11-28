@@ -56,8 +56,8 @@ export default function Header() {
               <Image
                 src={mobileLogo.imageUrl}
                 alt="Kivo Logo"
-                width={50}
-                height={34}
+                width={100}
+                height={68}
                 className="object-contain"
               />
             )}

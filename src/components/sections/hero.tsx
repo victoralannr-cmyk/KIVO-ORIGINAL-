@@ -90,7 +90,7 @@ export default function HeroSection() {
     return (
         <section
             id="home"
-            className="relative w-full pt-28 pb-20 md:pt-44 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden section-with-grid"
+            className="relative w-full pt-40 pb-20 md:pt-44 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden section-with-grid"
         >
             <Aurora colorStops={['#1A237E', '#4285F4', '#1A237E']} amplitude={0.2} blend={1.0} />
             {kLogo && (

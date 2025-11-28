@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -36,8 +37,8 @@ export default function Header() {
             <Image
               src={logo.imageUrl}
               alt="Kivo Logo"
-              width={90}
-              height={25.5}
+              width={120}
+              height={34}
               className="h-auto w-auto object-contain"
               priority
             />

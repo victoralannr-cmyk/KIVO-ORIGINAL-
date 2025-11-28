@@ -26,12 +26,8 @@ export default function SalesStrategyCard() {
         .line {
           stroke-dasharray: 180;
           stroke-dashoffset: 180;
-          animation: draw-line 1.5s ease-out forwards;
+          animation: draw-line 1.5s ease-out infinite;
         }
-
-        .line-1 { animation: draw-line 1.5s ease-out infinite 0.1s; }
-        .line-2 { animation: draw-line 1.5s ease-out infinite 0.2s; }
-        .line-3 { animation: draw-line 1.5s ease-out infinite 0.3s; }
 
         .icon-box {
           animation: pulse-icon 1.5s ease-in-out infinite;
@@ -75,9 +71,9 @@ export default function SalesStrategyCard() {
           </g>
 
           {/* Branching lines */}
-          <path className="line line-1" d="M120 95 C 170 95, 220 50, 270 30" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
-          <path className="line line-2" d="M120 95 H 270" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
-          <path className="line line-3" d="M120 95 C 170 95, 220 140, 270 160" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line" d="M120 95 C 170 95, 220 50, 270 30" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line" d="M120 95 H 270" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line" d="M120 95 C 170 95, 220 140, 270 160" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
           
           <g className="icon-box icon-box-1" style={{ transformOrigin: 'center' }}>
             <rect x="270" y="5" width="50" height="50" rx="10" fill="#0f1724" stroke="#F8F9FB" strokeWidth="2"/>

@@ -26,13 +26,13 @@ export default function SalesStrategyCard() {
         .line {
           stroke-dasharray: 180;
           stroke-dashoffset: 180;
-          animation: draw-line 1.5s ease-in-out infinite;
+          animation: draw-line 1.5s ease-out forwards;
         }
 
-        .line-main { animation-delay: 0s; }
-        .line-1 { animation-delay: 0.2s; }
-        .line-2 { animation-delay: 0.2s; }
-        .line-3 { animation-delay: 0.2s; }
+        .line-main { animation: draw-line 1.5s ease-out infinite; }
+        .line-1 { animation: draw-line 1.5s ease-out infinite 0.2s; }
+        .line-2 { animation: draw-line 1.5s ease-out infinite 0.2s; }
+        .line-3 { animation: draw-line 1.5s ease-out infinite 0.2s; }
 
         .icon-box {
           animation: pulse-icon 1.5s ease-in-out infinite;
@@ -47,9 +47,15 @@ export default function SalesStrategyCard() {
         }
 
         @keyframes draw-line {
-          0%, 20% { stroke-dashoffset: 180; }
-          50% { stroke-dashoffset: 0; }
-          80%, 100% { stroke-dashoffset: -180; }
+          0% {
+            stroke-dashoffset: 180;
+          }
+          50% {
+            stroke-dashoffset: 0;
+          }
+          100% {
+            stroke-dashoffset: 0;
+          }
         }
 
         @keyframes pulse-icon {

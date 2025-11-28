@@ -37,8 +37,8 @@ export default function Header() {
             <Image
               src={logo.imageUrl}
               alt="Kivo Logo"
-              width={30}
-              height={17}
+              width={34}
+              height={18}
               className="object-contain"
               priority
             />

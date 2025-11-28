@@ -49,9 +49,9 @@ export default function VideoCtaSection() {
 
 
           <h2 className="font-headline text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl text-foreground">
-            <span className="text-primary">Tráfego</span> colocam o seu negócio à frente dos{' '}
-            <span className="text-primary">olhares certos.</span> O seu posicionamento é a sua{' '}
-            <span className="text-primary">vitrine digital!</span>
+            <span className="text-wavy-gradient">Tráfego</span> colocam o seu negócio à frente dos{' '}
+            <span className="text-wavy-gradient">olhares certos.</span> O seu posicionamento é a sua{' '}
+            <span className="text-wavy-gradient">vitrine digital!</span>
           </h2>
           <div className="mt-6 flex justify-center">
             <Button asChild className="button-wavy-gradient rounded-full">

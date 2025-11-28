@@ -2,10 +2,16 @@
 
 import React from 'react';
 import { Folder, FileText, Users } from 'lucide-react';
+import { useInView } from 'framer-motion';
+import { useRef } from 'react';
+import { cn } from '@/lib/utils';
 
 export default function SalesStrategyCard() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+
   return (
-    <div className="w-full h-full flex items-center justify-center">
+    <div className="w-full h-full flex items-center justify-center" ref={ref}>
       <style jsx>{`
         .diagram-container {
           width: 100%;
@@ -19,43 +25,40 @@ export default function SalesStrategyCard() {
           box-shadow: 0 10px 25px rgba(0,0,0,0.25);
         }
 
-        .central-cube {
-          animation: float 1.5s ease-in-out infinite;
+        .central-cube, .icon-box {
+          opacity: 0;
+          animation: ${isInView ? 'fade-in-float 1s ease-out forwards' : 'none'};
         }
         
         .line {
           stroke-dasharray: 180;
           stroke-dashoffset: 180;
-          animation: draw-line 1.5s ease-out infinite;
+          animation: ${isInView ? 'draw-line 1s ease-out forwards' : 'none'};
         }
 
-        .icon-box {
-          animation: pulse-icon 1.5s ease-in-out infinite;
-        }
-        .icon-box-1 { animation-delay: 0.15s; }
-        .icon-box-2 { animation-delay: 0.25s; }
-        .icon-box-3 { animation-delay: 0.35s; }
+        .central-cube { animation-delay: 0.2s; }
+        .line-1 { animation-delay: 0.5s; }
+        .line-2 { animation-delay: 0.6s; }
+        .line-3 { animation-delay: 0.7s; }
+        .icon-box-1 { animation-delay: 0.8s; }
+        .icon-box-2 { animation-delay: 0.9s; }
+        .icon-box-3 { animation-delay: 1s; }
 
-        @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-4px); }
+        @keyframes fade-in-float {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
 
         @keyframes draw-line {
-          0% {
-            stroke-dashoffset: 180;
-          }
-          50% {
+          to {
             stroke-dashoffset: 0;
           }
-          100% {
-            stroke-dashoffset: 0;
-          }
-        }
-
-        @keyframes pulse-icon {
-          0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.05); }
         }
       `}</style>
        <div className="diagram-container">
@@ -71,9 +74,9 @@ export default function SalesStrategyCard() {
           </g>
 
           {/* Branching lines */}
-          <path className="line" d="M120 95 C 170 95, 220 50, 270 30" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
-          <path className="line" d="M120 95 H 270" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
-          <path className="line" d="M120 95 C 170 95, 220 140, 270 160" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line line-1" d="M120 95 C 170 95, 220 50, 270 30" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line line-2" d="M120 95 H 270" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+          <path className="line line-3" d="M120 95 C 170 95, 220 140, 270 160" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
           
           <g className="icon-box icon-box-1" style={{ transformOrigin: 'center' }}>
             <rect x="270" y="5" width="50" height="50" rx="10" fill="#0f1724" stroke="#F8F9FB" strokeWidth="2"/>

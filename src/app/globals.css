@@ -92,6 +92,15 @@
 }
 
 @layer utilities {
+  .logo-gradient-effect {
+    background: linear-gradient(90deg, hsl(var(--muted-foreground)), #ffffff, hsl(var(--muted-foreground)));
+    background-size: 200% 100%;
+    animation: gradient-wave 8s linear infinite;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+  }
+
   .button-wavy-gradient {
     background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--primary)));
     background-size: 200% 100%;

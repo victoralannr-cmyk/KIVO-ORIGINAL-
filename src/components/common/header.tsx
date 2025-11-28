@@ -34,13 +34,14 @@ export default function Header() {
       <div className="container mx-auto h-[70px] md:h-20 flex items-center justify-between bg-background/60 backdrop-blur-md rounded-full border border-border/20 shadow-lg px-5 md:px-10">
         <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }} className="flex items-center flex-shrink-0">
           {logo && (
-            <Image
-              src={logo.imageUrl}
-              alt="Kivo Logo"
-              width={34}
-              height={18}
-              className="object-contain"
-              priority
+            <div
+              className="logo-gradient-effect"
+              style={{
+                width: 34,
+                height: 18,
+                maskImage: `url(${logo.imageUrl})`,
+                WebkitMaskImage: `url(${logo.imageUrl})`,
+              }}
             />
           )}
         </Link>

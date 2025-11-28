@@ -49,17 +49,20 @@ export default function Header() {
         <div className="w-10 md:hidden" />
 
         {/* Mobile: Centered Logo */}
-        <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }} className="flex-grow flex justify-center md:hidden">
-          {mobileLogo && (
-            <Image
-              src={mobileLogo.imageUrl}
-              alt="Kivo Logo"
-              width={35}
-              height={35}
-              className="object-contain"
-            />
-          )}
-        </Link>
+        <div className="flex-1 flex justify-center md:hidden">
+          <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }}>
+            {mobileLogo && (
+              <Image
+                src={mobileLogo.imageUrl}
+                alt="Kivo Logo"
+                width={35}
+                height={35}
+                className="object-contain"
+              />
+            )}
+          </Link>
+        </div>
+
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex flex-grow items-center justify-center">

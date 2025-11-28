@@ -93,7 +93,7 @@ export default function CodeTypingAnimation() {
     async function runLoop() {
         while (isMountedRef.current) {
             const txt = codeSamples[sampleIndex % codeSamples.length];
-            await typeSample(txt, { speed: 14, pauseEnd: 1600 });
+            await typeSample(txt, { speed: 4, pauseEnd: 1000 });
             
             if (!isMountedRef.current) break;
 
@@ -101,7 +101,7 @@ export default function CodeTypingAnimation() {
                 if (!isMountedRef.current) break;
                 const newText = txt.slice(0, txt.length - Math.floor((i / 60) * txt.length));
                 codeEl.innerHTML = highlightChunk(esc(newText)) + '<span class="caret"></span>';
-                await new Promise(r => setTimeout(r, 6));
+                await new Promise(r => setTimeout(r, 2));
             }
             sampleIndex++;
         }

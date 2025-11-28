@@ -90,7 +90,7 @@ export default function Header() {
             </Button>
           </SheetTrigger>
           <div className="hidden md:flex items-center flex-shrink-0">
-            <Button onClick={(e) => { e.preventDefault(); handleNavClick('#agendar'); }} className="ml-2 button-wavy-gradient rounded-full">
+            <Button onClick={(e) => { e.preventDefault(); handleNavClick('#agendar'); }} className="ml-2 button-wavy-gradient rounded-full animate-pulse">
               Agendar
             </Button>
           </div>
@@ -132,7 +132,7 @@ export default function Header() {
                 })}
               </div>
               <div className="mt-auto pt-4 border-t border-border/20">
-                <Button onClick={(e) => { e.preventDefault(); handleNavClick('#agendar'); }} className="w-full button-wavy-gradient rounded-full">
+                <Button onClick={(e) => { e.preventDefault(); handleNavClick('#agendar'); }} className="w-full button-wavy-gradient rounded-full animate-pulse">
                   Agendar uma demonstração
                 </Button>
               </div>

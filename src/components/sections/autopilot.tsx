@@ -69,7 +69,7 @@ export default function AutopilotSection() {
                       element.scrollIntoView({ behavior: 'smooth' });
                     }
                   }}
-                  className="px-6 py-3 text-base md:px-8 md:py-4 md:text-lg button-wavy-gradient rounded-full"
+                  className="px-6 py-3 text-base md:px-8 md:py-4 md:text-lg button-wavy-gradient rounded-full animate-pulse"
                 >
                     Fale com um especialista
                     <ArrowUpRight className="h-5 w-5 ml-2 transition-transform group-hover:rotate-45" />

@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useEffect } from 'react';
@@ -23,7 +24,7 @@ const initialState: ContactFormState = {
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" className="w-full button-wavy-gradient" disabled={pending}>
+    <Button type="submit" className="w-full button-wavy-gradient animate-pulse" disabled={pending}>
       {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : 'Enviar'}
     </Button>
   );
@@ -140,7 +141,7 @@ export default function HeroSection() {
                               element.scrollIntoView({ behavior: 'smooth' });
                             }
                           }}
-                          className="px-6 py-3 text-base md:px-8 md:py-4 md:text-lg button-wavy-gradient rounded-full"
+                          className="px-6 py-3 text-base md:px-8 md:py-4 md:text-lg button-wavy-gradient rounded-full animate-pulse"
                         >
                             Agendar uma demonstração
                         </Button>

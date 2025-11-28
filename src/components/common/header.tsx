@@ -19,6 +19,7 @@ const navItems = [
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const logo = PlaceHolderImages.find(img => img.id === 'aetherai-logo');
+  const mobileLogo = PlaceHolderImages.find(img => img.id === 'kivo-logo-mobile');
 
   const handleNavClick = (href: string) => {
     setIsOpen(false);
@@ -30,8 +31,9 @@ export default function Header() {
 
   return (
     <header className="fixed top-4 left-0 right-0 z-50 w-full px-4">
-      <div className="container mx-auto h-[70px] md:h-20 flex items-center justify-between bg-background/80 backdrop-blur-md rounded-full border border-border/20 shadow-lg px-5 md:px-10">
-        <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }} className="flex items-center flex-shrink-0">
+      <div className="container mx-auto h-[70px] md:h-20 flex items-center justify-between bg-background/80 backdrop-blur-md rounded-full border border-border/20 shadow-lg px-5">
+        {/* Desktop Logo */}
+        <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }} className="hidden md:flex items-center flex-shrink-0">
           {logo && (
             <Image
               src={logo.imageUrl}
@@ -42,7 +44,24 @@ export default function Header() {
             />
           )}
         </Link>
+        
+        {/* Mobile: Spacer to help with centering */}
+        <div className="w-10 md:hidden" />
 
+        {/* Mobile: Centered Logo */}
+        <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }} className="flex-grow flex justify-center md:hidden">
+          {mobileLogo && (
+            <Image
+              src={mobileLogo.imageUrl}
+              alt="Kivo Logo"
+              width={35}
+              height={35}
+              className="object-contain"
+            />
+          )}
+        </Link>
+
+        {/* Desktop Navigation */}
         <div className="hidden md:flex flex-grow items-center justify-center">
           {navItems.map((item) => (
             <Link

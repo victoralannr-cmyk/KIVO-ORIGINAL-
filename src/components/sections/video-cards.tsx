@@ -20,7 +20,7 @@ const cardContent = [
   {
     type: 'creative',
     title: 'Setor Criativo',
-    description: 'Desenvolvemos posicionamento e vitrines digitais que elevam sua autoridade, despertam desejo e impulsionam vendas — mesmo sem depender de investimento em anúncios.',
+    description: 'Desenvolvemos posicionamento e vitrines digitais que elevam sua autoridade, despertam desejo e impulsionam vendas mesmo sem depender de investimento em anúncios.',
   },
 ];
 

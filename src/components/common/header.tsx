@@ -1,13 +1,13 @@
-
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Home, Settings, Briefcase, Info, HelpCircle, X, Menu } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const navItems = [
   { name: 'Home', href: '#home', id: 'home', icon: Home },
@@ -19,8 +19,19 @@ const navItems = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const logo = PlaceHolderImages.find(img => img.id === 'aetherai-logo');
   const mobileLogo = PlaceHolderImages.find(img => img.id === 'kivo-logo-mobile');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const handleNavClick = (href: string) => {
     setIsOpen(false);
@@ -32,7 +43,10 @@ export default function Header() {
 
   return (
     <header className="fixed top-4 left-0 right-0 z-50 w-full px-4">
-      <div className="container mx-auto h-[70px] md:h-20 flex items-center justify-between bg-background/80 backdrop-blur-md rounded-full border border-border/20 shadow-lg px-5">
+      <div className={cn(
+        "container mx-auto flex items-center justify-between bg-background/80 backdrop-blur-md rounded-full border border-border/20 shadow-lg px-5 transition-all duration-300 ease-in-out",
+        isScrolled ? 'h-[60px]' : 'h-[70px] md:h-20'
+      )}>
         {/* Desktop Logo */}
         <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }} className="hidden md:flex items-center flex-shrink-0">
           {logo && (

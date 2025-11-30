@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -19,15 +19,28 @@ const navItems = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isShrunk, setIsShrunk] = useState(false);
+  const lastScrollY = useRef(0);
+
   const logo = PlaceHolderImages.find(img => img.id === 'aetherai-logo');
   const mobileLogo = PlaceHolderImages.find(img => img.id === 'kivo-logo-mobile');
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll <= 0) {
+        setIsShrunk(false);
+      } else if (currentScroll > lastScrollY.current) {
+        setIsShrunk(true);
+      } else {
+        setIsShrunk(false);
+      }
+      lastScrollY.current = currentScroll;
     };
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -44,8 +57,10 @@ export default function Header() {
   return (
     <header className="fixed top-4 left-0 right-0 z-50 w-full px-4">
       <div className={cn(
-        "container mx-auto flex items-center justify-between bg-background/80 backdrop-blur-md rounded-full border border-border/20 shadow-lg transition-all duration-300 ease-in-out",
-        isScrolled ? 'py-2' : 'py-3 md:py-4'
+        "container mx-auto flex items-center justify-between bg-background/80 rounded-full border border-border/20 shadow-lg transition-all duration-300 ease-in-out",
+        "py-4 md:py-5", // Normal state padding
+        "backdrop-blur-none",
+        isShrunk && "py-2 md:py-3 backdrop-blur-md" // Shrunk state padding and blur
       )}>
         {/* Desktop Logo */}
         <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }} className="hidden md:flex items-center flex-shrink-0">

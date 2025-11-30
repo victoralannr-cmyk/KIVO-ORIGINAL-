@@ -25,7 +25,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -44,8 +44,8 @@ export default function Header() {
   return (
     <header className="fixed top-4 left-0 right-0 z-50 w-full px-4">
       <div className={cn(
-        "container mx-auto flex items-center justify-between bg-background/80 backdrop-blur-md rounded-full border border-border/20 shadow-lg px-5 transition-all duration-300 ease-in-out",
-        isScrolled ? 'h-[60px]' : 'h-[70px] md:h-20'
+        "container mx-auto flex items-center justify-between bg-background/80 backdrop-blur-md rounded-full border border-border/20 shadow-lg transition-all duration-300 ease-in-out",
+        isScrolled ? 'py-2' : 'py-3 md:py-4'
       )}>
         {/* Desktop Logo */}
         <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }} className="hidden md:flex items-center flex-shrink-0">
@@ -72,7 +72,7 @@ export default function Header() {
                 alt="Kivo Logo"
                 width={100}
                 height={68}
-                className="object-contain"
+                className="object-contain h-8 w-auto"
               />
             )}
           </Link>

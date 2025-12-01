@@ -114,7 +114,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradient-wave 5s linear infinite;
+    animation: gradient-wave 3s linear infinite;
   }
 
   @keyframes gradient-wave {
@@ -483,3 +483,5 @@
 .animate-subtle-pan {
   animation: subtle-pan 30s ease-in-out infinite;
 }
+
+    

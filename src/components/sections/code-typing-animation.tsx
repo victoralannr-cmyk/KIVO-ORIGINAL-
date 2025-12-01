@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useEffect, useRef } from 'react';
@@ -14,29 +15,6 @@ const codeSamples = [
 body{
   margin:0;
   min-height:100vh;
-  background:var(--bg);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-/* Header */
-.header{
-  width:100%;
-  padding:28px 32px;
-  backdrop-filter: blur(6px);
-  display:flex;
-  gap:18px;
-  align-items:center;
-}
-
-/* Hero gradient */
-.hero{
-  height:520px;
-  display:grid;
-  place-items:center;
-  background:linear-gradient(180deg, rgba(25,35,58,0.6), rgba(14,21,36,0.8));
-  position:relative;
 }
 `,
 ];

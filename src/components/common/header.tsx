@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
@@ -24,6 +25,8 @@ export default function Header() {
 
   const logo = PlaceHolderImages.find(img => img.id === 'aetherai-logo');
   const mobileLogo = PlaceHolderImages.find(img => img.id === 'kivo-logo-mobile');
+  const mobileLogoShrunk = PlaceHolderImages.find(img => img.id === 'kivo-logo-mobile-shrunk');
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,10 +60,10 @@ export default function Header() {
   return (
     <header className="fixed top-4 left-0 right-0 z-50 w-full px-4">
       <div className={cn(
-        "container mx-auto flex items-center justify-between bg-background/80 rounded-full border border-border/20 shadow-lg transition-all duration-300 ease-in-out",
+        "container mx-auto flex items-center justify-between bg-background/60 rounded-full border border-border/20 shadow-lg transition-all duration-300 ease-in-out",
         "py-4 md:py-5", // Normal state padding
         "backdrop-blur-none",
-        isShrunk && "py-2 md:py-3 backdrop-blur-md" // Shrunk state padding and blur
+        isShrunk && "py-2 md:py-3 backdrop-blur-md bg-background/40" // Shrunk state padding and blur
       )}>
         {/* Desktop Logo */}
         <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }} className="hidden md:flex items-center flex-shrink-0">
@@ -81,7 +84,15 @@ export default function Header() {
         {/* Mobile: Centered Logo */}
         <div className="flex-1 flex justify-center md:hidden">
           <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }}>
-            {mobileLogo && (
+            {isShrunk && mobileLogoShrunk ? (
+              <Image
+                src={mobileLogoShrunk.imageUrl}
+                alt="Kivo Logo"
+                width={100}
+                height={68}
+                className="object-contain h-8 w-auto"
+              />
+            ) : mobileLogo && (
               <Image
                 src={mobileLogo.imageUrl}
                 alt="Kivo Logo"

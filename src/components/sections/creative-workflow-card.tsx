@@ -59,7 +59,7 @@ export default function CreativeWorkflowCard() {
       `}</style>
       <div className="workflow-diagram-container">
         <svg className="animated-svg" viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="220" rx="20" fill="#19233A"/>
+          <rect width="400" height="220" rx="20" fill="#0f1724"/>
 
           {/* Lines */}
           <path className="connector-line line-1" d="M200 70 V 100" stroke="#F8F9FB" strokeWidth="1.5" strokeOpacity="0.5"/>
@@ -67,7 +67,7 @@ export default function CreativeWorkflowCard() {
 
           {/* Box 1: Planejamento */}
           <g className="box box-1">
-            <rect x="125" y="30" width="150" height="40" rx="10" stroke="#F8F9FB" strokeWidth="2" fill="hsl(var(--card))"/>
+            <rect x="125" y="30" width="150" height="40" rx="10" stroke="#F8F9FB" strokeWidth="2" fill="#0f1724"/>
             <foreignObject x="135" y="40" width="20" height="20" className="icon icon-1">
                 <Settings size={20} color="#888" />
             </foreignObject>
@@ -76,7 +76,7 @@ export default function CreativeWorkflowCard() {
           
           {/* Box 2: Roterização */}
           <g className="box box-2">
-            <rect x="125" y="100" width="150" height="40" rx="10" stroke="#F8F9FB" strokeWidth="2" fill="hsl(var(--card))"/>
+            <rect x="125" y="100" width="150" height="40" rx="10" stroke="#F8F9FB" strokeWidth="2" fill="#0f1724"/>
              <foreignObject x="135" y="110" width="20" height="20" className="icon icon-2">
                 <Mail size={20} color="#888" />
             </foreignObject>
@@ -85,7 +85,7 @@ export default function CreativeWorkflowCard() {
 
           {/* Box 3: Produção */}
           <g className="box box-3">
-            <rect x="125" y="170" width="150" height="40" rx="10" stroke="hsl(var(--primary))" strokeWidth="2.5" fill="hsl(var(--card))"/>
+            <rect x="125" y="170" width="150" height="40" rx="10" stroke="hsl(var(--primary))" strokeWidth="2.5" fill="#0f1724"/>
              <foreignObject x="135" y="180" width="20" height="20" className="icon icon-3">
                 <Video size={20} color="hsl(var(--primary))" />
             </foreignObject>

@@ -83,22 +83,29 @@ export default function Header() {
 
         {/* Mobile: Centered Logo */}
         <div className="flex-1 flex justify-center md:hidden">
-          <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }}>
-            {isShrunk && mobileLogoShrunk ? (
-              <Image
-                src={mobileLogoShrunk.imageUrl}
-                alt="Kivo Logo"
-                width={100}
-                height={68}
-                className="object-contain h-8 w-auto"
-              />
-            ) : mobileLogo && (
+          <Link href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('#home'); }} className="relative h-8 w-24 flex items-center justify-center">
+            {mobileLogo && (
               <Image
                 src={mobileLogo.imageUrl}
                 alt="Kivo Logo"
                 width={100}
                 height={68}
-                className="object-contain h-8 w-auto"
+                className={cn(
+                  "object-contain h-8 w-auto absolute transition-opacity duration-300",
+                  isShrunk ? "opacity-0" : "opacity-100"
+                )}
+              />
+            )}
+            {mobileLogoShrunk && (
+              <Image
+                src={mobileLogoShrunk.imageUrl}
+                alt="Kivo Logo"
+                width={100}
+                height={68}
+                className={cn(
+                  "object-contain h-8 w-auto absolute transition-opacity duration-300",
+                  isShrunk ? "opacity-100" : "opacity-0"
+                )}
               />
             )}
           </Link>

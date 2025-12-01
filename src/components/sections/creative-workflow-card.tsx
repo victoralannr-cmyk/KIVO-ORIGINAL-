@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -66,7 +67,7 @@ export default function CreativeWorkflowCard() {
 
           {/* Box 1: Planejamento */}
           <g className="box box-1">
-            <rect x="125" y="30" width="150" height="40" rx="10" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+            <rect x="125" y="30" width="150" height="40" rx="10" stroke="#F8F9FB" strokeWidth="2" fill="hsl(var(--card))"/>
             <foreignObject x="135" y="40" width="20" height="20" className="icon icon-1">
                 <Settings size={20} color="#888" />
             </foreignObject>
@@ -75,7 +76,7 @@ export default function CreativeWorkflowCard() {
           
           {/* Box 2: Roterização */}
           <g className="box box-2">
-            <rect x="125" y="100" width="150" height="40" rx="10" stroke="#F8F9FB" strokeWidth="2" fill="none"/>
+            <rect x="125" y="100" width="150" height="40" rx="10" stroke="#F8F9FB" strokeWidth="2" fill="hsl(var(--card))"/>
              <foreignObject x="135" y="110" width="20" height="20" className="icon icon-2">
                 <Mail size={20} color="#888" />
             </foreignObject>
@@ -84,7 +85,7 @@ export default function CreativeWorkflowCard() {
 
           {/* Box 3: Produção */}
           <g className="box box-3">
-            <rect x="125" y="170" width="150" height="40" rx="10" stroke="hsl(var(--primary))" strokeWidth="2.5" fill="none"/>
+            <rect x="125" y="170" width="150" height="40" rx="10" stroke="hsl(var(--primary))" strokeWidth="2.5" fill="hsl(var(--card))"/>
              <foreignObject x="135" y="180" width="20" height="20" className="icon icon-3">
                 <Video size={20} color="hsl(var(--primary))" />
             </foreignObject>

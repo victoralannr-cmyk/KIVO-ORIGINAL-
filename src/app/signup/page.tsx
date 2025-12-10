@@ -11,7 +11,6 @@ import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import Link from 'next/link';
 import { Loader2 } from 'lucide-react';
-import Aurora from '@/components/common/aurora';
 
 export default function SignupPage() {
   const [name, setName] = useState('');
@@ -82,7 +81,6 @@ export default function SignupPage() {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-background relative overflow-hidden">
-      <Aurora colorStops={['#1A237E', '#4285F4', '#1A237E']} amplitude={0.2} blend={1.0} />
       <div className="relative z-10 w-full max-w-md p-8 space-y-6 bg-card/50 backdrop-blur-lg rounded-2xl border border-border/20 shadow-2xl my-8">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-foreground">Crie sua conta</h1>

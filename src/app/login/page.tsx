@@ -10,7 +10,6 @@ import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import Link from 'next/link';
 import { Loader2 } from 'lucide-react';
-import Aurora from '@/components/common/aurora';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -43,7 +42,6 @@ export default function LoginPage() {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-background relative overflow-hidden">
-      <Aurora colorStops={['#1A237E', '#4285F4', '#1A237E']} amplitude={0.2} blend={1.0} />
       <div className="relative z-10 w-full max-w-md p-8 space-y-8 bg-card/50 backdrop-blur-lg rounded-2xl border border-border/20 shadow-2xl">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-foreground">Bem-vindo de volta</h1>

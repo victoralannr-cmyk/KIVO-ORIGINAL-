@@ -8,7 +8,6 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Aurora from '../common/aurora';
 import Link from 'next/link';
 
 
@@ -50,7 +49,6 @@ export default function HeroSection() {
             id="home"
             className="relative w-full pt-40 pb-20 md:pt-44 md:pb-32 flex flex-col justify-center items-center text-center overflow-hidden section-with-grid"
         >
-            <Aurora colorStops={['#1A237E', '#4285F4', '#1A237E']} amplitude={0.2} blend={1.0} />
             {kLogo && (
               <>
                 <Image src={kLogo.imageUrl} alt={kLogo.description} width={100} height={100} className="absolute top-1/4 left-[5%] w-16 h-auto opacity-10 animate-orbit" style={{ animationDuration: '45s' }} />

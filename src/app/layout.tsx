@@ -1,9 +1,16 @@
 
 import type {Metadata} from 'next';
+import { Poppins } from 'next/font/google';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import BackToTop from '@/components/common/back-to-top';
 import { cn } from '@/lib/utils';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '600', '700'],
+  variable: '--font-poppins',
+});
 
 export const metadata: Metadata = {
   title: 'Kivo | Agentes de IA sob medida',
@@ -19,12 +26,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="scroll-smooth dark">
+    <html lang="pt-BR" className={cn("scroll-smooth dark", poppins.variable)}>
       <head>
         <link rel="icon" href="https://i.postimg.cc/BnkbJxMQ/favicon-kivo-(1).png" type="image/png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("font-body antialiased text-foreground")}>
         <div className="main-content">

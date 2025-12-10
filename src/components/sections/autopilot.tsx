@@ -46,8 +46,8 @@ export default function AutopilotSection() {
           <Image
               src={kLogo.imageUrl}
               alt={kLogo.description}
-              width={500}
-              height={500}
+              width={128}
+              height={128}
               className="absolute bottom-5 left-5 w-32 h-auto opacity-10 animate-orbit hidden md:block"
               style={{ animationDuration: '49s' }}
           />

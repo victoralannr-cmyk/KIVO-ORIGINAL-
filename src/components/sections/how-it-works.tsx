@@ -196,6 +196,13 @@ export default function HowItWorksSection() {
               Entenda como iremos impulsionar sua empresa através da internet
             </motion.p>
           </div>
+          
+            <div className="mt-8 flex justify-center text-muted-foreground animate-bounce">
+                <svg width="59.22" height="78.96" viewBox="0 0 59.22 78.96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M29.61 1V77.96" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M58.22 50.34L29.61 77.95L1 50.34" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+            </div>
         
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {cardData.map((card, index) => {

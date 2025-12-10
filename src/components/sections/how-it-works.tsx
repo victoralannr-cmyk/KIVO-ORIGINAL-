@@ -202,7 +202,7 @@ export default function HowItWorksSection() {
                 </svg>
             </div>
             <div className="mt-8 flex justify-center">
-                <Button asChild className="px-8 py-4 text-lg md:px-10 md:py-5 md:text-xl button-wavy-gradient rounded-full">
+                <Button asChild className="px-8 py-4 text-lg button-wavy-gradient rounded-full">
                 <Link href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
                     WhatsApp <ArrowUpRight className="ml-2 h-4 w-4" />
                 </Link>

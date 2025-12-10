@@ -2,7 +2,6 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
@@ -10,6 +9,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Aurora from '../common/aurora';
+import Link from 'next/link';
 
 
 const sentence = {

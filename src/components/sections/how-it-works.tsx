@@ -134,9 +134,7 @@ export default function HowItWorksSection() {
         );
       case 'Clapperboard':
         return (
-           <div className="h-8 w-8 text-accent">
-            <Clapperboard size="100%" />
-           </div>
+          <Clapperboard size="32" className="text-accent" />
         );
       default:
         return null;

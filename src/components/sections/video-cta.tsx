@@ -60,7 +60,7 @@ export default function VideoCtaSection() {
             </svg>
           </div>
            <div className="mt-12 flex justify-center">
-            <Button asChild className="px-10 py-5 text-xl button-wavy-gradient rounded-full">
+            <Button asChild className="px-10 py-5 text-xl button-whatsapp-gradient rounded-full">
               <Link href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
                 WhatsApp <ArrowUpRight className="ml-2 h-4 w-4" />
               </Link>

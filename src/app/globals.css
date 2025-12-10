@@ -117,6 +117,13 @@
     animation: gradient-wave 3s linear infinite;
   }
 
+  .button-whatsapp-gradient {
+    background: linear-gradient(90deg, #128C7E, #25D366, #128C7E);
+    background-size: 200% 100%;
+    animation: gradient-wave 5s linear infinite;
+    color: white;
+  }
+
   @keyframes gradient-wave {
     0% {
       background-position: 200% 0;

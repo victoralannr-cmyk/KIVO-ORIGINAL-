@@ -202,7 +202,7 @@ export default function HowItWorksSection() {
                 </svg>
             </div>
             <div className="mt-8 flex justify-center">
-                <Button asChild className="px-6 py-3 text-base md:px-8 md:py-4 md:text-lg button-wavy-gradient rounded-full">
+                <Button asChild className="px-8 py-4 text-lg md:px-10 md:py-5 md:text-xl button-wavy-gradient rounded-full">
                 <Link href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
                     WhatsApp <ArrowUpRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -239,7 +239,7 @@ export default function HowItWorksSection() {
                   element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="px-6 py-3 text-base md:px-8 md:py-4 md:text-lg button-wavy-gradient rounded-full animate-pulse"
+              className="px-8 py-4 text-lg md:px-10 md:py-5 md:text-xl button-wavy-gradient rounded-full animate-pulse"
             >
               Fale com um especialista
               <ArrowUpRight className="h-5 w-5 ml-2 transition-transform group-hover:rotate-45" />

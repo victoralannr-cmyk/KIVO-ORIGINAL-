@@ -13,8 +13,6 @@ import { cn } from '@/lib/utils';
 const navItems = [
   { name: 'Home', href: '#home', id: 'home', icon: Home },
   { name: 'Serviços', href: '#como-funciona', id: 'como-funciona', icon: Settings },
-  { name: 'Apoiadores', href: '#sucesso', id: 'sucesso', icon: Briefcase },
-  { name: 'Sobre', href: '#sobre', id: 'sobre', icon: Info },
   { name: 'FAQ', href: '#faq', id: 'faq', icon: HelpCircle },
 ];
 

@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useEffect } from 'react';
@@ -155,7 +156,7 @@ export default function HeroSection() {
                         Vamos conversar?
                       </h2>
                       <p className="text-muted-foreground md:text-lg">
-                          Nosso time entrará em contato para fazer uma demonstração gratuita e mostrar como podemos ajudar.
+                          Entre em contato para agendar uma demonstração.
                       </p>
                   </div>
                       <div className="mt-16 flex justify-center text-muted-foreground animate-bounce">

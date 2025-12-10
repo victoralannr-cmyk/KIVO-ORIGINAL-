@@ -1,34 +1,16 @@
 
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { useFormState, useFormStatus } from 'react-dom';
-import { submitContactForm, type ContactFormState } from '@/app/actions';
-import { useToast } from '@/hooks/use-toast';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { ArrowUpRight, Loader2 } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Aurora from '../common/aurora';
 
-const initialState: ContactFormState = {
-  message: '',
-  success: false,
-};
-
-function SubmitButton() {
-  const { pending } = useFormStatus();
-  return (
-    <Button type="submit" className="w-full button-wavy-gradient animate-pulse" disabled={pending}>
-      {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : 'Enviar'}
-    </Button>
-  );
-}
 
 const sentence = {
   hidden: { opacity: 0 },
@@ -59,32 +41,7 @@ const paragraphText = "e mantemos você dominante, relevante e sempre";
 
 
 export default function HeroSection() {
-    const [state, formAction] = useFormState(submitContactForm, initialState);
-    const { toast } = useToast();
     const kLogo = PlaceHolderImages.find(img => img.id === 'k-logo-hero');
-
-    useEffect(() => {
-        if (state.message) {
-        if (state.success) {
-            toast({
-            title: 'Sucesso!',
-            description: state.message,
-            });
-        } else if (state.errors) {
-            toast({
-            variant: 'destructive',
-            title: 'Erro de Validação',
-            description: state.message,
-            });
-        } else {
-            toast({
-            variant: 'destructive',
-            title: 'Erro no Envio',
-            description: state.message,
-            });
-        }
-        }
-    }, [state, toast]);
 
     const wordsWithGradient = ["Impulsionamos", "para", "preditivos", "de", "conversão"];
 

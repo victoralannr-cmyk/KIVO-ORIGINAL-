@@ -9,6 +9,7 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { motion } from 'framer-motion';
 import { Card } from '../ui/card';
+import { cn } from '@/lib/utils';
 
 const sentence = {
   hidden: { opacity: 0 },
@@ -64,77 +65,29 @@ export default function HowItWorksSection() {
   const kLogo = PlaceHolderImages.find(img => img.id === 'k-logo-hero');
 
   const getIcon = (iconName?: string) => {
+    const iconProps = { size: 32, className: "text-accent" };
     switch(iconName) {
       case 'Users':
         return (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="text-accent"
-          >
-            <g className="animate-bob-1">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-            </g>
-            <g className="animate-bob-2">
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-            </g>g>
-          </svg>
+          <div className="relative">
+            <Users {...iconProps} className={cn(iconProps.className, "animate-bob-1")} />
+          </div>
         );
       case 'DollarSign':
         return (
           <div style={{ perspective: '800px' }}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="text-accent animate-spin-3d"
-            >
-              <line x1="12" y1="2" x2="12" y2="22"></line>
-              <line x1="12" y1="2" x2="12" y2="22"></line>
-              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-            </svg>
+            <DollarSign {...iconProps} className={cn(iconProps.className, "animate-spin-3d")} />
           </div>
         );
       case 'Code':
         return (
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="32" 
-              height="32" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              className="text-accent"
-            >
-              <g className="animate-fly-away-left">
-                <polyline points="16 18 22 12 16 6"></polyline>
-              </g>
-              <g className="animate-fly-away-right">
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </g>
-            </svg>
+          <div className='relative'>
+            <Code {...iconProps} className={cn(iconProps.className, 'animate-fly-away-left')} />
+          </div>
         );
       case 'Clapperboard':
         return (
-          <Clapperboard size="32" className="text-accent" />
+           <Clapperboard {...iconProps} />
         );
       default:
         return null;

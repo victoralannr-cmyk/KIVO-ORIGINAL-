@@ -69,26 +69,30 @@ export default function HowItWorksSection() {
     switch(iconName) {
       case 'Users':
         return (
-          <div className="relative">
-            <Users {...iconProps} className={cn(iconProps.className, "animate-bob-1")} />
+          <div className="animate-bob-1">
+            <Users {...iconProps} />
           </div>
         );
       case 'DollarSign':
         return (
           <div style={{ perspective: '800px' }}>
-            <DollarSign {...iconProps} className={cn(iconProps.className, "animate-spin-3d")} />
+            <div className="animate-spin-3d">
+              <DollarSign {...iconProps} />
+            </div>
           </div>
         );
       case 'Code':
         return (
-          <div className='relative'>
-            <Code {...iconProps} className={cn(iconProps.className, 'animate-fly-away-left')} />
+          <div className='animate-fly-away-left'>
+            <Code {...iconProps} />
           </div>
         );
       case 'Clapperboard':
-        return (
-           <Clapperboard {...iconProps} />
-        );
+         return (
+            <div className="animate-clap">
+              <Clapperboard {...iconProps} />
+            </div>
+          );
       default:
         return null;
     }

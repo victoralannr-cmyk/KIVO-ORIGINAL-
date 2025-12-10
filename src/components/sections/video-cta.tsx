@@ -59,7 +59,7 @@ export default function VideoCtaSection() {
               <path d="M58.22 50.34L29.61 77.95L1 50.34" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
-           <div className="mt-8 flex justify-center">
+           <div className="mt-12 flex justify-center">
             <Button asChild className="px-8 py-4 text-lg button-wavy-gradient rounded-full">
               <Link href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
                 WhatsApp <ArrowUpRight className="ml-2 h-4 w-4" />

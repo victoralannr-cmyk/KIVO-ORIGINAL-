@@ -53,21 +53,6 @@ export default function VideoCtaSection() {
             <span className="text-wavy-gradient">olhares certos.</span> O seu posicionamento é a sua{' '}
             <span className="text-wavy-gradient">vitrine digital!</span>
           </h2>
-          <div className="mt-8 flex justify-center">
-            <Button 
-              onClick={(e) => {
-                e.preventDefault();
-                const element = document.querySelector('#agendar');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="px-10 py-5 text-xl button-wavy-gradient rounded-full animate-pulse"
-            >
-              Fale com um especialista
-              <ArrowUpRight className="h-5 w-5 ml-2 transition-transform group-hover:rotate-45" />
-            </Button>
-          </div>
         </motion.div>
       </div>
     </section>

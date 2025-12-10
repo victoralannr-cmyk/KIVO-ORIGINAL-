@@ -196,6 +196,24 @@ export default function HowItWorksSection() {
               Entenda como iremos impulsionar sua empresa através da internet
             </motion.p>
           </div>
+
+          <div className="mt-12 text-center">
+          <ScrollReveal direction="up" delay={300}>
+            <Button 
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.querySelector('#agendar');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="px-10 py-5 text-xl button-wavy-gradient rounded-full animate-pulse"
+            >
+              Fale com um especialista
+              <ArrowUpRight className="h-5 w-5 ml-2 transition-transform group-hover:rotate-45" />
+            </Button>
+          </ScrollReveal>
+        </div>
         
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {cardData.map((card, index) => {
@@ -213,25 +231,6 @@ export default function HowItWorksSection() {
                   </ScrollReveal>
                 )
               })}
-        </div>
-
-
-        <div className="mt-20 text-center">
-          <ScrollReveal direction="right" delay={800}>
-            <Button 
-              onClick={(e) => {
-                e.preventDefault();
-                const element = document.querySelector('#agendar');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="px-10 py-5 text-xl button-wavy-gradient rounded-full animate-pulse"
-            >
-              Fale com um especialista
-              <ArrowUpRight className="h-5 w-5 ml-2 transition-transform group-hover:rotate-45" />
-            </Button>
-          </ScrollReveal>
         </div>
 
       </div>

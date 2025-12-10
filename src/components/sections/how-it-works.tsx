@@ -60,43 +60,43 @@ const cardData = [
   },
 ];
 
+const AnimatedIcon: React.FC<{ iconName?: string }> = ({ iconName }) => {
+  const iconProps = { size: 32, className: 'text-accent' };
+  switch (iconName) {
+    case 'Users':
+      return (
+        <div className="animate-bob-1">
+          <Users {...iconProps} />
+        </div>
+      );
+    case 'DollarSign':
+      return (
+        <div style={{ perspective: '800px' }}>
+          <div className="animate-spin-3d">
+            <DollarSign {...iconProps} />
+          </div>
+        </div>
+      );
+    case 'Code':
+      return (
+        <div className="animate-fly-away-left">
+          <Code {...iconProps} />
+        </div>
+      );
+    case 'Clapperboard':
+      return (
+        <div className="animate-clap">
+          <Clapperboard {...iconProps} />
+        </div>
+      );
+    default:
+      return null;
+  }
+};
+
 
 export default function HowItWorksSection() {
   const kLogo = PlaceHolderImages.find(img => img.id === 'k-logo-hero');
-
-  const getIcon = (iconName?: string) => {
-    const iconProps = { size: 32, className: "text-accent" };
-    switch(iconName) {
-      case 'Users':
-        return (
-          <div className="animate-bob-1">
-            <Users {...iconProps} />
-          </div>
-        );
-      case 'DollarSign':
-        return (
-          <div style={{ perspective: '800px' }}>
-            <div className="animate-spin-3d">
-              <DollarSign {...iconProps} />
-            </div>
-          </div>
-        );
-      case 'Code':
-        return (
-          <div className='animate-fly-away-left'>
-            <Code {...iconProps} />
-          </div>
-        );
-      case 'Clapperboard':
-         return (
-            <div className="animate-clap">
-              <Clapperboard {...iconProps} />
-            </div>
-          );
-      default:
-        return null;
-    }
-  }
 
   return (
     <section 
@@ -167,7 +167,7 @@ export default function HowItWorksSection() {
                       className="bg-card/10 backdrop-blur-sm border-border/20 shadow-lg p-6 flex flex-col justify-center items-center text-center h-full"
                     >
                       <div className="p-3 bg-primary/10 rounded-full mb-4 flex items-center justify-center h-[56px] w-[56px]">
-                        {getIcon(card.icon)}
+                        <AnimatedIcon iconName={card.icon} />
                       </div>
                       <h3 className="font-headline text-2xl font-bold text-foreground mb-4">{card.title}</h3>
                       <p className="text-muted-foreground">{card.description}</p>

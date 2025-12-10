@@ -11,7 +11,7 @@ import { submitContactForm, type ContactFormState } from '@/app/actions';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Loader2 } from 'lucide-react';
+import { ArrowUpRight, Loader2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Aurora from '../common/aurora';
 
@@ -162,6 +162,13 @@ export default function HeroSection() {
                           <path d="M29.61 1V77.96" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
                           <path d="M58.22 50.34L29.61 77.95L1 50.34" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
                           </svg>
+                      </div>
+                      <div className="mt-8 flex justify-center">
+                        <Button asChild className="button-wavy-gradient rounded-full">
+                          <Link href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
+                            WhatsApp <ArrowUpRight className="ml-2 h-4 w-4" />
+                          </Link>
+                        </Button>
                       </div>
                   </div>
                 </div>

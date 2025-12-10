@@ -243,11 +243,11 @@
   }
 
   .animate-fly-away-left {
-    animation: fly-away-left 4s ease-in-out infinite;
+    animation: fly-away-left 7s ease-in-out infinite;
   }
   
   .animate-fly-away-right {
-    animation: fly-away-right 4s ease-in-out infinite;
+    animation: fly-away-right 7s ease-in-out infinite;
   }
 
   @keyframes fly-away-left {

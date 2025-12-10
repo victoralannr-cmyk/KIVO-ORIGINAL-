@@ -39,22 +39,22 @@ const title = "Estratégias de Vendas".split(" ");
 
 const cardData = [
   {
-    icon: 'Users',
+    iconName: 'Users',
     title: 'Social Media',
     description: 'Construímos uma presença digital forte e profissional para sua marca. Estratégia, conteúdo e imagem que geram autoridade e desejo.',
   },
   {
-    icon: 'DollarSign',
+    iconName: 'DollarSign',
     title: 'Tráfego Pago',
     description: 'Impulsionamos campanhas estratégicas. Levamos o cliente ideal para a sua vitrine. Google e Meta Ads.',
   },
   {
-    icon: 'Code',
+    iconName: 'Code',
     title: 'Criação de Sites',
     description: 'Damos vida à sua marca com sites que combinam estética, movimento e funcionalidade. Uma vitrine digital única, feita para impressionar e converter.',
   },
   {
-    icon: 'Clapperboard',
+    iconName: 'Clapperboard',
     title: 'Criação de Conteúdo Criativo',
     description: 'Conteúdos criativos que realmente vendem vídeos, designs e textos feitos para aumentar o desempenho e destacar sua marca.',
   },
@@ -167,7 +167,7 @@ export default function HowItWorksSection() {
                       className="bg-card/10 backdrop-blur-sm border-border/20 shadow-lg p-6 flex flex-col justify-center items-center text-center h-full"
                     >
                       <div className="p-3 bg-primary/10 rounded-full mb-4 flex items-center justify-center h-[56px] w-[56px]">
-                        <AnimatedIcon iconName={card.icon} />
+                        <AnimatedIcon iconName={card.iconName} />
                       </div>
                       <h3 className="font-headline text-2xl font-bold text-foreground mb-4">{card.title}</h3>
                       <p className="text-muted-foreground">{card.description}</p>
